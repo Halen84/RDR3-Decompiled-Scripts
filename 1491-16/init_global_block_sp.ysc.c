@@ -1,0 +1,15 @@
+void __EntryFunction__()
+{
+	Global_1357515 = -1;
+	Global_1357516 = 1;
+	if (SCRIPTS::_DOES_COMPRESSED_GLOBAL_BLOCK_BUFFER_EXIST(5))
+	{
+		SCRIPTS::_RESTORE_GLOBAL_BLOCK(5);
+	}
+	else
+	{
+		SCRIPTS::_STORE_GLOBAL_BLOCK(5);
+	}
+	SCRIPTS::TERMINATE_THIS_THREAD();
+}
+
