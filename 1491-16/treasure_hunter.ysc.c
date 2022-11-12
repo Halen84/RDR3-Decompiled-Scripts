@@ -1756,7 +1756,7 @@ bool func_49(var uParam0)
 	}
 	if (!PED::IS_PED_RAGDOLL(uParam0->f_4))
 	{
-		PED::SET_PED_TO_RAGDOLL(uParam0->f_4, 0, 0, 0, true, true, false);
+		PED::SET_PED_TO_RAGDOLL(uParam0->f_4, 0, 0, 0, true, true, 0);
 		return true;
 	}
 	return false;

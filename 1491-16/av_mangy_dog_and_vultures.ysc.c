@@ -2863,7 +2863,7 @@ void func_69(var uParam0)
 
 void func_70(var uParam0)
 {
-	PED::SET_PED_TO_RAGDOLL(uParam0->f_20[0 /*14*/], 1000, 1000, 0, false, false, false);
+	PED::SET_PED_TO_RAGDOLL(uParam0->f_20[0 /*14*/], 1000, 1000, 0, false, false, 0);
 	if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_20[0 /*14*/]))
 	{
 		func_112(uParam0->f_20[0 /*14*/], 0, 0);

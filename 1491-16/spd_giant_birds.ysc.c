@@ -110,7 +110,7 @@ void __EntryFunction__()
 							}
 							if (MISC::GET_GAME_TIMER() >= (iVar2 + iLocal_15))
 							{
-								TASK::TASK_FLY_TO_COORD(iLocal_0[iVar1], 3.0f, func_4(iLocal_16), 0, 1);
+								TASK::TASK_FLY_TO_COORD(iLocal_0[iVar1], 3.0f, func_4(iLocal_16), false, true);
 								iLocal_18[iVar1] = 0;
 							}
 						}

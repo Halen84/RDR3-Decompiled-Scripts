@@ -15633,7 +15633,7 @@ bool func_554(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -20260,7 +20260,7 @@ void func_713(var uParam0)
 			{
 				func_745(uParam0, 0);
 			}
-			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, true);
 			if (func_1195(uParam0->f_67, 0))
 			{
 				if (func_731(uParam0))
@@ -33524,7 +33524,7 @@ bool func_1145(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -34863,9 +34863,9 @@ void func_1167()
 	iLocal_16 = 2;
 }
 
-bool func_1168(bool bParam0, bool bParam1, char* sParam2, int iParam3, float fParam4, int iParam5, bool bParam6, bool bParam7, int iParam8, bool bParam9, bool bParam10, int iParam11, bool bParam12, bool bParam13, int iParam14)
+bool func_1168(int iParam0, bool bParam1, char* sParam2, int iParam3, float fParam4, int iParam5, bool bParam6, bool bParam7, int iParam8, bool bParam9, bool bParam10, int iParam11, bool bParam12, bool bParam13, int iParam14)
 {
-	return func_1684(bParam0, bParam1, sParam2, iParam3, fParam4, iParam5, bParam6, bParam7, iParam8, bParam9, bParam10, iParam11, 0, bParam12, bParam13, iParam14) >= 0;
+	return func_1684(iParam0, bParam1, sParam2, iParam3, fParam4, iParam5, bParam6, bParam7, iParam8, bParam9, bParam10, iParam11, 0, bParam12, bParam13, iParam14) >= 0;
 }
 
 void func_1169()
@@ -35553,9 +35553,9 @@ void func_1197(var uParam0)
 	}
 }
 
-bool func_1198(int iParam0)
+bool func_1198(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_1199(var uParam0)
@@ -44439,7 +44439,7 @@ void func_1476(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1952(func_1951(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1952(func_1951(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_374())
 	{
@@ -44472,7 +44472,7 @@ void func_1478(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1952(func_1951(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1952(func_1951(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

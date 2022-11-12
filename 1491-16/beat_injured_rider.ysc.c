@@ -3043,7 +3043,7 @@ bool func_42()
 							if (func_204(&uLocal_966) > 1.5f)
 							{
 								PED::DETACH_CARRIABLE_ENTITY(uLocal_860[0], false, false);
-								PED::SET_PED_TO_RAGDOLL(uLocal_860[0], 5000, 5000, 0, true, true, false);
+								PED::SET_PED_TO_RAGDOLL(uLocal_860[0], 5000, 5000, 0, true, true, 0);
 							}
 						}
 						else
@@ -3105,14 +3105,14 @@ bool func_42()
 			if (FIRE::IS_ENTITY_ON_FIRE(uLocal_860[0]))
 			{
 				ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_126.f_0, "injured", uLocal_860[0]);
-				PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 200, 200, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 200, 200, 0, false, true, 0);
 			}
 			if (FIRE::IS_ENTITY_ON_FIRE(sLocal_740.f_101))
 			{
 				ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_126.f_0, "Stool", sLocal_134[9 /*12*/].f_8);
 				ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_126.f_0, "Dr", sLocal_740.f_101);
 				ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(sLocal_740.f_101, sLocal_134[9 /*12*/].f_8, false);
-				PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 200, 200, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 200, 200, 0, false, true, 0);
 				ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_126.f_0, "Rag", sLocal_134[12 /*12*/].f_8);
 				PHYSICS::ACTIVATE_PHYSICS(sLocal_134[12 /*12*/].f_8);
 				iLocal_886 = 19;
@@ -9907,7 +9907,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -9929,7 +9929,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -9947,7 +9947,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -9965,7 +9965,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -9983,7 +9983,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -10001,7 +10001,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -10026,7 +10026,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -10044,7 +10044,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -10064,7 +10064,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -10086,7 +10086,7 @@ bool func_240()
 				if (iVar0 == 1)
 				{
 					ANIMSCENE::SET_ANIM_SCENE_RATE(sLocal_126.f_0, fVar1);
-					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_740.f_101, 1000, 1000, 0, false, true, 0);
 				}
 				return true;
 			}
@@ -20604,7 +20604,7 @@ int func_558(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_687(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_688(&(uParam1->f_22)));
 			func_55(iVar0, func_689(&(uParam1->f_22)), 0);
 		}

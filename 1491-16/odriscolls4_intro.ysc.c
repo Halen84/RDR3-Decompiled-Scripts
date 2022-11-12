@@ -13994,7 +13994,7 @@ void func_600(int iParam0, bool bParam1)
 
 void func_601()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_736();
 }
 

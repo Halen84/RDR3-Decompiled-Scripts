@@ -2860,7 +2860,7 @@ void func_71(var uParam0)
 		if (ENTITY::HAS_ANIM_EVENT_FIRED(uParam0->f_20[1 /*14*/], 830334344))
 		{
 			PHYSICS::ACTIVATE_PHYSICS(uParam0->f_20[1 /*14*/]);
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 1000, 1000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 1000, 1000, 0, false, false, 0);
 			func_115(uParam0->f_20[1 /*14*/], 0, 0);
 		}
 		else if (!func_116(uParam0->f_20[1 /*14*/], joaat("SCRIPT_TASK_FLEE")))
@@ -2870,7 +2870,7 @@ void func_71(var uParam0)
 				if (ENTITY::IS_ENTITY_DEAD(uParam0->f_20[0 /*14*/]))
 				{
 					PED::SET_PED_CONFIG_FLAG(uParam0->f_20[1 /*14*/], 336, true);
-					PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 250, 250, 0, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 250, 250, 0, false, false, 0);
 				}
 			}
 			TASK::TASK_FLEE_PED(uParam0->f_20[1 /*14*/], Global_35, 3, 256, -1.0f, -1, 0);
@@ -2886,7 +2886,7 @@ void func_71(var uParam0)
 			{
 				if (ENTITY::IS_ENTITY_DEAD(uParam0->f_20[1 /*14*/]))
 				{
-					PED::SET_PED_TO_RAGDOLL(uParam0->f_20[0 /*14*/], 250, 250, 0, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(uParam0->f_20[0 /*14*/], 250, 250, 0, false, false, 0);
 				}
 			}
 			if (func_66(uParam0->f_20[0 /*14*/], Global_35, 1) < 900.0f)

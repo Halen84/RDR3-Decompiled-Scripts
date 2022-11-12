@@ -6268,7 +6268,7 @@ bool func_283(var uParam0)
 				{
 					if (!PED::IS_PED_RAGDOLL(uParam0->f_7))
 					{
-						PED::SET_PED_TO_RAGDOLL(uParam0->f_7, 0, 0, 0, true, true, false);
+						PED::SET_PED_TO_RAGDOLL(uParam0->f_7, 0, 0, 0, true, true, 0);
 					}
 				}
 				PED::SET_PED_CONFIG_FLAG(uParam0->f_7, 324, true);
@@ -6505,7 +6505,7 @@ void func_298(var uParam0)
 			else
 			{
 				PED::SET_PED_CAN_RAGDOLL(uParam0->f_7, true);
-				PED::SET_PED_TO_RAGDOLL(uParam0->f_7, 10000, 20000, 0, true, true, false);
+				PED::SET_PED_TO_RAGDOLL(uParam0->f_7, 10000, 20000, 0, true, true, 0);
 			}
 			PED::SET_PED_RESET_FLAG(uParam0->f_7, 29, true);
 		}
@@ -6669,11 +6669,11 @@ bool func_306()
 	return false;
 }
 
-void func_307(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
+void func_307(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0))
 	{
-		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, bParam4);
+		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, sParam4);
 	}
 }
 

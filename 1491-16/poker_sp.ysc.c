@@ -31315,7 +31315,7 @@ bool func_972(var uParam0, int iParam1)
 	char* sVar0;
 
 	sVar0 = func_1459(uParam0, iParam1);
-	return NETWORK::_0xE2C3CEC3C0903A00(sVar0);
+	return NETWORK::_TEXTURE_DOWNLOAD_TEXTURE_NAME_IS_VALID(sVar0);
 }
 
 struct<2> /*16*/ func_973(var uParam0, int iParam1)
@@ -49963,15 +49963,15 @@ bool func_1664(int iParam0, var uParam1, int iParam2)
 	return false;
 }
 
-struct<4> /*32*/ func_1665(bool bParam0, var uParam1, int iParam2, bool bParam3, var uParam4, int iParam5, bool bParam6)
+struct<4> /*32*/ func_1665(int iParam0, var uParam1, int iParam2, bool bParam3, var uParam4, int iParam5, bool bParam6)
 {
 	struct<4> /*32*/ sVar0;
 
-	if (!func_1695(bParam0, 0))
+	if (!func_1695(iParam0, 0))
 	{
 		return sVar0;
 	}
-	INVENTORY::INVENTORY_GET_GUID_FROM_ITEMID(func_1563(bParam6), &uParam1, bParam0, iParam5, &sVar0);
+	INVENTORY::INVENTORY_GET_GUID_FROM_ITEMID(func_1563(bParam6), &uParam1, iParam0, iParam5, &sVar0);
 	return sVar0;
 }
 
@@ -50768,13 +50768,13 @@ int func_1694(int iParam0)
 	return 1;
 }
 
-bool func_1695(bool bParam0, int iParam1)
+bool func_1695(int iParam0, int iParam1)
 {
-	if (bParam0 == 0)
+	if (iParam0 == 0)
 	{
 		return false;
 	}
-	return ITEMDATABASE::_ITEMDATABASE_IS_KEY_VALID(bParam0, iParam1);
+	return ITEMDATABASE::_ITEMDATABASE_IS_KEY_VALID(iParam0, iParam1);
 }
 
 void func_1696(int iParam0, int iParam1)
@@ -51548,15 +51548,15 @@ struct<4> /*32*/ func_1729(bool bParam0)
 	return func_1665(joaat("CHARACTER"), func_1763(), joaat("SLOTID_NONE"), bParam0);
 }
 
-int func_1730(bool bParam0)
+int func_1730(int iParam0)
 {
 	Vector3 vVar0;
 
-	if (!func_1695(bParam0, 0))
+	if (!func_1695(iParam0, 0))
 	{
 		return 0;
 	}
-	if (!ITEMDATABASE::ITEMDATABASE_FILLOUT_ITEM_INFO(bParam0, &vVar0))
+	if (!ITEMDATABASE::ITEMDATABASE_FILLOUT_ITEM_INFO(iParam0, &vVar0))
 	{
 		return 0;
 	}
@@ -51623,25 +51623,25 @@ struct<4> /*32*/ func_1733(bool bParam0)
 	return func_1665(joaat("EMOTE_ITEM"), func_1729(bParam0), joaat("SLOTID_EMOTE_ITEM"), 0);
 }
 
-bool func_1734(bool bParam0, int iParam1)
+bool func_1734(int iParam0, int iParam1)
 {
-	int iVar0;
+	var uVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
 
-	if (bParam0 == 0 || iParam1 == 0)
+	if (iParam0 == 0 || iParam1 == 0)
 	{
 		return false;
 	}
-	iVar1 = func_1564(bParam0);
+	iVar1 = func_1564(iParam0);
 	iVar3 = ITEMDATABASE::_ITEMDATABASE_GET_FITS_SLOT_COUNT(iVar1);
 	iVar2 = 0;
 	while (iVar2 < iVar3)
 	{
-		if (ITEMDATABASE::_ITEMDATABASE_GET_FITS_SLOT_INFO(iVar1, iVar2, &iVar0))
+		if (ITEMDATABASE::_ITEMDATABASE_GET_FITS_SLOT_INFO(iVar1, iVar2, &uVar0))
 		{
-			if (ITEMDATABASE::_ITEMDATABASE_CAN_EQUIP_ITEM_ON_CATEGORY(bParam0, iParam1, iVar0))
+			if (ITEMDATABASE::_ITEMDATABASE_CAN_EQUIP_ITEM_ON_CATEGORY(iParam0, iParam1, uVar0))
 			{
 				return true;
 			}
@@ -51664,16 +51664,16 @@ bool func_1735(var uParam0, var uParam1, bool bParam2, int iParam3, var uParam4,
 	return true;
 }
 
-int func_1736(bool bParam0, struct<4> /*32*/ sParam1, int iParam5, bool bParam6)
+int func_1736(int iParam0, struct<4> /*32*/ sParam1, int iParam5, bool bParam6)
 {
 	struct<4> /*32*/ sVar0;
 	int iVar4;
 
-	if (!func_1695(bParam0, 0))
+	if (!func_1695(iParam0, 0))
 	{
 		return 0;
 	}
-	sVar0 = { func_1665(bParam0, sParam1, iParam5, bParam6) /*4*/ };
+	sVar0 = { func_1665(iParam0, sParam1, iParam5, bParam6) /*4*/ };
 	if (!INVENTORY::_INVENTORY_IS_GUID_VALID(&sVar0))
 	{
 		return 0;
@@ -51682,12 +51682,12 @@ int func_1736(bool bParam0, struct<4> /*32*/ sParam1, int iParam5, bool bParam6)
 	return iVar4;
 }
 
-bool func_1737(bool bParam0, var uParam1, var uParam2, int iParam3)
+bool func_1737(int iParam0, var uParam1, var uParam2, int iParam3)
 {
 	int iVar0;
 
 	iVar0 = func_1563(0);
-	*uParam1 = { func_1665(bParam0, func_1731(0), iParam3, 0) /*4*/ };
+	*uParam1 = { func_1665(iParam0, func_1731(0), iParam3, 0) /*4*/ };
 	if (!INVENTORY::_INVENTORY_IS_GUID_VALID(uParam1))
 	{
 		return false;
@@ -51699,9 +51699,9 @@ bool func_1737(bool bParam0, var uParam1, var uParam2, int iParam3)
 	return true;
 }
 
-bool func_1738(bool bParam0)
+bool func_1738(int iParam0)
 {
-	if (ITEMDATABASE::_ITEMDATABASE_IS_INTRINSIC_ITEM(bParam0))
+	if (ITEMDATABASE::_ITEMDATABASE_IS_INTRINSIC_ITEM(iParam0))
 	{
 		return true;
 	}
@@ -53484,20 +53484,20 @@ int func_1765(int iParam0)
 	return sVar0.f_4;
 }
 
-int func_1766(bool bParam0, bool bParam1, bool bParam2)
+int func_1766(int iParam0, bool bParam1, bool bParam2)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
 
-	if (!func_1695(bParam0, 0))
+	if (!func_1695(iParam0, 0))
 	{
 		return 0;
 	}
-	iVar0 = func_1730(bParam0);
+	iVar0 = func_1730(iParam0);
 	if (iVar0 == joaat("AMMO") || (bParam1 && iVar0 == joaat("WEAPON")))
 	{
-		iVar1 = func_1785(bParam0, 1);
+		iVar1 = func_1785(iParam0, 1);
 		if (iVar1 != 0)
 		{
 			return WEAPON::GET_PED_AMMO_BY_TYPE(Global_35, iVar1);
@@ -53505,9 +53505,9 @@ int func_1766(bool bParam0, bool bParam1, bool bParam2)
 	}
 	else if (iVar0 == joaat("WEAPON"))
 	{
-		return func_1786(bParam0, 0);
+		return func_1786(iParam0, 0);
 	}
-	iVar2 = INVENTORY::_INVENTORY_GET_INVENTORY_ITEM_COUNT_WITH_ITEMID(func_1563(bParam2), bParam0, false);
+	iVar2 = INVENTORY::_INVENTORY_GET_INVENTORY_ITEM_COUNT_WITH_ITEMID(func_1563(bParam2), iParam0, false);
 	return iVar2;
 }
 
@@ -54040,44 +54040,44 @@ bool func_1784(int iParam0)
 	return MISC::IS_BIT_SET(Global_40.f_7857[iVar1], iVar2);
 }
 
-bool func_1785(bool bParam0, int iParam1)
+int func_1785(int iParam0, int iParam1)
 {
 	int iVar0;
 	var uVar1;
 	var uVar2;
 
-	if (!func_1695(bParam0, 0))
+	if (!func_1695(iParam0, 0))
 	{
-		return false;
+		return 0;
 	}
-	iVar0 = func_1730(bParam0);
-	if (iVar0 == joaat("WEAPON") && WEAPON::IS_WEAPON_VALID(bParam0))
+	iVar0 = func_1730(iParam0);
+	if (iVar0 == joaat("WEAPON") && WEAPON::IS_WEAPON_VALID(iParam0))
 	{
-		return WEAPON::_GET_AMMO_TYPE_FOR_WEAPON(bParam0);
+		return WEAPON::_GET_AMMO_TYPE_FOR_WEAPON(iParam0);
 	}
-	else if (iVar0 == joaat("AMMO") && WEAPON::_IS_AMMO_VALID(bParam0))
+	else if (iVar0 == joaat("AMMO") && WEAPON::_IS_AMMO_VALID(iParam0))
 	{
-		return bParam0;
+		return iParam0;
 	}
-	if (func_1795(bParam0, joaat("CI_TAG_ITEM_AMMOBOX")))
+	if (func_1795(iParam0, joaat("CI_TAG_ITEM_AMMOBOX")))
 	{
-		func_1796(bParam0, &uVar1, &uVar2);
+		func_1796(iParam0, &uVar1, &uVar2);
 		return uVar2;
 	}
-	return false;
+	return 0;
 }
 
-int func_1786(bool bParam0, bool bParam1)
+int func_1786(int iParam0, bool bParam1)
 {
 	struct<18> /*144*/ sVar0;
 	int iVar18;
 	int iVar19;
 
-	if (!WEAPON::IS_WEAPON_VALID(bParam0))
+	if (!WEAPON::IS_WEAPON_VALID(iParam0))
 	{
 		return 0;
 	}
-	sVar0 = { func_1797(bParam0, joaat("SLOTID_NONE"), joaat("SLOTID_NONE"), joaat("SLOTID_NONE"), 0, 0) /*18*/ };
+	sVar0 = { func_1797(iParam0, joaat("SLOTID_NONE"), joaat("SLOTID_NONE"), joaat("SLOTID_NONE"), 0, 0) /*18*/ };
 	if (bParam1)
 	{
 		func_1798(&sVar0, func_1731(0));
@@ -54185,9 +54185,9 @@ char* func_1794(char* sParam0, int iParam1)
 	return MISC::VAR_STRING(42, "COLOR_STRING", MISC::_CREATE_COLOR_STRING(iParam1), sParam0);
 }
 
-bool func_1795(bool bParam0, int iParam1)
+bool func_1795(int iParam0, int iParam1)
 {
-	if (bParam0 == 0)
+	if (iParam0 == 0)
 	{
 		return false;
 	}
@@ -54195,18 +54195,18 @@ bool func_1795(bool bParam0, int iParam1)
 	{
 		return false;
 	}
-	if (ITEMDATABASE::_ITEMDATABASE_DOES_ITEM_HAVE_TAG(bParam0, iParam1, 1120943070))
+	if (ITEMDATABASE::_ITEMDATABASE_DOES_ITEM_HAVE_TAG(iParam0, iParam1, 1120943070))
 	{
 		return true;
 	}
 	return false;
 }
 
-void func_1796(bool bParam0, var uParam1, var uParam2)
+void func_1796(int iParam0, var uParam1, var uParam2)
 {
 	*uParam1 = 0;
 	*uParam2 = 0;
-	switch (bParam0)
+	switch (iParam0)
 	{
 		case joaat("AMMO_REVOLVER_AMMOBOX"):
 			*uParam1 = joaat("REVOLVER_AMMO_BOX");
@@ -54291,7 +54291,7 @@ void func_1796(bool bParam0, var uParam1, var uParam2)
 	}
 }
 
-struct<18> /*144*/ func_1797(bool bParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+struct<18> /*144*/ func_1797(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	struct<18> /*144*/ sVar0;
 
@@ -54309,9 +54309,9 @@ struct<18> /*144*/ func_1797(bool bParam0, int iParam1, int iParam2, int iParam3
 	sVar0.f_15 = -1;
 	sVar0.f_16 = -1;
 	sVar0.f_17 = -1;
-	if (bParam0 != 0)
+	if (iParam0 != 0)
 	{
-		sVar0.f_0 = bParam0;
+		sVar0.f_0 = iParam0;
 	}
 	if (iParam1 != 0 && iParam1 != joaat("SLOTID_NONE"))
 	{

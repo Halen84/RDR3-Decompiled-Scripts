@@ -16393,7 +16393,7 @@ int func_390(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_570(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_571(&(uParam1->f_22)));
 			func_60(iVar0, func_572(&(uParam1->f_22)), 0);
 		}

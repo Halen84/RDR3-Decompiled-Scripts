@@ -1885,7 +1885,7 @@ bool func_55(int iParam0, int iParam1)
 
 void func_56()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_85();
 }
 

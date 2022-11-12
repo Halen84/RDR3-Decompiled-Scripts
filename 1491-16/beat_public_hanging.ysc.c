@@ -6031,7 +6031,7 @@ void func_160()
 				func_72();
 				if (func_43(iLocal_946[0], 0, 0) && !func_51(iLocal_1019, (1 << 22)))
 				{
-					PED::SET_PED_TO_RAGDOLL(iLocal_946[0], 1500, 1500, 1, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(iLocal_946[0], 1500, 1500, 1, false, true, 0);
 					PED::SET_PED_CONFIG_FLAG(iLocal_946[0], 449, true);
 				}
 				func_60(&iLocal_1019, (1 << 22));
@@ -15025,9 +15025,9 @@ void func_356()
 
 void func_357()
 {
-	ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_946[0], 3, 1);
-	ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_946[0], 4, 1);
-	ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_946[0], 5, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_946[0], 3, true);
+	ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_946[0], 4, true);
+	ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_946[0], 5, true);
 }
 
 void func_358()
@@ -18633,7 +18633,7 @@ int func_449(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_609(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_610(&(uParam1->f_22)));
 			func_365(iVar0, func_611(&(uParam1->f_22)), 0);
 		}

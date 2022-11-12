@@ -2062,7 +2062,7 @@ int func_86(int iParam0)
 			PHYSICS::_0xF1EA2A881EB7F2CD(iLocal_31[iParam0], true);
 			PHYSICS::_0x522FA3F490E2F7AC(iLocal_31[iParam0], 1, 1);
 			AUDIO::_0x2651DDC0EA269073(iLocal_31[iParam0], 1.0f);
-			PED::SET_PED_TO_RAGDOLL(iLocal_25[iParam0], 1000, 60000, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(iLocal_25[iParam0], 1000, 60000, 0, false, true, 0);
 			return 1;
 		}
 	}

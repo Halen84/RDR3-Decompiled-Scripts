@@ -168,7 +168,7 @@
 	var uLocal_550 = 0;
 	int iLocal_551 = 0;
 	int iLocal_552 = 0;
-	var uLocal_553 = 0;
+	int iLocal_553 = 0;
 	int iLocal_554 = 0;
 	int iLocal_555 = 0;
 	int iLocal_556 = 0;
@@ -4722,7 +4722,7 @@ void func_159(var uParam0)
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_465))
 	{
 		func_444(&iLocal_465, 0, 1, 1);
-		GRAPHICS::REMOVE_GRASS_CULL_SPHERE(uLocal_553);
+		GRAPHICS::REMOVE_GRASS_CULL_SPHERE(iLocal_553);
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_470))
 	{
@@ -7910,7 +7910,7 @@ int func_275(var uParam0)
 	{
 		iLocal_465 = OBJECT::CREATE_OBJECT(iLocal_466, vLocal_467, true, true, false, false, true);
 		ENTITY::PLACE_ENTITY_ON_GROUND_PROPERLY(iLocal_465, false);
-		uLocal_553 = GRAPHICS::SET_GRASS_CULL_SPHERE(vLocal_467, 1.0f, 0);
+		iLocal_553 = GRAPHICS::SET_GRASS_CULL_SPHERE(vLocal_467, 1.0f, 0);
 	}
 	if (!ENTITY::DOES_ENTITY_EXIST(iLocal_470))
 	{
@@ -17546,7 +17546,7 @@ bool func_585(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -22949,7 +22949,7 @@ void func_763(var uParam0)
 			{
 				func_773(uParam0, 0);
 			}
-			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, true);
 			if (func_725(uParam0->f_67, 0))
 			{
 				if (func_1265(uParam0))
@@ -35700,7 +35700,7 @@ bool func_1178(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -38832,9 +38832,9 @@ void func_1278(var uParam0)
 	}
 }
 
-bool func_1279(int iParam0)
+bool func_1279(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_1280(var uParam0)
@@ -47167,7 +47167,7 @@ void func_1532(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2030(func_2029(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2030(func_2029(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_402())
 	{
@@ -47200,7 +47200,7 @@ void func_1534(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2030(func_2029(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2030(func_2029(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

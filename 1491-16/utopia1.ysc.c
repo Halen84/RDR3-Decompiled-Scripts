@@ -42214,7 +42214,7 @@ bool func_913(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -50447,7 +50447,7 @@ void func_1151(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1732(func_1731(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1732(func_1731(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_315())
 	{
@@ -50480,7 +50480,7 @@ void func_1153(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1732(func_1731(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1732(func_1731(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -59646,7 +59646,7 @@ void func_1393(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 							PED::SET_PED_FLEE_ATTRIBUTES((*uParam0)[iVar0], (1 << 9), true);
 							PED::SET_PED_FLEE_ATTRIBUTES((*uParam0)[iVar0 + 1], (1 << 9), true);
 							func_1875((*uParam0)[iVar0], joaat("WEAPON_REPEATER_CARBINE"), 1, 1, 0, 1, 0, 1056964608, 1065353216, -1, 0, 0, 0, 0);
-							PED::_0xD8736EFDA38EDC5C((*uParam0)[iVar0], ENTITY::GET_ENTITY_COORDS((*uParam0)[iVar0], true, false), 150.0f);
+							PED::_REGISTER_HATED_TARGETS_IN_AREA((*uParam0)[iVar0], ENTITY::GET_ENTITY_COORDS((*uParam0)[iVar0], true, false), 150.0f);
 							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS((*uParam0)[iVar0], true);
 							PED::REGISTER_TARGET(bLocal_419, (*uParam0)[iVar0], true);
 							func_1822((*uParam0)[iVar0], joaat("BLIP_STYLE_COP_SCRIPT"), 1, 1);
@@ -59688,7 +59688,7 @@ void func_1393(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 							PED::SET_PED_FLEE_ATTRIBUTES((*uParam0)[iVar0], (1 << 9), true);
 							PED::SET_PED_FLEE_ATTRIBUTES((*uParam0)[iVar0 + 1], (1 << 9), true);
 							func_1875((*uParam0)[iVar0], joaat("WEAPON_REPEATER_CARBINE"), 1, 1, 0, 1, 0, 1056964608, 1065353216, -1, 0, 0, 0, 0);
-							PED::_0xD8736EFDA38EDC5C((*uParam0)[iVar0], ENTITY::GET_ENTITY_COORDS((*uParam0)[iVar0], true, false), 150.0f);
+							PED::_REGISTER_HATED_TARGETS_IN_AREA((*uParam0)[iVar0], ENTITY::GET_ENTITY_COORDS((*uParam0)[iVar0], true, false), 150.0f);
 							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS((*uParam0)[iVar0], true);
 							PED::REGISTER_TARGET(bLocal_419, (*uParam0)[iVar0], true);
 							func_1822((*uParam0)[iVar0], joaat("BLIP_STYLE_COP_SCRIPT"), 1, 1);
@@ -59845,7 +59845,7 @@ void func_1394(var uParam0, var uParam1)
 						PED::SET_PED_FLEE_ATTRIBUTES((*uParam0)[iVar0], (1 << 9), true);
 						PED::SET_PED_TO_PLAYER_WEAPON_DAMAGE_MODIFIER((*uParam0)[iVar0], 0.5f);
 						func_1875((*uParam0)[iVar0], joaat("WEAPON_REPEATER_CARBINE"), 1, 1, 0, 1, 0, 1056964608, 1065353216, -1, 0, 0, 0, 0);
-						PED::_0xD8736EFDA38EDC5C((*uParam0)[iVar0], ENTITY::GET_ENTITY_COORDS((*uParam0)[iVar0], true, false), 150.0f);
+						PED::_REGISTER_HATED_TARGETS_IN_AREA((*uParam0)[iVar0], ENTITY::GET_ENTITY_COORDS((*uParam0)[iVar0], true, false), 150.0f);
 						PED::REGISTER_TARGET(bLocal_419, (*uParam0)[iVar0], true);
 						PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS((*uParam0)[iVar0], true);
 						func_1924((*uParam0)[iVar0], func_1975(iVar0), 10.0f, 0, 0);
@@ -77185,9 +77185,9 @@ void func_1937(int iParam0)
 	}
 }
 
-bool func_1938(int iParam0)
+bool func_1938(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1939()
@@ -92698,7 +92698,7 @@ bool func_2520(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)

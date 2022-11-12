@@ -14,9 +14,9 @@
 	var uLocal_12 = 0;
 	var uLocal_13 = 0;
 	var uLocal_14 = 0;
-	int iLocal_15 = 0;
+	bool bLocal_15 = false;
 	int iLocal_16 = 0;
-	int iLocal_17 = 0;
+	bool bLocal_17 = false;
 	int iLocal_18 = 0;
 	int iLocal_19 = 0;
 	int iLocal_20 = 0;
@@ -666,28 +666,28 @@ bool func_24(var uParam0)
 {
 	if (!bLocal_23)
 	{
-		iLocal_15 = OBJECT::CREATE_OBJECT(joaat("P_STOOL08X"), -1317.835f, 2435.74f, 308.557f, true, true, false, false, true);
-		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_15))
+		bLocal_15 = OBJECT::CREATE_OBJECT(joaat("P_STOOL08X"), -1317.835f, 2435.74f, 308.557f, true, true, false, false, true);
+		if (!ENTITY::DOES_ENTITY_EXIST(bLocal_15))
 		{
 			return false;
 		}
-		ENTITY::SET_ENTITY_HEADING(iLocal_15, 63.46f);
-		iLocal_16 = TASK::_0xD508FA229F1C4900(iLocal_15, 0.0f, 0.0f, 0.5f, joaat("PROP_HUMAN_SEAT_BENCH"), 0.5f);
+		ENTITY::SET_ENTITY_HEADING(bLocal_15, 63.46f);
+		iLocal_16 = TASK::_0xD508FA229F1C4900(bLocal_15, 0.0f, 0.0f, 0.5f, joaat("PROP_HUMAN_SEAT_BENCH"), 0.5f);
 		TASK::_SET_SCENARIO_POINT_ACTIVE(iLocal_16, false);
-		ENTITY::FREEZE_ENTITY_POSITION(iLocal_15, true);
+		ENTITY::FREEZE_ENTITY_POSITION(bLocal_15, true);
 		bLocal_23 = true;
 	}
 	if (!bLocal_24)
 	{
-		iLocal_17 = OBJECT::CREATE_OBJECT(joaat("P_STOOL10X"), -1317.859f, 2436.214f, 308.53f, true, true, false, false, true);
-		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_17))
+		bLocal_17 = OBJECT::CREATE_OBJECT(joaat("P_STOOL10X"), -1317.859f, 2436.214f, 308.53f, true, true, false, false, true);
+		if (!ENTITY::DOES_ENTITY_EXIST(bLocal_17))
 		{
 			return false;
 		}
-		ENTITY::SET_ENTITY_HEADING(iLocal_17, -23.01f);
-		iLocal_18 = TASK::_0xD508FA229F1C4900(iLocal_17, 0.0f, 0.0f, 0.5f, joaat("PROP_HUMAN_SEAT_BENCH"), 0.5f);
+		ENTITY::SET_ENTITY_HEADING(bLocal_17, -23.01f);
+		iLocal_18 = TASK::_0xD508FA229F1C4900(bLocal_17, 0.0f, 0.0f, 0.5f, joaat("PROP_HUMAN_SEAT_BENCH"), 0.5f);
 		TASK::_SET_SCENARIO_POINT_ACTIVE(iLocal_18, false);
-		ENTITY::FREEZE_ENTITY_POSITION(iLocal_17, true);
+		ENTITY::FREEZE_ENTITY_POSITION(bLocal_17, true);
 		bLocal_24 = true;
 	}
 	if (func_37(1))

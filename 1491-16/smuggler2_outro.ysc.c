@@ -766,8 +766,8 @@ bool func_29(var uParam0)
 			break;
 		case 2:
 			TASK::USE_WAYPOINT_RECORDING_AS_ASSISTED_MOVEMENT_ROUTE(func_22(0), true, 1.0f, 1.0f, true);
-			TASK::TASK_FLY_TO_COORD(iLocal_42[0], 2.0f, 983.9f, -6775.8f, 50.0f, 1, 1);
-			TASK::TASK_FLY_TO_COORD(iLocal_42[1], 2.0f, 984.0f, -6775.6f, 50.0f, 1, 1);
+			TASK::TASK_FLY_TO_COORD(iLocal_42[0], 2.0f, 983.9f, -6775.8f, 50.0f, true, true);
+			TASK::TASK_FLY_TO_COORD(iLocal_42[1], 2.0f, 984.0f, -6775.6f, 50.0f, true, true);
 			ENTITY::PLACE_ENTITY_ON_GROUND_PROPERLY(iLocal_42[2], false);
 			TASK::TASK_PLAY_ANIM(iLocal_42[2], func_21(1), func_21(0), 1000.0f, -1000.0f, -1, 132, 0.474f, false, 0, false, 0, false);
 			func_56(3);
@@ -777,8 +777,8 @@ bool func_29(var uParam0)
 			{
 				if (func_61(Global_35, 983.2f, -6785.1f, 49.5f, 2.0f, 1, 1))
 				{
-					TASK::TASK_FLY_TO_COORD(iLocal_42[0], 2.0f, 975.7f, -6819.1f, 51.0f, 1, 1);
-					TASK::TASK_FLY_TO_COORD(iLocal_42[1], 2.0f, 975.7f, -6819.1f, 51.0f, 1, 1);
+					TASK::TASK_FLY_TO_COORD(iLocal_42[0], 2.0f, 975.7f, -6819.1f, 51.0f, true, true);
+					TASK::TASK_FLY_TO_COORD(iLocal_42[1], 2.0f, 975.7f, -6819.1f, 51.0f, true, true);
 					TASK::TASK_LOOK_AT_ENTITY(Global_35, iLocal_42[8], 5000, 48, 51, 1);
 					func_62(Global_35, "COUGH_SICK_SMALL", joaat("SPEECH_PARAMS_FORCE_NORMAL_CRITICAL"), 0, 1, 0, 0, 1);
 					bLocal_58 = true;
@@ -4007,7 +4007,7 @@ int func_144(int iParam0, float fParam1, int iParam2, bool bParam3, int iParam4)
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_174(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_142(iParam0))
 		{

@@ -12800,7 +12800,7 @@ bool func_548(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1889);
 	if (!bVar0)
 	{
-		uParam0->f_1889 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1889 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1889);
 	if (!bVar1)
@@ -15723,14 +15723,14 @@ void func_660(int iParam0, int iParam1, bool bParam2)
 
 void func_661(int iParam0, bool bParam1)
 {
-	bool bVar0;
+	int iVar0;
 
 	if (!func_463(iParam0))
 	{
 		return;
 	}
-	bVar0 = func_255(iParam0);
-	func_785(bVar0);
+	iVar0 = func_255(iParam0);
+	func_785(iVar0);
 	func_501(iParam0, 60, 1);
 	if (bParam1)
 	{
@@ -19985,20 +19985,20 @@ void func_786(int iParam0)
 	func_731(iParam0, (1 << 13), 1);
 }
 
-void func_787(bool bParam0)
+void func_787(int iParam0)
 {
-	if (func_866(bParam0, 0))
+	if (func_866(iParam0, 0))
 	{
 		return;
 	}
-	ENTITY::SET_ENTITY_INVINCIBLE(bParam0, false);
-	PED::SET_PED_CONFIG_FLAG(bParam0, 179, false);
-	ENTITY::SET_ENTITY_PROOFS(bParam0, 0, false);
+	ENTITY::SET_ENTITY_INVINCIBLE(iParam0, false);
+	PED::SET_PED_CONFIG_FLAG(iParam0, 179, false);
+	ENTITY::SET_ENTITY_PROOFS(iParam0, 0, false);
 }
 
 void func_788(int iParam0)
 {
-	bool bVar0;
+	int iVar0;
 
 	if (!func_463(iParam0))
 	{
@@ -20008,21 +20008,21 @@ void func_788(int iParam0)
 	{
 		return;
 	}
-	bVar0 = func_574(iParam0);
-	func_787(bVar0);
+	iVar0 = func_574(iParam0);
+	func_787(iVar0);
 	func_731(iParam0, (1 << 13), 0);
 }
 
-void func_789(bool bParam0)
+void func_789(int iParam0)
 {
-	if (func_866(bParam0, 0))
+	if (func_866(iParam0, 0))
 	{
 		return;
 	}
-	PED::SET_PED_CAN_RAGDOLL(bParam0, true);
-	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(bParam0, 1048575);
-	PED::SET_RAGDOLL_BLOCKING_FLAGS(bParam0, 8229);
-	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(bParam0, false);
+	PED::SET_PED_CAN_RAGDOLL(iParam0, true);
+	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(iParam0, 1048575);
+	PED::SET_RAGDOLL_BLOCKING_FLAGS(iParam0, 8229);
+	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(iParam0, false);
 }
 
 void func_790(int iParam0)
@@ -20056,7 +20056,7 @@ void func_790(int iParam0)
 
 void func_791(int iParam0)
 {
-	bool bVar0;
+	int iVar0;
 
 	if (!func_463(iParam0))
 	{
@@ -20066,26 +20066,26 @@ void func_791(int iParam0)
 	{
 		return;
 	}
-	bVar0 = func_574(iParam0);
-	func_789(bVar0);
+	iVar0 = func_574(iParam0);
+	func_789(iVar0);
 	func_731(iParam0, (1 << 14), 1);
 }
 
-void func_792(bool bParam0)
+void func_792(int iParam0)
 {
-	if (func_866(bParam0, 0))
+	if (func_866(iParam0, 0))
 	{
 		return;
 	}
-	PED::SET_PED_CAN_RAGDOLL(bParam0, true);
-	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(bParam0, 1048575);
-	PED::SET_RAGDOLL_BLOCKING_FLAGS(bParam0, 1);
-	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(bParam0, true);
+	PED::SET_PED_CAN_RAGDOLL(iParam0, true);
+	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(iParam0, 1048575);
+	PED::SET_RAGDOLL_BLOCKING_FLAGS(iParam0, 1);
+	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(iParam0, true);
 }
 
 void func_793(int iParam0)
 {
-	bool bVar0;
+	int iVar0;
 
 	if (!func_463(iParam0))
 	{
@@ -20095,8 +20095,8 @@ void func_793(int iParam0)
 	{
 		return;
 	}
-	bVar0 = func_574(iParam0);
-	func_792(bVar0);
+	iVar0 = func_574(iParam0);
+	func_792(iVar0);
 	func_731(iParam0, (1 << 14), 0);
 }
 
@@ -23383,17 +23383,17 @@ void func_865(int iParam0, int iParam1)
 	Global_40.f_4942[iParam0 /*60*/].f_5 -= Global_40.f_4942[iParam0 /*60*/].f_5 & iParam1;
 }
 
-bool func_866(bool bParam0, bool bParam1)
+bool func_866(int iParam0, bool bParam1)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(bParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		if (bParam1)
 		{
-			return PED::IS_PED_DEAD_OR_DYING(bParam0, true);
+			return PED::IS_PED_DEAD_OR_DYING(iParam0, true);
 		}
 		else
 		{
-			return ENTITY::IS_ENTITY_DEAD(bParam0);
+			return ENTITY::IS_ENTITY_DEAD(iParam0);
 		}
 	}
 	return true;

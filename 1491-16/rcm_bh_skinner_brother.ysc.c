@@ -14588,7 +14588,7 @@ bool func_536(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -18868,7 +18868,7 @@ void func_670(var uParam0)
 					{
 						if (!iLocal_445[0])
 						{
-							if (!AUDIO::_0xFE5C6177064BD390(1))
+							if (!AUDIO::_0xFE5C6177064BD390(true))
 							{
 								func_551(uParam0, sLocal_639[iVar0 /*20*/], "SAV_PED5", 0);
 								if (func_850(uParam0, "RBT18_SK6RETRN", 0))
@@ -19181,7 +19181,7 @@ void func_675(var uParam0)
 			{
 				func_701(uParam0, 0);
 			}
-			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, true);
 			if (func_1164(uParam0->f_67, 0))
 			{
 				if (func_694(uParam0))
@@ -32950,7 +32950,7 @@ bool func_1123(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -34552,9 +34552,9 @@ void func_1166(var uParam0)
 	}
 }
 
-bool func_1167(int iParam0)
+bool func_1167(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_1168(var uParam0)
@@ -43632,7 +43632,7 @@ void func_1453(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1936(func_1935(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1936(func_1935(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_363())
 	{
@@ -43665,7 +43665,7 @@ void func_1455(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1936(func_1935(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1936(func_1935(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

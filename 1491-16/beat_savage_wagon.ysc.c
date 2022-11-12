@@ -725,7 +725,7 @@ bool func_18()
 			if ((iLocal_353 != 1 && !func_22((1 << 10))) && ENTITY::GET_ENTITY_SPEED(iLocal_341) <= 0.1f)
 			{
 				AITRANSPORT::SET_PED_OFF_TRANSPORT_SEAT(uLocal_342[1], 64);
-				PED::SET_PED_TO_RAGDOLL(uLocal_342[1], 10000, 10000, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(uLocal_342[1], 10000, 10000, 0, false, true, 0);
 				func_15((1 << 10));
 			}
 			if ((!ENTITY::DOES_ENTITY_EXIST(iLocal_341) || func_66(iLocal_341, 1, 1) > 80.0f) || (func_22(256) && func_22((1 << 9))))
@@ -9560,7 +9560,7 @@ int func_253(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_363(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_364(&(uParam1->f_22)));
 			func_71(iVar0, func_365(&(uParam1->f_22)), 0);
 		}

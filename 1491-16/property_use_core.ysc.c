@@ -48722,7 +48722,7 @@ int func_1723(int iParam0, var uParam1)
 	return (Global_1946054.f_1329.f_48 - 1);
 }
 
-void func_1724(int iParam0, int iParam1, int iParam2, var uParam3)
+void func_1724(bool bParam0, int iParam1, int iParam2, var uParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -48742,14 +48742,14 @@ void func_1724(int iParam0, int iParam1, int iParam2, var uParam3)
 	sVar8.f_1 = Global_1946054.f_1329.f_29[iParam2 /*6*/];
 	sVar8.f_2 = joaat("STATE_ID");
 	sVar8.f_3 = 1;
-	iVar6 = PED::_0xFFCC2DB2D9953401(iParam0, iVar16, bVar15);
+	iVar6 = PED::_0xFFCC2DB2D9953401(bParam0, iVar16, bVar15);
 	iVar2 = iVar6 + 1;
 	iVar0 = 0;
 	while (iVar0 < iVar2)
 	{
 		if (iVar0 != iVar6)
 		{
-			iVar1 = PED::_0x6243635AF2F1B826(iParam0, iVar0, iVar16, bVar15);
+			iVar1 = PED::_0x6243635AF2F1B826(bParam0, iVar0, iVar16, bVar15);
 			sVar8.f_4 = iVar1;
 		}
 		else
@@ -64487,7 +64487,7 @@ void func_2204(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2327(func_2326(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2327(func_2326(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_1687())
 	{
@@ -64506,7 +64506,7 @@ void func_2205(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2327(func_2326(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2327(func_2326(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

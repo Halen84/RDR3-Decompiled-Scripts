@@ -36828,7 +36828,7 @@ int func_802(var uParam0)
 			{
 				if (sLocal_133[5 /*6*/].f_2 == 1)
 				{
-					TASK::TASK_FLY_TO_COORD(sLocal_133[5 /*6*/], 3.0f, 369.1f, -12.8f, 107.4f, 1, 0);
+					TASK::TASK_FLY_TO_COORD(sLocal_133[5 /*6*/], 3.0f, 369.1f, -12.8f, 107.4f, true, false);
 					func_943(5, 29);
 				}
 				PAD::DISABLE_CONTROL_ACTION(0, joaat("INPUT_AIM"), false);
@@ -38786,7 +38786,7 @@ int func_832(var uParam0)
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(sLocal_941[19 /*2*/]))
 	{
-		ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_941[19 /*2*/], 7, 1);
+		ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_941[19 /*2*/], 7, true);
 	}
 	if (func_165(122))
 	{
@@ -42117,7 +42117,7 @@ bool func_933(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -46766,7 +46766,7 @@ void func_1084(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1697(func_1696(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1697(func_1696(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_325())
 	{
@@ -46799,7 +46799,7 @@ void func_1086(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1697(func_1696(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1697(func_1696(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -55228,9 +55228,9 @@ int func_1320(var uParam0, bool bParam1, int iParam2, int iParam3, bool bParam4,
 	return iVar0;
 }
 
-bool func_1321(int iParam0)
+bool func_1321(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1322(bool bParam0)
@@ -58683,7 +58683,7 @@ void func_1416()
 				ENTITY::FREEZE_ENTITY_POSITION(sLocal_133[iVar4 /*6*/], false);
 				ENTITY::SET_ENTITY_COLLISION(sLocal_133[iVar4 /*6*/], true, false);
 				func_1355();
-				TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, 1, 1);
+				TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, true, true);
 				func_1356(sLocal_133[iVar4 /*6*/], func_1395(iVar4 == 55, 0.0f, 1.0f));
 				iVar4++;
 			}
@@ -58699,7 +58699,7 @@ void func_1416()
 					{
 						vVar0 = { func_1449(iVar4, 2, 7) /*4*/ };
 						func_1355();
-						TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, 1, 1);
+						TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, true, true);
 						func_1356(sLocal_133[iVar4 /*6*/], func_1395(iVar4 == 55, 0.0f, 1.0f));
 						iVar4++;
 					}
@@ -67458,7 +67458,7 @@ int func_1652(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_1983(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_1650(iParam0))
 		{
@@ -86377,7 +86377,7 @@ int func_2326(char* sParam0, int iParam1, int iParam2, bool bParam3)
 
 void func_2327()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}
@@ -91599,7 +91599,7 @@ bool func_2484(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)

@@ -9914,7 +9914,7 @@ void func_342()
 		case 2:
 			bVar2 = true;
 			iVar1 = func_707(&bLocal_163, &iLocal_165, 25.0f, &sLocal_207, 0.0f, 3, 0, "", iVar0, 0, 0, 2, -1082130432);
-			if (func_626(&uLocal_308) > 2.0f && !AUDIO::_0xFE5C6177064BD390(1))
+			if (func_626(&uLocal_308) > 2.0f && !AUDIO::_0xFE5C6177064BD390(true))
 			{
 				func_263(&uLocal_308);
 				iLocal_374 = 4;
@@ -9962,7 +9962,7 @@ void func_342()
 		case 9:
 			bVar2 = true;
 			iVar1 = func_707(&bLocal_163, &iLocal_186, 25.0f, &sLocal_242, 0.0f, 3, 0, "", iVar0, 0, 0, 2, -1082130432);
-			if (func_626(&uLocal_308) > 2.0f && !AUDIO::_0xFE5C6177064BD390(1))
+			if (func_626(&uLocal_308) > 2.0f && !AUDIO::_0xFE5C6177064BD390(true))
 			{
 				iLocal_92 = 1;
 				func_263(&uLocal_308);
@@ -9972,7 +9972,7 @@ void func_342()
 		case 11:
 			bVar2 = true;
 			iVar1 = func_707(&bLocal_163, &iLocal_186, 25.0f, &sLocal_242, 0.0f, 3, 0, "", iVar0, 0, 0, 2, -1082130432);
-			if (!AUDIO::_0xFE5C6177064BD390(1))
+			if (!AUDIO::_0xFE5C6177064BD390(true))
 			{
 				iLocal_92 = 1;
 				iLocal_374 = 14;
@@ -15531,7 +15531,7 @@ bool func_554(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -19761,9 +19761,9 @@ bool func_717(char* sParam0)
 	return AUDIO::_IS_SCRIPTED_CONVERSATION_CREATED(sParam0);
 }
 
-bool func_718(int iParam0)
+bool func_718(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_719(char* sParam0, bool bParam1)
@@ -31470,7 +31470,7 @@ bool func_1110(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -40854,7 +40854,7 @@ void func_1406(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1802(func_1801(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1802(func_1801(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_391())
 	{
@@ -40887,7 +40887,7 @@ void func_1408(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1802(func_1801(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1802(func_1801(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

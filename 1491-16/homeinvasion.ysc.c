@@ -4664,15 +4664,15 @@ float func_107()
 
 bool func_108(float fParam0)
 {
-	bool bVar0;
+	int iVar0;
 	float fVar1;
 
 	if (iLocal_19 > 0)
 	{
-		bVar0 = func_282(Global_36, -1);
-		if (!ENTITY::IS_ENTITY_DEAD(bVar0))
+		iVar0 = func_282(Global_36, -1);
+		if (!ENTITY::IS_ENTITY_DEAD(iVar0))
 		{
-			fVar1 = func_283(Global_35, bVar0, 1, 1);
+			fVar1 = func_283(Global_35, iVar0, 1, 1);
 			if (fVar1 < fParam0)
 			{
 				return false;
@@ -5562,7 +5562,7 @@ void func_144(Vector3 vParam0)
 		if (FIRE::IS_ENTITY_ON_FIRE(sLocal_268.f_208[0 /*149*/]) && ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_268.f_208[0 /*149*/], -1))
 		{
 			TASK::CLEAR_PED_TASKS(sLocal_268.f_208[0 /*149*/], true, false);
-			PED::SET_PED_TO_RAGDOLL(sLocal_268.f_208[0 /*149*/], 5000, 5000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(sLocal_268.f_208[0 /*149*/], 5000, 5000, 0, false, false, 0);
 		}
 		if (!func_375(2, 0, 0) && PED::IS_PED_IN_COMBAT(sLocal_268.f_208[0 /*149*/], 0))
 		{
@@ -5587,7 +5587,7 @@ void func_144(Vector3 vParam0)
 		if (FIRE::IS_ENTITY_ON_FIRE(sLocal_268.f_208[1 /*149*/]) && ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_268.f_208[1 /*149*/], -1))
 		{
 			TASK::CLEAR_PED_TASKS(sLocal_268.f_208[1 /*149*/], true, false);
-			PED::SET_PED_TO_RAGDOLL(sLocal_268.f_208[1 /*149*/], 5000, 5000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(sLocal_268.f_208[1 /*149*/], 5000, 5000, 0, false, false, 0);
 		}
 		if ((!func_375(2, 1, 0) && (iLocal_18 == 8 || iLocal_18 == 9)) && PED::IS_PED_IN_COMBAT(sLocal_268.f_208[1 /*149*/], 0))
 		{
@@ -23618,8 +23618,8 @@ int func_514(var uParam0, int iParam1, int iParam2, bool bParam3)
 	{
 		if (ENTITY::IS_ENTITY_IN_VOLUME(Global_35, sLocal_268.f_9[22], true, 0))
 		{
-			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 9, 1);
-			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 9, true);
+			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 			PAD::DISABLE_CONTROL_ACTION(0, joaat("INPUT_PICKUP"), true);
 			PAD::DISABLE_CONTROL_ACTION(0, joaat("INPUT_LOOT"), true);
 		}
@@ -41740,9 +41740,9 @@ void func_1022()
 	func_1072(iVar0, "b_breakout", 0, sVar1);
 }
 
-void func_1023(bool bParam0, bool bParam1, var uParam2, int iParam3, Vector3 vParam4, bool bParam7, bool bParam8)
+void func_1023(bool bParam0, int iParam1, var uParam2, int iParam3, Vector3 vParam4, bool bParam7, bool bParam8)
 {
-	uParam2->f_3 = bParam1;
+	uParam2->f_3 = iParam1;
 	uParam2->f_7 = iParam3;
 	*uParam2 = { vParam4 /*3*/ };
 	uParam2->f_13 = 1;
@@ -42394,9 +42394,9 @@ char* func_1044()
 	return "HRABWAITD";
 }
 
-void func_1045(char* sParam0, bool bParam1, bool bParam2)
+void func_1045(char* sParam0, bool bParam1, int iParam2)
 {
-	func_386(&(sLocal_268.f_4950), sParam0, bParam1, bParam2, 0, 0, 1, 0);
+	func_386(&(sLocal_268.f_4950), sParam0, bParam1, iParam2, 0, 0, 1, 0);
 }
 
 bool func_1046(bool bParam0, int iParam1, int iParam2)
@@ -44560,7 +44560,7 @@ char* func_1144()
 	return "HRABJDSKNEGL";
 }
 
-bool func_1145(bool bParam0, bool bParam1)
+bool func_1145(int iParam0, bool bParam1)
 {
 	if (!func_969(&(sLocal_268.f_5235[8 /*3*/]), bParam1, 0, "TIMER_ABDN_PLAY_BRO_LOITER_LINE"))
 	{
@@ -44570,7 +44570,7 @@ bool func_1145(bool bParam0, bool bParam1)
 	{
 		return false;
 	}
-	if (func_283(Global_35, bParam0, 1, 1) > 4.08f)
+	if (func_283(Global_35, iParam0, 1, 1) > 4.08f)
 	{
 		return false;
 	}
@@ -45732,7 +45732,7 @@ void func_1171(int iParam0)
 	PED::_0x57F35552E771BE9D(*iParam0, 12);
 }
 
-bool func_1172(int iParam0, bool bParam1, float fParam2, bool bParam3)
+bool func_1172(int iParam0, int iParam1, float fParam2, bool bParam3)
 {
 	bool bVar0;
 	float fVar1;
@@ -45750,10 +45750,10 @@ bool func_1172(int iParam0, bool bParam1, float fParam2, bool bParam3)
 	{
 		bVar0 = sLocal_268.f_208[iParam0 /*149*/];
 	}
-	fVar1 = func_283(bVar0, bParam1, 1, 1);
+	fVar1 = func_283(bVar0, iParam1, 1, 1);
 	if (fVar1 < fParam2)
 	{
-		if (func_2551(&sVar2, bVar0, bParam1))
+		if (func_2551(&sVar2, bVar0, iParam1))
 		{
 			func_85((1 << 19), iParam0, bParam3);
 			return true;
@@ -46144,7 +46144,7 @@ void func_1202(var uParam0, var uParam1, var uParam2)
 	bool bVar1;
 	bool bVar2;
 	bool bVar3;
-	bool bVar4;
+	int iVar4;
 
 	if (!func_155(64))
 	{
@@ -46205,14 +46205,14 @@ void func_1202(var uParam0, var uParam1, var uParam2)
 				{
 					if (bVar2)
 					{
-						bVar4 = *uParam1;
+						iVar4 = *uParam1;
 					}
 					else
 					{
-						bVar4 = *uParam2;
+						iVar4 = *uParam2;
 					}
 					func_1483((1 << 20), 0);
-					func_386(&(sLocal_268.f_4950), "RH0_CMBT_WGN2", *uParam0, bVar4, 0, 0, 1, 1);
+					func_386(&(sLocal_268.f_4950), "RH0_CMBT_WGN2", *uParam0, iVar4, 0, 0, 1, 1);
 					func_131(&(sLocal_268.f_5235[7 /*3*/]));
 					return;
 				}
@@ -50960,7 +50960,7 @@ void func_1283(int iParam0, int iParam1, char* sParam2, char* sParam3)
 {
 	func_222(iParam0, iParam1, sParam2, 1, 1);
 	ENTITY::GET_ENTITY_MODEL(iParam1);
-	if (ENTITY::_0x5AFFA9DDC87846F8(ENTITY::GET_ENTITY_MODEL(iParam1)))
+	if (ENTITY::_IS_CARRIABLE_MODEL(ENTITY::GET_ENTITY_MODEL(iParam1)))
 	{
 		TASK::_MAKE_OBJECT_CARRIABLE(iParam1);
 	}
@@ -53188,19 +53188,19 @@ char* func_1398()
 	return "PHRMC_SPOTTED";
 }
 
-void func_1399(bool bParam0, bool bParam1, char* sParam2, char* sParam3, char* sParam4)
+void func_1399(bool bParam0, int iParam1, char* sParam2, char* sParam3, char* sParam4)
 {
 	if (func_76(iLocal_17, (1 << 9)))
 	{
-		func_386(&(sLocal_268.f_4950), sParam3, bParam0, bParam1, 0, 0, 1, 1);
+		func_386(&(sLocal_268.f_4950), sParam3, bParam0, iParam1, 0, 0, 1, 1);
 	}
 	else if (func_76(iLocal_17, 16))
 	{
-		func_386(&(sLocal_268.f_4950), sParam4, bParam0, bParam1, 0, 0, 1, 1);
+		func_386(&(sLocal_268.f_4950), sParam4, bParam0, iParam1, 0, 0, 1, 1);
 	}
 	else
 	{
-		func_386(&(sLocal_268.f_4950), sParam2, bParam0, bParam1, 0, 0, 1, 1);
+		func_386(&(sLocal_268.f_4950), sParam2, bParam0, iParam1, 0, 0, 1, 1);
 	}
 }
 
@@ -59603,9 +59603,9 @@ void func_1640(int iParam0)
 	iLocal_78 = iParam0;
 }
 
-bool func_1641(bool bParam0, bool bParam1, char* sParam2, int iParam3, float fParam4, int iParam5, bool bParam6, bool bParam7, int iParam8, bool bParam9, bool bParam10, int iParam11, bool bParam12, bool bParam13, int iParam14)
+bool func_1641(bool bParam0, int iParam1, char* sParam2, int iParam3, float fParam4, int iParam5, bool bParam6, bool bParam7, int iParam8, bool bParam9, bool bParam10, int iParam11, bool bParam12, bool bParam13, int iParam14)
 {
-	return func_2937(bParam0, bParam1, sParam2, iParam3, fParam4, iParam5, bParam6, bParam7, iParam8, bParam9, bParam10, iParam11, 0, bParam12, bParam13, iParam14) >= 0;
+	return func_2937(bParam0, iParam1, sParam2, iParam3, fParam4, iParam5, bParam6, bParam7, iParam8, bParam9, bParam10, iParam11, 0, bParam12, bParam13, iParam14) >= 0;
 }
 
 void func_1642(int iParam0, float fParam1)
@@ -60646,7 +60646,7 @@ void func_1683(bool bParam0, bool bParam1)
 void func_1684(bool bParam0)
 {
 	int iVar0;
-	bool bVar1;
+	int iVar1;
 
 	if (!PED::IS_PED_HOGTIED(*bParam0))
 	{
@@ -60656,11 +60656,11 @@ void func_1684(bool bParam0)
 	}
 	if (func_62((1 << 25)))
 	{
-		bVar1 = sLocal_268.f_48[0 /*53*/];
+		iVar1 = sLocal_268.f_48[0 /*53*/];
 	}
 	else
 	{
-		bVar1 = Global_35;
+		iVar1 = Global_35;
 	}
 	if (func_114((1 << 30)))
 	{
@@ -60670,8 +60670,8 @@ void func_1684(bool bParam0)
 	{
 		func_120(*bParam0, "OUTLAW3", 1, 1);
 	}
-	func_386(&(sLocal_268.f_4950), "PHRLS_IG6_P2b1", *bParam0, bVar1, 0, 0, 1, 1);
-	func_1023(*bParam0, bVar1, &(bParam0->f_56), 7000, vLocal_14, 1, 0);
+	func_386(&(sLocal_268.f_4950), "PHRLS_IG6_P2b1", *bParam0, iVar1, 0, 0, 1, 1);
+	func_1023(*bParam0, iVar1, &(bParam0->f_56), 7000, vLocal_14, 1, 0);
 }
 
 void func_1685(var uParam0, int iParam1, int iParam2, bool bParam3)
@@ -85294,7 +85294,7 @@ bool func_2738(bool bParam0)
 
 void func_2739()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_2328();
 }
 
@@ -88536,14 +88536,14 @@ void func_2845(bool bParam0, bool bParam1)
 	}
 }
 
-void func_2846(char* sParam0, bool bParam1, bool bParam2, var uParam3, bool bParam4, int iParam5, int iParam6)
+void func_2846(char* sParam0, bool bParam1, int iParam2, var uParam3, bool bParam4, int iParam5, int iParam6)
 {
-	func_386(&(sLocal_268.f_4950), sParam0, bParam1, bParam2, 0, 0, 1, 1);
+	func_386(&(sLocal_268.f_4950), sParam0, bParam1, iParam2, 0, 0, 1, 1);
 	if (!bParam4)
 	{
 		return;
 	}
-	func_1023(bParam1, bParam2, uParam3, iParam5, vLocal_14, iParam6, 0);
+	func_1023(bParam1, iParam2, uParam3, iParam5, vLocal_14, iParam6, 0);
 }
 
 void func_2847()
@@ -94566,7 +94566,7 @@ void func_3147(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_3655(func_3654(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_3655(func_3654(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_474())
 	{
@@ -94599,7 +94599,7 @@ void func_3149(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_3655(func_3654(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_3655(func_3654(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -97372,7 +97372,7 @@ bool func_3263(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1642);
 	if (!bVar0)
 	{
-		uParam0->f_1642 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1642 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1642);
 	if (!bVar1)

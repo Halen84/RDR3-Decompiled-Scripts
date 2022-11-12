@@ -768,7 +768,7 @@ void func_1(var uParam0)
 					UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(3, joaat("CABR01"), MISC::GET_HASH_KEY(sVar4), joaat("HUD_TOASTS"));
 					MISSIONDATA::_MISSIONDATA_SET_MISSION_RATING(joaat("CABR01"), func_24());
 					UILOG::_UILOG_MARK_MISSION_COMPLETED(joaat("CABR01"));
-					UILOG::_0xA31013798FADCADC(3, joaat("CABR01"), 1);
+					UILOG::_UILOG_SET_DISPLAY_COMPLETION_RATING(3, joaat("CABR01"), true);
 				}
 				else
 				{
@@ -9269,7 +9269,7 @@ bool func_207(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_264 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_264 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_270 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_264);
@@ -22934,7 +22934,7 @@ void func_629(int iParam0, int* iParam1, float fParam2, float fParam3, bool bPar
 
 void func_630()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_1017();
 }
 
@@ -47358,7 +47358,7 @@ void func_1410(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1593(func_1592(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1593(func_1592(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_129())
 	{
@@ -47391,7 +47391,7 @@ void func_1412(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1593(func_1592(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1593(func_1592(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

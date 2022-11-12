@@ -483,7 +483,7 @@ void func_1(var uParam0)
 					UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(3, joaat("CABR01"), MISC::GET_HASH_KEY(sVar2), joaat("HUD_TOASTS"));
 					MISSIONDATA::_MISSIONDATA_SET_MISSION_RATING(joaat("CABR01"), func_23());
 					UILOG::_UILOG_MARK_MISSION_COMPLETED(joaat("CABR01"));
-					UILOG::_0xA31013798FADCADC(3, joaat("CABR01"), 1);
+					UILOG::_UILOG_SET_DISPLAY_COMPLETION_RATING(3, joaat("CABR01"), true);
 				}
 				else
 				{
@@ -8400,7 +8400,7 @@ bool func_193(var uParam0, char* sParam1, var uParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_264 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_264 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_270 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_264);

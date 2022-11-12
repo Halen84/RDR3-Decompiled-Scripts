@@ -16244,7 +16244,7 @@ void func_522(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	}
 }
 
-bool func_523(int iParam0, int iParam1, int iParam2, int iParam3)
+bool func_523(var uParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -16256,7 +16256,7 @@ bool func_523(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iParam2 = iVar0;
 	}
-	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(iParam0, iParam1, iParam2);
+	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(uParam0, iParam1, iParam2);
 	return bVar2;
 }
 

@@ -1872,7 +1872,7 @@ int func_31(var uParam0)
 					{
 						TASK::CLEAR_PED_TASKS(uParam0->f_20[iVar2 /*14*/], true, false);
 						func_67(&(uParam0->f_20[iVar2 /*14*/].f_5), 50, 10, 0);
-						TASK::TASK_FLY_TO_COORD(uParam0->f_20[iVar2 /*14*/], 1.0f, uParam0->f_20[iVar2 /*14*/].f_5, 1, 0);
+						TASK::TASK_FLY_TO_COORD(uParam0->f_20[iVar2 /*14*/], 1.0f, uParam0->f_20[iVar2 /*14*/].f_5, true, false);
 						PED::SET_PED_KEEP_TASK(uParam0->f_20[iVar2 /*14*/], true);
 					}
 					iVar2++;

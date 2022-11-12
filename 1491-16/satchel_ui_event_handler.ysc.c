@@ -6709,7 +6709,7 @@ int func_204(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 		iParam2 = 10;
 	}
 	bVar1 = false;
-	*uParam1 = DATAFILE::_0xD97D8D905F1562F2(iParam0);
+	*uParam1 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(iParam0);
 	while ((!DATAFILE::PARSEDDATA_IS_FILE_LOADED(*uParam1) && iVar0 < iParam2) && !bVar1)
 	{
 		iVar0++;

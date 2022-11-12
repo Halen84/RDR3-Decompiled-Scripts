@@ -2608,7 +2608,7 @@ void func_64()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(sLocal_56[1 /*12*/].f_8))
 		{
-			if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_56[1 /*12*/].f_7))
+			if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_56[1 /*12*/].f_7))
 			{
 				TASK::_MAKE_OBJECT_CARRIABLE(sLocal_56[1 /*12*/].f_8);
 				GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_gen_shiny_bling", sLocal_56[1 /*12*/].f_8, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, true, false, false);
@@ -2616,7 +2616,7 @@ void func_64()
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(sLocal_56[2 /*12*/].f_8))
 		{
-			if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_56[2 /*12*/].f_7))
+			if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_56[2 /*12*/].f_7))
 			{
 				TASK::_MAKE_OBJECT_CARRIABLE(sLocal_56[2 /*12*/].f_8);
 				GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_gen_shiny_bling", sLocal_56[1 /*12*/].f_8, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, true, false, false);
@@ -6009,11 +6009,11 @@ bool func_168(int iParam0, int iParam1, bool bParam2, bool bParam3)
 	return false;
 }
 
-void func_169(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
+void func_169(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0))
 	{
-		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, bParam4);
+		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, sParam4);
 	}
 }
 
@@ -13848,7 +13848,7 @@ int func_379(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_505(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_506(&(uParam1->f_22)));
 			func_69(iVar0, func_507(&(uParam1->f_22)), 0);
 		}

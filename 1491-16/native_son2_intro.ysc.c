@@ -1470,7 +1470,7 @@ bool func_44(int iParam0)
 
 	CAM::_REQUEST_LETTER_BOX_OVERTIME(1000, -1, false, 17, true, false);
 	CLOCK::_PAUSE_CLOCK_THIS_FRAME(true);
-	ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 	func_158(1, 1, 1, 1, 1, 1, 1);
 	if (func_159(iLocal_52, 0))
 	{

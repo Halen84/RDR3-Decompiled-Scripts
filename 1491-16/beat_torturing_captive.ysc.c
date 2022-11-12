@@ -8961,7 +8961,7 @@ void func_230()
 	ENTITY::SET_ENTITY_PROOFS(uLocal_46[2], 0, false);
 	ENTITY::FREEZE_ENTITY_POSITION(uLocal_46[2], false);
 	ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_529.f_0, "Victim", uLocal_46[2]);
-	PED::SET_PED_TO_RAGDOLL(uLocal_46[2], 1000, 4000, 0, false, true, false);
+	PED::SET_PED_TO_RAGDOLL(uLocal_46[2], 1000, 4000, 0, false, true, 0);
 	bLocal_802 = true;
 	func_419();
 }
@@ -13631,7 +13631,7 @@ int func_344(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_506(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_507(&(uParam1->f_22)));
 			func_223(iVar0, func_508(&(uParam1->f_22)), 0);
 		}

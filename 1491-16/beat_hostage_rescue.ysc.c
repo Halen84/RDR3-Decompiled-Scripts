@@ -2074,11 +2074,11 @@ bool func_48()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_510[2]) && PED::IS_PED_HOGTIED(iLocal_510[2]))
 		{
-			ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_510[2], 2, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_510[2], 2, true);
 		}
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_510[3]) && PED::IS_PED_HOGTIED(iLocal_510[3]))
 		{
-			ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_510[3], 2, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_510[3], 2, true);
 		}
 	}
 	if ((!func_22((1 << 23)) && PED::IS_PED_FLEEING(iLocal_510[2])) && func_166(iLocal_510[2], vLocal_700, 1) > 30.0f)
@@ -2549,7 +2549,7 @@ bool func_48()
 					else
 					{
 						ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_76.f_0, "HOSTAGE", iLocal_510[1]);
-						PED::SET_PED_TO_RAGDOLL(iLocal_510[1], 1000, 1000, 0, false, true, false);
+						PED::SET_PED_TO_RAGDOLL(iLocal_510[1], 1000, 1000, 0, false, true, 0);
 						func_221(sLocal_76.f_0);
 						func_34(24);
 					}
@@ -4347,7 +4347,7 @@ int func_110(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_330(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_331(&(uParam1->f_22)));
 			func_223(iVar0, func_332(&(uParam1->f_22)), 0);
 		}
@@ -6514,17 +6514,17 @@ void func_193(bool bParam0)
 
 int func_194(int iParam0, int iParam1, bool bParam2, int iParam3)
 {
-	var uVar0;
+	int iVar0;
 
 	if (!VOLUME::DOES_VOLUME_EXIST(iParam0))
 	{
-		return uVar0;
+		return iVar0;
 	}
 	func_426(iParam0, bParam2);
 	POPULATION::_ADD_AMBIENT_SPAWN_RESTRICTION(iParam0, iParam3, 0, 0, -1, -1, 0);
 	POPULATION::_ADD_AMBIENT_AVOIDANCE_RESTRICTION(iParam0, iParam3, 0, 0, -1, -1, 2);
-	uVar0 = PED::_ADD_SCENARIO_BLOCKING_VOLUME(iParam0, bParam2, 15);
-	return uVar0;
+	iVar0 = PED::_ADD_SCENARIO_BLOCKING_VOLUME(iParam0, bParam2, 15);
+	return iVar0;
 }
 
 void func_195(int iParam0)
@@ -7283,7 +7283,7 @@ bool func_225()
 				if (PED::IS_PED_DEAD_OR_DYING(iLocal_510[1], true))
 				{
 					ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_76.f_0, "HOSTAGE", iLocal_510[1]);
-					PED::SET_PED_TO_RAGDOLL(iLocal_510[1], 1000, 1000, 0, false, true, false);
+					PED::SET_PED_TO_RAGDOLL(iLocal_510[1], 1000, 1000, 0, false, true, 0);
 				}
 				iLocal_698 = 1;
 			}

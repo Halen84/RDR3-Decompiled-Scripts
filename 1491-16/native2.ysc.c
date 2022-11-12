@@ -38761,7 +38761,7 @@ bool func_869(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -42082,7 +42082,7 @@ void func_969(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1559(func_1558(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1559(func_1558(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_299())
 	{
@@ -42115,7 +42115,7 @@ void func_971(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1559(func_1558(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1559(func_1558(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -54923,7 +54923,7 @@ void func_1302(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, 
 					PED::SET_PED_FLEE_ATTRIBUTES((*iParam2)[iVar0], (1 << 9), true);
 					PED::SET_PED_FLEE_ATTRIBUTES((*iParam1)[iVar0], (1 << 9), true);
 					func_1269((*iParam2)[iVar0], joaat("WEAPON_REPEATER_CARBINE"), 1, 1, 0, 1, 0, 1056964608, 1065353216, -1, 0, 0, 0, 0);
-					PED::_0xD8736EFDA38EDC5C((*iParam2)[iVar0], ENTITY::GET_ENTITY_COORDS((*iParam2)[iVar0], true, false), 150.0f);
+					PED::_REGISTER_HATED_TARGETS_IN_AREA((*iParam2)[iVar0], ENTITY::GET_ENTITY_COORDS((*iParam2)[iVar0], true, false), 150.0f);
 					PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS((*iParam2)[iVar0], true);
 					TASK::CLEAR_PED_TASKS_IMMEDIATELY((*iParam2)[iVar0], false, true);
 					TASK::CLEAR_PED_TASKS_IMMEDIATELY((*iParam1)[iVar0], false, true);
@@ -55325,7 +55325,7 @@ bool func_1306(var uParam0)
 				vVar4 = { ENTITY::GET_ENTITY_ROTATION(bLocal_166, 2) /*3*/ };
 				ENTITY::SET_ENTITY_COORDS(bLocal_166, vVar1, false, true, true, true);
 				ENTITY::SET_ENTITY_ROTATION(bLocal_166, vVar4, 2, false);
-				PED::SET_PED_TO_RAGDOLL(bLocal_166, 0, 1, 1, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(bLocal_166, 0, 1, 1, false, true, 0);
 				func_1235((1 << 25));
 			}
 		}
@@ -56230,7 +56230,7 @@ int func_1313(int iParam0, bool bParam1, bool bParam2, char* sParam3)
 		}
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam3))
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(iVar1, sParam3);
+			MAP::_SET_BLIP_NAME(iVar1, sParam3);
 		}
 	}
 	return 1;
@@ -85326,7 +85326,7 @@ bool func_2368(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -92138,7 +92138,7 @@ void func_2643(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	}
 }
 
-bool func_2644(bool bParam0, int iParam1, int iParam2, int iParam3)
+bool func_2644(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -92150,7 +92150,7 @@ bool func_2644(bool bParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iParam2 = iVar0;
 	}
-	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(bParam0, iParam1, iParam2);
+	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(iParam0, iParam1, iParam2);
 	return bVar2;
 }
 

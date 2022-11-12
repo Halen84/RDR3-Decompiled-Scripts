@@ -2426,7 +2426,7 @@ void func_62()
 	if (ENTITY::HAS_ANIM_EVENT_FIRED(iLocal_841[0], -708661514))
 	{
 		ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_232.f_0, "pedVictim", iLocal_841[0]);
-		PED::SET_PED_TO_RAGDOLL(iLocal_841[0], 1000, 1000, 0, false, false, false);
+		PED::SET_PED_TO_RAGDOLL(iLocal_841[0], 1000, 1000, 0, false, false, 0);
 		TASK::TASK_FLEE_PED(iLocal_841[0], Global_35, 3, 0, -1.0f, -1, iLocal_841[1]);
 		return;
 	}
@@ -4004,7 +4004,7 @@ int func_109(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPar
 		if (func_289(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_290(&(uParam1->f_22)));
 			func_174(iVar0, func_291(&(uParam1->f_22)), 0);
 		}

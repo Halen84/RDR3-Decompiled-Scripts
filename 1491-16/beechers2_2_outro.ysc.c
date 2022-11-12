@@ -621,7 +621,7 @@ bool func_24(var uParam0)
 					iLocal_113 = 3;
 					if (!ENTITY::IS_ENTITY_DEAD(iLocal_111))
 					{
-						TASK::TASK_FLY_TO_COORD(iLocal_111, 2.0f, -1552.0f, -1457.9f, 93.0f, 1, 0);
+						TASK::TASK_FLY_TO_COORD(iLocal_111, 2.0f, -1552.0f, -1457.9f, 93.0f, true, false);
 						ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&iLocal_111);
 					}
 					func_46();
@@ -5246,7 +5246,7 @@ void func_234(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_260(func_259(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_260(func_259(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_193())
 	{
@@ -5279,7 +5279,7 @@ void func_236(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_260(func_259(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_260(func_259(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

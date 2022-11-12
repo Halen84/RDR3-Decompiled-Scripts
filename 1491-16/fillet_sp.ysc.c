@@ -19022,7 +19022,7 @@ bool func_686(var uParam0, int iParam1)
 	char* sVar0;
 
 	sVar0 = func_534(uParam0, iParam1);
-	return NETWORK::_0xE2C3CEC3C0903A00(sVar0);
+	return NETWORK::_TEXTURE_DOWNLOAD_TEXTURE_NAME_IS_VALID(sVar0);
 }
 
 bool func_687(int iParam0, int iParam1)

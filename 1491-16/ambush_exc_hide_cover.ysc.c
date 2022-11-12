@@ -10509,7 +10509,7 @@ void func_385(var uParam0, int iParam1, char* sParam2, Vector3 vParam3, int iPar
 
 void func_386()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_490();
 }
 
@@ -17425,7 +17425,7 @@ void func_608(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_677(func_676(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_677(func_676(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_644())
 	{
@@ -17458,7 +17458,7 @@ void func_610(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_677(func_676(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_677(func_676(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

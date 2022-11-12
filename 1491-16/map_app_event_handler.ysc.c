@@ -2226,7 +2226,7 @@ char* func_69(int iParam0, var uParam1, char* sParam2)
 		default:
 			sVar0 = "Unknown Type";
 			break;
-			sVar0 = NETWORK::_0xB5C4B18B12A2AF23(uParam1, 0);
+			sVar0 = NETWORK::_REQUEST_PEDSHOT_TEXTURE_DOWNLOAD(uParam1, 0);
 			break;
 		case 1:
 			iVar1 = NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(uParam1);

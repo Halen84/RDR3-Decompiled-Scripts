@@ -38442,7 +38442,7 @@ bool func_899(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -41944,7 +41944,7 @@ void func_1032(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1607(func_1606(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1607(func_1606(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_297())
 	{
@@ -41977,7 +41977,7 @@ void func_1034(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1607(func_1606(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1607(func_1606(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -59078,7 +59078,7 @@ void func_1510(char[4] cParam0)
 			}
 			PED::SET_PED_RAGDOLL_ON_COLLISION(Global_35, true, false);
 			PED::SET_PED_RAGDOLL_ON_COLLISION(iLocal_63[0], true, false);
-			PED::SET_PED_TO_RAGDOLL(iLocal_63[0], 3000, 5000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iLocal_63[0], 3000, 5000, 0, false, false, 0);
 			func_11(&uLocal_1801, 1, 1);
 			iVar0 = CAM::CREATE_CAMERA(joaat("DEFAULT_SCRIPTED_CAMERA"), false);
 			CAM::SET_CAM_COORD(iVar0, CAM::GET_FINAL_RENDERED_CAM_COORD());
@@ -60589,7 +60589,7 @@ int func_1570(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_1958(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_1568(iParam0))
 		{
@@ -81588,9 +81588,9 @@ void func_2339(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4
 	func_2344(iParam0, 128);
 }
 
-bool func_2340(int iParam0)
+bool func_2340(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_2341(int iParam0, int iParam1)
@@ -82283,7 +82283,7 @@ bool func_2373(int iParam0, float fParam1, int iParam2, bool bParam3, bool bPara
 
 void func_2374()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_2681();
 }
 
@@ -86005,7 +86005,7 @@ bool func_2487(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)

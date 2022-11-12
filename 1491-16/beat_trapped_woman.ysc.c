@@ -5078,7 +5078,7 @@ void func_106()
 			PLAYER::RESET_PLAYER_ARREST_STATE(PLAYER::PLAYER_ID());
 			PLAYER::_0xCBB54CC7FFFFAB86(PLAYER::PLAYER_ID(), 0, 0, 0);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(uLocal_443[1], joaat("REL_PLAYER_ENEMY"));
-			PED::_0xD8736EFDA38EDC5C(uLocal_443[1], ENTITY::GET_ENTITY_COORDS(Global_35, true, false), 3.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(uLocal_443[1], ENTITY::GET_ENTITY_COORDS(Global_35, true, false), 3.0f);
 			WEAPON::SET_CURRENT_PED_WEAPON(uLocal_443[1], joaat("WEAPON_REVOLVER_CATTLEMAN"), false, 0, false, false);
 			iLocal_619 = 1;
 			break;
@@ -17969,7 +17969,7 @@ int func_437(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_620(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_621(&(uParam1->f_22)));
 			func_213(iVar0, func_622(&(uParam1->f_22)), 0);
 		}
@@ -22755,7 +22755,7 @@ void func_594(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_837(func_836(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_837(func_836(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_531())
 	{
@@ -22788,7 +22788,7 @@ void func_596(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_837(func_836(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_837(func_836(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

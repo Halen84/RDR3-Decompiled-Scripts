@@ -39800,7 +39800,7 @@ bool func_892(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -42828,7 +42828,7 @@ void func_991(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1526(func_1525(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1526(func_1525(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_298())
 	{
@@ -42861,7 +42861,7 @@ void func_993(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1526(func_1525(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1526(func_1525(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -55644,8 +55644,8 @@ void func_1309(bool bParam0)
 	if ((func_1285(Global_35, iLocal_798, 1, 0) && func_1305(Global_35, sLocal_678.f_0)) || ((bParam0 && PED::IS_PED_FALLING(Global_35)) && INTERIOR::GET_INTERIOR_FROM_ENTITY(Global_35) == 0))
 	{
 		PED::DETACH_CARRIABLE_ENTITY(sLocal_678.f_0, false, false);
-		PED::SET_PED_TO_RAGDOLL(sLocal_678.f_0, 10000, 10000, 0, false, false, false);
-		PED::SET_PED_TO_RAGDOLL(Global_35, 10000, 10000, 0, false, false, false);
+		PED::SET_PED_TO_RAGDOLL(sLocal_678.f_0, 10000, 10000, 0, false, false, 0);
+		PED::SET_PED_TO_RAGDOLL(Global_35, 10000, 10000, 0, false, false, 0);
 		ENTITY::SET_ENTITY_HEALTH(sLocal_678.f_0, 0, 0);
 	}
 }
@@ -82767,7 +82767,7 @@ bool func_2240(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -90243,7 +90243,7 @@ void func_2545(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	}
 }
 
-bool func_2546(bool bParam0, int iParam1, int iParam2, int iParam3)
+bool func_2546(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -90255,7 +90255,7 @@ bool func_2546(bool bParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iParam2 = iVar0;
 	}
-	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(bParam0, iParam1, iParam2);
+	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(iParam0, iParam1, iParam2);
 	return bVar2;
 }
 

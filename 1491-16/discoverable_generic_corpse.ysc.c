@@ -1089,7 +1089,7 @@ void func_8(var uParam0)
 							TASK::_0xA6A76D666A281F2D(uLocal_67[0], func_78(uParam0, 0));
 							if (!func_79(Global_35, 1593.126f, -1769.049f, 52.7226f, -135.25f, 1065353216))
 							{
-								ENTITY::_0xC3ABCFBC7D74AFA5(uLocal_67[0], 7, 1);
+								ENTITY::_0xC3ABCFBC7D74AFA5(uLocal_67[0], 7, true);
 							}
 						}
 					}

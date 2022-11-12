@@ -10496,7 +10496,7 @@ void func_359()
 					{
 						func_341(&iLocal_53);
 						TASK::CLEAR_PED_TASKS_IMMEDIATELY(bLocal_140, false, true);
-						PED::SET_PED_TO_RAGDOLL(bLocal_140, 10, 20, 0, false, true, false);
+						PED::SET_PED_TO_RAGDOLL(bLocal_140, 10, 20, 0, false, true, 0);
 						PED::SET_PED_CONFIG_FLAG(bLocal_140, 128, true);
 						TASK::_0x9EBD34958AB6F824(bLocal_140);
 						func_310(iLocal_56, 0, 0, 0, 1, 0, 0, 0);
@@ -15757,7 +15757,7 @@ bool func_568(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -19841,9 +19841,9 @@ void func_755(bool bParam0, bool bParam1, bool bParam2)
 	AUDIO::_STOP_ALL_SCRIPTED_CONVERSIONS(bParam0, bParam1, bParam2);
 }
 
-bool func_756(int iParam0)
+bool func_756(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_757(char* sParam0)
@@ -30618,7 +30618,7 @@ bool func_1120(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -38634,7 +38634,7 @@ void func_1356(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1709(func_1708(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1709(func_1708(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_393())
 	{
@@ -38667,7 +38667,7 @@ void func_1358(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1709(func_1708(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1709(func_1708(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

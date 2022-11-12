@@ -40759,7 +40759,7 @@ bool func_935(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -43774,7 +43774,7 @@ void func_1063(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1620(func_1619(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1620(func_1619(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_305())
 	{
@@ -43807,7 +43807,7 @@ void func_1065(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1620(func_1619(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1620(func_1619(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -53642,7 +53642,7 @@ void func_1314(var uParam0)
 			}
 			if (func_176(iLocal_70, 4))
 			{
-				if (!AUDIO::_0xFE5C6177064BD390(1) && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
+				if (!AUDIO::_0xFE5C6177064BD390(true) && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
 				{
 					if (func_1309(&(vLocal_1072[13 /*3*/])) >= 8.0f || (func_936(&(vLocal_1072[1 /*3*/])) >= 12.0f && !func_921(sLocal_111[1 /*14*/], Global_35, 8.0f, 1)))
 					{
@@ -53663,7 +53663,7 @@ void func_1314(var uParam0)
 						}
 					}
 				}
-				if ((func_936(&(vLocal_1072[18 /*3*/])) >= 4.0f && !AUDIO::_0xFE5C6177064BD390(1)) && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
+				if ((func_936(&(vLocal_1072[18 /*3*/])) >= 4.0f && !AUDIO::_0xFE5C6177064BD390(true)) && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
 				{
 					if (bLocal_1369)
 					{
@@ -53719,7 +53719,7 @@ void func_1314(var uParam0)
 			{
 				func_219(&(vLocal_1072[1 /*3*/]));
 			}
-			if (((func_936(&(vLocal_1072[18 /*3*/])) >= 5.0f && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true)) && !AUDIO::_0xFE5C6177064BD390(1)) && func_1324(uParam0, "FIN2_CLEET_BEAT", 0))
+			if (((func_936(&(vLocal_1072[18 /*3*/])) >= 5.0f && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true)) && !AUDIO::_0xFE5C6177064BD390(true)) && func_1324(uParam0, "FIN2_CLEET_BEAT", 0))
 			{
 				func_219(&(vLocal_1072[18 /*3*/]));
 			}
@@ -57577,11 +57577,11 @@ void func_1364(var uParam0)
 			}
 			break;
 		case 7:
-			if (((!func_176(iLocal_70, 32) && !AUDIO::_0xFE5C6177064BD390(1)) && PED::IS_PED_SHOOTING(sLocal_111[1 /*14*/])) && func_1324(uParam0, "FIN2_MOREAGAIN", 0))
+			if (((!func_176(iLocal_70, 32) && !AUDIO::_0xFE5C6177064BD390(true)) && PED::IS_PED_SHOOTING(sLocal_111[1 /*14*/])) && func_1324(uParam0, "FIN2_MOREAGAIN", 0))
 			{
 				func_424(&iLocal_70, 32);
 			}
-			if (func_936(&(vLocal_1072[1 /*3*/])) >= 5.0f && !AUDIO::_0xFE5C6177064BD390(1))
+			if (func_936(&(vLocal_1072[1 /*3*/])) >= 5.0f && !AUDIO::_0xFE5C6177064BD390(true))
 			{
 				if (PED::IS_PED_SHOOTING(Global_35) && func_936(&(vLocal_1072[1 /*3*/])) >= 8.0f)
 				{
@@ -58893,7 +58893,7 @@ void func_1376()
 		case 1:
 			if (func_1283(Global_35, -1722.488f, 1117.849f, 320.2824f, sLocal_52))
 			{
-				TASK::TASK_FLY_TO_COORD(vLocal_1338.x, 1.5f, -1793.2f, 1201.2f, 324.2146f, 0, 1);
+				TASK::TASK_FLY_TO_COORD(vLocal_1338.x, 1.5f, -1793.2f, 1201.2f, 324.2146f, false, true);
 				ENTITY::SET_ENTITY_INVINCIBLE(vLocal_1338.x, false);
 				vLocal_1338.f_2 = vLocal_1338.z + 1;
 			}
@@ -87045,7 +87045,7 @@ bool func_2343(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -90116,7 +90116,7 @@ bool func_2488(int iParam0, var uParam1)
 
 void func_2489()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}

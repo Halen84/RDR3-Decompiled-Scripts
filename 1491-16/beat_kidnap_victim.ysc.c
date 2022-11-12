@@ -1499,7 +1499,7 @@ bool func_39()
 	func_144();
 	PED::SET_PED_RESET_FLAG(Global_35, 224, true);
 	func_19();
-	ENTITY::_0xC3ABCFBC7D74AFA5(uLocal_392[1], 8, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(uLocal_392[1], 8, true);
 	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 1466789374))
 	{
 		WEAPON::_HIDE_PED_WEAPONS(Global_35, 2, true);
@@ -16052,7 +16052,7 @@ int func_446(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_560(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_561(&(uParam1->f_22)));
 			func_563(iVar0, func_562(&(uParam1->f_22)), 0);
 		}

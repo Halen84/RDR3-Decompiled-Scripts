@@ -870,7 +870,7 @@ void func_1(var uParam0)
 					UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(3, joaat("CABR01"), MISC::GET_HASH_KEY(sVar4), joaat("HUD_TOASTS"));
 					MISSIONDATA::_MISSIONDATA_SET_MISSION_RATING(joaat("CABR01"), func_24());
 					UILOG::_UILOG_MARK_MISSION_COMPLETED(joaat("CABR01"));
-					UILOG::_0xA31013798FADCADC(3, joaat("CABR01"), 1);
+					UILOG::_UILOG_SET_DISPLAY_COMPLETION_RATING(3, joaat("CABR01"), true);
 				}
 				else
 				{
@@ -9219,7 +9219,7 @@ bool func_197(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_264 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_264 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_270 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_264);
@@ -19724,9 +19724,9 @@ bool func_509(bool bParam0)
 	return PED::IS_PED_ON_MOUNT(bParam0);
 }
 
-bool func_510(int iParam0)
+bool func_510(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_511()
@@ -36071,7 +36071,7 @@ Vector3 func_1047()
 
 void func_1048(int iParam0)
 {
-	int iVar0;
+	bool bVar0;
 	int iVar1;
 	struct<4> /*32*/ sVar2;
 	int iVar6;
@@ -36086,8 +36086,8 @@ void func_1048(int iParam0)
 	{
 		return;
 	}
-	iVar0 = func_635(iParam0);
-	if (!ENTITY::DOES_ENTITY_EXIST(iVar0))
+	bVar0 = func_635(iParam0);
+	if (!ENTITY::DOES_ENTITY_EXIST(bVar0))
 	{
 		return;
 	}
@@ -36095,7 +36095,7 @@ void func_1048(int iParam0)
 	while (iVar6 < 3)
 	{
 		iVar1 = func_1365(iVar6);
-		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar2, iVar0, iVar1, 0))
+		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar2, bVar0, iVar1, 0))
 		{
 		}
 		else
@@ -46699,7 +46699,7 @@ void func_1411(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1564(func_1563(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1564(func_1563(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_116())
 	{
@@ -46732,7 +46732,7 @@ void func_1413(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1564(func_1563(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1564(func_1563(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -50926,13 +50926,13 @@ int func_1577(int iParam0)
 
 bool func_1578(int iParam0, int iParam1, int iParam2, var uParam3)
 {
-	int iVar0;
+	bool bVar0;
 	struct<4> /*32*/ sVar1;
 	int iVar5;
 
 	if (func_636(iParam1) && !func_637(iParam1))
 	{
-		iVar0 = func_635(iParam1);
+		bVar0 = func_635(iParam1);
 	}
 	else
 	{
@@ -50940,7 +50940,7 @@ bool func_1578(int iParam0, int iParam1, int iParam2, var uParam3)
 	}
 	func_1369(uParam3);
 	iVar5 = func_1365(iParam2);
-	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, iVar0, iVar5, 0))
+	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, bVar0, iVar5, 0))
 	{
 		return false;
 	}

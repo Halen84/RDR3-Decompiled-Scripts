@@ -1389,8 +1389,8 @@ void func_53(var uParam0, int iParam1, bool bParam2)
 			}
 			break;
 		case 3:
-			PED::_0x19173C3F15367B54(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
-			PED::_0x5708EDD71B50C008(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
+			PED::_SET_PLAYER_GREET_DISABLED_FOR_PED(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
+			PED::_SET_PLAYER_ANTAGONIZE_DISABLED_FOR_PED(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
 			break;
 	}
 	uParam0->f_107[iParam1 /*113*/].f_32.f_62 = 1;
@@ -12714,7 +12714,7 @@ void func_413(int iParam0, float fParam1, bool bParam2)
 
 void func_414(int iParam0)
 {
-	int iVar0;
+	bool bVar0;
 
 	if (!func_103(iParam0))
 	{
@@ -12724,8 +12724,8 @@ void func_414(int iParam0)
 	{
 		return;
 	}
-	iVar0 = func_104(iParam0);
-	func_445(iVar0);
+	bVar0 = func_104(iParam0);
+	func_445(bVar0);
 	func_106(iParam0, (1 << 13), 1);
 }
 
@@ -13491,14 +13491,14 @@ struct<7> /*56*/ func_424(int iParam0, int iParam1, Vector3 vParam2, bool bParam
 
 void func_425(int iParam0, bool bParam1)
 {
-	int iVar0;
+	bool bVar0;
 
 	if (!func_103(iParam0))
 	{
 		return;
 	}
-	iVar0 = func_222(iParam0);
-	func_445(iVar0);
+	bVar0 = func_222(iParam0);
+	func_445(bVar0);
 	func_55(iParam0, 60, 1);
 	if (bParam1)
 	{
@@ -14243,55 +14243,55 @@ float func_444(float fParam0, float fParam1, float fParam2)
 	return fParam0;
 }
 
-void func_445(int iParam0)
+void func_445(bool bParam0)
 {
-	if (func_462(iParam0, 0))
+	if (func_462(bParam0, 0))
 	{
 		return;
 	}
-	ENTITY::SET_ENTITY_INVINCIBLE(iParam0, true);
-	PED::SET_PED_CONFIG_FLAG(iParam0, 179, true);
-	ENTITY::SET_ENTITY_PROOFS(iParam0, 127, false);
-	if (FIRE::IS_ENTITY_ON_FIRE(iParam0))
+	ENTITY::SET_ENTITY_INVINCIBLE(bParam0, true);
+	PED::SET_PED_CONFIG_FLAG(bParam0, 179, true);
+	ENTITY::SET_ENTITY_PROOFS(bParam0, 127, false);
+	if (FIRE::IS_ENTITY_ON_FIRE(bParam0))
 	{
-		FIRE::STOP_ENTITY_FIRE(iParam0, 0);
-		ENTITY::SET_ENTITY_HEALTH(iParam0, ENTITY::GET_ENTITY_MAX_HEALTH(iParam0, false), 0);
+		FIRE::STOP_ENTITY_FIRE(bParam0, 0);
+		ENTITY::SET_ENTITY_HEALTH(bParam0, ENTITY::GET_ENTITY_MAX_HEALTH(bParam0, false), 0);
 	}
 }
 
-void func_446(int iParam0)
+void func_446(bool bParam0)
 {
-	if (func_462(iParam0, 0))
+	if (func_462(bParam0, 0))
 	{
 		return;
 	}
-	ENTITY::SET_ENTITY_INVINCIBLE(iParam0, false);
-	PED::SET_PED_CONFIG_FLAG(iParam0, 179, false);
-	ENTITY::SET_ENTITY_PROOFS(iParam0, 0, false);
+	ENTITY::SET_ENTITY_INVINCIBLE(bParam0, false);
+	PED::SET_PED_CONFIG_FLAG(bParam0, 179, false);
+	ENTITY::SET_ENTITY_PROOFS(bParam0, 0, false);
 }
 
-void func_447(int iParam0)
+void func_447(bool bParam0)
 {
-	if (func_462(iParam0, 0))
+	if (func_462(bParam0, 0))
 	{
 		return;
 	}
-	PED::SET_PED_CAN_RAGDOLL(iParam0, true);
-	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(iParam0, 1048575);
-	PED::SET_RAGDOLL_BLOCKING_FLAGS(iParam0, 8229);
-	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(iParam0, false);
+	PED::SET_PED_CAN_RAGDOLL(bParam0, true);
+	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(bParam0, 1048575);
+	PED::SET_RAGDOLL_BLOCKING_FLAGS(bParam0, 8229);
+	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(bParam0, false);
 }
 
-void func_448(int iParam0)
+void func_448(bool bParam0)
 {
-	if (func_462(iParam0, 0))
+	if (func_462(bParam0, 0))
 	{
 		return;
 	}
-	PED::SET_PED_CAN_RAGDOLL(iParam0, true);
-	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(iParam0, 1048575);
-	PED::SET_RAGDOLL_BLOCKING_FLAGS(iParam0, 1);
-	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(iParam0, true);
+	PED::SET_PED_CAN_RAGDOLL(bParam0, true);
+	PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(bParam0, 1048575);
+	PED::SET_RAGDOLL_BLOCKING_FLAGS(bParam0, 1);
+	PED::SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT(bParam0, true);
 }
 
 int func_449(int iParam0)
@@ -14652,17 +14652,17 @@ bool func_461(int iParam0)
 	return func_475(iParam0);
 }
 
-bool func_462(int iParam0, bool bParam1)
+bool func_462(bool bParam0, bool bParam1)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(bParam0))
 	{
 		if (bParam1)
 		{
-			return PED::IS_PED_DEAD_OR_DYING(iParam0, true);
+			return PED::IS_PED_DEAD_OR_DYING(bParam0, true);
 		}
 		else
 		{
-			return ENTITY::IS_ENTITY_DEAD(iParam0);
+			return ENTITY::IS_ENTITY_DEAD(bParam0);
 		}
 	}
 	return true;

@@ -81,7 +81,7 @@ void func_2(var uParam0, bool bParam1)
 		{
 			if (!func_7(uParam0, 32))
 			{
-				PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 10000, 20000, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 10000, 20000, 0, false, true, 0);
 			}
 			ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(uParam0->f_42));
 		}
@@ -560,7 +560,7 @@ bool func_19(var uParam0)
 	}
 	if (bVar0)
 	{
-		PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 1000, 60000, 0, false, true, false);
+		PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 1000, 60000, 0, false, true, 0);
 	}
 	return bVar0;
 }
@@ -574,7 +574,7 @@ bool func_20(var uParam0)
 			if (PED::_HAS_PED_TAKEN_GORE_DAMAGE(uParam0->f_42, 10) || PED::_HAS_PED_TAKEN_GORE_DAMAGE(uParam0->f_42, 13))
 			{
 				PED::_0x5A1A929C8B729B4A(uParam0->f_42);
-				PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 1000, 60000, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 1000, 60000, 0, false, true, 0);
 				ENTITY::SET_ENTITY_VISIBLE(uParam0->f_43, false);
 				ENTITY::SET_ENTITY_VISIBLE(uParam0->f_42, true);
 				func_35(uParam0);
@@ -623,7 +623,7 @@ bool func_20(var uParam0)
 		}
 		if (func_7(uParam0, 4) && !func_7(uParam0, 32))
 		{
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 1000, 60000, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_42, 1000, 60000, 0, false, true, 0);
 			func_27(uParam0, 1);
 			func_22(uParam0, 32);
 			func_35(uParam0);

@@ -43251,7 +43251,7 @@ bool func_923(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -47069,7 +47069,7 @@ bool func_1043(int iParam0)
 
 void func_1044(int iParam0)
 {
-	int iVar0;
+	bool bVar0;
 	int iVar1;
 	struct<4> /*32*/ sVar2;
 	int iVar6;
@@ -47084,8 +47084,8 @@ void func_1044(int iParam0)
 	{
 		return;
 	}
-	iVar0 = func_239(iParam0);
-	if (!ENTITY::DOES_ENTITY_EXIST(iVar0))
+	bVar0 = func_239(iParam0);
+	if (!ENTITY::DOES_ENTITY_EXIST(bVar0))
 	{
 		return;
 	}
@@ -47093,7 +47093,7 @@ void func_1044(int iParam0)
 	while (iVar6 < 3)
 	{
 		iVar1 = func_1643(iVar6);
-		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar2, iVar0, iVar1, 0))
+		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar2, bVar0, iVar1, 0))
 		{
 		}
 		else
@@ -47150,7 +47150,7 @@ void func_1047(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1645(func_1644(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1645(func_1644(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_326())
 	{
@@ -47183,7 +47183,7 @@ void func_1049(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1645(func_1644(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1645(func_1644(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -58286,9 +58286,9 @@ bool func_1318(Vector3 vParam0, Vector3 vParam3, float fParam6, bool bParam7)
 	return func_1626(vParam0, vParam3) <= (fParam6 * fParam6);
 }
 
-bool func_1319(int iParam0)
+bool func_1319(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1320(bool bParam0)
@@ -58663,14 +58663,14 @@ void func_1327(var uParam0)
 				ENTITY::FREEZE_ENTITY_POSITION(sLocal_218[4 /*8*/], false);
 				vVar0 = { func_931(4, 1, 1) /*4*/ };
 				func_1823();
-				TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, 1, 0);
+				TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, true, false);
 				func_1824(sLocal_218[4 /*8*/], 0);
 				if (!ENTITY::IS_ENTITY_DEAD(sLocal_218[5 /*8*/]))
 				{
 					vVar0 = { func_931(5, 1, 1) /*4*/ };
 					ENTITY::FREEZE_ENTITY_POSITION(sLocal_218[5 /*8*/], false);
 					func_1823();
-					TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, 1, 0);
+					TASK::TASK_FLY_TO_COORD(0, 2.0f, vVar0, true, false);
 					func_1824(sLocal_218[5 /*8*/], 0);
 				}
 				sLocal_218[4 /*8*/].f_2 = 21;
@@ -93997,7 +93997,7 @@ bool func_2449(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -96619,13 +96619,13 @@ int func_2554(int iParam0)
 
 bool func_2555(int iParam0, int iParam1, int iParam2, var uParam3)
 {
-	int iVar0;
+	bool bVar0;
 	struct<4> /*32*/ sVar1;
 	int iVar5;
 
 	if (func_576(iParam1) && !func_1517(iParam1))
 	{
-		iVar0 = func_239(iParam1);
+		bVar0 = func_239(iParam1);
 	}
 	else
 	{
@@ -96633,7 +96633,7 @@ bool func_2555(int iParam0, int iParam1, int iParam2, var uParam3)
 	}
 	func_2404(uParam3);
 	iVar5 = func_1643(iParam2);
-	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, iVar0, iVar5, 0))
+	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, bVar0, iVar5, 0))
 	{
 		return false;
 	}

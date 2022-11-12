@@ -393,7 +393,7 @@ void func_21()
 				}
 				else
 				{
-					sVar5 = NETWORK::_0xB5C4B18B12A2AF23(&sVar2, 0);
+					sVar5 = NETWORK::_REQUEST_PEDSHOT_TEXTURE_DOWNLOAD(&sVar2, 0);
 					if (!MISC::IS_STRING_NULL_OR_EMPTY(sVar5))
 					{
 						iVar6 = MISC::GET_HASH_KEY(sVar5);
@@ -404,7 +404,7 @@ void func_21()
 						iVar6 = 0;
 						iVar7 = 0;
 					}
-					if (DATABINDING::_0x81D7183E7A8ECA72(Global_1935689.f_1225.f_5[iVar0 /*30*/].f_15) != iVar6)
+					if (DATABINDING::_DATABINDING_READ_HASH(Global_1935689.f_1225.f_5[iVar0 /*30*/].f_15) != iVar6)
 					{
 						DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING(Global_1935689.f_1225.f_5[iVar0 /*30*/].f_15, iVar6);
 						DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING(Global_1935689.f_1225.f_5[iVar0 /*30*/].f_16, iVar7);

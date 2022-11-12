@@ -835,12 +835,12 @@ int func_23(int iParam0)
 	return -1;
 }
 
-bool func_24(bool bParam0, char* sParam1)
+bool func_24(int iParam0, char* sParam1)
 {
 	struct<7> /*56*/ sVar0;
 	int iVar8;
 
-	if (!AUDIO::IS_AMBIENT_SPEECH_PLAYING(bParam0))
+	if (!AUDIO::IS_AMBIENT_SPEECH_PLAYING(iParam0))
 	{
 		sVar0.f_5 = 1;
 		sVar0.f_6 = 1;
@@ -848,7 +848,7 @@ bool func_24(bool bParam0, char* sParam1)
 		sVar0.f_3 = joaat("SPEECH_PARAMS_BEAT_SHOUTED_CRITICAL");
 		sVar0.f_4 = Global_35;
 		sVar0.f_5 = 0;
-		iVar8 = AUDIO::_0x72E4D1C4639BC465(bParam0, &sVar0);
+		iVar8 = AUDIO::_0x72E4D1C4639BC465(iParam0, &sVar0);
 		if (iVar8 >= 0)
 		{
 			AUDIO::_0xB18FEC133C7C6C69(iVar8);

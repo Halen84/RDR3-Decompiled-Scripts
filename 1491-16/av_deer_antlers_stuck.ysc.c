@@ -2847,7 +2847,7 @@ void func_69(int iParam0, Vector3 vParam1, bool bParam4)
 void func_70(var uParam0)
 {
 	PHYSICS::ACTIVATE_PHYSICS(uParam0->f_20[1 /*14*/]);
-	PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, true, false);
+	PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, true, 0);
 	if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_20[0 /*14*/]))
 	{
 		if (!func_65(uParam0->f_20[0 /*14*/], joaat("SCRIPT_TASK_FLEE")))

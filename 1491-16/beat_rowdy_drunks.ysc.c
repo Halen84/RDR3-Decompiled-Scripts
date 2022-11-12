@@ -1241,7 +1241,7 @@ bool func_38()
 		if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uLocal_417[0], sLocal_384.f_0) && FIRE::IS_ENTITY_ON_FIRE(uLocal_417[0]))
 		{
 			func_104(0);
-			PED::SET_PED_TO_RAGDOLL(uLocal_417[0], 200, 200, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(uLocal_417[0], 200, 200, 0, false, true, 0);
 		}
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(uLocal_417[1]))
@@ -1249,7 +1249,7 @@ bool func_38()
 		if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uLocal_417[1], sLocal_384.f_0) && FIRE::IS_ENTITY_ON_FIRE(uLocal_417[1]))
 		{
 			func_104(1);
-			PED::SET_PED_TO_RAGDOLL(uLocal_417[1], 200, 200, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(uLocal_417[1], 200, 200, 0, false, true, 0);
 		}
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(uLocal_417[2]))
@@ -1257,7 +1257,7 @@ bool func_38()
 		if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uLocal_417[2], sLocal_384.f_0) && FIRE::IS_ENTITY_ON_FIRE(uLocal_417[2]))
 		{
 			func_104(2);
-			PED::SET_PED_TO_RAGDOLL(uLocal_417[2], 200, 200, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(uLocal_417[2], 200, 200, 0, false, true, 0);
 		}
 	}
 	func_105();
@@ -3968,7 +3968,7 @@ void func_120()
 		ENTITY::SET_ENTITY_HEALTH(uLocal_417[2], 5, 0);
 		PED::_SET_PED_DESIRED_LOCO_MOTION_TYPE(uLocal_417[2], "INJURED_GENERAL");
 		PED::KNOCK_OFF_PED_PROP(uLocal_417[2], false, true, false, false);
-		PED::SET_PED_TO_RAGDOLL(uLocal_417[2], 5000, 5000, 0, false, false, false);
+		PED::SET_PED_TO_RAGDOLL(uLocal_417[2], 5000, 5000, 0, false, false, 0);
 	}
 	if ((!func_25(4) && !PED::IS_PED_RAGDOLL(uLocal_417[2])) && !TASK::IS_PED_GETTING_UP(uLocal_417[2]))
 	{
@@ -12588,7 +12588,7 @@ int func_361(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_488(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_489(&(uParam1->f_22)));
 			func_491(iVar0, func_490(&(uParam1->f_22)), 0);
 		}

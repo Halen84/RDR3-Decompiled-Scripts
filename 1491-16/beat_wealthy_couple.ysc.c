@@ -3468,7 +3468,7 @@ void func_112()
 				}
 				else if (sLocal_14.f_46)
 				{
-					PED::SET_PED_TO_RAGDOLL(uLocal_312[2], 2000, 5000, 1, true, false, false);
+					PED::SET_PED_TO_RAGDOLL(uLocal_312[2], 2000, 5000, 1, true, false, 0);
 					TASK::TASK_FLEE_PED(uLocal_312[2], Global_35, 4, 0, -1.0f, -1, 0);
 					func_16(9);
 				}
@@ -3573,7 +3573,7 @@ void func_112()
 				PED::SET_PED_CONFIG_FLAG(uLocal_312[1], 26, false);
 				if (!bVar3 && func_296())
 				{
-					PED::SET_PED_TO_RAGDOLL(uLocal_312[2], 2000, 5000, 1, true, false, false);
+					PED::SET_PED_TO_RAGDOLL(uLocal_312[2], 2000, 5000, 1, true, false, 0);
 					TASK::TASK_FLEE_PED(uLocal_312[2], Global_35, 4, 0, -1.0f, -1, 0);
 					func_16(9);
 				}
@@ -14037,7 +14037,7 @@ int func_417(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_587(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_588(&(uParam1->f_22)));
 			func_590(iVar0, func_589(&(uParam1->f_22)), 0);
 		}

@@ -1399,8 +1399,8 @@ void func_54(var uParam0, int iParam1, bool bParam2)
 			}
 			break;
 		case 3:
-			PED::_0x19173C3F15367B54(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
-			PED::_0x5708EDD71B50C008(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
+			PED::_SET_PLAYER_GREET_DISABLED_FOR_PED(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
+			PED::_SET_PLAYER_ANTAGONIZE_DISABLED_FOR_PED(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
 			break;
 	}
 	uParam0->f_107[iParam1 /*113*/].f_32.f_62 = 1;
@@ -3418,7 +3418,7 @@ bool func_94(var uParam0)
 {
 	if (func_200(uParam0, iLocal_14))
 	{
-		PED::SET_PED_TO_RAGDOLL(func_49(uParam0, iLocal_14), 1000, 5000, 0, false, true, false);
+		PED::SET_PED_TO_RAGDOLL(func_49(uParam0, iLocal_14), 1000, 5000, 0, false, true, 0);
 		func_201(uParam0, iLocal_14);
 	}
 	return true;

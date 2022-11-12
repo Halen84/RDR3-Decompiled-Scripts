@@ -5456,7 +5456,7 @@ void func_236(int iParam0)
 	Vector3 vVar2;
 	struct<8> /*64*/ sVar5;
 	struct<8> /*64*/ sVar13;
-	int iVar21;
+	var uVar21;
 
 	if (!func_293(iParam0))
 	{
@@ -5476,7 +5476,7 @@ void func_236(int iParam0)
 	MemCopy(&sVar5, {Global_1835011[iParam0 /*74*/].f_8}, 8);
 	sVar13 = { sVar5 /*8*/ };
 	strcat_s(&sVar13, 64, "_DESC");
-	UILOG::_UILOG_ADD_ENTRY_HASH(1, iVar1, vVar2, Global_1835011[iParam0 /*74*/].f_26, MISC::GET_HASH_KEY(&sVar13), iVar21);
+	UILOG::_UILOG_ADD_ENTRY_HASH(1, iVar1, vVar2, Global_1835011[iParam0 /*74*/].f_26, MISC::GET_HASH_KEY(&sVar13), uVar21);
 	UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(1, iVar1, Global_1835011[iParam0 /*74*/].f_26, joaat("TOAST_LOG_BLIPS"));
 }
 

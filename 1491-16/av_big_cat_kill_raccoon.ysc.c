@@ -2795,7 +2795,7 @@ void func_67(var uParam0)
 	{
 		if (ENTITY::HAS_ANIM_EVENT_FIRED(uParam0->f_20[1 /*14*/], -756517419))
 		{
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, 0);
 			func_69(uParam0->f_20[1 /*14*/], 0, 0);
 		}
 		else

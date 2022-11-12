@@ -11902,7 +11902,7 @@ void func_511(int iParam0, Vector3 vParam1)
 
 void func_512()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_657();
 }
 

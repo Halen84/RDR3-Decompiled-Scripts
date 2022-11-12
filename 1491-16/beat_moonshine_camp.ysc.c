@@ -4201,7 +4201,7 @@ void func_126(var uParam0, int iParam1)
 
 void func_127()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_173();
 }
 
@@ -19281,7 +19281,7 @@ int func_498(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_695(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_696(&(uParam1->f_22)));
 			func_698(iVar0, func_697(&(uParam1->f_22)), 0);
 		}

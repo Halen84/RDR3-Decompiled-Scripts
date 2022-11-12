@@ -11216,7 +11216,7 @@ void func_439(int* iParam0, bool bParam1)
 
 void func_440()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_572();
 }
 

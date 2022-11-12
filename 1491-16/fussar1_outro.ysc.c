@@ -2497,7 +2497,7 @@ int func_113(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam4
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_149(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_111(iParam0))
 		{

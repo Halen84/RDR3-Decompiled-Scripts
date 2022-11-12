@@ -2878,9 +2878,9 @@ bool func_69(var uParam0, Vector3 vParam1, bool bParam4, int iParam5, bool bPara
 	return bVar0;
 }
 
-bool func_70(int iParam0)
+bool func_70(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_71(int* iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6, bool bParam7, int iParam8)

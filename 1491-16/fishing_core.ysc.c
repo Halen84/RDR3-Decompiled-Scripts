@@ -14532,7 +14532,7 @@ void func_555(var uParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST((uParam0[iParam1 /*263*/])->f_13))
 		{
-			TASK::_0xCE71C2F9BAA3F975(func_53(uParam0, iParam1), (uParam0[iParam1 /*263*/])->f_13);
+			TASK::_PED_FISHINGROD_HOOK_OBJECT(func_53(uParam0, iParam1), (uParam0[iParam1 /*263*/])->f_13);
 		}
 	}
 }
@@ -20859,9 +20859,9 @@ int func_771(var uParam0)
 	return 3;
 }
 
-bool func_772(int iParam0)
+bool func_772(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 int func_773(int iParam0)

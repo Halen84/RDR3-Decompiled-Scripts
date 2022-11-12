@@ -4640,7 +4640,7 @@ int func_119(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_376(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_377(&(uParam1->f_22)));
 			func_222(iVar0, func_378(&(uParam1->f_22)), 0);
 		}
@@ -5317,7 +5317,7 @@ void func_138(var uParam0, int* iParam1, var uParam2, int iParam3, bool bParam4)
 
 void func_139()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_410();
 }
 
@@ -7295,7 +7295,7 @@ void func_230(int iParam0)
 				func_221(&(iLocal_769[0]), &(sLocal_679[0 /*21*/]), &sLocal_701, 1, 1);
 				if (func_107((1 << 11)) || func_107(256))
 				{
-					PED::_0x19173C3F15367B54(iLocal_769[0], PLAYER::PLAYER_ID(), 120000);
+					PED::_SET_PLAYER_GREET_DISABLED_FOR_PED(iLocal_769[0], PLAYER::PLAYER_ID(), 120000);
 				}
 				PED::SET_PED_KEEP_TASK(iLocal_769[0], true);
 				ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(iLocal_769[0]));

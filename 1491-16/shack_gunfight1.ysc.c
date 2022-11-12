@@ -2931,7 +2931,7 @@ void func_94(var uParam0, bool bParam1, Vector3 vParam2, float fParam5, float fP
 			}
 			else
 			{
-				TASK::TASK_FLY_TO_COORD(bParam1, fParam14, vParam2, 1, 0);
+				TASK::TASK_FLY_TO_COORD(bParam1, fParam14, vParam2, true, false);
 				*uParam0 = 3;
 			}
 			break;

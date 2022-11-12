@@ -33160,7 +33160,7 @@ void func_1082(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1361(func_1360(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1361(func_1360(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_607())
 	{
@@ -33179,7 +33179,7 @@ void func_1083(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1361(func_1360(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1361(func_1360(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

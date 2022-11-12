@@ -974,7 +974,7 @@ void func_1(var uParam0)
 					UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(3, joaat("CABR01"), MISC::GET_HASH_KEY(sVar4), joaat("HUD_TOASTS"));
 					MISSIONDATA::_MISSIONDATA_SET_MISSION_RATING(joaat("CABR01"), func_24());
 					UILOG::_UILOG_MARK_MISSION_COMPLETED(joaat("CABR01"));
-					UILOG::_0xA31013798FADCADC(3, joaat("CABR01"), 1);
+					UILOG::_UILOG_SET_DISPLAY_COMPLETION_RATING(3, joaat("CABR01"), true);
 				}
 				else
 				{
@@ -4671,7 +4671,7 @@ void func_109()
 {
 	struct<15> /*120*/ sVar0;
 	int iVar17;
-	int iVar18;
+	bool bVar18;
 
 	sVar0.f_0 = Global_35;
 	sVar0.f_12 = 8;
@@ -4681,11 +4681,11 @@ void func_109()
 	{
 		if (func_58(iVar17))
 		{
-			iVar18 = func_65(iVar17);
-			if (ENTITY::DOES_ENTITY_EXIST(iVar18))
+			bVar18 = func_65(iVar17);
+			if (ENTITY::DOES_ENTITY_EXIST(bVar18))
 			{
-				sVar0.f_14 = iVar18;
-				sVar0.f_3 = iVar18;
+				sVar0.f_14 = bVar18;
+				sVar0.f_3 = bVar18;
 				MISC::_CREATE_AI_MEMORY(&sVar0, 17);
 			}
 		}
@@ -9225,7 +9225,7 @@ bool func_197(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_264 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_264 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_270 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_264);
@@ -9411,43 +9411,43 @@ bool func_207()
 	return false;
 }
 
-bool func_208(int iParam0, float fParam1)
+bool func_208(bool bParam0, float fParam1)
 {
-	if (BUILTIN::VDIST(Global_36, ENTITY::GET_ENTITY_COORDS(iParam0, true, false)) > fParam1)
+	if (BUILTIN::VDIST(Global_36, ENTITY::GET_ENTITY_COORDS(bParam0, true, false)) > fParam1)
 	{
 		return true;
 	}
 	return false;
 }
 
-bool func_209(int iParam0)
+bool func_209(bool bParam0)
 {
-	if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iParam0, Global_35, true, true))
+	if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(bParam0, Global_35, true, true))
 	{
-		if ((WEAPON::_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON_RECENTLY(iParam0, joaat("WEAPON_THROWN_DYNAMITE"), 100) || WEAPON::_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON_RECENTLY(iParam0, joaat("WEAPON_THROWN_DYNAMITE"), 100)) || WEAPON::_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON_RECENTLY(iParam0, joaat("WEAPON_THROWN_MOLOTOV"), 100))
+		if ((WEAPON::_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON_RECENTLY(bParam0, joaat("WEAPON_THROWN_DYNAMITE"), 100) || WEAPON::_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON_RECENTLY(bParam0, joaat("WEAPON_THROWN_DYNAMITE"), 100)) || WEAPON::_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON_RECENTLY(bParam0, joaat("WEAPON_THROWN_MOLOTOV"), 100))
 		{
 			return true;
 		}
 	}
-	ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(iParam0);
+	ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(bParam0);
 	return false;
 }
 
-bool func_210(int iParam0)
+bool func_210(bool bParam0)
 {
-	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(bParam0))
 	{
 		return false;
 	}
-	if (ENTITY::IS_ENTITY_DEAD(iParam0))
+	if (ENTITY::IS_ENTITY_DEAD(bParam0))
 	{
 		return true;
 	}
-	if (TASK::IS_PED_IN_WRITHE(iParam0))
+	if (TASK::IS_PED_IN_WRITHE(bParam0))
 	{
 		return true;
 	}
-	if (PED::IS_PED_FATALLY_INJURED(iParam0))
+	if (PED::IS_PED_FATALLY_INJURED(bParam0))
 	{
 		return true;
 	}
@@ -11559,7 +11559,7 @@ void func_256()
 	func_608(128);
 }
 
-void func_257(int iParam0, int iParam1, bool bParam2, int iParam3, bool bParam4)
+void func_257(bool bParam0, int iParam1, bool bParam2, int iParam3, bool bParam4)
 {
 	bool bVar0;
 
@@ -11907,7 +11907,7 @@ int func_274(bool bParam0)
 	int iVar1;
 	var uVar2;
 	int iVar3;
-	bool bVar4;
+	int iVar4;
 
 	if (bParam0)
 	{
@@ -11921,8 +11921,8 @@ int func_274(bool bParam0)
 	iVar3 = 0;
 	while (iVar3 < iVar1)
 	{
-		bVar4 = PED::GET_PED_AS_GROUP_MEMBER(func_50(), iVar3);
-		if (func_619(bVar4))
+		iVar4 = PED::GET_PED_AS_GROUP_MEMBER(func_50(), iVar3);
+		if (func_619(iVar4))
 		{
 			iVar0++;
 		}
@@ -19068,9 +19068,9 @@ bool func_501(bool bParam0)
 	return false;
 }
 
-bool func_502(int iParam0)
+bool func_502(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_503(bool bParam0, bool bParam1, bool bParam2)
@@ -21773,21 +21773,21 @@ void func_569(var uParam0, int iParam1, bool bParam2)
 
 void func_570(int iParam0, bool bParam1, char* sParam2)
 {
-	int iVar0;
+	bool bVar0;
 
-	iVar0 = func_65(iParam0);
-	if (!func_58(iParam0) || ENTITY::IS_ENTITY_DEAD(iVar0))
+	bVar0 = func_65(iParam0);
+	if (!func_58(iParam0) || ENTITY::IS_ENTITY_DEAD(bVar0))
 	{
 		return;
 	}
-	PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(iVar0);
+	PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(bVar0);
 	if (bParam1)
 	{
-		TASK::CLEAR_PED_TASKS_IMMEDIATELY(iVar0, false, true);
+		TASK::CLEAR_PED_TASKS_IMMEDIATELY(bVar0, false, true);
 	}
 	else
 	{
-		TASK::CLEAR_PED_TASKS(iVar0, true, false);
+		TASK::CLEAR_PED_TASKS(bVar0, true, false);
 	}
 }
 
@@ -30852,18 +30852,18 @@ void func_869(int iParam0, int iParam1)
 	Global_1900383[iParam0 /*45*/].f_24 |= iParam1;
 }
 
-void func_870(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3)
+void func_870(char[4] cParam0, char[4] cParam1, char[4] cParam2, var uParam3)
 {
 	int iVar0;
 
 	iVar0 = 0;
-	while (iVar0 < cParam3->f_97)
+	while (iVar0 < uParam3->f_97)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST((*cParam3)[iVar0 /*4*/]))
+		if (ENTITY::DOES_ENTITY_EXIST((*uParam3)[iVar0 /*4*/]))
 		{
-			if (!ENTITY::IS_ENTITY_DEAD((*cParam3)[iVar0 /*4*/]))
+			if (!ENTITY::IS_ENTITY_DEAD((*uParam3)[iVar0 /*4*/]))
 			{
-				AUDIO::ADD_PED_TO_CONVERSATION(&cParam0, (*cParam3)[iVar0 /*4*/], &((cParam3[iVar0 /*4*/])->f_1));
+				AUDIO::ADD_PED_TO_CONVERSATION(&cParam0, (*uParam3)[iVar0 /*4*/], &((uParam3[iVar0 /*4*/])->f_1));
 			}
 		}
 		iVar0++;
@@ -43692,7 +43692,7 @@ void func_1259(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1470(func_1469(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1470(func_1469(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_116())
 	{
@@ -43725,7 +43725,7 @@ void func_1261(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1470(func_1469(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1470(func_1469(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

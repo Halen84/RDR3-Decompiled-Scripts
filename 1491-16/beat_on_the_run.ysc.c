@@ -924,7 +924,7 @@ bool func_20()
 		if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(iLocal_324[0], sLocal_477.f_0) && FIRE::IS_ENTITY_ON_FIRE(iLocal_324[0]))
 		{
 			ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_477.f_0, func_88(1), iLocal_324[0]);
-			PED::SET_PED_TO_RAGDOLL(iLocal_324[0], 200, 200, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(iLocal_324[0], 200, 200, 0, false, true, 0);
 		}
 	}
 	if (func_73(sLocal_240[0 /*32*/].f_11, 0, 1) && !func_18((1 << 16)))
@@ -3258,7 +3258,7 @@ int func_74(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPara
 		if (func_252(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_253(&(uParam1->f_22)));
 			func_255(iVar0, func_254(&(uParam1->f_22)), 0);
 		}
@@ -7560,7 +7560,7 @@ void func_203(int iParam0, int iParam1, bool bParam2)
 
 void func_204()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_394();
 }
 

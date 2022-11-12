@@ -13003,40 +13003,40 @@ int func_387()
 void func_388(bool bParam0)
 {
 	int iVar0;
-	struct<16> /*128*/ sVar1;
+	char cVar1[128];
 
 	if (func_856(Global_1935630.f_3))
 	{
 		return;
 	}
 	iVar0 = 1;
-	sVar1.f_2 = 4;
-	sVar1.f_0 = "HUD_PENALTY_SOUNDSET";
-	sVar1.f_1 = "HUD_FAIL";
-	sVar1.f_3 = func_857();
-	sVar1.f_3.f_3 = iVar0;
+	cVar1.f_2 = 4;
+	cVar1.f_0 = "HUD_PENALTY_SOUNDSET";
+	cVar1.f_1 = "HUD_FAIL";
+	cVar1.f_3 = func_857();
+	cVar1.f_3.f_3 = iVar0;
 	if ((!func_858(Global_1347343.f_2) && !func_385(Global_1347343.f_11, 64)) || func_60((1 << 15)))
 	{
-		sVar1.f_7 = func_859();
-		sVar1.f_7.f_3 = iVar0;
+		cVar1.f_7 = func_859();
+		cVar1.f_7.f_3 = iVar0;
 	}
 	if (!func_385(Global_1347343.f_11, (1 << 10)) && !func_60((1 << 15)))
 	{
-		sVar1.f_11 = func_860();
-		sVar1.f_11.f_3 = iVar0;
+		cVar1.f_11 = func_860();
+		cVar1.f_11.f_3 = iVar0;
 	}
 	if (func_385(Global_1347343.f_11, 8))
 	{
-		sVar1.f_15 = func_861();
-		sVar1.f_15.f_3 = iVar0;
+		cVar1.f_15 = func_861();
+		cVar1.f_15.f_3 = iVar0;
 	}
 	if (Global_1347343.f_1 != 2)
 	{
-		Global_1935630.f_3 = func_862(&sVar1, "REPLAY_T", &(Global_1347343.f_3), 0, 1);
+		Global_1935630.f_3 = func_862(&cVar1, "REPLAY_T", &(Global_1347343.f_3), 0, 1);
 	}
 	else
 	{
-		Global_1935630.f_3 = func_863(&sVar1, "REPLAY_T_DEAD", 0, 1);
+		Global_1935630.f_3 = func_863(&cVar1, "REPLAY_T_DEAD", 0, 1);
 	}
 	PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::PLAYER_ID(), true);
 	if (!PED::IS_PED_IN_ANY_VEHICLE(Global_35, false) && !ENTITY::IS_ENTITY_ATTACHED(Global_35))
@@ -13659,7 +13659,7 @@ void func_409()
 
 void func_410()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_890();
 }
 
@@ -17307,7 +17307,7 @@ bool func_583(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -20696,7 +20696,7 @@ void func_721(var uParam0)
 			{
 				func_746(uParam0, 0);
 			}
-			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, true);
 			if (func_507(uParam0->f_67, 0))
 			{
 				if (func_739(uParam0))
@@ -27133,14 +27133,14 @@ int func_862(var uParam0, char* sParam1, var uParam2, int iParam3, bool bParam4)
 	return iVar3;
 }
 
-int func_863(var uParam0, char* sParam1, int iParam2, bool bParam3)
+int func_863(char* sParam0, char* sParam1, int iParam2, bool bParam3)
 {
 	struct<2> /*16*/ sVar0;
 	int iVar3;
 
 	sVar0.f_0 = iParam2;
 	sVar0.f_1 = sParam1;
-	iVar3 = UISTICKYFEED::_UI_STICKY_FEED_CREATE_DEATH_FAIL_MESSAGE(uParam0, &sVar0, bParam3);
+	iVar3 = UISTICKYFEED::_UI_STICKY_FEED_CREATE_DEATH_FAIL_MESSAGE(sParam0, &sVar0, bParam3);
 	return iVar3;
 }
 
@@ -30724,9 +30724,9 @@ int func_978(char* sParam0)
 	return 0;
 }
 
-bool func_979(int iParam0)
+bool func_979(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_980(bool bParam0)
@@ -34733,7 +34733,7 @@ bool func_1168(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -44995,7 +44995,7 @@ void func_1472(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1957(func_1956(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1957(func_1956(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_365())
 	{
@@ -45028,7 +45028,7 @@ void func_1474(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1957(func_1956(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1957(func_1956(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

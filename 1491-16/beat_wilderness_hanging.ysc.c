@@ -885,7 +885,7 @@ bool func_18()
 					{
 						if (!PED::IS_PED_RAGDOLL(iLocal_382[0]))
 						{
-							PED::SET_PED_TO_RAGDOLL(iLocal_382[0], 0, 0, 0, true, true, false);
+							PED::SET_PED_TO_RAGDOLL(iLocal_382[0], 0, 0, 0, true, true, 0);
 						}
 					}
 					iLocal_395 = 1;
@@ -1777,7 +1777,7 @@ int func_42(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPara
 		if (func_140(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_141(&(uParam1->f_22)));
 			func_69(iVar0, func_142(&(uParam1->f_22)), 0);
 		}

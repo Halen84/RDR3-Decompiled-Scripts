@@ -614,7 +614,7 @@ void func_20(int iParam0)
 		}
 		else
 		{
-			iVar24 = TASK::_0xE47DD64B9F02677D(sVar0.f_1[iVar23]);
+			iVar24 = TASK::_FIND_MODEL_FOR_ITEM(sVar0.f_1[iVar23]);
 			if (iVar24 == 0 && iParam0->f_26[iVar23] != 0)
 			{
 				iParam0->f_12[iVar23] = joaat("SCRIPTEDBALL");

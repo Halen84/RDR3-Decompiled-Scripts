@@ -1815,7 +1815,7 @@ int func_31(var uParam0)
 		{
 			ANIMSCENE::_DELETE_ANIM_SCENE(uParam0->f_3.f_1);
 			PHYSICS::ACTIVATE_PHYSICS(uParam0->f_20[2 /*14*/]);
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[2 /*14*/], 3000, 15000, 0, false, true, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[2 /*14*/], 3000, 15000, 0, false, true, 0);
 			return 1;
 		}
 	}
@@ -1878,7 +1878,7 @@ int func_31(var uParam0)
 			{
 				PHYSICS::ACTIVATE_PHYSICS(uParam0->f_20[2 /*14*/]);
 				ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(uParam0->f_3.f_1, uParam0->f_20[2 /*14*/].f_1, uParam0->f_20[2 /*14*/]);
-				PED::SET_PED_TO_RAGDOLL(uParam0->f_20[2 /*14*/], 3000, 15000, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(uParam0->f_20[2 /*14*/], 3000, 15000, 0, false, true, 0);
 			}
 		}
 	}

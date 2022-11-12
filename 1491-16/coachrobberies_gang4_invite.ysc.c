@@ -11439,7 +11439,7 @@ void func_408(int iParam0, Vector3 vParam1)
 	}
 }
 
-bool func_409(int iParam0)
+bool func_409(bool bParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -11449,11 +11449,11 @@ bool func_409(int iParam0)
 	int iVar8;
 	int iVar9;
 
-	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(bParam0))
 	{
 		return false;
 	}
-	if (ENTITY::IS_ENTITY_DEAD(iParam0))
+	if (ENTITY::IS_ENTITY_DEAD(bParam0))
 	{
 		return false;
 	}
@@ -11463,7 +11463,7 @@ bool func_409(int iParam0)
 		return false;
 	}
 	ITEMSET::_CLEAR_ITEMSET(iVar0);
-	PED::FIND_ALL_ATTACHED_CARRIABLE_ENTITIES(iParam0, iVar0);
+	PED::FIND_ALL_ATTACHED_CARRIABLE_ENTITIES(bParam0, iVar0);
 	iVar1 = ITEMSET::GET_ITEMSET_SIZE(iVar0);
 	if (iVar1 == 0)
 	{
@@ -11473,7 +11473,7 @@ bool func_409(int iParam0)
 	while (iVar9 < 4)
 	{
 		iVar2 = func_552(iVar9);
-		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar3, iParam0, iVar2, 0))
+		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar3, bParam0, iVar2, 0))
 		{
 		}
 		else
@@ -11875,7 +11875,7 @@ void func_441(int* iParam0, int iParam1)
 
 void func_442()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_566();
 }
 

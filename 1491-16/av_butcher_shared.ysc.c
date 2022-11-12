@@ -3085,7 +3085,7 @@ void func_75(var uParam0)
 	}
 	vVar4 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(uParam0->f_372[0 /*8*/], iVar2) /*3*/ };
 	vVar7 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(uParam0->f_372[0 /*8*/], iVar3) /*3*/ };
-	PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 10000, 15000, 0, false, true, false);
+	PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 10000, 15000, 0, false, true, 0);
 	PED::_0xE1AADD0055D76603(uParam0->f_20[1 /*14*/], uParam0->f_372[0 /*8*/], iVar0, iVar2, vVar4, -1.0f, false, false, 0);
 	PED::_0xE1AADD0055D76603(uParam0->f_20[1 /*14*/], uParam0->f_372[0 /*8*/], iVar1, iVar3, vVar7, -1.0f, false, false, 0);
 }

@@ -8861,7 +8861,7 @@ int func_202(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam4
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_110(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_503(iParam0))
 		{
@@ -112706,7 +112706,7 @@ void func_2114(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2126(func_2125(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2126(func_2125(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_150())
 	{
@@ -112739,7 +112739,7 @@ void func_2116(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2126(func_2125(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2126(func_2125(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

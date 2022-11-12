@@ -38772,7 +38772,7 @@ bool func_908(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -44865,7 +44865,7 @@ void func_1068(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1683(func_1682(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1683(func_1682(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_313())
 	{
@@ -44898,7 +44898,7 @@ void func_1070(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1683(func_1682(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1683(func_1682(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -62364,7 +62364,7 @@ void func_1557(int iParam0, bool bParam1)
 				WEAPON::_ADD_AMMO_TO_PED(sLocal_302.f_0, joaat("WEAPON_SHOTGUN_SAWEDOFF_CHARLES"), 200, joaat("ADD_REASON_DEFAULT"));
 				WEAPON::SET_CURRENT_PED_WEAPON(sLocal_302.f_0, joaat("WEAPON_SHOTGUN_SAWEDOFF_CHARLES"), true, 0, false, false);
 			}
-			PED::_0xD8736EFDA38EDC5C(sLocal_302.f_0, Global_36, 50.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(sLocal_302.f_0, Global_36, 50.0f);
 			TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(sLocal_302.f_0, Global_36, 50.0f, 0, 19);
 			break;
 		case 2:
@@ -63270,7 +63270,7 @@ void func_1563(int iParam0, bool bParam1, bool bParam2)
 							WEAPON::_ADD_AMMO_TO_PED(sLocal_302.f_0, joaat("WEAPON_SHOTGUN_SAWEDOFF_CHARLES"), 200, joaat("ADD_REASON_DEFAULT"));
 							WEAPON::SET_CURRENT_PED_WEAPON(sLocal_302.f_0, joaat("WEAPON_SHOTGUN_SAWEDOFF_CHARLES"), true, 0, false, false);
 						}
-						PED::_0xD8736EFDA38EDC5C(sLocal_302.f_0, Global_36, 50.0f);
+						PED::_REGISTER_HATED_TARGETS_IN_AREA(sLocal_302.f_0, Global_36, 50.0f);
 						TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(sLocal_302.f_0, Global_36, 50.0f, 0, 19);
 					}
 				}
@@ -76817,7 +76817,7 @@ int func_1971(bool bParam0, bool bParam1, bool bParam2, char* sParam3)
 		}
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam3))
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(iVar1, sParam3);
+			MAP::_SET_BLIP_NAME(iVar1, sParam3);
 		}
 	}
 	return 1;
@@ -94903,7 +94903,7 @@ void func_2546()
 
 void func_2547()
 {
-	if ((((bLocal_7723 && !MAP::DOES_BLIP_EXIST(iLocal_7718)) && ENTITY::DOES_ENTITY_EXIST(bLocal_267)) && !AUDIO::_0xFE5C6177064BD390(1)) && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
+	if ((((bLocal_7723 && !MAP::DOES_BLIP_EXIST(iLocal_7718)) && ENTITY::DOES_ENTITY_EXIST(bLocal_267)) && !AUDIO::_0xFE5C6177064BD390(true)) && !AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
 	{
 		iLocal_7718 = func_1989(joaat("BLIP_STYLE_OBJECTIVE"), bLocal_267, 1);
 		MAP::SET_BLIP_NAME_FROM_TEXT_FILE(iLocal_7718, "NTS3_CANNON");
@@ -95633,7 +95633,7 @@ int func_2572(int iParam0)
 	return 86;
 }
 
-bool func_2573(int iParam0, bool bParam1)
+bool func_2573(int iParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -95645,10 +95645,10 @@ bool func_2573(int iParam0, bool bParam1)
 	iVar2 = -1;
 	if (iParam0 >= 15)
 	{
-		*bParam1 = 1;
+		*iParam1 = 1;
 		return false;
 	}
-	*bParam1 = 0;
+	*iParam1 = 0;
 	TASK::WAYPOINT_RECORDING_GET_CLOSEST_WAYPOINT(func_193(7), Global_36, &iVar0);
 	TASK::WAYPOINT_RECORDING_GET_CLOSEST_WAYPOINT(func_193(7), ENTITY::GET_ENTITY_COORDS(sLocal_302.f_0, true, false), &iVar1);
 	if (iVar1 > iVar0)
@@ -95706,12 +95706,12 @@ bool func_2573(int iParam0, bool bParam1)
 	}
 	if (iVar2 <= -1)
 	{
-		*bParam1 = 1;
+		*iParam1 = 1;
 		return false;
 	}
 	if (iVar0 >= iVar2)
 	{
-		*bParam1 = 1;
+		*iParam1 = 1;
 		return true;
 	}
 	return false;
@@ -98792,7 +98792,7 @@ bool func_2652(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -100591,7 +100591,7 @@ bool func_2719(char* sParam0)
 
 void func_2720()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}
@@ -109405,9 +109405,9 @@ bool func_3063(var uParam0, var uParam1, float fParam2, float fParam3, bool bPar
 	}
 }
 
-bool func_3064(int iParam0)
+bool func_3064(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_3065(bool bParam0, float fParam1, int iParam2, float fParam3, bool bParam4, float fParam5, float fParam6, bool bParam7, int iParam8, int iParam9, bool bParam10, bool bParam11, int iParam12, bool bParam13)

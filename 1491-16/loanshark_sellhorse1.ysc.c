@@ -3524,7 +3524,7 @@ int func_81(char[4] cParam0)
 				{
 					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_326))
 					{
-						iLocal_326 = OBJECT::CREATE_OBJECT(TASK::_0xE47DD64B9F02677D(1478239863), -611.1f, -30.7f, 85.65f, true, true, false, false, false);
+						iLocal_326 = OBJECT::CREATE_OBJECT(TASK::_FIND_MODEL_FOR_ITEM(joaat("PROVISION_GOLDRING")), -611.1f, -30.7f, 85.65f, true, true, false, false, false);
 					}
 					PED::SET_PED_CONFIG_FLAG(Global_35, 26, true);
 					iLocal_215 = func_227(joaat("PROVISION_GOLDRING"), 0, 0);
@@ -24889,9 +24889,9 @@ bool func_751(char[4] cParam0)
 	return false;
 }
 
-bool func_752(int iParam0)
+bool func_752(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_753(bool bParam0, bool bParam1, bool bParam2)
@@ -32618,7 +32618,7 @@ bool func_1001(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1655);
 	if (!bVar0)
 	{
-		uParam0->f_1655 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1655 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1655);
 	if (!bVar1)
@@ -39123,7 +39123,7 @@ void func_1258(int iParam0, bool bParam1)
 
 void func_1259()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_152();
 }
 

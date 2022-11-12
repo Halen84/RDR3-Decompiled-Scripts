@@ -1352,7 +1352,7 @@ void func_1(var uParam0)
 					UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(3, joaat("CABR01"), MISC::GET_HASH_KEY(sVar4), joaat("HUD_TOASTS"));
 					MISSIONDATA::_MISSIONDATA_SET_MISSION_RATING(joaat("CABR01"), func_24());
 					UILOG::_UILOG_MARK_MISSION_COMPLETED(joaat("CABR01"));
-					UILOG::_0xA31013798FADCADC(3, joaat("CABR01"), 1);
+					UILOG::_UILOG_SET_DISPLAY_COMPLETION_RATING(3, joaat("CABR01"), true);
 				}
 				else
 				{
@@ -10720,7 +10720,7 @@ bool func_211(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_264 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_264 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_270 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_264);
@@ -12161,7 +12161,7 @@ void func_256()
 				}
 				if (!func_259(iLocal_27, joaat("SCRIPT_TASK_COMBAT_HATED_TARGETS")))
 				{
-					PED::_0xD8736EFDA38EDC5C(iLocal_27, ENTITY::GET_ENTITY_COORDS(iLocal_27, true, false), 150.0f);
+					PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_27, ENTITY::GET_ENTITY_COORDS(iLocal_27, true, false), 150.0f);
 					TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(iLocal_27, ENTITY::GET_ENTITY_COORDS(iLocal_27, true, false), 100.0f, (1 << 14), 1);
 				}
 			}
@@ -12174,7 +12174,7 @@ void func_256()
 				bVar11 = false;
 				if (!func_259(iLocal_28, joaat("SCRIPT_TASK_COMBAT_HATED_TARGETS")))
 				{
-					PED::_0xD8736EFDA38EDC5C(iLocal_28, ENTITY::GET_ENTITY_COORDS(iLocal_28, true, false), 150.0f);
+					PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_28, ENTITY::GET_ENTITY_COORDS(iLocal_28, true, false), 150.0f);
 					TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(iLocal_28, ENTITY::GET_ENTITY_COORDS(iLocal_28, true, false), 100.0f, (1 << 14), 1);
 				}
 			}
@@ -12361,8 +12361,8 @@ void func_263()
 				}
 				PED::SET_PED_SHOULD_PLAY_COMBAT_SCENARIO_EXIT(iLocal_25, vLocal_1014, 3);
 				iLocal_73 = 1;
-				PED::_0xD8736EFDA38EDC5C(iLocal_25, vLocal_1014, 150.0f);
-				PED::_0xD8736EFDA38EDC5C(iLocal_25, vLocal_968, 100.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_25, vLocal_1014, 150.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_25, vLocal_968, 100.0f);
 			}
 			break;
 		case 1:
@@ -27389,7 +27389,7 @@ void func_682(var uParam0, int iParam1)
 
 void func_683()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_1157();
 }
 
@@ -27725,7 +27725,7 @@ void func_697(var uParam0, Vector3 vParam1)
 	{
 		return;
 	}
-	if (AUDIO::_0xFE5C6177064BD390(1) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
+	if (AUDIO::_0xFE5C6177064BD390(true) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
 	{
 		if (func_1166(&(uParam0->f_311[0 /*17*/]), 0, 0))
 		{
@@ -30327,7 +30327,7 @@ void func_753(var uParam0)
 			PED::SET_PED_CONFIG_FLAG(uParam0->f_440, 297, true);
 		}
 	}
-	if ((AUDIO::_0xFE5C6177064BD390(1) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true)) || uParam0->f_400 == 2)
+	if ((AUDIO::_0xFE5C6177064BD390(true) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true)) || uParam0->f_400 == 2)
 	{
 		if (func_1166(&(uParam0->f_401[0 /*17*/]), 0, 0))
 		{
@@ -41688,7 +41688,7 @@ void func_1074(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1550(func_1549(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1550(func_1549(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_132())
 	{
@@ -41721,7 +41721,7 @@ void func_1076(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1550(func_1549(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1550(func_1549(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -45490,7 +45490,7 @@ void func_1224(var uParam0)
 	{
 		return;
 	}
-	if (AUDIO::_0xFE5C6177064BD390(1) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
+	if (AUDIO::_0xFE5C6177064BD390(true) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
 	{
 		if (func_1166(&(uParam0->f_311[0 /*17*/]), 0, 0))
 		{

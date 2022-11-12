@@ -3428,7 +3428,7 @@ void func_111()
 					PHYSICS::DELETE_ROPE(&iLocal_511);
 					OBJECT::DELETE_OBJECT(&(sLocal_271[2 /*12*/].f_8));
 					OBJECT::DELETE_OBJECT(&(sLocal_271[1 /*12*/].f_8));
-					PED::SET_PED_TO_RAGDOLL(iLocal_15[0], 1000, 2000, 0, true, true, false);
+					PED::SET_PED_TO_RAGDOLL(iLocal_15[0], 1000, 2000, 0, true, true, 0);
 					if (iLocal_344 == 0)
 					{
 						ENTITY::APPLY_FORCE_TO_ENTITY(iLocal_15[0], 1, 0.0f, -5.0f, -3.0f, 0.0f, 0.0f, 0.0f, 0, true, true, true, false, true);
@@ -10778,7 +10778,7 @@ void func_264(var uParam0, int iParam1, Vector3 vParam2, float fParam5, float fP
 			}
 			else
 			{
-				TASK::TASK_FLY_TO_COORD(iParam1, fParam14, vParam2, 1, 0);
+				TASK::TASK_FLY_TO_COORD(iParam1, fParam14, vParam2, true, false);
 				*uParam0 = 3;
 			}
 			break;
@@ -10898,7 +10898,7 @@ void func_268(float fParam0)
 			TASK::OPEN_SEQUENCE_TASK(&iVar0);
 			if (iLocal_344 == 2)
 			{
-				TASK::TASK_FLY_TO_COORD(0, 3.0f, -181.1736f, 457.2728f, 115.4317f, 0, 1);
+				TASK::TASK_FLY_TO_COORD(0, 3.0f, -181.1736f, 457.2728f, 115.4317f, false, true);
 				TASK::TASK_FLY_AWAY(0, iLocal_15[0]);
 			}
 			else
@@ -17555,7 +17555,7 @@ bool func_530(var uParam0)
 
 void func_531()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_418();
 }
 

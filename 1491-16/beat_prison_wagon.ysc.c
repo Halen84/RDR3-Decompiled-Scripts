@@ -4235,9 +4235,9 @@ bool func_111()
 	return ENTITY::DOES_ENTITY_EXIST(iLocal_1505);
 }
 
-var func_112(var uParam0, int iParam1)
+bool func_112(int iParam0, int iParam1)
 {
-	return AUDIO::_0xDF947FE0D551684E(uParam0, func_278(iParam1));
+	return AUDIO::_0xDF947FE0D551684E(iParam0, func_278(iParam1));
 }
 
 int func_113(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, float fParam5, float fParam6, bool bParam7)
@@ -17368,7 +17368,7 @@ int func_480(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_643(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_644(&(uParam1->f_22)));
 			func_377(iVar0, func_645(&(uParam1->f_22)), 0);
 		}

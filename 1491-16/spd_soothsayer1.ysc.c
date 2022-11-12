@@ -1868,7 +1868,7 @@ void func_29(var uParam0, int iParam1)
 		}
 		else if (func_163(&(uParam0->f_145)) > 15000)
 		{
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_160[0], 100, 3000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_160[0], 100, 3000, 0, false, false, 0);
 			PED::SET_PED_RAGDOLL_FORCE_FALL(uParam0->f_160[0]);
 			func_57(&(uParam0->f_145));
 			func_18(uParam0, iParam1, 11);
@@ -2749,7 +2749,7 @@ void func_64(int iParam0, float fParam1, bool bParam2)
 	}
 }
 
-void func_65(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, int iParam5)
+void func_65(var uParam0, int iParam1, var uParam2, int iParam3, var uParam4, int iParam5)
 {
 	var uVar0[1];
 	var uVar2[2];
@@ -2778,7 +2778,7 @@ void func_65(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, in
 		{
 			if (func_220(uParam0, &uVar0, &uVar2, 5, iParam1, 0, 0, -1) > 0)
 			{
-				uParam3->f_3 = uVar0[0];
+				iParam3->f_3 = uVar0[0];
 				func_53(uParam4, 0.0f);
 			}
 			else
@@ -2788,22 +2788,22 @@ void func_65(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, in
 		}
 		else
 		{
-			uParam3->f_3 = Global_35;
+			iParam3->f_3 = Global_35;
 			func_53(uParam4, 0.0f);
 		}
 	}
-	*uParam3 = { 0.0f, 0.0f, 0.0f /*3*/ };
-	uParam3->f_4 = 21030;
-	uParam3->f_8 = 4;
-	uParam3->f_17 = 2;
-	uParam3->f_18 = 1;
-	uParam3->f_19 = 3;
-	uParam3->f_20 = 1;
-	uParam3->f_21 = 3;
-	uParam3->f_22 = 1;
-	uParam3->f_13 = 3;
-	uParam3->f_7 = iParam5;
-	IK::_INVERSE_KINEMATICS_REQUEST_LOOK_AT(*uParam2, uParam3);
+	*iParam3 = { 0.0f, 0.0f, 0.0f /*3*/ };
+	iParam3->f_4 = 21030;
+	iParam3->f_8 = 4;
+	iParam3->f_17 = 2;
+	iParam3->f_18 = 1;
+	iParam3->f_19 = 3;
+	iParam3->f_20 = 1;
+	iParam3->f_21 = 3;
+	iParam3->f_22 = 1;
+	iParam3->f_13 = 3;
+	iParam3->f_7 = iParam5;
+	IK::_INVERSE_KINEMATICS_REQUEST_LOOK_AT(*uParam2, iParam3);
 }
 
 bool func_66(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4, int iParam5, int iParam6, float fParam7)

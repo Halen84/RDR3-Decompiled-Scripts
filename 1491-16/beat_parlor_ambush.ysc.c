@@ -2366,7 +2366,7 @@ int func_81(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPara
 		if (func_224(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_225(&(uParam1->f_22)));
 			func_227(iVar0, func_226(&(uParam1->f_22)), 0);
 		}
@@ -19371,7 +19371,7 @@ bool func_689(int iParam0, float fParam1, float fParam2, bool bParam3, bool bPar
 
 void func_690()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_400();
 }
 

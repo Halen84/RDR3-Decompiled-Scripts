@@ -41787,7 +41787,7 @@ bool func_918(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -45783,7 +45783,7 @@ void func_1084(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1659(func_1658(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1659(func_1658(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_308())
 	{
@@ -45816,7 +45816,7 @@ void func_1086(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1659(func_1658(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1659(func_1658(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -59035,7 +59035,7 @@ void func_1345(char[4] cParam0, bool bParam1, int iParam2, var uParam3, var uPar
 						}
 						if (ANIMSCENE::IS_ENTITY_EXITING_ANIM_SCENE_THIS_FRAME(*iParam7, "msp_feud1_males_01"))
 						{
-							PED::SET_PED_TO_RAGDOLL(*bParam1, 10000, 10001, 0, false, false, false);
+							PED::SET_PED_TO_RAGDOLL(*bParam1, 10000, 10001, 0, false, false, 0);
 						}
 						if (ANIMSCENE::IS_ENTITY_EXITING_ANIM_SCENE_THIS_FRAME(*iParam7, "player_zero"))
 						{
@@ -59875,11 +59875,11 @@ void func_1346(char[4] cParam0, bool bParam1, int iParam2, var uParam3, var uPar
 				case 44:
 					if (func_164(bParam1->f_12, (1 << 13)))
 					{
-						ENTITY::_0xC3ABCFBC7D74AFA5(*bParam1, 7, 1);
+						ENTITY::_0xC3ABCFBC7D74AFA5(*bParam1, 7, true);
 					}
 					else
 					{
-						ENTITY::_0xC3ABCFBC7D74AFA5(*bParam1, 7, 0);
+						ENTITY::_0xC3ABCFBC7D74AFA5(*bParam1, 7, false);
 					}
 					PED::_0x57F35552E771BE9D(*bParam1, 12);
 					PED::SET_PED_MAX_MOVE_BLEND_RATIO(*bParam1, 1.0f);
@@ -60028,7 +60028,7 @@ void func_1346(char[4] cParam0, bool bParam1, int iParam2, var uParam3, var uPar
 				{
 					ENTITY::_SET_ENTITY_CARRYING_FLAG(*bParam1, 2, false);
 					ENTITY::_SET_ENTITY_CARRYING_FLAG(*bParam1, 12, false);
-					ENTITY::_0xC3ABCFBC7D74AFA5(*bParam1, 7, 1);
+					ENTITY::_0xC3ABCFBC7D74AFA5(*bParam1, 7, true);
 					func_183(&(bParam1->f_12), (1 << 13));
 				}
 			}
@@ -74182,7 +74182,7 @@ int func_1632(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_1982(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_1630(iParam0))
 		{
@@ -82157,9 +82157,9 @@ bool func_1856(float fParam0, float fParam1, float fParam2)
 	return iVar0;
 }
 
-bool func_1857(int iParam0)
+bool func_1857(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1858(bool bParam0)
@@ -92497,7 +92497,7 @@ bool func_2351(int iParam0, var uParam1)
 
 void func_2352()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}
@@ -96194,7 +96194,7 @@ bool func_2456(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -107023,7 +107023,7 @@ int func_2880(int iParam0)
 	return Global_1359489[iParam0];
 }
 
-void func_2881(var uParam0, var uParam1, int iParam2)
+void func_2881(var uParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 
@@ -107032,7 +107032,7 @@ void func_2881(var uParam0, var uParam1, int iParam2)
 	{
 		func_2788(uParam0);
 	}
-	uParam0->f_1 = PED::_REQUEST_METAPED_COMPONENT(iVar0, uParam1, 0, func_20() != -1, iParam2);
+	uParam0->f_1 = PED::_REQUEST_METAPED_COMPONENT(iVar0, iParam1, 0, func_20() != -1, iParam2);
 	*uParam0 = 1;
 }
 

@@ -40256,7 +40256,7 @@ bool func_919(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -44997,7 +44997,7 @@ void func_1047(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1604(func_1603(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1604(func_1603(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_311())
 	{
@@ -45030,7 +45030,7 @@ void func_1049(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1604(func_1603(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1604(func_1603(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -59527,7 +59527,7 @@ void func_1501(char[4] cParam0)
 				ENTITY::SET_ENTITY_COLLISION(sLocal_14.f_7[iLocal_1517], true, false);
 				PED::SET_PED_CONFIG_FLAG(sLocal_14.f_7[iLocal_1517], 169, false);
 				PED::REGISTER_TARGET(sLocal_14.f_7[iLocal_1517], Global_35, true);
-				PED::_0xD8736EFDA38EDC5C(sLocal_14.f_7[iLocal_1517], ENTITY::GET_ENTITY_COORDS(sLocal_14.f_7[iLocal_1517], true, false), 200.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(sLocal_14.f_7[iLocal_1517], ENTITY::GET_ENTITY_COORDS(sLocal_14.f_7[iLocal_1517], true, false), 200.0f);
 				ENTITY::SET_ENTITY_HEALTH(sLocal_14.f_7[iLocal_1517], 80, 0);
 				PED::_SET_PED_DEFENSIVE_SPHERE_ATTACHED_TO_ENTITY(sLocal_14.f_7[iLocal_1517], Global_35, 0.0f, 0.0f, 0.0f, 10.0f, 0, false);
 				TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(sLocal_14.f_7[iLocal_1517], ENTITY::GET_ENTITY_COORDS(Global_35, true, false), 200.0f, 0, 0);
@@ -59828,7 +59828,7 @@ void func_1515(char[4] cParam0)
 	}
 	if ((iVar0 == iLocal_243 || iVar0 == iLocal_244) || func_1284(PLAYER::PLAYER_PED_ID(), sLocal_150.f_1, 1, 0))
 	{
-		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 	}
 }
 
@@ -73534,7 +73534,7 @@ void func_1836(char[4] cParam0)
 				TASK::CLEAR_PED_TASKS(sLocal_14.f_20[iLocal_1517], true, false);
 				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(6, joaat("REL_PLAYER_ENEMY"), joaat("REL_COMPANION_GROUP"));
 				PED::REGISTER_TARGET(sLocal_14.f_20[iLocal_1517], Global_35, true);
-				PED::_0xD8736EFDA38EDC5C(sLocal_14.f_20[iLocal_1517], ENTITY::GET_ENTITY_COORDS(sLocal_14.f_20[iLocal_1517], true, false), 200.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(sLocal_14.f_20[iLocal_1517], ENTITY::GET_ENTITY_COORDS(sLocal_14.f_20[iLocal_1517], true, false), 200.0f);
 				PED::_SET_PED_DEFENSIVE_SPHERE_ATTACHED_TO_ENTITY(sLocal_14.f_20[iLocal_1517], Global_35, 0.0f, 0.0f, 0.0f, 10.0f, 0, false);
 				TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(sLocal_14.f_20[iLocal_1517], ENTITY::GET_ENTITY_COORDS(Global_35, true, false), 200.0f, 0, 0);
 				PED::SET_PED_COMBAT_MOVEMENT(sLocal_14.f_20[iLocal_1517], 2);
@@ -74114,7 +74114,7 @@ void func_1843()
 				TASK::CLEAR_PED_TASKS(sLocal_14.f_20[iLocal_1517], true, false);
 				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(6, joaat("REL_PLAYER_ENEMY"), joaat("REL_COMPANION_GROUP"));
 				PED::REGISTER_TARGET(sLocal_14.f_20[iLocal_1517], Global_35, true);
-				PED::_0xD8736EFDA38EDC5C(sLocal_14.f_20[iLocal_1517], ENTITY::GET_ENTITY_COORDS(sLocal_14.f_20[iLocal_1517], true, false), 200.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(sLocal_14.f_20[iLocal_1517], ENTITY::GET_ENTITY_COORDS(sLocal_14.f_20[iLocal_1517], true, false), 200.0f);
 				PED::_SET_PED_DEFENSIVE_SPHERE_ATTACHED_TO_ENTITY(sLocal_14.f_20[iLocal_1517], Global_35, 0.0f, 0.0f, 0.0f, 10.0f, 0, false);
 				TASK::TASK_COMBAT_HATED_TARGETS_IN_AREA(sLocal_14.f_20[iLocal_1517], ENTITY::GET_ENTITY_COORDS(Global_35, true, false), 200.0f, 0, 0);
 				PED::SET_PED_COMBAT_MOVEMENT(sLocal_14.f_20[iLocal_1517], 2);
@@ -87881,7 +87881,7 @@ bool func_2390(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -94538,7 +94538,7 @@ int func_2622(char[4] cParam0, bool bParam1, char[4] cParam2, char[4] cParam3, c
 
 void func_2623()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}

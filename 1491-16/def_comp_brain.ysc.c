@@ -1336,7 +1336,7 @@ void func_42(var uParam0, bool bParam1)
 	{
 		if (!func_144(*uParam0, (1 << 11)))
 		{
-			ENTITY::_0xC3ABCFBC7D74AFA5(iVar0, 6, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(iVar0, 6, true);
 		}
 		if (!func_144(*uParam0, (1 << 12)))
 		{
@@ -9143,8 +9143,8 @@ void func_310(var uParam0)
 	if (PED::_0x947E43F544B6AB34(uParam0->f_5, PLAYER::PLAYER_ID(), 34, 60000))
 	{
 		PED::_0xEBD49472BCCF7642(uParam0->f_5, PLAYER::PLAYER_ID());
-		PED::_0x19173C3F15367B54(uParam0->f_5, PLAYER::PLAYER_ID(), 60000);
-		PED::_0x5708EDD71B50C008(uParam0->f_5, PLAYER::PLAYER_ID(), 60000);
+		PED::_SET_PLAYER_GREET_DISABLED_FOR_PED(uParam0->f_5, PLAYER::PLAYER_ID(), 60000);
+		PED::_SET_PLAYER_ANTAGONIZE_DISABLED_FOR_PED(uParam0->f_5, PLAYER::PLAYER_ID(), 60000);
 	}
 	bVar0 = func_4(*uParam0, 53, 0);
 	bVar1 = func_4(*uParam0, 52, 0);

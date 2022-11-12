@@ -18769,7 +18769,7 @@ bool func_607(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -31742,9 +31742,9 @@ void func_1001(var uParam0, bool bParam1, bool bParam2)
 	*uParam0 = 0;
 }
 
-bool func_1002(int iParam0)
+bool func_1002(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_1003()
@@ -43870,7 +43870,7 @@ bool func_1423(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -44748,7 +44748,7 @@ void func_1445(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1928(func_1927(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1928(func_1927(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_392())
 	{
@@ -44781,7 +44781,7 @@ void func_1447(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1928(func_1927(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1928(func_1927(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -46287,7 +46287,7 @@ void func_1467(var uParam0)
 			PED::SET_PED_CONFIG_FLAG(uParam0->f_440, 297, true);
 		}
 	}
-	if ((AUDIO::_0xFE5C6177064BD390(1) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true)) || uParam0->f_400 == 2)
+	if ((AUDIO::_0xFE5C6177064BD390(true) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true)) || uParam0->f_400 == 2)
 	{
 		if (func_1961(&(uParam0->f_401[0 /*17*/]), 0, 0))
 		{
@@ -59932,7 +59932,7 @@ void func_1946(var uParam0)
 	{
 		return;
 	}
-	if (AUDIO::_0xFE5C6177064BD390(1) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
+	if (AUDIO::_0xFE5C6177064BD390(true) || AUDIO::_IS_ANY_CONVERSATION_PLAYING(true))
 	{
 		if (func_1961(&(uParam0->f_311[0 /*17*/]), 0, 0))
 		{

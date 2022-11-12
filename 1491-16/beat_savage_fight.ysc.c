@@ -10718,7 +10718,7 @@ int func_336(int iParam0)
 			{
 				if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uLocal_469[0], -1) && !func_138(1))
 				{
-					PED::SET_PED_TO_RAGDOLL(uLocal_469[0], 1000, 1000, 0, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(uLocal_469[0], 1000, 1000, 0, false, false, 0);
 				}
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_472[0]))
 				{
@@ -10775,7 +10775,7 @@ int func_336(int iParam0)
 							PED::SET_COMBAT_FLOAT(uLocal_469[0], 40, 1.0f);
 							if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uLocal_469[0], -1) && !func_138(1))
 							{
-								PED::SET_PED_TO_RAGDOLL(uLocal_469[0], 1000, 1000, 0, false, false, false);
+								PED::SET_PED_TO_RAGDOLL(uLocal_469[0], 1000, 1000, 0, false, false, 0);
 							}
 							func_309(uLocal_469[0], iLocal_472[0]);
 							func_309(uLocal_469[0], iLocal_472[1]);
@@ -10924,7 +10924,7 @@ int func_336(int iParam0)
 				{
 					if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uLocal_469[0], -1) && !func_138(1))
 					{
-						PED::SET_PED_TO_RAGDOLL(uLocal_469[0], 1000, 1000, 0, false, false, false);
+						PED::SET_PED_TO_RAGDOLL(uLocal_469[0], 1000, 1000, 0, false, false, 0);
 					}
 					if (bVar1)
 					{
@@ -14769,7 +14769,7 @@ int func_428(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_646(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_647(&(uParam1->f_22)));
 			func_186(iVar0, func_648(&(uParam1->f_22)), 0);
 		}

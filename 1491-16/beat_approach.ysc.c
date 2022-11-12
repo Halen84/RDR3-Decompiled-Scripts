@@ -2378,7 +2378,7 @@ int func_55(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPara
 		if (func_202(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_203(&(uParam1->f_22)));
 			func_205(iVar0, func_204(&(uParam1->f_22)), 0);
 		}
@@ -2447,9 +2447,9 @@ int func_57(int iParam0, var uParam1, bool bParam2)
 	return 0;
 }
 
-var func_58(var uParam0, int iParam1)
+bool func_58(int iParam0, int iParam1)
 {
-	return AUDIO::_0xDF947FE0D551684E(uParam0, func_216(iParam1));
+	return AUDIO::_0xDF947FE0D551684E(iParam0, func_216(iParam1));
 }
 
 int func_59(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4, float fParam5, float fParam6, bool bParam7)

@@ -1182,13 +1182,13 @@ void func_14(var uParam0)
 		func_1(uParam0, 4);
 		return;
 	}
-	uParam0->f_404 = DATAFILE::_0xD97D8D905F1562F2(865029999);
-	uParam0->f_405 = DATAFILE::_0xD97D8D905F1562F2(-1343021396);
-	uParam0->f_406 = DATAFILE::_0xD97D8D905F1562F2(-764567687);
+	uParam0->f_404 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(865029999);
+	uParam0->f_405 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(-1343021396);
+	uParam0->f_406 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(-764567687);
 	iVar1 = func_143(uParam0);
 	if (iVar1 != 0)
 	{
-		uParam0->f_403 = DATAFILE::_0xD97D8D905F1562F2(iVar1);
+		uParam0->f_403 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(iVar1);
 		if (!DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_403))
 		{
 		}
@@ -10282,7 +10282,7 @@ int func_267(var uParam0)
 				func_231(&(uParam0->f_16[0]), &(uParam0->f_283[0 /*18*/]), &(uParam0->f_302), 1, 1);
 				func_188(&(uParam0->f_281), 4);
 				func_188(&(uParam0->f_281), 8);
-				PED::_0x19173C3F15367B54(uParam0->f_16[0], PLAYER::GET_PLAYER_INDEX(), 120000);
+				PED::_SET_PLAYER_GREET_DISABLED_FOR_PED(uParam0->f_16[0], PLAYER::GET_PLAYER_INDEX(), 120000);
 				break;
 			case 8:
 				if (func_94(&(uParam0->f_477), (5.0f - 1.0f)))

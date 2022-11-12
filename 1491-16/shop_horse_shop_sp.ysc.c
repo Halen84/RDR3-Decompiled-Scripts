@@ -20138,7 +20138,7 @@ bool func_561(bool bParam0, int iParam1)
 	{
 		bParam0 = func_1068(bParam0);
 	}
-	iVar0 = TASK::_0xE47DD64B9F02677D(bParam0);
+	iVar0 = TASK::_FIND_MODEL_FOR_ITEM(bParam0);
 	if (iVar0 != 0)
 	{
 		*iParam1 = iVar0;
@@ -88014,7 +88014,7 @@ void func_2678(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2991(func_2990(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2991(func_2990(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_1188())
 	{
@@ -88033,7 +88033,7 @@ void func_2679(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2991(func_2990(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2991(func_2990(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

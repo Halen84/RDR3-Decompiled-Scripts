@@ -49,7 +49,7 @@
 	var uLocal_70 = 0;
 	bool bLocal_71 = false;
 	var uLocal_72[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	bool bLocal_83 = false;
+	int iLocal_83 = 0;
 	var uLocal_84 = 1;
 	var uLocal_85 = 0;
 	int iLocal_86 = 0;
@@ -120,18 +120,18 @@ void __EntryFunction__()
 
 void func_1()
 {
-	if (func_14(bLocal_71, bLocal_83))
+	if (func_14(bLocal_71, iLocal_83))
 	{
-		func_15(bLocal_83, 1, 1);
+		func_15(iLocal_83, 1, 1);
 	}
 	func_16(0);
 	if (func_6(iLocal_38) && func_17(iLocal_38, 0))
 	{
 		func_18(iLocal_38, 0, 1, 0, 0);
 	}
-	if (ENTITY::DOES_ENTITY_EXIST(bLocal_83))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_83))
 	{
-		func_19(&bLocal_83);
+		func_19(&iLocal_83);
 	}
 	func_20();
 	SCRIPTS::TERMINATE_THIS_THREAD();
@@ -296,33 +296,33 @@ bool func_13()
 			}
 			break;
 		case 2:
-			ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_83, 7, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_83, 7, true);
 			PED::SET_PED_RESET_FLAG(bLocal_71, 49, true);
 			if (func_43(&sLocal_5, 106))
 			{
 				TASK::CLEAR_PED_TASKS(bLocal_71, true, false);
-				if ((ENTITY::DOES_ENTITY_EXIST(bLocal_83) && func_44(bLocal_71, bLocal_83, 1, 1) < 50.0f) && !ENTITY::IS_ENTITY_ATTACHED_TO_ANY_PED(bLocal_83))
+				if ((ENTITY::DOES_ENTITY_EXIST(iLocal_83) && func_44(bLocal_71, iLocal_83, 1, 1) < 50.0f) && !ENTITY::IS_ENTITY_ATTACHED_TO_ANY_PED(iLocal_83))
 				{
 					TASK::OPEN_SEQUENCE_TASK(&iVar0);
-					TASK::TASK_GO_TO_ENTITY(0, bLocal_83, 20000, 0.5f, 1.0f, (1 << 30), 0);
-					TASK::TASK_PICKUP_CARRIABLE_ENTITY(0, bLocal_83);
+					TASK::TASK_GO_TO_ENTITY(0, iLocal_83, 20000, 0.5f, 1.0f, (1 << 30), 0);
+					TASK::TASK_PICKUP_CARRIABLE_ENTITY(0, iLocal_83);
 					func_45(bLocal_71, &iVar0, 0, 0, 1, 1);
 					func_39(3);
 				}
 				else
 				{
-					if (ENTITY::DOES_ENTITY_EXIST(bLocal_83))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_83))
 					{
-						func_19(&bLocal_83);
+						func_19(&iLocal_83);
 					}
 					func_39(0);
 				}
 			}
 			break;
 		case 3:
-			ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_83, 7, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_83, 7, true);
 			PED::SET_PED_RESET_FLAG(bLocal_71, 49, true);
-			if (func_14(bLocal_71, bLocal_83))
+			if (func_14(bLocal_71, iLocal_83))
 			{
 				TASK::CLEAR_PED_TASKS(bLocal_71, true, false);
 				func_46();
@@ -333,15 +333,15 @@ bool func_13()
 			PED::SET_PED_RESET_FLAG(bLocal_71, 49, true);
 			if (func_43(&sLocal_5, 106))
 			{
-				TASK::TASK_PLACE_CARRIED_ENTITY_AT_COORD(bLocal_71, bLocal_83, func_7(Global_1425351.f_18), 1.0f, 1);
+				TASK::TASK_PLACE_CARRIED_ENTITY_AT_COORD(bLocal_71, iLocal_83, func_7(Global_1425351.f_18), 1.0f, 1);
 				func_39(5);
 			}
 			break;
 		case 5:
 			PED::SET_PED_RESET_FLAG(bLocal_71, 49, true);
-			if (!func_14(bLocal_71, bLocal_83))
+			if (!func_14(bLocal_71, iLocal_83))
 			{
-				func_19(&bLocal_83);
+				func_19(&iLocal_83);
 				func_39(0);
 			}
 			break;
@@ -353,19 +353,19 @@ bool func_13()
 	return false;
 }
 
-bool func_14(bool bParam0, bool bParam1)
+bool func_14(bool bParam0, int iParam1)
 {
 	int iVar0;
 
-	if (!ENTITY::DOES_ENTITY_EXIST(bParam1))
+	if (!ENTITY::DOES_ENTITY_EXIST(iParam1))
 	{
 		return false;
 	}
-	if (PED::_GET_CARRIER_AS_PED(bParam1) != bParam0)
+	if (PED::_GET_CARRIER_AS_PED(iParam1) != bParam0)
 	{
 		return false;
 	}
-	iVar0 = ENTITY::GET_CARRIABLE_ENTITY_STATE(bParam1);
+	iVar0 = ENTITY::GET_CARRIABLE_ENTITY_STATE(iParam1);
 	if (iVar0 == 5)
 	{
 		return true;
@@ -377,13 +377,13 @@ bool func_14(bool bParam0, bool bParam1)
 	return false;
 }
 
-void func_15(bool bParam0, bool bParam1, bool bParam2)
+void func_15(int iParam0, bool bParam1, bool bParam2)
 {
-	if (!ENTITY::IS_ENTITY_DEAD(bParam0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0))
 	{
-		if (ENTITY::IS_ENTITY_ATTACHED(bParam0))
+		if (ENTITY::IS_ENTITY_ATTACHED(iParam0))
 		{
-			ENTITY::DETACH_ENTITY(bParam0, bParam1, bParam2);
+			ENTITY::DETACH_ENTITY(iParam0, bParam1, bParam2);
 		}
 	}
 }
@@ -464,10 +464,10 @@ void func_18(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4
 	}
 }
 
-void func_19(bool bParam0)
+void func_19(int iParam0)
 {
-	DECORATOR::DECOR_REMOVE(*bParam0, func_57());
-	PED::SET_PED_CONFIG_FLAG(*bParam0, 186, true);
+	DECORATOR::DECOR_REMOVE(*iParam0, func_57());
+	PED::SET_PED_CONFIG_FLAG(*iParam0, 186, true);
 }
 
 void func_20()
@@ -691,9 +691,9 @@ void func_35()
 	if (!bLocal_87 && func_70(bLocal_71, 0, &uLocal_42, &uLocal_70, 0, 0))
 	{
 		TASK::OPEN_SEQUENCE_TASK(&iVar0);
-		if (func_14(bLocal_71, bLocal_83))
+		if (func_14(bLocal_71, iLocal_83))
 		{
-			TASK::TASK_PLACE_CARRIED_ENTITY_AT_COORD(0, bLocal_83, ENTITY::GET_ENTITY_COORDS(bLocal_71, true, false), 2.0f, 3);
+			TASK::TASK_PLACE_CARRIED_ENTITY_AT_COORD(0, iLocal_83, ENTITY::GET_ENTITY_COORDS(bLocal_71, true, false), 2.0f, 3);
 		}
 		TASK::TASK_FLEE_PED(0, Global_35, 4, 0, -1.0f, -1, 0);
 		func_45(bLocal_71, &iVar0, 0, 0, 1, 1);
@@ -763,7 +763,7 @@ bool func_41()
 				if (DECORATOR::DECOR_EXIST_ON(uLocal_72[iVar2], func_57()) && DECORATOR::DECOR_GET_BOOL(uLocal_72[iVar2], func_57()))
 				{
 					iVar1 = 1;
-					bLocal_83 = uLocal_72[iVar2];
+					iLocal_83 = uLocal_72[iVar2];
 				}
 				else
 				{
@@ -2788,17 +2788,17 @@ bool func_110(var uParam0, bool bParam1)
 	return false;
 }
 
-bool func_111(bool bParam0, bool bParam1)
+bool func_111(bool bParam0, int iParam1)
 {
-	if (!ENTITY::IS_ENTITY_DEAD(bParam1))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1))
 	{
-		if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(bParam0, bParam1, true, true))
+		if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(bParam0, iParam1, true, true))
 		{
 			return true;
 		}
-		if (func_44(bParam0, bParam1, 1, 1) < 4.0f)
+		if (func_44(bParam0, iParam1, 1, 1) < 4.0f)
 		{
-			if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(bParam0, bParam1) && PED::IS_PED_RAGDOLL(bParam0))
+			if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(bParam0, iParam1) && PED::IS_PED_RAGDOLL(bParam0))
 			{
 				return true;
 			}
@@ -3601,9 +3601,9 @@ bool func_142(bool bParam0, var uParam1, bool bParam2)
 	return false;
 }
 
-float func_143(bool bParam0, bool bParam1)
+float func_143(bool bParam0, int iParam1)
 {
-	return func_44(bParam0, bParam1, 1, 1);
+	return func_44(bParam0, iParam1, 1, 1);
 }
 
 float func_144(var uParam0)

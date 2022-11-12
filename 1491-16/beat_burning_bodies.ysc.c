@@ -725,7 +725,7 @@ void func_26()
 			if (ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_14.f_27[8], sLocal_14.f_868))
 			{
 				ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_14.f_868, "CORPSE_A", sLocal_14.f_27[8]);
-				PED::SET_PED_TO_RAGDOLL(sLocal_14.f_27[8], -1, -1, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(sLocal_14.f_27[8], -1, -1, 0, false, true, 0);
 				ENTITY::_SET_ENTITY_CARRYING_FLAG(sLocal_14.f_27[8], 7, true);
 			}
 			if (VOLUME::DOES_VOLUME_EXIST(sLocal_14.f_210))
@@ -788,7 +788,7 @@ void func_27()
 	}
 	if (!PED::IS_PED_RAGDOLL(sLocal_14.f_27[8]))
 	{
-		PED::SET_PED_TO_RAGDOLL(sLocal_14.f_27[8], -1, -1, 0, false, true, false);
+		PED::SET_PED_TO_RAGDOLL(sLocal_14.f_27[8], -1, -1, 0, false, true, 0);
 	}
 }
 
@@ -7512,7 +7512,7 @@ int func_202(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_393(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_394(&(uParam1->f_22)));
 			func_211(iVar0, func_395(&(uParam1->f_22)), 0);
 		}

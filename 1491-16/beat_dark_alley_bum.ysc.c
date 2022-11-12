@@ -1534,7 +1534,7 @@ bool func_33()
 			func_54();
 			if (!func_50(iLocal_718, (1 << 9)))
 			{
-				if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_271[2 /*12*/].f_7))
+				if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_271[2 /*12*/].f_7))
 				{
 					TASK::_MAKE_OBJECT_CARRIABLE(sLocal_271[2 /*12*/].f_8);
 				}
@@ -1552,7 +1552,7 @@ bool func_33()
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_271[1 /*12*/].f_8))
 				{
-					if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_271[1 /*12*/].f_7))
+					if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_271[1 /*12*/].f_7))
 					{
 						TASK::_MAKE_OBJECT_CARRIABLE(sLocal_271[1 /*12*/].f_8);
 					}
@@ -2085,7 +2085,7 @@ void func_54()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(sLocal_271[3 /*12*/].f_8))
 		{
-			if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_271[3 /*12*/].f_7))
+			if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_271[3 /*12*/].f_7))
 			{
 				TASK::_MAKE_OBJECT_CARRIABLE(sLocal_271[3 /*12*/].f_8);
 				GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_gen_shiny_bling", sLocal_271[3 /*12*/].f_8, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, true, false, false);
@@ -2094,7 +2094,7 @@ void func_54()
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(sLocal_271[4 /*12*/].f_8) && func_50(iLocal_718, 4))
 		{
-			if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_271[4 /*12*/].f_7))
+			if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_271[4 /*12*/].f_7))
 			{
 				TASK::_MAKE_OBJECT_CARRIABLE(sLocal_271[4 /*12*/].f_8);
 				GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_gen_shiny_bling", sLocal_271[4 /*12*/].f_8, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, true, false, false);
@@ -3998,7 +3998,7 @@ void func_123()
 							ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_584.f_2, "BOTTLE", sLocal_271[1 /*12*/].f_8);
 							func_143(sLocal_271[1 /*12*/].f_8, 1, 1);
 							PHYSICS::ACTIVATE_PHYSICS(sLocal_271[1 /*12*/].f_8);
-							if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_271[1 /*12*/].f_7))
+							if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_271[1 /*12*/].f_7))
 							{
 								TASK::_MAKE_OBJECT_CARRIABLE(sLocal_271[1 /*12*/].f_8);
 							}
@@ -5245,7 +5245,7 @@ void func_142()
 			ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_584.f_2, "BOTTLE", sLocal_271[1 /*12*/].f_8);
 		}
 		func_143(sLocal_271[1 /*12*/].f_8, 1, 1);
-		if (ENTITY::_0x5AFFA9DDC87846F8(sLocal_271[1 /*12*/].f_7))
+		if (ENTITY::_IS_CARRIABLE_MODEL(sLocal_271[1 /*12*/].f_7))
 		{
 			TASK::_MAKE_OBJECT_CARRIABLE(sLocal_271[1 /*12*/].f_8);
 		}
@@ -14153,7 +14153,7 @@ int func_372(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_599(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_600(&(uParam1->f_22)));
 			func_602(iVar0, func_601(&(uParam1->f_22)), 0);
 		}

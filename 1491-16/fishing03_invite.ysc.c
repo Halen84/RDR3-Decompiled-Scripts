@@ -10560,7 +10560,7 @@ void func_404(int* iParam0, int iParam1)
 
 void func_405()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_532();
 }
 

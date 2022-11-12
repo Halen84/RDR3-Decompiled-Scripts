@@ -791,9 +791,9 @@ bool func_17()
 	return false;
 }
 
-bool func_18(int iParam0)
+bool func_18(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_19(bool bParam0, bool bParam1, bool bParam2)

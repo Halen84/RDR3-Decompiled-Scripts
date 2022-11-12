@@ -1097,7 +1097,7 @@ void __EntryFunction__()
 									PHYSICS::ACTIVATE_PHYSICS(uLocal_1250[0]);
 									ENTITY::APPLY_FORCE_TO_ENTITY(uLocal_1250[0], 1, 0.0f, 1.0f, 5.0f, 0.0f, 0.0f, 0.0f, 1, true, true, true, false, true);
 									PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(uLocal_1250[0], false, false);
-									PED::SET_PED_TO_RAGDOLL(uLocal_1250[0], 9000, 9000, 0, true, true, false);
+									PED::SET_PED_TO_RAGDOLL(uLocal_1250[0], 9000, 9000, 0, true, true, 0);
 									ENTITY::_SET_ENTITY_CARRYING_FLAG(uLocal_1250[0], 2, false);
 									TASK::CLEAR_PED_TASKS(iLocal_1253, true, false);
 									ENTITY::SET_ENTITY_COORDS(iLocal_1253, -278.0838f, 804.876f, 118.3801f, true, false, true, true);
@@ -12203,7 +12203,7 @@ bool func_277(int iParam0)
 
 void func_278()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_393();
 }
 
@@ -23003,7 +23003,7 @@ int func_570(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_737(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_738(&(uParam1->f_22)));
 			func_248(iVar0, func_739(&(uParam1->f_22)), 0);
 		}
@@ -26277,7 +26277,7 @@ void func_670()
 			if (iLocal_1011 == 1 && func_43(uLocal_1250[1], 0, 1))
 			{
 				ENTITY::SET_ENTITY_COORDS(uLocal_1250[0], -311.8077f, 816.4948f, 121.6537f, false, true, true, true);
-				PED::SET_PED_TO_RAGDOLL(uLocal_1250[0], 500, 500, 0, false, true, false);
+				PED::SET_PED_TO_RAGDOLL(uLocal_1250[0], 500, 500, 0, false, true, 0);
 			}
 			if (iLocal_1011 == 0)
 			{

@@ -1407,8 +1407,8 @@ void func_54(var uParam0, int iParam1, bool bParam2)
 			}
 			break;
 		case 3:
-			PED::_0x19173C3F15367B54(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
-			PED::_0x5708EDD71B50C008(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
+			PED::_SET_PLAYER_GREET_DISABLED_FOR_PED(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
+			PED::_SET_PLAYER_ANTAGONIZE_DISABLED_FOR_PED(uParam0->f_107[iParam1 /*113*/].f_5, PLAYER::PLAYER_ID(), iVar1);
 			break;
 	}
 	uParam0->f_107[iParam1 /*113*/].f_32.f_62 = 1;
@@ -6127,7 +6127,7 @@ void func_199(var uParam0)
 	iVar3 = ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(func_22(uParam0, iLocal_15), "bottomHookInd01");
 	vVar4 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_22(uParam0, iLocal_15), iVar2) /*3*/ };
 	vVar7 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_22(uParam0, iLocal_15), iVar3) /*3*/ };
-	PED::SET_PED_TO_RAGDOLL(func_49(uParam0, iLocal_14), 10000, 15000, 0, false, true, false);
+	PED::SET_PED_TO_RAGDOLL(func_49(uParam0, iLocal_14), 10000, 15000, 0, false, true, 0);
 	PED::_0xE1AADD0055D76603(func_49(uParam0, iLocal_14), func_22(uParam0, iLocal_15), iVar0, iVar2, vVar4, -1.0f, false, false, 0);
 	PED::_0xE1AADD0055D76603(func_49(uParam0, iLocal_14), func_22(uParam0, iLocal_15), iVar1, iVar3, vVar7, -1.0f, false, false, 0);
 }

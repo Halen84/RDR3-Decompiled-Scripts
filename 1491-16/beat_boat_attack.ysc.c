@@ -8390,11 +8390,11 @@ void func_211()
 {
 	if (!PED::IS_PED_RAGDOLL(uLocal_395[4]))
 	{
-		PED::SET_PED_TO_RAGDOLL(uLocal_395[4], 1000, 4000, 0, false, true, false);
+		PED::SET_PED_TO_RAGDOLL(uLocal_395[4], 1000, 4000, 0, false, true, 0);
 	}
 	if (!PED::IS_PED_RAGDOLL(uLocal_395[3]))
 	{
-		PED::SET_PED_TO_RAGDOLL(uLocal_395[3], 1000, 4000, 0, false, true, false);
+		PED::SET_PED_TO_RAGDOLL(uLocal_395[3], 1000, 4000, 0, false, true, 0);
 	}
 	ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_536.f_1, "VICTIM_A", uLocal_395[3]);
 	ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_536.f_1, "VICTIM_B", uLocal_395[4]);
@@ -11474,7 +11474,7 @@ int func_292(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_407(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_408(&(uParam1->f_22)));
 			func_410(iVar0, func_409(&(uParam1->f_22)), 0);
 		}

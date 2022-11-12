@@ -2338,9 +2338,9 @@ bool func_92(int iParam0, char* sParam1, bool bParam2)
 	return false;
 }
 
-bool func_93(int iParam0)
+bool func_93(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 void func_94(bool bParam0, int iParam1)
@@ -10230,7 +10230,7 @@ void func_383(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_432(func_431(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_432(func_431(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_362())
 	{
@@ -10249,7 +10249,7 @@ void func_384(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_432(func_431(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_432(func_431(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

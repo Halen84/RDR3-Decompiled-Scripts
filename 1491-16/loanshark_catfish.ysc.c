@@ -2526,7 +2526,7 @@ void func_70(var uParam0)
 
 void func_71()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_165();
 }
 
@@ -24596,9 +24596,9 @@ bool func_768(var uParam0)
 	return false;
 }
 
-bool func_769(int iParam0)
+bool func_769(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 struct<8> /*64*/ func_770(var uParam0)
@@ -25295,7 +25295,7 @@ void func_801(char[4] cParam0)
 
 void func_802(char[4] cParam0)
 {
-	ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_19[0 /*35*/], 1, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_19[0 /*35*/], 1, true);
 	if (((((func_615(cParam0, 0, 0) || func_142((1 << 29))) || iLocal_17 == 3) || PED::IS_PED_HOGTIED(sLocal_19[1 /*35*/])) || iLocal_17 == 8) || !ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_19[0 /*35*/], -1))
 	{
 		if ((PED::IS_PED_RAGDOLL(sLocal_19[0 /*35*/]) || PED::_HAS_PED_BEEN_SHOVED_RECENTLY(sLocal_19[0 /*35*/], 1000)) || !ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_19[0 /*35*/], -1))
@@ -25706,7 +25706,7 @@ void func_807(var uParam0)
 
 void func_808(var uParam0)
 {
-	ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_19[1 /*35*/], 1, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_19[1 /*35*/], 1, true);
 	if (((((func_1306(uParam0) || func_142((1 << 29))) || iLocal_16 == 7) || iLocal_16 == 11) || PED::IS_PED_HOGTIED(sLocal_19[0 /*35*/])) || !ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_19[1 /*35*/], -1))
 	{
 		if (PED::IS_PED_RAGDOLL(sLocal_19[1 /*35*/]) || !ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(sLocal_19[1 /*35*/], -1))
@@ -32361,7 +32361,7 @@ bool func_1026(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1655);
 	if (!bVar0)
 	{
-		uParam0->f_1655 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1655 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1655);
 	if (!bVar1)

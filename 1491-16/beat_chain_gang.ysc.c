@@ -3201,7 +3201,7 @@ void func_55()
 				}
 				else if (ENTITY::HAS_ANIM_EVENT_FIRED(uLocal_1408[1], 1745200685))
 				{
-					PED::SET_PED_TO_RAGDOLL(uLocal_1408[1], 500, 500, 0, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(uLocal_1408[1], 500, 500, 0, false, false, 0);
 				}
 				else if (bLocal_1478 == 0)
 				{
@@ -6395,7 +6395,7 @@ void func_159()
 		{
 			if (PED::IS_PED_HOGTIED(uLocal_1408[iVar0]))
 			{
-				ENTITY::_0xC3ABCFBC7D74AFA5(uLocal_1408[iVar0], 2, 1);
+				ENTITY::_0xC3ABCFBC7D74AFA5(uLocal_1408[iVar0], 2, true);
 			}
 		}
 		iVar0++;
@@ -18171,7 +18171,7 @@ int func_438(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_585(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_586(&(uParam1->f_22)));
 			func_185(iVar0, func_587(&(uParam1->f_22)), 0);
 		}

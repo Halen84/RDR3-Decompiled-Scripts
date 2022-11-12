@@ -4220,7 +4220,7 @@ int func_113()
 			return -1;
 		}
 	}
-	ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_18.f_1862.f_5, 6, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_18.f_1862.f_5, 6, true);
 	if (func_38(1))
 	{
 		if (func_131(0, 0, 1))
@@ -9494,7 +9494,7 @@ void func_318(int iParam0, int iParam1)
 	int iVar1;
 	float fVar2;
 	float fVar3;
-	int iVar4;
+	bool bVar4;
 	float fVar5;
 	float fVar6;
 	float fVar7;
@@ -9543,8 +9543,8 @@ void func_318(int iParam0, int iParam1)
 	switch (iParam1)
 	{
 		case 1:
-			iVar4 = func_363(iParam0);
-			if (func_745(iVar4, 0))
+			bVar4 = func_363(iParam0);
+			if (func_745(bVar4, 0))
 			{
 				fVar3 *= 0.5f;
 			}
@@ -13747,7 +13747,7 @@ bool func_472(int iParam0)
 	return false;
 }
 
-bool func_473(int iParam0)
+bool func_473(bool bParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -13757,11 +13757,11 @@ bool func_473(int iParam0)
 	int iVar8;
 	int iVar9;
 
-	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(bParam0))
 	{
 		return false;
 	}
-	if (ENTITY::IS_ENTITY_DEAD(iParam0))
+	if (ENTITY::IS_ENTITY_DEAD(bParam0))
 	{
 		return false;
 	}
@@ -13771,7 +13771,7 @@ bool func_473(int iParam0)
 		return false;
 	}
 	ITEMSET::_CLEAR_ITEMSET(iVar0);
-	PED::FIND_ALL_ATTACHED_CARRIABLE_ENTITIES(iParam0, iVar0);
+	PED::FIND_ALL_ATTACHED_CARRIABLE_ENTITIES(bParam0, iVar0);
 	iVar1 = ITEMSET::GET_ITEMSET_SIZE(iVar0);
 	if (iVar1 == 0)
 	{
@@ -13781,7 +13781,7 @@ bool func_473(int iParam0)
 	while (iVar9 < 4)
 	{
 		iVar2 = func_879(iVar9);
-		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar3, iParam0, iVar2, 0))
+		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar3, bParam0, iVar2, 0))
 		{
 		}
 		else
@@ -17899,7 +17899,7 @@ void func_619(int iParam0, var uParam1)
 	{
 		return;
 	}
-	uParam1->f_2 = DATAFILE::_0xD97D8D905F1562F2(iVar0);
+	uParam1->f_2 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(iVar0);
 	MISC::SET_BIT(&(uParam1->f_254), 1);
 }
 
@@ -21671,7 +21671,7 @@ float func_744(int iParam0)
 	return 0.0f;
 }
 
-bool func_745(int iParam0, int iParam1)
+bool func_745(bool bParam0, int iParam1)
 {
 	int iVar0;
 	struct<4> /*32*/ sVar1;
@@ -21682,7 +21682,7 @@ bool func_745(int iParam0, int iParam1)
 		return false;
 	}
 	iVar0 = func_1100(iParam1);
-	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, iParam0, iVar0, 0))
+	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, bParam0, iVar0, 0))
 	{
 		return false;
 	}
@@ -31141,7 +31141,7 @@ void func_1063(int iParam0)
 
 void func_1064(int iParam0)
 {
-	int iVar0;
+	bool bVar0;
 	int iVar1;
 	struct<4> /*32*/ sVar2;
 	int iVar6;
@@ -31156,8 +31156,8 @@ void func_1064(int iParam0)
 	{
 		return;
 	}
-	iVar0 = func_363(iParam0);
-	if (!ENTITY::DOES_ENTITY_EXIST(iVar0))
+	bVar0 = func_363(iParam0);
+	if (!ENTITY::DOES_ENTITY_EXIST(bVar0))
 	{
 		return;
 	}
@@ -31165,7 +31165,7 @@ void func_1064(int iParam0)
 	while (iVar6 < 3)
 	{
 		iVar1 = func_1100(iVar6);
-		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar2, iVar0, iVar1, 0))
+		if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar2, bVar0, iVar1, 0))
 		{
 		}
 		else
@@ -39795,7 +39795,7 @@ void func_1331(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1493(func_1492(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1493(func_1492(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_204())
 	{
@@ -39814,7 +39814,7 @@ void func_1332(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1493(func_1492(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1493(func_1492(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

@@ -1839,7 +1839,7 @@ int func_31(var uParam0)
 						ENTITY::FREEZE_ENTITY_POSITION(uParam0->f_20[iVar1 /*14*/], false);
 						PED::FORCE_PED_MOTION_STATE(uParam0->f_20[iVar1 /*14*/], -1299979036, true, 0, false);
 						TASK::OPEN_SEQUENCE_TASK(&iVar0);
-						TASK::TASK_FLY_TO_COORD(0, 3.0f, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_20[iVar1 /*14*/], 0.0f, 2.5f, 0.0f), 0, 0);
+						TASK::TASK_FLY_TO_COORD(0, 3.0f, ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_20[iVar1 /*14*/], 0.0f, 2.5f, 0.0f), false, false);
 						TASK::TASK_FLY_AWAY(0, Global_35);
 						TASK::CLOSE_SEQUENCE_TASK(iVar0);
 						TASK::TASK_PERFORM_SEQUENCE(uParam0->f_20[iVar1 /*14*/], iVar0);

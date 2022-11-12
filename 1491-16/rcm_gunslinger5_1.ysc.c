@@ -15020,7 +15020,7 @@ bool func_562(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -18961,7 +18961,7 @@ void func_728(var uParam0)
 				}
 				else if (!bLocal_998)
 				{
-					if (!AUDIO::_0xFE5C6177064BD390(1))
+					if (!AUDIO::_0xFE5C6177064BD390(true))
 					{
 						if (!func_1145(iLocal_1016))
 						{
@@ -24283,7 +24283,7 @@ void func_839(var uParam0, var uParam1)
 
 void func_840()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_1363();
 }
 
@@ -30430,7 +30430,7 @@ bool func_1115(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -31317,7 +31317,7 @@ void func_1137(bool bParam0)
 				if (((func_208(sLocal_244[0 /*86*/][2 /*15*/], 73) && !func_668(sLocal_244[0 /*86*/][2 /*15*/], sLocal_690[3 /*25*/].f_1, 4.0f, 1, 1)) && !PED::IS_PED_RAGDOLL(sLocal_244[0 /*86*/][2 /*15*/])) && !PED::IS_PED_DEAD_OR_DYING(sLocal_244[0 /*86*/][2 /*15*/], true))
 				{
 					TASK::CLEAR_PED_TASKS(sLocal_244[0 /*86*/][2 /*15*/], true, false);
-					PED::SET_PED_TO_RAGDOLL(sLocal_244[0 /*86*/][2 /*15*/], 2000, 3000, 0, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_244[0 /*86*/][2 /*15*/], 2000, 3000, 0, false, false, 0);
 					func_1598(&(sLocal_244[0 /*86*/][2 /*15*/]));
 				}
 				iLocal_956 = 4;
@@ -39225,7 +39225,7 @@ void func_1399(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1811(func_1810(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1811(func_1810(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_372())
 	{
@@ -39258,7 +39258,7 @@ void func_1401(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1811(func_1810(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1811(func_1810(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -45887,9 +45887,9 @@ void func_1598(var uParam0)
 	ENTITY::APPLY_FORCE_TO_ENTITY(*uParam0, 1, vVar9, 0.0f, 0.0f, 0.0f, 0, true, false, true, false, true);
 }
 
-bool func_1599(int iParam0)
+bool func_1599(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 int func_1600(char* sParam0)
@@ -56769,7 +56769,7 @@ void func_1915(var uParam0, int iParam1, int iParam2, char* sParam3)
 			{
 				PED::SET_PED_DEFENSIVE_AREA_VOLUME(iLocal_218, uLocal_928[13], true, false, false);
 				MISC::SET_BIT(&iLocal_919, 13);
-				PED::_0xD8736EFDA38EDC5C(iLocal_218, ENTITY::GET_ENTITY_COORDS(iLocal_218, true, false), 500.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_218, ENTITY::GET_ENTITY_COORDS(iLocal_218, true, false), 500.0f);
 				func_715(3);
 			}
 		}
@@ -56779,7 +56779,7 @@ void func_1915(var uParam0, int iParam1, int iParam2, char* sParam3)
 			{
 				PED::SET_PED_DEFENSIVE_AREA_VOLUME(iLocal_218, uLocal_928[12], true, false, false);
 				MISC::SET_BIT(&iLocal_919, 12);
-				PED::_0xD8736EFDA38EDC5C(iLocal_218, ENTITY::GET_ENTITY_COORDS(iLocal_218, true, false), 500.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_218, ENTITY::GET_ENTITY_COORDS(iLocal_218, true, false), 500.0f);
 				func_715(4);
 			}
 		}

@@ -9680,7 +9680,7 @@ bool func_355(var uParam0)
 				ANIMSCENE::SET_ANIM_SCENE_PLAY_LIST(iLocal_181, "pblfail", true);
 				if (!ENTITY::IS_ENTITY_DEAD(bLocal_159))
 				{
-					PED::SET_PED_TO_RAGDOLL(bLocal_159, 1000, 2000, 0, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(bLocal_159, 1000, 2000, 0, false, false, 0);
 					ENTITY::SET_ENTITY_HEALTH(bLocal_159, 0, 0);
 				}
 				func_370(&iLocal_170);
@@ -15221,7 +15221,7 @@ bool func_572(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -32080,7 +32080,7 @@ bool func_1119(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -33269,9 +33269,9 @@ void func_1156(var uParam0)
 	}
 }
 
-bool func_1157(int iParam0)
+bool func_1157(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1158(bool bParam0)
@@ -40522,7 +40522,7 @@ void func_1378(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1805(func_1804(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1805(func_1804(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_390())
 	{
@@ -40555,7 +40555,7 @@ void func_1380(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1805(func_1804(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1805(func_1804(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

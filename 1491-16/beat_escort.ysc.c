@@ -2799,7 +2799,7 @@ int func_86(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPara
 		if (func_233(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_234(&(uParam1->f_22)));
 			func_147(iVar0, func_235(&(uParam1->f_22)), 0);
 		}
@@ -22442,7 +22442,7 @@ void func_701(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_932(func_931(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_932(func_931(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_763())
 	{
@@ -22475,7 +22475,7 @@ void func_703(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_932(func_931(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_932(func_931(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

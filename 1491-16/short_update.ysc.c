@@ -8908,7 +8908,7 @@ var func_244()
 	return uVar1;
 }
 
-void func_245(bool bParam0, int iParam1, bool bParam2, int iParam3)
+void func_245(bool bParam0, int iParam1, bool bParam2, bool bParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -8938,10 +8938,10 @@ void func_245(bool bParam0, int iParam1, bool bParam2, int iParam3)
 		return;
 	}
 	vVar3 = { ENTITY::GET_ENTITY_COORDS(bParam0, true, false) /*3*/ };
-	func_962(iParam1, iVar0, vVar3, bParam2, iParam3);
+	func_962(iParam1, iVar0, vVar3, bParam2, bParam3);
 	if (bParam2 && joaat("AT_HORSE") == iParam1)
 	{
-		COMPENDIUM::COMPENDIUM_HORSE_OBSERVED(bParam0, iParam3);
+		COMPENDIUM::COMPENDIUM_HORSE_OBSERVED(bParam0, bParam3);
 	}
 }
 
@@ -17179,7 +17179,7 @@ void func_490(var uParam0)
 			break;
 		case 6:
 			sVar4 = NETWORK::_0x356F9FB0698C1FEB(uParam0->f_10, uParam0->f_27);
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(sVar4) && NETWORK::_0xE2C3CEC3C0903A00(sVar4))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(sVar4) && NETWORK::_TEXTURE_DOWNLOAD_TEXTURE_NAME_IS_VALID(sVar4))
 			{
 				MISC::SET_BIT(&(uParam0->f_23), uParam0->f_10);
 				uParam0->f_10 = -1;
@@ -24063,7 +24063,7 @@ void func_720(int iParam0)
 {
 	Vector3 vVar0;
 	int iVar3;
-	bool bVar4;
+	int iVar4;
 
 	SCRIPTS::GET_EVENT_DATA(0, iParam0, &vVar0, 3);
 	if (!ENTITY::DOES_ENTITY_EXIST(Global_35))
@@ -24095,8 +24095,8 @@ void func_720(int iParam0)
 	{
 		return;
 	}
-	bVar4 = ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(vVar0.y);
-	if (ENTITY::IS_ENTITY_DEAD(bVar4) || PED::IS_PED_INJURED(bVar4))
+	iVar4 = ENTITY::GET_PED_INDEX_FROM_ENTITY_INDEX(vVar0.y);
+	if (ENTITY::IS_ENTITY_DEAD(iVar4) || PED::IS_PED_INJURED(iVar4))
 	{
 		return;
 	}
@@ -24105,7 +24105,7 @@ void func_720(int iParam0)
 		return;
 	}
 	func_1711(func_1627(joaat("HORSES_BROKEN"), joaat("WILD")), 1);
-	COMPENDIUM::COMPENDIUM_HORSE_WILD_BROKEN(bVar4);
+	COMPENDIUM::COMPENDIUM_HORSE_WILD_BROKEN(iVar4);
 }
 
 void func_721(int iParam0)
@@ -37200,7 +37200,7 @@ bool func_1154(int iParam0)
 	}
 	if (!DATAFILE::PARSEDDATA_IS_FILE_VALID(Global_1914319.f_16934[iParam0]))
 	{
-		Global_1914319.f_16934[iParam0] = DATAFILE::_0xD97D8D905F1562F2(iVar0);
+		Global_1914319.f_16934[iParam0] = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(iVar0);
 		if (!func_123(Global_1914319.f_16970[iParam0], 1))
 		{
 			func_1157(&(Global_1914319.f_16970[iParam0]), 1);
@@ -46554,7 +46554,7 @@ bool func_1432()
 		default:
 			return false;
 	}
-	Global_1327590.f_19721 = DATAFILE::_0xD97D8D905F1562F2(iVar0);
+	Global_1327590.f_19721 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(iVar0);
 	return true;
 }
 
@@ -55727,7 +55727,7 @@ int func_1782(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_3009(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_3017(iParam0))
 		{
@@ -79490,7 +79490,7 @@ bool func_2628(int iParam0, int iParam1, bool bParam2, float fParam3, bool bPara
 	return PED::CAN_PED_SEE_ENTITY(iParam0, iParam1, bParam2, false) == 1;
 }
 
-var func_2629(char* sParam0)
+int func_2629(char* sParam0)
 {
 	return AUDIO::_0x295859EB18F48D82(sParam0);
 }
@@ -134340,7 +134340,7 @@ void func_4493(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_4560(func_4559(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_4560(func_4559(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_2058())
 	{
@@ -134359,7 +134359,7 @@ void func_4494(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_4560(func_4559(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_4560(func_4559(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

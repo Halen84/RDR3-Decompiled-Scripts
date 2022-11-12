@@ -21309,7 +21309,7 @@ bool func_644(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -31280,7 +31280,7 @@ void func_850()
 		PED::SET_PED_RESET_FLAG(Global_35, 104, true);
 		if (func_449(Global_35, iLocal_1041[21], 1, 0))
 		{
-			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 			func_1381();
 		}
 		if (func_449(Global_35, iLocal_1041[20], 1, 0))
@@ -44537,9 +44537,9 @@ void func_1172(int* iParam0, var uParam1)
 	}
 }
 
-bool func_1173(int iParam0)
+bool func_1173(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1174(bool bParam0)
@@ -48096,7 +48096,7 @@ bool func_1323(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -56377,7 +56377,7 @@ void func_1592(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2054(func_2053(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2054(func_2053(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_412())
 	{
@@ -56410,7 +56410,7 @@ void func_1594(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2054(func_2053(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2054(func_2053(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -63309,7 +63309,7 @@ void func_1773(int iParam0, bool bParam1)
 
 void func_1774()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_2072();
 }
 
@@ -66824,7 +66824,7 @@ struct<4> /*32*/ func_1876()
 
 void func_1877()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}

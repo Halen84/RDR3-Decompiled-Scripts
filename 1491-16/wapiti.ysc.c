@@ -1707,7 +1707,7 @@ void func_64()
 				func_131(&iLocal_116, 16);
 			}
 		}
-		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 	}
 	else
 	{

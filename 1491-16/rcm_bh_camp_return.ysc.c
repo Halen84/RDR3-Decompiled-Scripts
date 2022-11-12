@@ -12438,40 +12438,40 @@ int func_401()
 void func_402(bool bParam0)
 {
 	int iVar0;
-	struct<16> /*128*/ sVar1;
+	char cVar1[128];
 
 	if (func_871(Global_1935630.f_3))
 	{
 		return;
 	}
 	iVar0 = 1;
-	sVar1.f_2 = 4;
-	sVar1.f_0 = "HUD_PENALTY_SOUNDSET";
-	sVar1.f_1 = "HUD_FAIL";
-	sVar1.f_3 = func_872();
-	sVar1.f_3.f_3 = iVar0;
+	cVar1.f_2 = 4;
+	cVar1.f_0 = "HUD_PENALTY_SOUNDSET";
+	cVar1.f_1 = "HUD_FAIL";
+	cVar1.f_3 = func_872();
+	cVar1.f_3.f_3 = iVar0;
 	if ((!func_873(Global_1347343.f_2) && !func_399(Global_1347343.f_11, 64)) || func_60((1 << 15)))
 	{
-		sVar1.f_7 = func_874();
-		sVar1.f_7.f_3 = iVar0;
+		cVar1.f_7 = func_874();
+		cVar1.f_7.f_3 = iVar0;
 	}
 	if (!func_399(Global_1347343.f_11, (1 << 10)) && !func_60((1 << 15)))
 	{
-		sVar1.f_11 = func_875();
-		sVar1.f_11.f_3 = iVar0;
+		cVar1.f_11 = func_875();
+		cVar1.f_11.f_3 = iVar0;
 	}
 	if (func_399(Global_1347343.f_11, 8))
 	{
-		sVar1.f_15 = func_876();
-		sVar1.f_15.f_3 = iVar0;
+		cVar1.f_15 = func_876();
+		cVar1.f_15.f_3 = iVar0;
 	}
 	if (Global_1347343.f_1 != 2)
 	{
-		Global_1935630.f_3 = func_877(&sVar1, "REPLAY_T", &(Global_1347343.f_3), 0, 1);
+		Global_1935630.f_3 = func_877(&cVar1, "REPLAY_T", &(Global_1347343.f_3), 0, 1);
 	}
 	else
 	{
-		Global_1935630.f_3 = func_878(&sVar1, "REPLAY_T_DEAD", 0, 1);
+		Global_1935630.f_3 = func_878(&cVar1, "REPLAY_T_DEAD", 0, 1);
 	}
 	PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::PLAYER_ID(), true);
 	if (!PED::IS_PED_IN_ANY_VEHICLE(Global_35, false) && !ENTITY::IS_ENTITY_ATTACHED(Global_35))
@@ -15860,7 +15860,7 @@ bool func_564(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -21209,7 +21209,7 @@ void func_736(var uParam0)
 			{
 				func_760(uParam0, 0);
 			}
-			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(uParam0->f_67, 19, true);
 			if (func_689(uParam0->f_67, 0))
 			{
 				if (func_753(uParam0))
@@ -27638,14 +27638,14 @@ int func_877(var uParam0, char* sParam1, var uParam2, int iParam3, bool bParam4)
 	return iVar3;
 }
 
-int func_878(var uParam0, char* sParam1, int iParam2, bool bParam3)
+int func_878(char* sParam0, char* sParam1, int iParam2, bool bParam3)
 {
 	struct<2> /*16*/ sVar0;
 	int iVar3;
 
 	sVar0.f_0 = iParam2;
 	sVar0.f_1 = sParam1;
-	iVar3 = UISTICKYFEED::_UI_STICKY_FEED_CREATE_DEATH_FAIL_MESSAGE(uParam0, &sVar0, bParam3);
+	iVar3 = UISTICKYFEED::_UI_STICKY_FEED_CREATE_DEATH_FAIL_MESSAGE(sParam0, &sVar0, bParam3);
 	return iVar3;
 }
 
@@ -34005,7 +34005,7 @@ bool func_1133(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -35710,9 +35710,9 @@ void func_1169(bool bParam0, bool bParam1, bool bParam2)
 	AUDIO::_STOP_ALL_SCRIPTED_CONVERSIONS(bParam0, bParam1, bParam2);
 }
 
-bool func_1170(int iParam0)
+bool func_1170(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1171(bool bParam0)
@@ -44987,7 +44987,7 @@ void func_1470(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1927(func_1926(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1927(func_1926(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_379())
 	{
@@ -45020,7 +45020,7 @@ void func_1472(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1927(func_1926(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1927(func_1926(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

@@ -1536,7 +1536,7 @@ void func_28(var uParam0, int iParam1, float fParam2)
 			{
 				iVar2 = 0;
 			}
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_170[iVar1], -1, -1, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_170[iVar1], -1, -1, 0, false, false, 0);
 			if (iVar2 == 6)
 			{
 				PLAYER::_0xC67A4910425F11F1(PLAYER::GET_PLAYER_INDEX(), "CHMasterBubble");

@@ -6779,9 +6779,9 @@ bool func_299(int iParam0, int iParam1)
 	return false;
 }
 
-bool func_300(int iParam0)
+bool func_300(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 char* func_301(int iParam0)

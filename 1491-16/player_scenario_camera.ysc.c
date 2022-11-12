@@ -68,7 +68,7 @@ int func_4()
 				return 0;
 			}
 			sLocal_0.f_33 = TASK::_GET_SCENARIO_POINT_ENTITY(sLocal_0.f_32);
-			sLocal_0.f_34 = DATAFILE::_0xD97D8D905F1562F2(82155782);
+			sLocal_0.f_34 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(82155782);
 			sLocal_0.f_35 = TASK::_GET_SCENARIO_POINT_TYPE(sLocal_0.f_32);
 			sLocal_0.f_0 = 1;
 			break;

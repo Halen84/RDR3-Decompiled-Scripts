@@ -39526,7 +39526,7 @@ bool func_899(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -43571,7 +43571,7 @@ void func_1019(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1567(func_1566(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1567(func_1566(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_308())
 	{
@@ -43604,7 +43604,7 @@ void func_1021(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1567(func_1566(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1567(func_1566(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -62764,7 +62764,7 @@ void func_1488()
 	TASK::OPEN_SEQUENCE_TASK(&iLocal_884);
 }
 
-void func_1489(bool bParam0, float fParam1, float fParam2, bool bParam3)
+void func_1489(int iParam0, float fParam1, float fParam2, bool bParam3)
 {
 	if (bParam3)
 	{
@@ -62781,11 +62781,11 @@ void func_1489(bool bParam0, float fParam1, float fParam2, bool bParam3)
 	}
 	if (fParam1 == -1.0f && fParam2 == -1.0f)
 	{
-		TASK::TASK_PERFORM_SEQUENCE(bParam0, iLocal_884);
+		TASK::TASK_PERFORM_SEQUENCE(iParam0, iLocal_884);
 	}
 	else
 	{
-		TASK::_TASK_PERFORM_SEQUENCE_2(bParam0, iLocal_884, fParam1, fParam2);
+		TASK::_TASK_PERFORM_SEQUENCE_2(iParam0, iLocal_884, fParam1, fParam2);
 	}
 	TASK::CLEAR_SEQUENCE_TASK(&iLocal_884);
 }
@@ -75827,11 +75827,11 @@ void func_1883(var uParam0)
 	}
 }
 
-void func_1884(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
+void func_1884(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0))
 	{
-		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, bParam4);
+		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, sParam4);
 	}
 }
 
@@ -83929,7 +83929,7 @@ bool func_2231(char[4] cParam0, char* sParam1)
 
 void func_2232()
 {
-	if (AUDIO::_0xFE5C6177064BD390(1))
+	if (AUDIO::_0xFE5C6177064BD390(true))
 	{
 		PED::SET_PED_RESET_FLAG(Global_35, 189, true);
 	}
@@ -84052,9 +84052,9 @@ void func_2234(char[4] cParam0, bool bParam1, int iParam2, bool bParam3, int iPa
 	}
 }
 
-bool func_2235(int iParam0)
+bool func_2235(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 int func_2236(int iParam0, int iParam1)
@@ -89526,7 +89526,7 @@ bool func_2394(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)

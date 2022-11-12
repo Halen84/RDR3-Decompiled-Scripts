@@ -3255,9 +3255,9 @@ int func_104(int iParam0)
 	return MONEY::_MONEY_GET_CASH_BALANCE();
 }
 
-bool func_105(int iParam0)
+bool func_105(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_106()
@@ -26259,13 +26259,13 @@ int func_861(int iParam0)
 
 bool func_862(int iParam0, int iParam1, int iParam2, var uParam3)
 {
-	int iVar0;
+	bool bVar0;
 	struct<4> /*32*/ sVar1;
 	int iVar5;
 
 	if (func_884(iParam1) && !func_885(iParam1))
 	{
-		iVar0 = func_886(iParam1);
+		bVar0 = func_886(iParam1);
 	}
 	else
 	{
@@ -26273,7 +26273,7 @@ bool func_862(int iParam0, int iParam1, int iParam2, var uParam3)
 	}
 	func_887(uParam3);
 	iVar5 = func_888(iParam2);
-	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, iVar0, iVar5, 0))
+	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, bVar0, iVar5, 0))
 	{
 		return false;
 	}

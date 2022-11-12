@@ -39813,7 +39813,7 @@ bool func_923(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -43622,7 +43622,7 @@ void func_1024(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1578(func_1577(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1578(func_1577(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_296())
 	{
@@ -43655,7 +43655,7 @@ void func_1026(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1578(func_1577(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1578(func_1577(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -54432,7 +54432,7 @@ void func_1319(char[4] cParam0)
 				ENTITY::_SET_ENTITY_CARRYING_FLAG(iLocal_1285[iLocal_354], 7, true);
 				if (iLocal_354 == 1)
 				{
-					ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_1285[iLocal_354], 7, 1);
+					ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_1285[iLocal_354], 7, true);
 				}
 				if (iLocal_354 == 0)
 				{
@@ -54458,10 +54458,10 @@ void func_1319(char[4] cParam0)
 				}
 				break;
 			case 49:
-				ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 9, 1);
+				ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 9, true);
 				if (iLocal_354 == 1)
 				{
-					ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_1285[iLocal_354], 7, 1);
+					ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_1285[iLocal_354], 7, true);
 				}
 				if (ENTITY::GET_CARRIABLE_ENTITY_STATE(iLocal_1285[iLocal_354]) == 5)
 				{
@@ -54522,7 +54522,7 @@ void func_1319(char[4] cParam0)
 			case 47:
 				if (iLocal_354 == 1)
 				{
-					ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_1285[iLocal_354], 7, 1);
+					ENTITY::_0xC3ABCFBC7D74AFA5(iLocal_1285[iLocal_354], 7, true);
 				}
 				break;
 		}
@@ -56198,7 +56198,7 @@ void func_1341(char[4] cParam0)
 			case 19:
 				if (func_445(bLocal_1283, 0))
 				{
-					PED::SET_PED_TO_RAGDOLL(bLocal_1283, 20000, 50000, 0, true, false, false);
+					PED::SET_PED_TO_RAGDOLL(bLocal_1283, 20000, 50000, 0, true, false, 0);
 				}
 				if (ANIMSCENE::DOES_ANIM_SCENE_EXIST(iLocal_361[17]) && ANIMSCENE::IS_ANIM_SCENE_RUNNING(iLocal_361[17], false))
 				{
@@ -57124,7 +57124,7 @@ int func_1350(char[4] cParam0)
 		case 44:
 			break;
 	}
-	ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, true);
 	switch (iLocal_549[1])
 	{
 		case 0:
@@ -57268,7 +57268,7 @@ void func_1356(bool bParam0)
 		return;
 	}
 	TASK::TASK_CARRIABLE(bLocal_1283, joaat("KNOCKEDOUT_CARRIABLE_HUMAN_NEVER_WAKE_UP"), *bParam0, 0, 0);
-	ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, true);
 	PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(*bParam0, false, false);
 	func_422(&iLocal_356, (1 << 11));
 }
@@ -57399,7 +57399,7 @@ int func_1357(char[4] cParam0)
 		case 68:
 			if (func_445(bLocal_1283, 0))
 			{
-				ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, 1);
+				ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, true);
 				func_1869();
 			}
 			break;
@@ -57997,7 +57997,7 @@ int func_1364(char[4] cParam0)
 		case 68:
 			if (func_445(bLocal_1283, 0))
 			{
-				ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, 1);
+				ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, true);
 				func_1869();
 			}
 			break;
@@ -58662,7 +58662,7 @@ int func_1367(char[4] cParam0)
 		case 68:
 			if (func_445(bLocal_1283, 0))
 			{
-				ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, 1);
+				ENTITY::_0xC3ABCFBC7D74AFA5(bLocal_1283, 7, true);
 				func_1869();
 			}
 			break;
@@ -86347,7 +86347,7 @@ bool func_2337(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)

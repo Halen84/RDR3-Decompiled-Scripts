@@ -6032,7 +6032,7 @@ void func_139(var uParam0, var uParam1, bool bParam2, bool bParam3)
 		if (!bParam3 && func_261(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(*uParam0, true);
-			PED::SET_PED_TO_RAGDOLL(*uParam0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(*uParam0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(*uParam0, 186, !func_262(&(uParam1->f_22)));
 			func_264(*uParam0, func_263(&(uParam1->f_22)), 0);
 		}

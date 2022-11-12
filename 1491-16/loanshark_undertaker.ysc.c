@@ -12290,7 +12290,7 @@ void func_364(char[4] cParam0, int iParam1)
 
 void func_365()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_151();
 }
 
@@ -19725,9 +19725,9 @@ bool func_624(char[4] cParam0)
 	return false;
 }
 
-bool func_625(int iParam0)
+bool func_625(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 struct<8> /*64*/ func_626(var uParam0)
@@ -28315,7 +28315,7 @@ bool func_921(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1655);
 	if (!bVar0)
 	{
-		uParam0->f_1655 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1655 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1655);
 	if (!bVar1)
@@ -60601,7 +60601,7 @@ void func_2092(int iParam0, int iParam1)
 	Global_1223212.f_1[(Global_1223212 - 1) /*9*/] = { sVar1 /*9*/ };
 }
 
-void func_2093(var uParam0, int iParam1, int iParam2)
+void func_2093(var uParam0, var uParam1, int iParam2)
 {
 	int iVar0;
 
@@ -60610,7 +60610,7 @@ void func_2093(var uParam0, int iParam1, int iParam2)
 	{
 		func_2086(uParam0);
 	}
-	uParam0->f_1 = PED::_REQUEST_METAPED_COMPONENT(iVar0, iParam1, 0, func_273() != -1, iParam2);
+	uParam0->f_1 = PED::_REQUEST_METAPED_COMPONENT(iVar0, uParam1, 0, func_273() != -1, iParam2);
 	*uParam0 = 1;
 }
 

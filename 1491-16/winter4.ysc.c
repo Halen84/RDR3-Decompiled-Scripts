@@ -44504,7 +44504,7 @@ bool func_942(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -50462,7 +50462,7 @@ void func_1105(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1804(func_1803(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1804(func_1803(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_314())
 	{
@@ -50495,7 +50495,7 @@ void func_1107(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1804(func_1803(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1804(func_1803(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -60635,7 +60635,7 @@ bool func_1405(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bPara
 				else
 				{
 					PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(Global_35, 8722);
-					PED::SET_PED_TO_RAGDOLL(Global_35, 5000, 8000, 1, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(Global_35, 5000, 8000, 1, false, false, 0);
 					TASK::CLEAR_PED_TASKS(Global_35, true, false);
 					iLocal_158 = 12;
 				}
@@ -64060,7 +64060,7 @@ void func_1487(var uParam0)
 		case 0:
 			if (!func_1328(Global_35, func_1466(1, 0), 2.0f, 1, 1))
 			{
-				PED::_0xD8736EFDA38EDC5C(iLocal_199[5], func_397(9, 0), 100.0f);
+				PED::_REGISTER_HATED_TARGETS_IN_AREA(iLocal_199[5], func_397(9, 0), 100.0f);
 				PED::_SET_PED_COMBAT_STYLE(iLocal_199[5], joaat("SCRIPT_STARTOFCOMBAT_COVERINGFIRE"), 2, -1.0f);
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_484);
 				TASK::TASK_SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(0, true);
@@ -71792,7 +71792,7 @@ void func_1716(var uParam0)
 		func_27(&uLocal_1702, 0);
 		if (func_174(iLocal_199[2], 0) && func_1328(iLocal_199[2], -1043.658f, 619.859f, 90.6397f, 5.0f, 1, 1))
 		{
-			PED::SET_PED_TO_RAGDOLL(iLocal_199[2], 11000, 12000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iLocal_199[2], 11000, 12000, 1, false, false, 0);
 		}
 	}
 	if (func_1319(&uLocal_1702, 1.0f))
@@ -72275,7 +72275,7 @@ void func_1721(var uParam0)
 				{
 					if (func_174(bLocal_213, 1))
 					{
-						PED::SET_PED_TO_RAGDOLL(bLocal_213, 11000, 12000, 1, false, false, false);
+						PED::SET_PED_TO_RAGDOLL(bLocal_213, 11000, 12000, 1, false, false, 0);
 					}
 					func_232(&uLocal_751);
 					if (bLocal_213 != iLocal_199[5])
@@ -72334,7 +72334,7 @@ void func_1721(var uParam0)
 					ANIMSCENE::_DELETE_ANIM_SCENE(uLocal_429[3]);
 					if (func_174(Global_35, 1))
 					{
-						PED::SET_PED_TO_RAGDOLL(Global_35, 11000, 12000, 1, false, false, false);
+						PED::SET_PED_TO_RAGDOLL(Global_35, 11000, 12000, 1, false, false, 0);
 						vVar3 = { 0.0f, 0.0f, 0.0f /*3*/ };
 						vVar0 = { ENTITY::GET_ENTITY_FORWARD_VECTOR(Global_35) /*3*/ };
 						vVar0 = { vVar0 * Vector(2.5f, 2.5f, 2.5f) /*3*/ };
@@ -72410,7 +72410,7 @@ void func_1721(var uParam0)
 			{
 				if (func_174(sLocal_133.f_3[0], 1))
 				{
-					PED::SET_PED_TO_RAGDOLL(sLocal_133.f_3[0], 11000, 12000, 1, false, false, false);
+					PED::SET_PED_TO_RAGDOLL(sLocal_133.f_3[0], 11000, 12000, 1, false, false, 0);
 					ENTITY::SET_ENTITY_HEALTH(sLocal_133.f_3[0], 10, 0);
 				}
 				func_232(&uLocal_751);
@@ -81449,9 +81449,9 @@ bool func_1978(bool bParam0, Vector3 vParam1, float fParam4)
 	return (((vVar0.x * vVar3.x) + (vVar0.y * vVar3.y)) / BUILTIN::VDIST(vVar3, 0.0f, 0.0f, 0.0f)) > fParam4;
 }
 
-bool func_1979(int iParam0)
+bool func_1979(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 int func_1980(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, float fParam6, float fParam7, float fParam8, bool bParam9, int iParam10, bool bParam11, bool bParam12)
@@ -82316,14 +82316,14 @@ void func_1997(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bPara
 		case 19:
 			if (func_1319(&uLocal_724, 2.0f))
 			{
-				PED::SET_PED_TO_RAGDOLL(iLocal_199[5], 5000, 8000, 1, false, false, false);
+				PED::SET_PED_TO_RAGDOLL(iLocal_199[5], 5000, 8000, 1, false, false, 0);
 			}
 			break;
 		case 20:
 			if (ENTITY::HAS_ANIM_EVENT_FIRED(iLocal_199[5], -37250139) || func_1319(&uLocal_724, 0.75f))
 			{
 				TASK::CLEAR_PED_TASKS(iLocal_199[5], true, false);
-				PED::SET_PED_TO_RAGDOLL(iLocal_199[5], 5000, 8000, 1, false, false, false);
+				PED::SET_PED_TO_RAGDOLL(iLocal_199[5], 5000, 8000, 1, false, false, 0);
 				func_232(&uLocal_724);
 				iLocal_160 = 19;
 			}
@@ -82331,7 +82331,7 @@ void func_1997(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bPara
 		case 21:
 			if (!ANIMSCENE::IS_ANIM_SCENE_RUNNING(uLocal_402[14], false) || ANIMSCENE::IS_ENTITY_EXITING_ANIM_SCENE_THIS_FRAME(uLocal_402[14], "lenny"))
 			{
-				PED::SET_PED_TO_RAGDOLL(iLocal_199[5], 5000, 8000, 1, false, false, false);
+				PED::SET_PED_TO_RAGDOLL(iLocal_199[5], 5000, 8000, 1, false, false, 0);
 				func_232(&uLocal_724);
 				iLocal_160 = 19;
 			}
@@ -99999,7 +99999,7 @@ bool func_2686(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)
@@ -101458,7 +101458,7 @@ int func_2733(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_2171(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_2731(iParam0))
 		{

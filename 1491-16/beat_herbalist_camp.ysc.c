@@ -5856,7 +5856,7 @@ int func_160(int iParam0, var uParam1, Vector3 vParam2, float fParam5, bool bPar
 		if (func_293(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_294(&(uParam1->f_22)));
 			func_296(iVar0, func_295(&(uParam1->f_22)), 0);
 		}
@@ -7686,7 +7686,7 @@ bool func_210(var uParam0, var uParam1, bool bParam2)
 				}
 				break;
 			case 2:
-				if (((!AUDIO::IS_ANY_SPEECH_PLAYING(Global_35) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35)) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(1))
+				if (((!AUDIO::IS_ANY_SPEECH_PLAYING(Global_35) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35)) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(true))
 				{
 					func_341(&(uParam0->f_212));
 					if (func_431(uParam0, 1))
@@ -7701,7 +7701,7 @@ bool func_210(var uParam0, var uParam1, bool bParam2)
 				}
 				break;
 			case 3:
-				if (((func_343(&(uParam0->f_212), 2.0f) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35)) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(1))
+				if (((func_343(&(uParam0->f_212), 2.0f) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35)) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(true))
 				{
 					func_432(uParam0);
 					func_433(uParam0, 4);
@@ -7717,7 +7717,7 @@ bool func_210(var uParam0, var uParam1, bool bParam2)
 			case 4:
 				if (func_343(&(uParam0->f_212), 2.0f))
 				{
-					if ((!AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(1))
+					if ((!AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(true))
 					{
 						if (func_431(uParam0, 4) || func_373(uParam0, 0))
 						{
@@ -7740,7 +7740,7 @@ bool func_210(var uParam0, var uParam1, bool bParam2)
 			case 5:
 				if (!func_330(uParam0, 1))
 				{
-					if ((!AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(1))
+					if ((!AUDIO::IS_SCRIPTED_SPEECH_PLAYING(Global_35) && !AUDIO::IS_SCRIPTED_SPEECH_PLAYING(uParam0->f_7)) && !AUDIO::_0xFE5C6177064BD390(true))
 					{
 						if ((func_343(&(uParam0->f_212), 2.0f) || func_431(uParam0, 6)) || func_431(uParam0, 5))
 						{
@@ -13008,7 +13008,7 @@ void func_435(var uParam0, int iParam1)
 
 bool func_436(var uParam0)
 {
-	if ((AUDIO::_0xFE5C6177064BD390(1) || AUDIO::IS_ANY_SPEECH_PLAYING(Global_35)) || AUDIO::IS_ANY_SPEECH_PLAYING(uParam0->f_7))
+	if ((AUDIO::_0xFE5C6177064BD390(true) || AUDIO::IS_ANY_SPEECH_PLAYING(Global_35)) || AUDIO::IS_ANY_SPEECH_PLAYING(uParam0->f_7))
 	{
 		func_326(&(uParam0->f_284.f_21[0 /*17*/]));
 		func_326(&(uParam0->f_284.f_21[1 /*17*/]));
@@ -31908,7 +31908,7 @@ void func_987(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1242(func_1241(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1242(func_1241(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_629())
 	{
@@ -31941,7 +31941,7 @@ void func_989(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1242(func_1241(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1242(func_1241(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

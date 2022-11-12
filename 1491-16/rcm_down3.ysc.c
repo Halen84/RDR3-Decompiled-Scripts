@@ -9277,7 +9277,7 @@ bool func_329(var uParam0)
 	PAD::DISABLE_CONTROL_ACTION(0, joaat("INPUT_ATTACK"), false);
 	PAD::DISABLE_CONTROL_ACTION(0, joaat("INPUT_QUICK_EQUIP_ITEM"), false);
 	PAD::DISABLE_CONTROL_ACTION(0, joaat("INPUT_TOGGLE_HOLSTER"), false);
-	ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 9, 1);
+	ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 9, true);
 	PLAYER::_SET_PLAYER_RESET_FLAG(PLAYER::PLAYER_ID(), 28, true);
 	PED::SET_PED_RESET_FLAG(sLocal_88[0 /*5*/], 49, true);
 	func_679(0);
@@ -16073,7 +16073,7 @@ bool func_560(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -20520,7 +20520,7 @@ void func_714()
 
 	if (func_1225(Global_35, iLocal_122[5], 1, 0))
 	{
-		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 		PED::SET_PED_RESET_FLAG(Global_35, 264, true);
 		if (PED::IS_PED_CARRYING_SOMETHING(Global_35) && !func_1036(Global_35, joaat("SCRIPT_TASK_PLACE_CARRIED_ENTITY_AT_COORD")))
 		{
@@ -34721,7 +34721,7 @@ bool func_1204(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -36305,9 +36305,9 @@ bool func_1243()
 	return func_1725(1);
 }
 
-bool func_1244(int iParam0)
+bool func_1244(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 bool func_1245(int iParam0)
@@ -43305,7 +43305,7 @@ void func_1458(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1911(func_1910(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1911(func_1910(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_359())
 	{
@@ -43338,7 +43338,7 @@ void func_1460(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1911(func_1910(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1911(func_1910(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -59885,7 +59885,7 @@ int func_1920(int iParam0, float fParam1, int iParam2, bool bParam3, bool bParam
 		MAP::SET_BLIP_SPRITE(Global_1835011[iParam0 /*74*/].f_27, Global_1835011[iParam0 /*74*/].f_26, true);
 		if (iVar0 != -1)
 		{
-			MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
+			MAP::_SET_BLIP_NAME(Global_1835011[iParam0 /*74*/].f_27, &(Global_1835011[iParam0 /*74*/].f_39));
 		}
 		if (!func_2175(&(Global_1835011[iParam0 /*74*/].f_29), (1 << 10)) && !func_983(iParam0))
 		{

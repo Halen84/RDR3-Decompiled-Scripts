@@ -2309,7 +2309,7 @@ bool func_101(int iParam0)
 	return false;
 }
 
-void func_102(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, int iParam5)
+void func_102(var uParam0, int iParam1, var uParam2, int iParam3, var uParam4, int iParam5)
 {
 	var uVar0[1];
 	var uVar2[2];
@@ -2338,7 +2338,7 @@ void func_102(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, i
 		{
 			if (func_202(uParam0, &uVar0, &uVar2, 5, iParam1, 0, 0, -1) > 0)
 			{
-				uParam3->f_3 = uVar0[0];
+				iParam3->f_3 = uVar0[0];
 				func_93(uParam4, 0.0f);
 			}
 			else
@@ -2348,22 +2348,22 @@ void func_102(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, i
 		}
 		else
 		{
-			uParam3->f_3 = Global_35;
+			iParam3->f_3 = Global_35;
 			func_93(uParam4, 0.0f);
 		}
 	}
-	*uParam3 = { 0.0f, 0.0f, 0.0f /*3*/ };
-	uParam3->f_4 = 21030;
-	uParam3->f_8 = 4;
-	uParam3->f_17 = 2;
-	uParam3->f_18 = 1;
-	uParam3->f_19 = 3;
-	uParam3->f_20 = 1;
-	uParam3->f_21 = 3;
-	uParam3->f_22 = 1;
-	uParam3->f_13 = 3;
-	uParam3->f_7 = iParam5;
-	IK::_INVERSE_KINEMATICS_REQUEST_LOOK_AT(*uParam2, uParam3);
+	*iParam3 = { 0.0f, 0.0f, 0.0f /*3*/ };
+	iParam3->f_4 = 21030;
+	iParam3->f_8 = 4;
+	iParam3->f_17 = 2;
+	iParam3->f_18 = 1;
+	iParam3->f_19 = 3;
+	iParam3->f_20 = 1;
+	iParam3->f_21 = 3;
+	iParam3->f_22 = 1;
+	iParam3->f_13 = 3;
+	iParam3->f_7 = iParam5;
+	IK::_INVERSE_KINEMATICS_REQUEST_LOOK_AT(*uParam2, iParam3);
 }
 
 bool func_103(int iParam0)
@@ -5691,7 +5691,7 @@ void func_205(int iParam0, bool bParam1, bool bParam2)
 void func_206(int iParam0, int iParam1, int iParam2)
 {
 	PED::SET_PED_CAN_RAGDOLL(iParam0, true);
-	PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, 1, false, false, false);
+	PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, 1, false, false, 0);
 }
 
 void func_207()

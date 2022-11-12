@@ -40036,7 +40036,7 @@ bool func_931(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_2495 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_2495 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_2501 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2495);
@@ -44447,7 +44447,7 @@ void func_1074(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1658(func_1657(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1658(func_1657(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_302())
 	{
@@ -44480,7 +44480,7 @@ void func_1076(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1658(func_1657(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1658(func_1657(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -80497,7 +80497,7 @@ void func_2301(char[4] cParam0, int* iParam1, var uParam2)
 			break;
 		case 52:
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam1, true);
-			PED::_0xD8736EFDA38EDC5C(*iParam1, uParam2->f_6, 200.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(*iParam1, uParam2->f_6, 200.0f);
 			PED::_0xCF0B19806473D324(*iParam1, uParam2->f_6);
 			func_50(*iParam1);
 			if (VOLUME::DOES_VOLUME_EXIST(uParam2->f_9))
@@ -80528,7 +80528,7 @@ void func_2301(char[4] cParam0, int* iParam1, var uParam2)
 				PED::REGISTER_TARGET(*iParam1, Global_35, true);
 			}
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam1, true);
-			PED::_0xD8736EFDA38EDC5C(*iParam1, uParam2->f_6, 200.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(*iParam1, uParam2->f_6, 200.0f);
 			TASK::CLEAR_PED_TASKS(*iParam1, true, false);
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_481);
 			if (uParam2->f_12 == 0 || !TASK::DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS(TASK::GET_SCRIPTED_COVER_POINT_COORDS(uParam2->f_12), 0))
@@ -80552,7 +80552,7 @@ void func_2301(char[4] cParam0, int* iParam1, var uParam2)
 			break;
 		case 54:
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam1, true);
-			PED::_0xD8736EFDA38EDC5C(*iParam1, uParam2->f_6, 200.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(*iParam1, uParam2->f_6, 200.0f);
 			func_50(*iParam1);
 			PED::SET_PED_SPHERE_DEFENSIVE_AREA(*iParam1, uParam2->f_6, 3.0f, false, false, false);
 			TASK::CLEAR_PED_TASKS(*iParam1, true, false);
@@ -80581,7 +80581,7 @@ void func_2301(char[4] cParam0, int* iParam1, var uParam2)
 			break;
 		case 55:
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam1, true);
-			PED::_0xD8736EFDA38EDC5C(*iParam1, uParam2->f_6, 200.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(*iParam1, uParam2->f_6, 200.0f);
 			PED::REGISTER_TARGET(*iParam1, Global_35, true);
 			func_50(*iParam1);
 			PED::SET_PED_SPHERE_DEFENSIVE_AREA(*iParam1, uParam2->f_6, 3.0f, false, false, false);
@@ -80767,7 +80767,7 @@ void func_2301(char[4] cParam0, int* iParam1, var uParam2)
 			break;
 		case 31:
 			WEAPON::SET_CURRENT_PED_WEAPON(*iParam1, WEAPON::GET_BEST_PED_WEAPON(*iParam1, false, false), false, 0, true, false);
-			PED::_0xD8736EFDA38EDC5C(*iParam1, uParam2->f_6, 200.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(*iParam1, uParam2->f_6, 200.0f);
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam1, true);
 			func_50(*iParam1);
 			TASK::CLEAR_PED_TASKS(*iParam1, true, false);
@@ -80803,11 +80803,11 @@ void func_2301(char[4] cParam0, int* iParam1, var uParam2)
 	}
 }
 
-void func_2302(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
+void func_2302(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(iParam0))
 	{
-		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, bParam4);
+		PED::SET_PED_TO_RAGDOLL(iParam0, iParam1, iParam2, iParam3, false, false, sParam4);
 	}
 }
 
@@ -83017,7 +83017,7 @@ void func_2366(char[4] cParam0, int* iParam1, var uParam2)
 			break;
 		case 52:
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(*iParam1, true);
-			PED::_0xD8736EFDA38EDC5C(*iParam1, ENTITY::GET_ENTITY_COORDS(*iParam1, true, false), 200.0f);
+			PED::_REGISTER_HATED_TARGETS_IN_AREA(*iParam1, ENTITY::GET_ENTITY_COORDS(*iParam1, true, false), 200.0f);
 			func_50(*iParam1);
 			func_1374(*iParam1, joaat("BLIP_STYLE_ENEMY"), 1, 1);
 			func_1851(*iParam1, joaat("BLIP_MODIFIER_ENEMY_GUNSHOTS_ONLY"), 1);
@@ -86392,7 +86392,7 @@ bool func_2446(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_2279);
 	if (!bVar0)
 	{
-		uParam0->f_2279 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_2279 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_2279);
 	if (!bVar1)

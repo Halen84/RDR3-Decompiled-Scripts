@@ -9762,7 +9762,7 @@ bool func_213()
 						{
 							PED::_PED_EMOTIONAL_PRESET_LOCO_MOTION(uLocal_598[2], "TaskCower_Default", 0, -1, 4);
 							ANIMSCENE::REMOVE_ANIM_SCENE_ENTITY(sLocal_479.f_0, "VICTIM", uLocal_598[2]);
-							PED::SET_PED_TO_RAGDOLL(uLocal_598[2], 2000, 2000, 0, false, false, false);
+							PED::SET_PED_TO_RAGDOLL(uLocal_598[2], 2000, 2000, 0, false, false, 0);
 							func_224(&uLocal_752);
 							iLocal_632++;
 						}
@@ -14313,7 +14313,7 @@ int func_339(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_483(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_484(&(uParam1->f_22)));
 			func_84(iVar0, func_485(&(uParam1->f_22)), 0);
 		}

@@ -2875,7 +2875,7 @@ void func_69(var uParam0)
 			{
 				ENTITY::DETACH_ENTITY(uParam0->f_20[1 /*14*/], true, true);
 				PHYSICS::ACTIVATE_PHYSICS(uParam0->f_20[1 /*14*/]);
-				PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, false);
+				PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, 0);
 			}
 			func_73(uParam0->f_20[1 /*14*/], 0, 0);
 		}

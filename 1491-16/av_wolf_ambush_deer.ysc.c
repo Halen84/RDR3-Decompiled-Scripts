@@ -2825,7 +2825,7 @@ void func_71(var uParam0)
 	{
 		if (ENTITY::HAS_ANIM_EVENT_FIRED(uParam0->f_20[1 /*14*/], 830334344))
 		{
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, 0);
 			func_110(uParam0->f_20[1 /*14*/], 0, 0);
 		}
 		else if (!func_111(uParam0->f_20[1 /*14*/], joaat("SCRIPT_TASK_FLEE")))

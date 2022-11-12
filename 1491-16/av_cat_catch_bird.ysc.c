@@ -1975,7 +1975,7 @@ int func_32(var uParam0, bool bParam1)
 			TASK::CLEAR_PED_SECONDARY_TASK(uParam0->f_20[0 /*14*/]);
 			TASK::CLEAR_PED_SECONDARY_TASK(uParam0->f_20[1 /*14*/]);
 			ENTITY::DETACH_ENTITY(uParam0->f_20[1 /*14*/], true, true);
-			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(uParam0->f_20[1 /*14*/], 2000, 2000, 0, false, false, 0);
 			func_75(uParam0->f_20[1 /*14*/], 0, 0);
 			func_72(&(uParam0->f_20[0 /*14*/]), 0, 1);
 			uParam0->f_469[5] = 1;

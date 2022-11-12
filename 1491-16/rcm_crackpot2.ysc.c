@@ -11997,7 +11997,7 @@ void func_375()
 				GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_crackpot_rc_lightening", vVar14, 0.0f, 0.0f, 0.0f, 1.0f, false, false, false);
 				GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_crackpot_rc_lightening_exp", vVar0[iVar17 /*3*/], 90.0f, 0.0f, fVar10[iVar17], 1.0f, false, false, false);
 				AUDIO::_PLAY_SOUND_FROM_POSITION_WITH_ID(iLocal_433, "LIGHTNING_EXP", vVar0[iVar17 /*3*/], "RCKPT2_Sounds", false, 0, true);
-				PED::SET_PED_TO_RAGDOLL(Global_35, 1200, 1500, 0, false, false, false);
+				PED::SET_PED_TO_RAGDOLL(Global_35, 1200, 1500, 0, false, false, 0);
 				ENTITY::APPLY_FORCE_TO_ENTITY(Global_35, 3, 0.0f, -6.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, true, true, true, false, true);
 				PED::APPLY_DAMAGE_TO_PED(Global_35, 50, 1, -1, 0);
 				PAD::SET_CONTROL_SHAKE(0, 100, 200);
@@ -17049,7 +17049,7 @@ bool func_572(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -24561,9 +24561,9 @@ bool func_840(char[4] cParam0, char[12] cParam1, bool bParam4, int iParam5, bool
 	return bVar0;
 }
 
-bool func_841(int iParam0)
+bool func_841(bool bParam0)
 {
-	return AUDIO::_0xFE5C6177064BD390(iParam0);
+	return AUDIO::_0xFE5C6177064BD390(bParam0);
 }
 
 int func_842(int iParam0)
@@ -39592,7 +39592,7 @@ bool func_1293(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -45049,7 +45049,7 @@ void func_1464(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1792(func_1791(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1792(func_1791(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_403())
 	{
@@ -45082,7 +45082,7 @@ void func_1466(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1792(func_1791(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1792(func_1791(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -61120,7 +61120,7 @@ void func_2037(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	}
 }
 
-bool func_2038(bool bParam0, int iParam1, int iParam2, int iParam3)
+bool func_2038(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -61132,7 +61132,7 @@ bool func_2038(bool bParam0, int iParam1, int iParam2, int iParam3)
 	{
 		iParam2 = iVar0;
 	}
-	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(bParam0, iParam1, iParam2);
+	bVar2 = PED::COMPUTE_SATCHEL_ITEM_FOR_PED_DAMAGE(iParam0, iParam1, iParam2);
 	return bVar2;
 }
 

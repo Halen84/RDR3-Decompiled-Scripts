@@ -11752,7 +11752,7 @@ bool func_373(var uParam0)
 
 void func_374(var uParam0)
 {
-	if (!AUDIO::_0xFE5C6177064BD390(1))
+	if (!AUDIO::_0xFE5C6177064BD390(true))
 	{
 		if (!MAP::DOES_BLIP_EXIST(iLocal_263))
 		{
@@ -16742,7 +16742,7 @@ bool func_570(var uParam0, char* sParam1, int iParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_776 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_776 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_782 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_776);
@@ -41974,7 +41974,7 @@ bool func_1363(var uParam0, char* sParam1, int iParam2)
 	bVar0 = DATAFILE::PARSEDDATA_IS_FILE_VALID(uParam0->f_1785);
 	if (!bVar0)
 	{
-		uParam0->f_1785 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+		uParam0->f_1785 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 	}
 	bVar1 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_1785);
 	if (!bVar1)
@@ -48371,7 +48371,7 @@ void func_1550(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2016(func_2015(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2016(func_2015(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_404())
 	{
@@ -48404,7 +48404,7 @@ void func_1552(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_2016(func_2015(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_2016(func_2015(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
@@ -49374,7 +49374,7 @@ void func_1593(int iParam0, Vector3 vParam1)
 
 void func_1594()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_1899();
 }
 

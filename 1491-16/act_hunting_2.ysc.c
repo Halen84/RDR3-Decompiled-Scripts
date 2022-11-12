@@ -500,7 +500,7 @@ void func_1(var uParam0)
 					UILOG::_UILOG_SET_ENTRY_ICON_TEXTURE(3, joaat("CABR01"), MISC::GET_HASH_KEY(sVar4), joaat("HUD_TOASTS"));
 					MISSIONDATA::_MISSIONDATA_SET_MISSION_RATING(joaat("CABR01"), func_24());
 					UILOG::_UILOG_MARK_MISSION_COMPLETED(joaat("CABR01"));
-					UILOG::_0xA31013798FADCADC(3, joaat("CABR01"), 1);
+					UILOG::_UILOG_SET_DISPLAY_COMPLETION_RATING(3, joaat("CABR01"), true);
 				}
 				else
 				{
@@ -2811,12 +2811,12 @@ int func_45(var uParam0)
 		func_227(uParam0);
 		func_228(uParam0);
 		func_229();
-		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 15, 1);
+		ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 15, true);
 		if (func_230())
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(sLocal_15.f_375))
 			{
-				ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_15.f_375, 12, 1);
+				ENTITY::_0xC3ABCFBC7D74AFA5(sLocal_15.f_375, 12, true);
 			}
 			if (PED::GET_PED_CONFIG_FLAG(sLocal_15.f_307[2], 136, true))
 			{
@@ -2891,7 +2891,7 @@ int func_45(var uParam0)
 			break;
 		case 7:
 			PED::SET_PED_RESET_FLAG(sLocal_15.f_307[0], 179, true);
-			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 			func_240();
 			func_242(&(sLocal_15.f_421), 877.5134f, 418.416f, 110.7355f, "scr_campfire_distance_smoke_sma");
 			if (func_245(uParam0))
@@ -2901,7 +2901,7 @@ int func_45(var uParam0)
 			break;
 		case 8:
 			PED::SET_PED_RESET_FLAG(sLocal_15.f_307[0], 179, true);
-			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, 1);
+			ENTITY::_0xC3ABCFBC7D74AFA5(Global_35, 0, true);
 			func_242(&(sLocal_15.f_421), 877.5134f, 418.416f, 110.7355f, "scr_campfire_distance_smoke_sma");
 			func_246();
 			if (func_247(uParam0))
@@ -9055,7 +9055,7 @@ bool func_206(var uParam0, char* sParam1, var uParam2, bool bParam3, bool bParam
 		}
 		else
 		{
-			uParam0->f_264 = DATAFILE::_0xD97D8D905F1562F2(MISC::GET_HASH_KEY(sParam1));
+			uParam0->f_264 = DATAFILE::_PARSEDDATA_LOAD_FILE_HASH(MISC::GET_HASH_KEY(sParam1));
 		}
 	}
 	uParam0->f_270 = DATAFILE::PARSEDDATA_IS_FILE_LOADED(uParam0->f_264);
@@ -22467,7 +22467,7 @@ bool func_616(int iParam0, float fParam1, float fParam2, bool bParam3, bool bPar
 
 void func_617()
 {
-	CAM::_0x88544C0E3291DCAE(1);
+	CAM::_0x88544C0E3291DCAE(true);
 	func_960();
 }
 
@@ -37307,7 +37307,7 @@ void func_1038(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1312(func_1311(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1312(func_1311(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_125())
 	{
@@ -37340,7 +37340,7 @@ void func_1040(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1312(func_1311(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1312(func_1311(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{

@@ -8742,7 +8742,7 @@ int func_197(int iParam0, var uParam1, Vector3 vParam2, bool bParam5, bool bPara
 		if (func_350(&(uParam1->f_22)))
 		{
 			PED::SET_PED_CAN_RAGDOLL(iVar0, true);
-			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, false);
+			PED::SET_PED_TO_RAGDOLL(iVar0, 1000, 1000, 1, false, false, 0);
 			PED::SET_PED_CONFIG_FLAG(iVar0, 186, !func_351(&(uParam1->f_22)));
 			func_353(iVar0, func_352(&(uParam1->f_22)), 0);
 		}
@@ -22244,7 +22244,7 @@ void func_566(int iParam0)
 		ENTITY::FREEZE_ENTITY_POSITION(iLocal_445[iParam0], false);
 		PED::SET_PED_CAN_BE_TARGETTED(iLocal_445[iParam0], true);
 		TASK::OPEN_SEQUENCE_TASK(&iVar0);
-		TASK::TASK_FLY_TO_COORD(0, 2.75f, func_774(), 0, 0);
+		TASK::TASK_FLY_TO_COORD(0, 2.75f, func_774(), false, false);
 		TASK::TASK_FLYING_CIRCLE(0, 2.0f, vVar1, 0.0f, 15.0f);
 		func_52(iLocal_445[iParam0], &iVar0, 0.0f, (BUILTIN::TO_FLOAT(iParam0) * 1.5f), 1, 1);
 	}
@@ -39163,7 +39163,7 @@ void func_1178(var uParam0)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1197(func_1196(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1197(func_1196(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else if (func_1146())
 	{
@@ -39196,7 +39196,7 @@ void func_1180(var uParam0, bool bParam1)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		MAP::_SET_BLIP_NAME_FROM_PLAYER_STRING(*uParam0, func_1197(func_1196(255), joaat("COLOR_PURE_WHITE")));
+		MAP::_SET_BLIP_NAME(*uParam0, func_1197(func_1196(255), joaat("COLOR_PURE_WHITE")));
 	}
 	else
 	{
