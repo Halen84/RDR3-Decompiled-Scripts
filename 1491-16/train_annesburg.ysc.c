@@ -11,7 +11,7 @@
 	int iScriptParam_0 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	vLocal_5 = { 2941.792f, 1377.969f, 43.1f /*3*/ };
 	vLocal_8 = { 2314.011f, -1512.919f, 44.9053f /*3*/ };
@@ -181,7 +181,7 @@ void func_3(int iParam0, int iParam1)
 	{
 		return;
 	}
-	Global_40.f_11029[iParam0 /*5*/] -= Global_40.f_11029[iParam0 /*5*/] & iParam1;
+	Global_40.f_11029[iParam0 /*5*/] -= (Global_40.f_11029[iParam0 /*5*/] & iParam1);
 }
 
 int func_4(int iParam0)
@@ -265,7 +265,7 @@ bool func_8(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_40.f_11029[iParam0 /*5*/] & iParam1 != 0;
+	return (Global_40.f_11029[iParam0 /*5*/] & iParam1) != 0;
 }
 
 float func_9(int iParam0, bool bParam1, int iParam2)
@@ -476,7 +476,7 @@ bool func_15(int iParam0, bool bParam1, bool bParam2)
 	{
 		return true;
 	}
-	if (Global_1935630 & 40959 & (-1 - iParam0) != 0)
+	if ((Global_1935630 & (40959 & (-1 - iParam0))) != 0)
 	{
 		return true;
 	}
@@ -492,25 +492,25 @@ bool func_15(int iParam0, bool bParam1, bool bParam2)
 		case 0:
 			return false;
 		case 1:
-			return iParam0 & 1 == 0;
+			return (iParam0 & 1) == 0;
 		case 4:
-			return iParam0 & 2 == 0;
+			return (iParam0 & 2) == 0;
 		case 6:
-			return iParam0 & 4 == 0;
+			return (iParam0 & 4) == 0;
 		case 2:
-			return iParam0 & 16 == 0;
+			return (iParam0 & 16) == 0;
 		case 5:
-			return iParam0 & 32 == 0;
+			return (iParam0 & 32) == 0;
 		case 9:
-			return iParam0 & 64 == 0;
+			return (iParam0 & 64) == 0;
 		case 8:
-			return iParam0 & 8 == 0;
+			return (iParam0 & 8) == 0;
 		case 10:
-			return iParam0 & (1 << 9) == 0;
+			return (iParam0 & (1 << 9)) == 0;
 		case 3:
-			return iParam0 & 128 == 0;
+			return (iParam0 & 128) == 0;
 		case 11:
-			return iParam0 & 256 == 0;
+			return (iParam0 & 256) == 0;
 		default:
 			break;
 	}
@@ -579,7 +579,7 @@ bool func_19(int iParam0, bool bParam1)
 	{
 		if (Global_40.f_450[iVar0] == iParam0)
 		{
-			if (!bParam1 || Global_1347702[iVar0 /*49*/].f_13 & (1 << 14) == 0)
+			if (!bParam1 || (Global_1347702[iVar0 /*49*/].f_13 & (1 << 14)) == 0)
 			{
 				return true;
 			}
@@ -688,7 +688,7 @@ bool func_26()
 	{
 		return true;
 	}
-	if (Global_1051043 == -1 && Global_1572887.f_6 & 1 != 0)
+	if (Global_1051043 == -1 && (Global_1572887.f_6 & 1) != 0)
 	{
 		return true;
 	}
@@ -711,7 +711,7 @@ bool func_28(int iParam0)
 
 bool func_29(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_30(int iParam0)
@@ -774,7 +774,7 @@ int func_34()
 
 bool func_35(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_36(int iParam0)
@@ -801,7 +801,7 @@ int func_37(int iParam0)
 
 int func_38(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023);
 }
 
 int func_39(int iParam0)

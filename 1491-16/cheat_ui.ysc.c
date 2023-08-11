@@ -15,7 +15,7 @@
 	var uLocal_106 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bool bVar0;
 
@@ -195,7 +195,7 @@ void func_4()
 		else
 		{
 			iVar1 = func_24(iVar3);
-			if (func_25(iVar3) == 369178237 || func_25(iVar3) == 1726108579)
+			if (func_25(iVar3) == joaat("CHEAT_LOCKED") || func_25(iVar3) == 1726108579)
 			{
 			}
 			else if (func_26(iVar1))
@@ -374,7 +374,7 @@ void func_7(int iParam0)
 			}
 			else
 			{
-				DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(iVar0, func_6(5), 369178237);
+				DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(iVar0, func_6(5), joaat("CHEAT_LOCKED"));
 			}
 			break;
 		default:
@@ -436,10 +436,10 @@ char* func_8(int iParam0)
 				return func_37(iVar1);
 			}
 			break;
-		case 369178237:
+		case joaat("CHEAT_LOCKED"):
 		case 1726108579:
 			return "CHEAT_UNLOCK_DESCRIPTION";
-		case 866112557:
+		case joaat("UNLOCKED_DISABLED"):
 			if (func_26(iVar1))
 			{
 				return "CHEAT_DISABLED_DESCRIPTION";
@@ -520,7 +520,7 @@ void func_10()
 				sLocal_9.f_93[iVar0] = sLocal_9.f_50[iVar1];
 				DATABINDING::_DATABINDING_WRITE_DATA_BOOL_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar0]], func_6(9), true);
 				DATABINDING::_DATABINDING_WRITE_DATA_BOOL_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar0]], func_6(7), true);
-				DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar0]], func_6(5), 866112557);
+				DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar0]], func_6(5), joaat("UNLOCKED_DISABLED"));
 			}
 		}
 		iVar0++;
@@ -622,7 +622,7 @@ void func_15()
 								DATABINDING::_DATABINDING_WRITE_DATA_BOOL_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar3]], func_6(7), false);
 								if (func_26(iVar1))
 								{
-									DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar3]], func_6(5), 866112557);
+									DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar3]], func_6(5), joaat("UNLOCKED_DISABLED"));
 								}
 								else if (func_20(iVar1))
 								{
@@ -630,7 +630,7 @@ void func_15()
 								}
 								else
 								{
-									DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar3]], func_6(5), 369178237);
+									DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_93[iVar3]], func_6(5), joaat("CHEAT_LOCKED"));
 								}
 								sLocal_9.f_93[iVar3] = sLocal_9.f_43;
 								DATABINDING::_DATABINDING_WRITE_DATA_BOOL_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(6), false);
@@ -644,7 +644,7 @@ void func_15()
 									if (iVar4 >= sLocal_9.f_49)
 									{
 										DATABINDING::DATABINDING_WRITE_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(8), MISC::VAR_STRING(2, "CHEAT_TIP_AMOUNT_ADDED_MAX"));
-										DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(5), 866112557);
+										DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(5), joaat("UNLOCKED_DISABLED"));
 									}
 									else
 									{
@@ -654,7 +654,7 @@ void func_15()
 								else
 								{
 									DATABINDING::_DATABINDING_WRITE_DATA_BOOL_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(7), true);
-									DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(5), 866112557);
+									DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[sLocal_9.f_43], func_6(5), joaat("UNLOCKED_DISABLED"));
 								}
 								Jump @549; // curOff = 537
 								Jump @549; // curOff = 540
@@ -912,7 +912,7 @@ void func_23(int iParam0)
 	func_69(iParam0);
 	if (func_53(iParam0))
 	{
-		if (func_25(sLocal_9.f_4[iVar0]) != 369178237)
+		if (func_25(sLocal_9.f_4[iVar0]) != joaat("CHEAT_LOCKED"))
 		{
 			if (!func_70(iParam0, sLocal_9.f_44[func_33(iParam0)]))
 			{
@@ -1378,7 +1378,7 @@ int func_39(int iParam0)
 		{
 			if (func_26(iParam0))
 			{
-				return 866112557;
+				return joaat("UNLOCKED_DISABLED");
 			}
 			else if (func_20(iParam0))
 			{
@@ -1391,20 +1391,20 @@ int func_39(int iParam0)
 		}
 		else
 		{
-			return 369178237;
+			return joaat("CHEAT_LOCKED");
 		}
 	}
 	if (func_20(iParam0))
 	{
 		if (func_26(iParam0))
 		{
-			return 866112557;
+			return joaat("UNLOCKED_DISABLED");
 		}
 		else if (iParam0 == 6)
 		{
 			if (sLocal_9.f_49 <= 0 || func_32() >= sLocal_9.f_49)
 			{
-				return 866112557;
+				return joaat("UNLOCKED_DISABLED");
 			}
 			else
 			{
@@ -1415,7 +1415,7 @@ int func_39(int iParam0)
 		{
 			if (func_61())
 			{
-				return 866112557;
+				return joaat("UNLOCKED_DISABLED");
 			}
 			else
 			{
@@ -1427,7 +1427,7 @@ int func_39(int iParam0)
 			iVar1 = func_27(iParam0);
 			if (iVar1 == 0)
 			{
-				return 866112557;
+				return joaat("UNLOCKED_DISABLED");
 			}
 			else
 			{
@@ -1439,7 +1439,7 @@ int func_39(int iParam0)
 			return joaat("UNLOCKED");
 		}
 	}
-	return 369178237;
+	return joaat("CHEAT_LOCKED");
 }
 
 bool func_40(int iParam0)
@@ -2002,7 +2002,7 @@ void func_65(int iParam0, int iParam1, int iParam2)
 	iVar1 = func_82(iParam2, (iParam1 - 1));
 	if (iVar1 == -1)
 	{
-		DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[iParam0], func_6(5), 369178237);
+		DATABINDING::_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT(sLocal_9.f_4[iParam0], func_6(5), joaat("CHEAT_LOCKED"));
 		return;
 	}
 	if (func_20(iVar1))
@@ -2963,7 +2963,7 @@ bool func_113(int iParam0, bool bParam1, bool bParam2)
 	{
 		return true;
 	}
-	if (Global_1935630 & 40959 & (-1 - iParam0) != 0)
+	if ((Global_1935630 & (40959 & (-1 - iParam0))) != 0)
 	{
 		return true;
 	}
@@ -2979,25 +2979,25 @@ bool func_113(int iParam0, bool bParam1, bool bParam2)
 		case 0:
 			return false;
 		case 1:
-			return iParam0 & 1 == 0;
+			return (iParam0 & 1) == 0;
 		case 4:
-			return iParam0 & 2 == 0;
+			return (iParam0 & 2) == 0;
 		case 6:
-			return iParam0 & 4 == 0;
+			return (iParam0 & 4) == 0;
 		case 2:
-			return iParam0 & 16 == 0;
+			return (iParam0 & 16) == 0;
 		case 5:
-			return iParam0 & 32 == 0;
+			return (iParam0 & 32) == 0;
 		case 9:
-			return iParam0 & 64 == 0;
+			return (iParam0 & 64) == 0;
 		case 8:
-			return iParam0 & 8 == 0;
+			return (iParam0 & 8) == 0;
 		case 10:
-			return iParam0 & (1 << 9) == 0;
+			return (iParam0 & (1 << 9)) == 0;
 		case 3:
-			return iParam0 & 128 == 0;
+			return (iParam0 & 128) == 0;
 		case 11:
-			return iParam0 & 256 == 0;
+			return (iParam0 & 256) == 0;
 		default:
 			break;
 	}
@@ -3154,7 +3154,7 @@ bool func_124(int iParam0)
 	switch (func_137())
 	{
 		case -1:
-			return Global_1357549.f_1494 & iParam0 != 0;
+			return (Global_1357549.f_1494 & iParam0) != 0;
 	}
 	return false;
 }
@@ -3177,7 +3177,7 @@ bool func_125()
 	{
 		return true;
 	}
-	if (Global_1051043 == -1 && Global_1572887.f_6 & 1 != 0)
+	if (Global_1051043 == -1 && (Global_1572887.f_6 & 1) != 0)
 	{
 		return true;
 	}
@@ -3200,7 +3200,7 @@ bool func_127(int iParam0)
 
 bool func_128(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_129(int iParam0)
@@ -3434,7 +3434,7 @@ int func_138(int iParam0)
 
 int func_139(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023);
 }
 
 int func_140(int iParam0)

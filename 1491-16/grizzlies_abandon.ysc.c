@@ -36,7 +36,7 @@
 	var uScriptParam_9 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -320,7 +320,7 @@ bool func_9(int iParam0, bool bParam1, bool bParam2)
 	{
 		return true;
 	}
-	if (Global_1935630 & 40959 & (-1 - iParam0) != 0)
+	if ((Global_1935630 & (40959 & (-1 - iParam0))) != 0)
 	{
 		return true;
 	}
@@ -336,25 +336,25 @@ bool func_9(int iParam0, bool bParam1, bool bParam2)
 		case 0:
 			return false;
 		case 1:
-			return iParam0 & 1 == 0;
+			return (iParam0 & 1) == 0;
 		case 4:
-			return iParam0 & 2 == 0;
+			return (iParam0 & 2) == 0;
 		case 6:
-			return iParam0 & 4 == 0;
+			return (iParam0 & 4) == 0;
 		case 2:
-			return iParam0 & 16 == 0;
+			return (iParam0 & 16) == 0;
 		case 5:
-			return iParam0 & 32 == 0;
+			return (iParam0 & 32) == 0;
 		case 9:
-			return iParam0 & 64 == 0;
+			return (iParam0 & 64) == 0;
 		case 8:
-			return iParam0 & 8 == 0;
+			return (iParam0 & 8) == 0;
 		case 10:
-			return iParam0 & (1 << 9) == 0;
+			return (iParam0 & (1 << 9)) == 0;
 		case 3:
-			return iParam0 & 128 == 0;
+			return (iParam0 & 128) == 0;
 		case 11:
-			return iParam0 & 256 == 0;
+			return (iParam0 & 256) == 0;
 		default:
 			break;
 	}
@@ -363,7 +363,7 @@ bool func_9(int iParam0, bool bParam1, bool bParam2)
 
 bool func_10(int iParam0)
 {
-	return Global_1572864.f_3 & iParam0 != 0;
+	return (Global_1572864.f_3 & iParam0) != 0;
 }
 
 bool func_11(int iParam0)
@@ -390,7 +390,7 @@ void func_12(int iParam0, int iParam1)
 	{
 		return;
 	}
-	Global_1900383[iParam0 /*45*/].f_24 -= Global_1900383[iParam0 /*45*/].f_24 & iParam1;
+	Global_1900383[iParam0 /*45*/].f_24 -= (Global_1900383[iParam0 /*45*/].f_24 & iParam1);
 }
 
 void func_13(bool bParam0)
@@ -424,7 +424,7 @@ void func_15(int iParam0, bool bParam1, bool bParam2)
 		}
 		if (bParam2)
 		{
-			PED::SET_PED_CONFIG_FLAG(iParam0, 243, true);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 243 /*PCF_0x0831CCD1*/, true);
 		}
 		if (Global_35 == iParam0)
 		{
@@ -529,7 +529,7 @@ bool func_21()
 	{
 		return true;
 	}
-	if (Global_1051043 == -1 && Global_1572887.f_6 & 1 != 0)
+	if (Global_1051043 == -1 && (Global_1572887.f_6 & 1) != 0)
 	{
 		return true;
 	}
@@ -552,7 +552,7 @@ bool func_23(int iParam0)
 
 bool func_24(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_25(int iParam0)
@@ -609,7 +609,7 @@ int func_29(int iParam0)
 
 int func_30(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023);
 }
 
 int func_31(int iParam0)

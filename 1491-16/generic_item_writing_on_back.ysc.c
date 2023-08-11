@@ -22,7 +22,7 @@
 	var uScriptParam_4 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	struct<152> /*1216*/ sVar0;
 	int iVar152;
@@ -60,7 +60,7 @@ void __EntryFunction__()
 	sVar0.f_134 = ANIMSCENE::_CREATE_ANIM_SCENE("lightrig@player_journal", 0, "plMain", false, true);
 	ANIMSCENE::LOAD_ANIM_SCENE(sVar0.f_134);
 	sVar0.f_142 = 0;
-	if (!ENTITY::IS_ENTITY_DEAD(Global_35) && (PED::IS_PED_USING_ANY_SCENARIO(Global_35) && !PED::GET_PED_CONFIG_FLAG(Global_35, 464, true)))
+	if (!ENTITY::IS_ENTITY_DEAD(Global_35) && (PED::IS_PED_USING_ANY_SCENARIO(Global_35) && !PED::GET_PED_CONFIG_FLAG(Global_35, 464 /*PCF_0x219138E7*/, true)))
 	{
 		sVar0.f_142 = 1;
 	}
@@ -331,6 +331,6 @@ bool func_13(int iParam0)
 
 bool func_14(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 

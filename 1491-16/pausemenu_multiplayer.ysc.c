@@ -4,7 +4,7 @@
 	var uScriptParam_3 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	switch (sScriptParam_0.f_0)

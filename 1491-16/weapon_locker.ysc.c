@@ -107,7 +107,7 @@
 	var uLocal_105 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	func_1();
 	if (func_2(&iLocal_0) == 1)
@@ -234,7 +234,7 @@ bool func_8(var uParam0)
 	{
 		return false;
 	}
-	if (func_21(&(uParam0->f_2.f_13), &(uParam0->f_2), 1673159803))
+	if (func_21(&(uParam0->f_2.f_13), &(uParam0->f_2), joaat("WEAPON_FILTER")))
 	{
 		func_22(&(uParam0->f_2.f_13));
 		iVar7 = 0;
@@ -831,7 +831,7 @@ int func_48(var uParam0, var uParam1)
 	{
 		return 0;
 	}
-	MISC::_COPY_MEMORY(&(uParam0->f_102), uParam1, 4);
+	MISC::COPY_SCRIPT_STRUCT(&(uParam0->f_102), uParam1, 4);
 	return 1;
 }
 
@@ -1206,7 +1206,7 @@ int func_68(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 	{
 		return 0;
 	}
-	MISC::_COPY_MEMORY(&(uParam0->f_2.f_9), &uParam1, 4);
+	MISC::COPY_SCRIPT_STRUCT(&(uParam0->f_2.f_9), &uParam1, 4);
 	return 1;
 }
 
@@ -1745,7 +1745,7 @@ bool func_94(int* iParam0, var uParam1)
 	{
 		return false;
 	}
-	MISC::_COPY_MEMORY(&(iParam0->f_98), uParam1, 4);
+	MISC::COPY_SCRIPT_STRUCT(&(iParam0->f_98), uParam1, 4);
 	return true;
 }
 

@@ -19,7 +19,7 @@
 	var uScriptParam_2 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	Vector3 vVar0;
 
@@ -180,7 +180,7 @@ void func_3(var uParam0, int iParam1)
 
 bool func_4(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_5(var uParam0)

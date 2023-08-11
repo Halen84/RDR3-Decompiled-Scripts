@@ -11,7 +11,7 @@
 	var uScriptParam_9 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	sLocal_0.f_4 = func_1(sScriptParam_0.f_1);
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(514))
@@ -330,7 +330,7 @@ void func_6(int iParam0)
 
 void func_7(int iParam0)
 {
-	Global_1946054 -= Global_1946054 & iParam0;
+	Global_1946054 -= (Global_1946054 & iParam0);
 }
 
 char* func_8()
@@ -370,7 +370,7 @@ int func_11()
 	{
 		return 0;
 	}
-	if (PED::GET_PED_RESET_FLAG(iVar5, 267))
+	if (PED::GET_PED_RESET_FLAG(iVar5, 267 /*PRF_0x8F5BB50B*/))
 	{
 		return 0;
 	}
@@ -726,7 +726,7 @@ void func_19(int iParam0, int iParam1)
 	{
 		return;
 	}
-	iVar0 = Global_40.f_7157[iParam0 /*3*/] & iParam1;
+	iVar0 = (Global_40.f_7157[iParam0 /*3*/] & iParam1);
 	Global_40.f_7157[iParam0 /*3*/] -= iVar0;
 }
 
@@ -823,7 +823,7 @@ bool func_27(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_40.f_7157[iParam0 /*3*/] & iParam1 != 0;
+	return (Global_40.f_7157[iParam0 /*3*/] & iParam1) != 0;
 }
 
 bool func_28(int iParam0, int iParam1)
@@ -1112,7 +1112,7 @@ void func_39(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 
 bool func_40(int iParam0)
 {
-	return Global_1946054 & iParam0 != 0;
+	return (Global_1946054 & iParam0) != 0;
 }
 
 void func_41()
@@ -1182,9 +1182,9 @@ void func_44(int iParam0, bool bParam1, bool bParam2, int iParam3, bool bParam4,
 		}
 		if ((bParam4 && iVar0 > 5) && func_60(Global_1946054.f_1497))
 		{
-			if (Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 9) != 0)
+			if ((Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 9)) != 0)
 			{
-				Global_40.f_7157[Global_40.f_7729 /*3*/] -= Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 12);
+				Global_40.f_7157[Global_40.f_7729 /*3*/] -= (Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 12));
 				Global_40.f_7729 = 0;
 				Global_1905941 = Global_40.f_7729;
 				iVar0 = Global_40.f_7729;
@@ -1288,7 +1288,7 @@ void func_46(var uParam0, int iParam1, bool bParam2, int iParam3, bool bParam4, 
 				if (!func_67(iVar1, iParam3))
 				{
 				}
-				else if ((func_66(iVar3, 6) || uParam0->f_1[iVar1 /*3*/] == Global_1946054.f_57[iVar1 /*11*/]) || uParam0->f_1[iVar1 /*3*/].f_1 == 289238755)
+				else if ((func_66(iVar3, 6) || uParam0->f_1[iVar1 /*3*/] == Global_1946054.f_57[iVar1 /*11*/]) || uParam0->f_1[iVar1 /*3*/].f_1 == joaat("REMOVE_COMPONENT"))
 				{
 					if (!func_66(iVar3, 1) || bParam2)
 					{
@@ -1297,9 +1297,9 @@ void func_46(var uParam0, int iParam1, bool bParam2, int iParam3, bool bParam4, 
 						{
 							func_65(iParam1, iVar1, bVar4, 1, 0);
 						}
-						if (uParam0->f_1[iVar1 /*3*/].f_1 == 289238755)
+						if (uParam0->f_1[iVar1 /*3*/].f_1 == joaat("REMOVE_COMPONENT"))
 						{
-							Global_1946054.f_2456[iVar1 /*2*/].f_1 = 289238755;
+							Global_1946054.f_2456[iVar1 /*2*/].f_1 = joaat("REMOVE_COMPONENT");
 						}
 						func_70(iVar3, 1, 6);
 					}
@@ -1407,7 +1407,7 @@ bool func_52(var uParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4,
 		return false;
 	}
 	DATAFILE::_0xA63CD20F19B961AB(&bVar2, &sVar4, joaat("PARTIAL"));
-	DATAFILE::_PARSEDDATA_GET_SECTION(&iVar0, &sVar4, 2049745650);
+	DATAFILE::_PARSEDDATA_GET_SECTION(&iVar0, &sVar4, joaat("PERSISTENT_TAGS"));
 	*bParam2 = bVar2;
 	Global_1946054.f_2652 = 0;
 	if (!bVar2 && !bParam3)
@@ -1615,7 +1615,7 @@ void func_57(var uParam0)
 
 void func_58(int iParam0, int iParam1, int iParam2)
 {
-	Global_1946054.f_57[func_75(iParam0, 1) /*11*/].f_10 -= Global_1946054.f_57[func_75(iParam0, 1) /*11*/].f_10 & iParam1;
+	Global_1946054.f_57[func_75(iParam0, 1) /*11*/].f_10 -= (Global_1946054.f_57[func_75(iParam0, 1) /*11*/].f_10 & iParam1);
 }
 
 void func_59()
@@ -1681,7 +1681,7 @@ void func_62(bool bParam0, bool bParam1)
 
 bool func_63(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_64(struct<4> /*32*/ sParam0)
@@ -1767,12 +1767,12 @@ void func_65(int iParam0, int iParam1, bool bParam2, bool bParam3, int iParam4)
 
 bool func_66(int iParam0, int iParam1)
 {
-	return Global_1946054.f_57[func_75(iParam0, 1) /*11*/].f_10 & iParam1 != 0;
+	return (Global_1946054.f_57[func_75(iParam0, 1) /*11*/].f_10 & iParam1) != 0;
 }
 
 bool func_67(int iParam0, int iParam1)
 {
-	return Global_1946054.f_57[iParam0 /*11*/].f_9 & iParam1 != 0;
+	return (Global_1946054.f_57[iParam0 /*11*/].f_9 & iParam1) != 0;
 }
 
 void func_68(int iParam0, bool bParam1, bool bParam2)
@@ -1917,7 +1917,7 @@ bool func_71(int iParam0, int iParam1)
 		}
 		if (iParam1 > -1 && iParam1 < 5)
 		{
-			return Global_26796.f_26[iParam1 /*120*/] & iParam0 != 0;
+			return (Global_26796.f_26[iParam1 /*120*/] & iParam0) != 0;
 		}
 		return false;
 	}
@@ -1927,7 +1927,7 @@ bool func_71(int iParam0, int iParam1)
 	}
 	if (iParam1 > -1 && iParam1 < 5)
 	{
-		return Global_36638.f_45.f_350.f_26[iParam1 /*120*/] & iParam0 != 0;
+		return (Global_36638.f_45.f_350.f_26[iParam1 /*120*/] & iParam0) != 0;
 	}
 	return false;
 }
@@ -2559,7 +2559,7 @@ int func_85(int iParam0)
 
 bool func_86(var uParam0, int iParam1)
 {
-	return uParam0->f_2 & iParam1 != 0;
+	return (uParam0->f_2 & iParam1) != 0;
 }
 
 Vector3 func_87(int iParam0, int iParam1)
@@ -2703,13 +2703,13 @@ void func_93(var uParam0, int iParam1, int iParam2)
 void func_94(var uParam0, int iParam1, int iParam2)
 {
 	Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/] = { *uParam0 /*3*/ };
-	Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1;
+	Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= (Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1);
 }
 
 void func_95(var uParam0, int iParam1, int iParam2)
 {
 	Global_36638.f_45.f_350.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/] = { *uParam0 /*3*/ };
-	Global_36638.f_45.f_350.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1;
+	Global_36638.f_45.f_350.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= (Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1);
 }
 
 bool func_96(int iParam0, int iParam1)
@@ -2723,7 +2723,7 @@ bool func_96(int iParam0, int iParam1)
 
 bool func_97(var uParam0, int iParam1)
 {
-	return uParam0->f_1 & iParam1 != 0;
+	return (uParam0->f_1 & iParam1) != 0;
 }
 
 void func_98(var uParam0, int iParam1)

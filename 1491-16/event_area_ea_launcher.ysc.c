@@ -20,7 +20,7 @@
 	var uScriptParam_3 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -95,7 +95,7 @@ bool func_3(int iParam0)
 
 bool func_4(int iParam0)
 {
-	return Global_1898092.f_1 & iParam0 != 0;
+	return (Global_1898092.f_1 & iParam0) != 0;
 }
 
 void func_5(int iParam0)
@@ -150,10 +150,10 @@ void func_9(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		Global_23118[iParam0 /*11*/] -= Global_23118[iParam0 /*11*/] & iParam1;
+		Global_23118[iParam0 /*11*/] -= (Global_23118[iParam0 /*11*/] & iParam1);
 		return;
 	}
-	Global_1058888.f_40545[iParam0 /*11*/] -= Global_1058888.f_40545[iParam0 /*11*/] & iParam1;
+	Global_1058888.f_40545[iParam0 /*11*/] -= (Global_1058888.f_40545[iParam0 /*11*/] & iParam1);
 }
 
 void func_10()
@@ -174,7 +174,7 @@ bool func_11(int iParam0)
 
 bool func_12(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_13(int iParam0, bool bParam1, bool bParam2, float fParam3, bool bParam4)

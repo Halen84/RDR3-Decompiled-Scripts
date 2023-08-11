@@ -39,7 +39,7 @@
 	var uLocal_37 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -359,7 +359,7 @@ int func_11(int iParam0)
 
 bool func_12(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_13(var uParam0, int iParam1)
@@ -369,7 +369,7 @@ void func_13(var uParam0, int iParam1)
 
 int func_14(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31);
 }
 
 int func_15()
@@ -600,7 +600,7 @@ bool func_27(var uParam0, int iParam1)
 
 bool func_28(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_29(int iParam0, int iParam1)
@@ -624,7 +624,7 @@ bool func_29(int iParam0, int iParam1)
 
 bool func_30(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_31(var uParam0, int iParam1)
@@ -634,7 +634,7 @@ void func_31(var uParam0, int iParam1)
 
 void func_32(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_33(var uParam0, int iParam1)
@@ -781,7 +781,7 @@ void func_40(int iParam0, Vector3 vParam1, float fParam4)
 
 bool func_41(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 float func_42()
@@ -803,7 +803,7 @@ void func_43(var uParam0, int iParam1)
 
 void func_44(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_45(var uParam0)

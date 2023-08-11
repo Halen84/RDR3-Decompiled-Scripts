@@ -11,7 +11,7 @@
 	var uScriptParam_9 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bool bVar0;
 	int iVar1;
@@ -42,7 +42,7 @@ void __EntryFunction__()
 
 bool func_1(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_2(int iParam0)
@@ -165,6 +165,6 @@ int func_3(int iParam0)
 
 void func_4(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 

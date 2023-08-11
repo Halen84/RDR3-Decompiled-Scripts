@@ -3,7 +3,7 @@
 	int iLocal_1 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	int iVar0;
 	int iVar1;

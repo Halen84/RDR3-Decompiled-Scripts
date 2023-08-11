@@ -101,7 +101,7 @@
 	bool bLocal_101 = false;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	var uVar0;
 
@@ -393,7 +393,7 @@ bool func_13()
 
 bool func_14(var uParam0, int iParam1)
 {
-	return uParam0->f_2 & iParam1 != 0;
+	return (uParam0->f_2 & iParam1) != 0;
 }
 
 bool func_15(int iParam0)
@@ -800,7 +800,7 @@ int func_30(int iParam0)
 	}
 	while (iVar1 > 0)
 	{
-		iVar1 &= (iVar1 - 1);
+		iVar1 = (iVar1 & (iVar1 - 1));
 		iVar0++;
 	}
 	return iVar0;
@@ -844,12 +844,12 @@ int func_33()
 
 int func_34(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31);
 }
 
 bool func_35(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_36(bool bParam0, bool bParam1, bool bParam2)
@@ -916,7 +916,7 @@ int func_40(int iParam0)
 
 void func_41(int iParam0, int iParam1)
 {
-	*iParam0 -= *iParam0 & iParam1;
+	*iParam0 -= (*iParam0 & iParam1);
 }
 
 bool func_42(int iParam0)

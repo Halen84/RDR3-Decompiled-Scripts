@@ -122,7 +122,7 @@
 	var uLocal_126 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	var uVar0;
 	int iVar12;
@@ -384,7 +384,7 @@ void func_11(int iParam0)
 	else
 	{
 		iVar0 |= BUILTIN::SHIFT_LEFT((iVar1 - 1898), 26);
-		iVar0 -= iVar0 & (1 << 31);
+		iVar0 -= (iVar0 & (1 << 31));
 	}
 	Global_1899515 = iVar0;
 }
@@ -479,12 +479,12 @@ void func_15(var uParam0)
 
 bool func_16(int iParam0)
 {
-	return Global_1572864.f_3 & iParam0 != 0;
+	return (Global_1572864.f_3 & iParam0) != 0;
 }
 
 void func_17(int iParam0)
 {
-	Global_1572864.f_3 -= Global_1572864.f_3 & iParam0;
+	Global_1572864.f_3 -= (Global_1572864.f_3 & iParam0);
 }
 
 void func_18()
@@ -2031,7 +2031,7 @@ bool func_78()
 		}
 	}
 	func_255(&(Global_1572887.f_182));
-	sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("MODE")));
+	sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("MODE")));
 	iVar1 = MISC::GET_HASH_KEY(sVar0);
 	if (iVar1 != 0)
 	{
@@ -2039,39 +2039,39 @@ bool func_78()
 	}
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("REGION_ID"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("REGION_ID")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("REGION_ID")));
 		Global_1572887.f_182.f_3 = func_256(MISC::GET_HASH_KEY(sVar0));
 	}
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("DISTRICT_ID"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("DISTRICT_ID")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("DISTRICT_ID")));
 		Global_1572887.f_182.f_4 = func_257(MISC::GET_HASH_KEY(sVar0));
 	}
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("STATE_ID"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("STATE_ID")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("STATE_ID")));
 		Global_1572887.f_182.f_5 = func_258(MISC::GET_HASH_KEY(sVar0));
 	}
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("MINIGAME_ID"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("MINIGAME_ID")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("MINIGAME_ID")));
 		Global_1572887.f_182.f_7 = func_259(MISC::GET_HASH_KEY(sVar0));
 		Global_1572887.f_182.f_6 = -1;
 	}
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("SERIES_ID"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("SERIES_ID")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("SERIES_ID")));
 		Global_1572887.f_182.f_2 = func_260(MISC::GET_HASH_KEY(sVar0));
 	}
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("MISSION_ID"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("MISSION_ID")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("MISSION_ID")));
 		Global_1572887.f_182.f_8 = MISC::GET_HASH_KEY(sVar0);
 	}
 	Global_1572887.f_182.f_9 = 0;
 	if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(joaat("CHAR_SLOT"))))
 	{
-		sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(joaat("CHAR_SLOT")));
+		sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(joaat("CHAR_SLOT")));
 		if (MISC::STRING_TO_INT(sVar0, &(Global_1572887.f_182.f_9)))
 		{
 		}
@@ -2085,7 +2085,7 @@ bool func_78()
 		iVar2 = (iVar5 + iVar4);
 		if (NETWORK::_GET_LAUNCH_PARAM_EXISTS(func_253(iVar2)))
 		{
-			sVar0 = NETWORK::_GET_LAUNCH_PARAM_VALUE(func_253(iVar2));
+			sVar0 = NETWORK::GET_LAUNCH_PARAM_VALUE(func_253(iVar2));
 			iVar3 = MISC::GET_HASH_KEY(sVar0);
 			if (iVar3 != 0)
 			{
@@ -6626,7 +6626,7 @@ void func_238()
 	PAD::DISABLE_ALL_CONTROL_ACTIONS(0);
 	NETWORK::NETWORK_DISABLE_REALTIME_MULTIPLAYER();
 	func_353();
-	if (func_359() & func_360() && (func_312(255) > 0 && func_361() > -1))
+	if ((func_359() & func_360()) && (func_312(255) > 0 && func_361() > -1))
 	{
 		func_249(16);
 	}
@@ -7526,7 +7526,7 @@ int func_261(int iParam0)
 
 bool func_262(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 char* func_263(int iParam0)
@@ -8885,7 +8885,7 @@ bool func_309(int iParam0)
 
 bool func_310(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_311()
@@ -8925,12 +8925,12 @@ int func_312(int iParam0)
 
 bool func_313(int iParam0, int iParam1)
 {
-	return Global_262777[iParam0 /*69*/].f_67 & iParam1 != 0;
+	return (Global_262777[iParam0 /*69*/].f_67 & iParam1) != 0;
 }
 
 bool func_314(int iParam0)
 {
-	return Global_262148 & iParam0 != 0;
+	return (Global_262148 & iParam0) != 0;
 }
 
 void func_315(var uParam0)
@@ -8940,7 +8940,7 @@ void func_315(var uParam0)
 
 bool func_316(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_317(var uParam0)
@@ -10072,7 +10072,7 @@ int func_363()
 
 int func_364(int iParam0)
 {
-	return iParam0 & 31;
+	return (iParam0 & 31);
 }
 
 bool func_365()
@@ -11352,7 +11352,7 @@ char* func_414(char* sParam0, int iParam1)
 
 void func_415(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 int func_416()
@@ -11411,12 +11411,12 @@ void func_419(int iParam0)
 
 bool func_420(int iParam0)
 {
-	return Global_1109000.f_22.f_6 & iParam0 != 0;
+	return (Global_1109000.f_22.f_6 & iParam0) != 0;
 }
 
 bool func_421(int iParam0)
 {
-	return Global_1109000.f_22.f_8 & iParam0 != 0;
+	return (Global_1109000.f_22.f_8 & iParam0) != 0;
 }
 
 bool func_422(int iParam0)
@@ -11457,7 +11457,7 @@ void func_425(int iParam0)
 
 bool func_426(int iParam0)
 {
-	return Global_265073.f_73815.f_273 & iParam0 != 0;
+	return (Global_265073.f_73815.f_273 & iParam0) != 0;
 }
 
 int func_427(Vector3 vParam0)
@@ -11701,7 +11701,7 @@ int func_442(var uParam0, int iParam1)
 		else if (!SCRIPTS::_0x72B2E00C9BAC6789(&uParam0, iVar0))
 		{
 		}
-		else if (Global_262777[iVar0 /*69*/].f_67 & iParam1 != 0)
+		else if ((Global_262777[iVar0 /*69*/].f_67 & iParam1) != 0)
 		{
 			return 1;
 		}
@@ -11712,7 +11712,7 @@ int func_442(var uParam0, int iParam1)
 
 bool func_443(var uParam0, int iParam1)
 {
-	return uParam0->f_15 & iParam1 != 0;
+	return (uParam0->f_15 & iParam1) != 0;
 }
 
 bool func_444(var uParam0)
@@ -12119,7 +12119,7 @@ void func_467(var uParam0, int iParam1)
 
 void func_468(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_469()

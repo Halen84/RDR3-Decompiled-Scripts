@@ -1,4 +1,4 @@
-void __EntryFunction__()
+void __SCRIPT()
 {
 	Global_1048945 = { -557.7f, -3610.7f, 80.9f /*3*/ };
 	Global_1051043 = -1;

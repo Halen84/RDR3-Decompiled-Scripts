@@ -24,7 +24,7 @@
 	Vector3 vScriptParam_0 = { 0.0f, 0.0f, 0.0f };
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	iLocal_0 = 1;
 	iLocal_16 = 20;
@@ -229,7 +229,7 @@ void func_11(int iParam0)
 
 bool func_12(int iParam0)
 {
-	return iLocal_5 & iParam0 != 0;
+	return (iLocal_5 & iParam0) != 0;
 }
 
 void func_13()

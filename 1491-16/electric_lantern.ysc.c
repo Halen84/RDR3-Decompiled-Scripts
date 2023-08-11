@@ -3,7 +3,7 @@
 	bool bLocal_1 = false;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	Vector3 vVar0;
 	Vector3 vVar3;

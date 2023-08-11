@@ -20,7 +20,7 @@
 	int iLocal_18 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bool bVar0;
 

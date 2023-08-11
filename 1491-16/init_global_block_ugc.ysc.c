@@ -1,4 +1,4 @@
-void __EntryFunction__()
+void __SCRIPT()
 {
 	if (SCRIPTS::_DOES_COMPRESSED_GLOBAL_BLOCK_BUFFER_EXIST(1))
 	{

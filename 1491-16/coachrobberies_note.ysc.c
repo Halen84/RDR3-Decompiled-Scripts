@@ -7,7 +7,7 @@
 	bool bLocal_5 = false;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	sLocal_4 = "SCRB";
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(523))
@@ -151,12 +151,12 @@ void func_11(var uParam0, int iParam1)
 
 void func_12(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_13(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_14(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, bool bParam5)

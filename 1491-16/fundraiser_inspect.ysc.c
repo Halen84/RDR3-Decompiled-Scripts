@@ -13,7 +13,7 @@
 	Vector3 vScriptParam_0 = { 0.0f, 0.0f, 0.0f };
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bLocal_3 = true;
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(523))
@@ -253,7 +253,7 @@ bool func_14(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_1945188[iParam0 /*18*/].f_1 & iParam1 != 0;
+	return (Global_1945188[iParam0 /*18*/].f_1 & iParam1) != 0;
 }
 
 bool func_15(Vector3 vParam0, Vector3 vParam3, float fParam6, bool bParam7)
@@ -391,7 +391,7 @@ bool func_17(int iParam0)
 	{
 		return false;
 	}
-	if (Global_1945188[iParam0 /*18*/].f_1 & 2 == 0)
+	if ((Global_1945188[iParam0 /*18*/].f_1 & 2) == 0)
 	{
 		return false;
 	}
@@ -463,7 +463,7 @@ float func_22(var uParam0)
 
 bool func_23(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_24(var uParam0)
@@ -538,7 +538,7 @@ void func_31(var uParam0, int iParam1)
 
 void func_32(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_33(var uParam0)

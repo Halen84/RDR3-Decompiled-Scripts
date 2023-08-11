@@ -4,7 +4,7 @@
 	var uLocal_2 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 }
 

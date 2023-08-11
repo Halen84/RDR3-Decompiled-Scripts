@@ -3,7 +3,7 @@
 	struct<5> /*40*/ sScriptParam_0 = { 0, 0, 0, 0, 0 } ;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(515))
 	{
@@ -591,7 +591,7 @@ bool func_21(int iParam0)
 
 bool func_22(var uParam0)
 {
-	if (-1829635046 == func_38(joaat("CI_CATEGORY_WARDROBE_MASK")))
+	if (joaat("MASK_UP") == func_38(joaat("CI_CATEGORY_WARDROBE_MASK")))
 	{
 		if (func_21(uParam0))
 		{
@@ -618,7 +618,7 @@ int func_23(int iParam0)
 
 bool func_24(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_25(var uParam0, int iParam1)
@@ -1061,7 +1061,7 @@ int func_40(int iParam0)
 
 void func_41(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 int func_42(int iParam0, int iParam1)
@@ -1192,7 +1192,7 @@ bool func_44(int iParam0)
 
 bool func_45(int iParam0)
 {
-	return Global_1946054 & iParam0 != 0;
+	return (Global_1946054 & iParam0) != 0;
 }
 
 int func_46(int iParam0)
@@ -1629,7 +1629,7 @@ int func_64(int iParam0, var uParam1)
 
 void func_65(int iParam0, int iParam1, int iParam2)
 {
-	Global_1946054.f_57[func_42(iParam0, 1) /*11*/].f_10 -= Global_1946054.f_57[func_42(iParam0, 1) /*11*/].f_10 & iParam1;
+	Global_1946054.f_57[func_42(iParam0, 1) /*11*/].f_10 -= (Global_1946054.f_57[func_42(iParam0, 1) /*11*/].f_10 & iParam1);
 }
 
 bool func_66(int iParam0)

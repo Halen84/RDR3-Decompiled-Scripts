@@ -6,7 +6,7 @@
 	var uScriptParam_2 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	iLocal_45 = sScriptParam_0.f_0;
 	iLocal_46 = sScriptParam_0.f_1;

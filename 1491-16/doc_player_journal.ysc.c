@@ -689,7 +689,7 @@
 	var uScriptParam_4 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	int iVar0;
 
@@ -699,7 +699,7 @@ void __EntryFunction__()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(Global_35))
 		{
-			PED::SET_PED_RESET_FLAG(Global_35, 265, true);
+			PED::SET_PED_RESET_FLAG(Global_35, 265 /*PRF_0x9CB2F098*/, true);
 		}
 		func_1();
 	}
@@ -856,7 +856,7 @@ bool func_7(var uParam0)
 		return false;
 	}
 	Global_1357517 = 1;
-	PED::SET_PED_RESET_FLAG(Global_35, 129, true);
+	PED::SET_PED_RESET_FLAG(Global_35, 129 /*PRF_DisableAmbientPrompts*/, true);
 	iVar0 = func_16(uParam0);
 	if (uParam0->f_7 == 1 || iVar0 == 12)
 	{
@@ -978,7 +978,7 @@ bool func_7(var uParam0)
 			}
 			if (uParam0->f_32.f_89 < uParam0->f_32.f_90)
 			{
-				if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, -1543672280))
+				if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("NEXT_PAGE")))
 				{
 					func_37(&(uParam0->f_32), 1);
 					uParam0->f_32.f_87 = -1;
@@ -986,7 +986,7 @@ bool func_7(var uParam0)
 					func_20(uParam0, 4);
 					return true;
 				}
-				else if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 251766646))
+				else if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("NEXT_CHAPTER")))
 				{
 					func_39(0, &(uParam0->f_32));
 					uParam0->f_32.f_87 = -1;
@@ -1122,7 +1122,7 @@ bool func_7(var uParam0)
 			}
 			break;
 		case 14:
-			if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 251766646))
+			if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("NEXT_CHAPTER")))
 			{
 				func_20(uParam0, 6);
 			}
@@ -1156,14 +1156,14 @@ bool func_7(var uParam0)
 			}
 			break;
 		case 8:
-			if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, -917343754))
+			if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("TURN_END")))
 			{
 				func_30(&(uParam0->f_32), &(uParam0->f_155), &(uParam0->f_155.f_618), &(uParam0->f_155.f_652), &(uParam0->f_155.f_635), 0);
 				func_20(uParam0, 3);
 			}
 			break;
 		case 9:
-			if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, -917343754))
+			if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("TURN_END")))
 			{
 				OBJECT::_RESET_OBJECT_VELOCITY(uParam0->f_2);
 				func_30(&(uParam0->f_32), &(uParam0->f_155.f_309), &(uParam0->f_155.f_618), &(uParam0->f_155.f_652), &(uParam0->f_155.f_635), 0);
@@ -1755,7 +1755,7 @@ bool func_33(int iParam0)
 	{
 		return false;
 	}
-	if (Global_1945188[iParam0 /*18*/].f_1 & 2 == 0)
+	if ((Global_1945188[iParam0 /*18*/].f_1 & 2) == 0)
 	{
 		return false;
 	}
@@ -1983,7 +1983,7 @@ bool func_46(int iParam0, bool bParam1)
 
 int func_47()
 {
-	return -1913092956;
+	return joaat("JOURNAL_CONTENT");
 }
 
 void func_48(var uParam0, bool bParam1, bool bParam2)
@@ -2912,7 +2912,7 @@ void func_80(var uParam0, var uParam1)
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		MISC::_COPY_MEMORY(uParam0[iVar0 /*6*/], uParam1[iVar0 /*6*/], 6);
+		MISC::COPY_SCRIPT_STRUCT(uParam0[iVar0 /*6*/], uParam1[iVar0 /*6*/], 6);
 		iVar0++;
 	}
 }
@@ -2996,7 +2996,7 @@ void func_84(int iParam0, var uParam1)
 
 bool func_85(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_86(var uParam0)
@@ -3041,7 +3041,7 @@ void func_88(int iParam0)
 
 bool func_89(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_90(var uParam0)
@@ -3501,7 +3501,7 @@ void func_109(var uParam0, int iParam1)
 
 void func_110(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_111(int iParam0, int iParam1)
@@ -3510,7 +3510,7 @@ void func_111(int iParam0, int iParam1)
 	{
 		return;
 	}
-	Global_1945188[iParam0 /*18*/].f_1 -= Global_1945188[iParam0 /*18*/].f_1 & iParam1;
+	Global_1945188[iParam0 /*18*/].f_1 -= (Global_1945188[iParam0 /*18*/].f_1 & iParam1);
 }
 
 void func_112(int iParam0, bool bParam1)
@@ -3551,7 +3551,7 @@ bool func_115(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_1945188[iParam0 /*18*/].f_1 & iParam1 != 0;
+	return (Global_1945188[iParam0 /*18*/].f_1 & iParam1) != 0;
 }
 
 void func_116(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, Vector3 vParam6, float fParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, float fParam18, float fParam19, float fParam20, bool bParam21, bool bParam22, int iParam23, int iParam24, bool bParam25)

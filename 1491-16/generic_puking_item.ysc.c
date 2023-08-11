@@ -1,4 +1,4 @@
-void __EntryFunction__()
+void __SCRIPT()
 {
 	var uVar0;
 	int iVar3;
@@ -142,7 +142,7 @@ void func_10(var uParam0)
 
 bool func_11(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_12(var uParam0)
@@ -177,7 +177,7 @@ void func_15(var uParam0, float fParam1)
 
 bool func_16(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_17(var uParam0, int iParam1)
@@ -187,6 +187,6 @@ void func_17(var uParam0, int iParam1)
 
 void func_18(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 

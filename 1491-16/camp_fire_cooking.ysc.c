@@ -9,7 +9,7 @@
 	Vector3 vScriptParam_0 = { 0.0f, 0.0f, 0.0f };
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bLocal_0 = true;
 	iLocal_2 = vScriptParam_0.x;
@@ -267,7 +267,7 @@ void func_17(int iParam0)
 
 bool func_18(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_19(var uParam0, float fParam1)
@@ -302,6 +302,6 @@ void func_22(var uParam0, int iParam1)
 
 void func_23(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 

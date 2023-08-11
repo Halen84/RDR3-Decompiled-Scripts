@@ -20,7 +20,7 @@
 	var uLocal_36 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	sLocal_0.f_3 = "mech_inventory@binoculars";
 	if (!ENTITY::IS_ENTITY_DEAD(Global_35))
@@ -368,7 +368,7 @@ bool func_12(int iParam0)
 	{
 		return false;
 	}
-	if (Global_1945188[iParam0 /*18*/].f_1 & 2 == 0)
+	if ((Global_1945188[iParam0 /*18*/].f_1 & 2) == 0)
 	{
 		return false;
 	}
@@ -613,7 +613,7 @@ int func_28(int iParam0, int iParam1)
 
 bool func_29(int* iParam0, int iParam1)
 {
-	return iParam0->f_12 & iParam1 != 0;
+	return (iParam0->f_12 & iParam1) != 0;
 }
 
 bool func_30()
@@ -684,12 +684,12 @@ bool func_33()
 
 bool func_34(int iParam0)
 {
-	return Global_1911668 & iParam0 != 0;
+	return (Global_1911668 & iParam0) != 0;
 }
 
 void func_35(int iParam0)
 {
-	Global_1911668 -= Global_1911668 & iParam0;
+	Global_1911668 -= (Global_1911668 & iParam0);
 }
 
 void func_36(int iParam0, bool bParam1, bool bParam2)
@@ -725,7 +725,7 @@ bool func_37(int iParam0, bool bParam1)
 
 void func_38(int* iParam0, int iParam1)
 {
-	iParam0->f_12 -= iParam0->f_12 & iParam1;
+	iParam0->f_12 -= (iParam0->f_12 & iParam1);
 }
 
 void func_39(var uParam0, float fParam1)
@@ -805,7 +805,7 @@ bool func_45(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_1945188[iParam0 /*18*/].f_1 & iParam1 != 0;
+	return (Global_1945188[iParam0 /*18*/].f_1 & iParam1) != 0;
 }
 
 void func_46(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, Vector3 vParam6, float fParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, float fParam18, float fParam19, float fParam20, bool bParam21, bool bParam22, int iParam23, int iParam24, bool bParam25)
@@ -1083,7 +1083,7 @@ void func_53(int iParam0, int iParam1)
 	{
 		return;
 	}
-	Global_1945188[iParam0 /*18*/].f_1 -= Global_1945188[iParam0 /*18*/].f_1 & iParam1;
+	Global_1945188[iParam0 /*18*/].f_1 -= (Global_1945188[iParam0 /*18*/].f_1 & iParam1);
 }
 
 void func_54(int iParam0, bool bParam1)
@@ -1137,7 +1137,7 @@ void func_58(var uParam0, int iParam1)
 
 void func_59(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_60(int iParam0, int iParam1)
@@ -1204,12 +1204,12 @@ bool func_62(int iParam0)
 
 bool func_63(int iParam0, int iParam1)
 {
-	return Global_1905944.f_22[iParam0 /*9*/].f_2 & iParam1 != 0;
+	return (Global_1905944.f_22[iParam0 /*9*/].f_2 & iParam1) != 0;
 }
 
 bool func_64(int iParam0)
 {
-	return Global_1572864.f_3 & iParam0 != 0;
+	return (Global_1572864.f_3 & iParam0) != 0;
 }
 
 bool func_65()

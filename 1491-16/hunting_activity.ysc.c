@@ -42,7 +42,7 @@
 	int iLocal_86 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(514) && !func_1(Global_1935630, (1 << 14)))
 	{
@@ -59,7 +59,7 @@ void __EntryFunction__()
 
 bool func_1(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_2(var uParam0)
@@ -205,7 +205,7 @@ bool func_4(bool bParam0, int iParam1)
 	}
 	if (func_19(iVar0, 8))
 	{
-		if (PED::GET_PED_CONFIG_FLAG(bParam0, 11, false))
+		if (PED::GET_PED_CONFIG_FLAG(bParam0, 11 /*PCF_Knockedout*/, false))
 		{
 			return false;
 		}
@@ -306,7 +306,7 @@ void func_6(var uParam0, bool bParam1)
 
 bool func_7(var uParam0, int iParam1)
 {
-	return uParam0->f_59 & iParam1 != 0;
+	return (uParam0->f_59 & iParam1) != 0;
 }
 
 int func_8()
@@ -345,7 +345,7 @@ void func_12(var uParam0, int iParam1, bool bParam2)
 	}
 	else
 	{
-		uParam0->f_59 &= iParam1;
+		uParam0->f_59 = (uParam0->f_59 & iParam1);
 	}
 }
 
@@ -569,7 +569,7 @@ bool func_18(var uParam0, float fParam1)
 
 bool func_19(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_20()
@@ -1101,7 +1101,7 @@ bool func_46(int iParam0)
 
 bool func_47(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_48(var uParam0, float fParam1)
@@ -1141,7 +1141,7 @@ bool func_51(float fParam0)
 
 bool func_52()
 {
-	return (Global_1894899 & 1 != 0 && func_70() != -1);
+	return ((Global_1894899 & 1) != 0 && func_70() != -1);
 }
 
 float func_53(int iParam0, bool bParam1, bool bParam2)
@@ -1307,7 +1307,7 @@ void func_65(var uParam0, int iParam1)
 
 void func_66(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_67(bool bParam0, int iParam1, bool bParam2)

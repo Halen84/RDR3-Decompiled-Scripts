@@ -15,7 +15,7 @@
 	var uLocal_13 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	int iVar0;
 	int iVar1;
@@ -27,7 +27,7 @@ void __EntryFunction__()
 	{
 		func_1();
 	}
-	PED::SET_PED_RESET_FLAG(Global_35, 304, true);
+	PED::SET_PED_RESET_FLAG(Global_35, 304 /*PRF_0x9B4EF77E*/, true);
 	if (!ENTITY::IS_ENTITY_DEAD(Global_35))
 	{
 		if (!PED::IS_PED_IN_ANY_BOAT(Global_35))
@@ -68,7 +68,7 @@ void __EntryFunction__()
 	}
 	while (true)
 	{
-		PED::SET_PED_RESET_FLAG(Global_35, 304, true);
+		PED::SET_PED_RESET_FLAG(Global_35, 304 /*PRF_0x9B4EF77E*/, true);
 		switch (func_5())
 		{
 			case 0:

@@ -23,7 +23,7 @@
 	var uScriptParam_9 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(523))
 	{
@@ -627,9 +627,9 @@ bool func_26(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_23118[iParam0 /*11*/] & iParam1 != 0;
+		return (Global_23118[iParam0 /*11*/] & iParam1) != 0;
 	}
-	return Global_1058888.f_40545[iParam0 /*11*/] & iParam1 != 0;
+	return (Global_1058888.f_40545[iParam0 /*11*/] & iParam1) != 0;
 }
 
 float func_27(int iParam0)
@@ -840,7 +840,7 @@ bool func_40(int iParam0)
 	switch (func_23())
 	{
 		case -1:
-			return Global_1357549.f_1495 & iParam0 != 0;
+			return (Global_1357549.f_1495 & iParam0) != 0;
 	}
 	return false;
 }
@@ -867,7 +867,7 @@ bool func_43(var uParam0, int iParam1)
 {
 	int iVar0;
 
-	iVar0 = *uParam0 & iParam1;
+	iVar0 = (*uParam0 & iParam1);
 	if (!iVar0 == 0)
 	{
 		return true;
@@ -938,23 +938,23 @@ void func_47(Vector3 vParam0, float fParam3, int iParam4)
 	int iVar0;
 
 	iVar0 = (1 << 9);
-	if (iParam4 & 1 != 0)
+	if ((iParam4 & 1) != 0)
 	{
 		iVar0 |= (1 << 19);
 	}
-	if (iParam4 & 2 != 0)
+	if ((iParam4 & 2) != 0)
 	{
 		iVar0 |= 1536;
 	}
-	if (iParam4 & 4 != 0)
+	if ((iParam4 & 4) != 0)
 	{
 		iVar0 |= 2560;
 	}
-	if (iParam4 & 8 != 0)
+	if ((iParam4 & 8) != 0)
 	{
 		iVar0 |= 4608;
 	}
-	if (iParam4 & 16 != 0)
+	if ((iParam4 & 16) != 0)
 	{
 		iVar0 |= 8704;
 	}
@@ -1069,12 +1069,12 @@ int func_55(int iParam0)
 
 int func_56(int iParam0)
 {
-	return iParam0 & 31;
+	return (iParam0 & 31);
 }
 
 int func_57(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023);
 }
 
 char* func_58()

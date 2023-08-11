@@ -42,7 +42,7 @@
 	char* sLocal_40 = NULL;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bool bVar0;
 
@@ -569,7 +569,7 @@ bool func_23(int iParam0, char* sParam1, char* sParam2, char* sParam3, int iPara
 
 void func_24(int iParam0, int iParam1)
 {
-	*iParam0 -= *iParam0 & iParam1;
+	*iParam0 -= (*iParam0 & iParam1);
 }
 
 int func_25(int iParam0)
@@ -609,7 +609,7 @@ bool func_28(int iParam0)
 
 bool func_29(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_30(int iParam0)
@@ -657,9 +657,9 @@ bool func_33(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_23118[iParam0 /*11*/] & iParam1 != 0;
+		return (Global_23118[iParam0 /*11*/] & iParam1) != 0;
 	}
-	return Global_1058888.f_40545[iParam0 /*11*/] & iParam1 != 0;
+	return (Global_1058888.f_40545[iParam0 /*11*/] & iParam1) != 0;
 }
 
 void func_34()

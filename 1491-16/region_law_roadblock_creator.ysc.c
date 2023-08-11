@@ -46,7 +46,7 @@
 	var uScriptParam_0 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	int iVar0;
 
@@ -241,7 +241,7 @@ bool func_4()
 
 bool func_5()
 {
-	return Global_1894899 & 2 != 0;
+	return (Global_1894899 & 2) != 0;
 }
 
 void func_6()
@@ -357,7 +357,7 @@ void func_6()
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_37[iVar4]))
 				{
-					PED::SET_PED_RESET_FLAG(iLocal_37[iVar4], 116, true);
+					PED::SET_PED_RESET_FLAG(iLocal_37[iVar4], 116 /*PRF_0x3091E1F5*/, true);
 					if (func_34(Global_35, iLocal_37[iVar4], 1, 1) > 200.0f)
 					{
 						iLocal_14 = 6;
@@ -420,7 +420,7 @@ bool func_9(int iParam0, int iParam1)
 	}
 	if (func_38(iVar0, 8))
 	{
-		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11, false))
+		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11 /*PCF_Knockedout*/, false))
 		{
 			return false;
 		}
@@ -828,7 +828,7 @@ void func_30()
 	LAW::_SET_PED_LAW_BEHAVIOUR(iLocal_37[iLocal_26], 2);
 	LAW::_SET_PED_LAW_BEHAVIOUR(iLocal_37[iLocal_26], (1 << 14));
 	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_37[iLocal_26], 39, true);
-	PED::SET_PED_CONFIG_FLAG(iLocal_37[iLocal_26], 188, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_37[iLocal_26], 188 /*PCF_0x66114902*/, true);
 	func_61(iLocal_37[iLocal_26], iLocal_126);
 	iLocal_26++;
 	if (iLocal_26 >= iLocal_25)
@@ -998,7 +998,7 @@ bool func_37(int iParam0)
 
 bool func_38(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 Vector3 func_39(Vector3 vParam0, Vector3 vParam3, float fParam6)
@@ -1076,9 +1076,9 @@ bool func_42(int iParam0, int iParam1)
 	}
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_40.f_358[iParam0 /*12*/].f_5 & iParam1 != 0;
+		return (Global_40.f_358[iParam0 /*12*/].f_5 & iParam1) != 0;
 	}
-	return Global_1058888.f_42196[iParam0 /*12*/].f_5 & iParam1 != 0;
+	return (Global_1058888.f_42196[iParam0 /*12*/].f_5 & iParam1) != 0;
 }
 
 bool func_43(int iParam0)
@@ -1094,9 +1094,9 @@ bool func_44(int iParam0, int iParam1)
 	}
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_40.f_431[iParam0] & iParam1 != 0;
+		return (Global_40.f_431[iParam0] & iParam1) != 0;
 	}
-	return Global_1058888.f_42269[iParam0] & iParam1 != 0;
+	return (Global_1058888.f_42269[iParam0] & iParam1) != 0;
 }
 
 bool func_45(int iParam0)
@@ -1108,9 +1108,9 @@ bool func_46(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_23118[iParam0 /*11*/] & iParam1 != 0;
+		return (Global_23118[iParam0 /*11*/] & iParam1) != 0;
 	}
-	return Global_1058888.f_40545[iParam0 /*11*/] & iParam1 != 0;
+	return (Global_1058888.f_40545[iParam0 /*11*/] & iParam1) != 0;
 }
 
 bool func_47(Vector3 vParam0)
@@ -1144,7 +1144,7 @@ bool func_48(int iParam0, Vector3 vParam1, float fParam4, bool bParam5, bool bPa
 
 bool func_49(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_50(var uParam0, int iParam1, int iParam2)
@@ -1936,7 +1936,7 @@ float func_67(Vector3 vParam0, Vector3 vParam3)
 
 bool func_68(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_69(var uParam0, int iParam1)
@@ -1946,7 +1946,7 @@ void func_69(var uParam0, int iParam1)
 
 void func_70(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 float func_71(float fParam0, float fParam1, float fParam2, int iParam3)
@@ -1999,7 +1999,7 @@ void func_73(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, 
 		{
 			func_76(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{

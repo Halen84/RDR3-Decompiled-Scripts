@@ -45,7 +45,7 @@
 	int iScriptParam_0 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -853,7 +853,7 @@ void func_39(int iParam0, int iParam1)
 	{
 		return;
 	}
-	Global_40.f_11029[iParam0 /*5*/] -= Global_40.f_11029[iParam0 /*5*/] & iParam1;
+	Global_40.f_11029[iParam0 /*5*/] -= (Global_40.f_11029[iParam0 /*5*/] & iParam1);
 }
 
 struct<4> /*32*/ func_40(bool bParam0)
@@ -2118,7 +2118,7 @@ void func_69(int iParam0, Vector3 vParam1, float fParam4, int iParam5, int iPara
 			iVar0 = PED::GET_VEHICLE_PED_IS_IN(iVar1, true);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar0) && !ENTITY::IS_ENTITY_DEAD(iVar0))
 			{
-				iParam5 -= iParam5 & 4;
+				iParam5 -= (iParam5 & 4);
 				func_69(iVar0, vParam1, fParam4, iParam5, iParam6);
 			}
 			return;
@@ -2128,7 +2128,7 @@ void func_69(int iParam0, Vector3 vParam1, float fParam4, int iParam5, int iPara
 			iVar2 = PED::GET_MOUNT(iVar1);
 			if (ENTITY::DOES_ENTITY_EXIST(iVar2) && !ENTITY::IS_ENTITY_DEAD(iVar2))
 			{
-				iParam5 -= iParam5 & 4;
+				iParam5 -= (iParam5 & 4);
 				func_69(iVar2, vParam1, fParam4, iParam5, iParam6);
 			}
 			return;
@@ -2199,7 +2199,7 @@ void func_69(int iParam0, Vector3 vParam1, float fParam4, int iParam5, int iPara
 
 void func_70(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_71(var uParam0)
@@ -2210,7 +2210,7 @@ void func_71(var uParam0)
 
 void func_72(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_73(var uParam0, int iParam1)
@@ -2488,7 +2488,7 @@ bool func_87(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_1310750[iParam0 /*111*/] & iParam1 != 0;
+	return (Global_1310750[iParam0 /*111*/] & iParam1) != 0;
 }
 
 bool func_88(int iParam0)
@@ -3059,7 +3059,7 @@ int func_105(int iParam0)
 		case 61:
 			return joaat("SHOP_STR_GENERAL_STORE");
 		case 62:
-			return joaat("SHOP_STR_WELCOME_CENTER");
+			return joaat("RAGE_P2_3");
 		case 63:
 			return joaat("SHOP_STR_HORSE_SHOP");
 		case 65:
@@ -3300,7 +3300,7 @@ bool func_109(int iParam0)
 
 bool func_110(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_111(bool bParam0)
@@ -3470,7 +3470,7 @@ bool func_121(bool bParam0)
 
 bool func_122(int iParam0)
 {
-	return Global_1310750.f_16035 & iParam0 != 0;
+	return (Global_1310750.f_16035 & iParam0) != 0;
 }
 
 bool func_123(int iParam0)
@@ -3500,7 +3500,7 @@ void func_124(int iParam0)
 
 bool func_125(int iParam0)
 {
-	return Global_1392040 & iParam0 != 0;
+	return (Global_1392040 & iParam0) != 0;
 }
 
 int func_126(int iParam0, int iParam1)

@@ -11,7 +11,7 @@
 	var uScriptParam_9 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	SCRIPTS::TERMINATE_THIS_THREAD();
 }

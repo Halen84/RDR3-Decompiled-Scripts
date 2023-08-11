@@ -3,7 +3,7 @@
 	var uScriptParam_2 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	struct<44> /*352*/ sVar0;
 
@@ -220,7 +220,7 @@ bool func_6(var uParam0)
 
 bool func_7(var uParam0, int iParam1)
 {
-	return uParam0->f_56 & iParam1 != 0;
+	return (uParam0->f_56 & iParam1) != 0;
 }
 
 bool func_8(Vector3 vParam0, Vector3 vParam3, float fParam6, bool bParam7)
@@ -437,8 +437,8 @@ bool func_14(var uParam0)
 	uParam0->f_42 = func_25(uParam0->f_38, vVar1, (uParam0->f_4 + fVar0), 0, 1, 0, 1, 1, 1, 0, 0, 0, 0);
 	PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(uParam0->f_42, true);
 	PED::_SET_PED_SCALE(uParam0->f_42, 1.0f);
-	PED::SET_PED_CONFIG_FLAG(uParam0->f_42, 186, false);
-	PED::SET_PED_CONFIG_FLAG(uParam0->f_42, 243, true);
+	PED::SET_PED_CONFIG_FLAG(uParam0->f_42, 186 /*PCF_CorpseIsPersistent*/, false);
+	PED::SET_PED_CONFIG_FLAG(uParam0->f_42, 243 /*PCF_0x0831CCD1*/, true);
 	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(uParam0->f_42, uParam0->f_42, false);
 	ENTITY::SET_ENTITY_COLLISION(uParam0->f_42, false, false);
 	OBJECT::CREATE_OBJECT_SKELETON(uParam0->f_43);
@@ -769,7 +769,7 @@ void func_26(int iParam0, bool bParam1, bool bParam2)
 		}
 		if (bParam2)
 		{
-			PED::SET_PED_CONFIG_FLAG(iParam0, 243, true);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 243 /*PCF_0x0831CCD1*/, true);
 		}
 		if (Global_35 == iParam0)
 		{
@@ -947,7 +947,7 @@ void func_36(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	{
 		return;
 	}
-	if (Global_36616 & func_43(iParam1) != 0)
+	if ((Global_36616 & func_43(iParam1)) != 0)
 	{
 		return;
 	}
@@ -1057,7 +1057,7 @@ void func_38(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, 
 		{
 			func_49(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{
@@ -1081,7 +1081,7 @@ void func_38(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, 
 
 bool func_39(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_40(var uParam0, float fParam1)
@@ -1706,7 +1706,7 @@ void func_53(var uParam0, int iParam1)
 
 void func_54(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_55(var uParam0)

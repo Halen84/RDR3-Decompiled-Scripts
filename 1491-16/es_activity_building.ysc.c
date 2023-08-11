@@ -3,7 +3,7 @@
 	struct<34> /*272*/ sScriptParam_0 = { -1, -1, -1, 0, -1, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, -1, 255, 0, 0 } ;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	int iVar0;
 	struct<188> /*1504*/ sVar1;
@@ -256,7 +256,7 @@ void func_2(var uParam0, int iParam1, bool bParam2)
 
 bool func_3(int iParam0, int iParam1)
 {
-	return Global_1899528.f_3[iParam0] & iParam1 != 0;
+	return (Global_1899528.f_3[iParam0] & iParam1) != 0;
 }
 
 void func_4(var uParam0)
@@ -734,7 +734,7 @@ void func_35(bool bParam0)
 
 bool func_36()
 {
-	return Global_1894899 & 2 != 0;
+	return (Global_1894899 & 2) != 0;
 }
 
 void func_37(int iParam0)
@@ -1376,7 +1376,7 @@ int func_65(int iParam0)
 
 int func_66(int iParam0)
 {
-	return iParam0 & 31;
+	return (iParam0 & 31);
 }
 
 int func_67(int iParam0)
@@ -1476,7 +1476,7 @@ bool func_71(int iParam0, bool bParam1, bool bParam2)
 	{
 		return true;
 	}
-	if (Global_1935630 & 40959 & (-1 - iParam0) != 0)
+	if ((Global_1935630 & (40959 & (-1 - iParam0))) != 0)
 	{
 		return true;
 	}
@@ -1492,25 +1492,25 @@ bool func_71(int iParam0, bool bParam1, bool bParam2)
 		case 0:
 			return false;
 		case 1:
-			return iParam0 & 1 == 0;
+			return (iParam0 & 1) == 0;
 		case 4:
-			return iParam0 & 2 == 0;
+			return (iParam0 & 2) == 0;
 		case 6:
-			return iParam0 & 4 == 0;
+			return (iParam0 & 4) == 0;
 		case 2:
-			return iParam0 & 16 == 0;
+			return (iParam0 & 16) == 0;
 		case 5:
-			return iParam0 & 32 == 0;
+			return (iParam0 & 32) == 0;
 		case 9:
-			return iParam0 & 64 == 0;
+			return (iParam0 & 64) == 0;
 		case 8:
-			return iParam0 & 8 == 0;
+			return (iParam0 & 8) == 0;
 		case 10:
-			return iParam0 & (1 << 9) == 0;
+			return (iParam0 & (1 << 9)) == 0;
 		case 3:
-			return iParam0 & 128 == 0;
+			return (iParam0 & 128) == 0;
 		case 11:
-			return iParam0 & 256 == 0;
+			return (iParam0 & 256) == 0;
 		default:
 			break;
 	}
@@ -1519,7 +1519,7 @@ bool func_71(int iParam0, bool bParam1, bool bParam2)
 
 bool func_72(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_73(int iParam0)
@@ -1739,7 +1739,7 @@ bool func_86(int iParam0)
 	{
 		return false;
 	}
-	if (Global_1945188[iParam0 /*18*/].f_1 & 2 == 0)
+	if ((Global_1945188[iParam0 /*18*/].f_1 & 2) == 0)
 	{
 		return false;
 	}
@@ -1788,32 +1788,32 @@ void func_89(bool bParam0)
 
 int func_90(int iParam0)
 {
-	return (BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31 * func_156(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 1898;
+	return ((BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31) * func_156(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 1898;
 }
 
 int func_91(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 22) & 15;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 22) & 15);
 }
 
 int func_92(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 17) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 17) & 31);
 }
 
 int func_93(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31);
 }
 
 int func_94(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 6) & 63;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 6) & 63);
 }
 
 int func_95(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 0) & 63;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 0) & 63);
 }
 
 int func_96(int iParam0, int iParam1)
@@ -1868,7 +1868,7 @@ void func_97(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 
 bool func_98(var uParam0, int iParam1)
 {
-	return uParam0->f_2 & iParam1 != 0;
+	return (uParam0->f_2 & iParam1) != 0;
 }
 
 void func_99(var uParam0, int iParam1)
@@ -1961,7 +1961,7 @@ void func_103(int iParam0, int iParam1)
 	if (func_3(iParam0, iParam1))
 	{
 	}
-	Global_1899528.f_3[iParam0] -= Global_1899528.f_3[iParam0] & iParam1;
+	Global_1899528.f_3[iParam0] -= (Global_1899528.f_3[iParam0] & iParam1);
 }
 
 bool func_104()
@@ -2602,11 +2602,11 @@ bool func_118(var uParam0)
 				func_114();
 				func_171(&(uParam0->f_4), 256);
 			}
-			if (uParam0->f_5 == 7 && ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 1426850769))
+			if (uParam0->f_5 == 7 && ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("ATTACHBEAM")))
 			{
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(uParam0->f_10, Global_35, PED::GET_PED_BONE_INDEX(Global_35, 37709), 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, false, false, false, false, 2, true, false, false);
 			}
-			if (uParam0->f_5 == 9 && ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 1426850769))
+			if (uParam0->f_5 == 9 && ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("ATTACHBEAM")))
 			{
 				ENTITY::ATTACH_ENTITY_TO_ENTITY(uParam0->f_11, Global_35, PED::GET_PED_BONE_INDEX(Global_35, 37709), 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, false, false, false, false, 2, true, false, false);
 			}
@@ -2917,7 +2917,7 @@ bool func_125(int iParam0, int iParam1)
 
 bool func_126(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_127(int iParam0)
@@ -3023,7 +3023,7 @@ bool func_134()
 	{
 		return true;
 	}
-	if (Global_1051043 == -1 && Global_1572887.f_6 & 1 != 0)
+	if (Global_1051043 == -1 && (Global_1572887.f_6 & 1) != 0)
 	{
 		return true;
 	}
@@ -3037,7 +3037,7 @@ bool func_135(int iParam0)
 
 bool func_136(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_137(int iParam0)
@@ -3459,7 +3459,7 @@ void func_144(int iParam0, int iParam1)
 
 void func_145(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_146(var uParam0, int iParam1)
@@ -3615,12 +3615,12 @@ int func_152(int iParam0)
 
 int func_153(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023);
 }
 
 int func_154(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 15) & 16383;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 15) & 16383);
 }
 
 bool func_155(int iParam0)
@@ -3647,7 +3647,7 @@ void func_157(var uParam0, int iParam1)
 	{
 		return;
 	}
-	*uParam0 -= *uParam0 & 2080374784;
+	*uParam0 -= (*uParam0 & 2080374784);
 	if (iParam1 < 1898)
 	{
 		*uParam0 |= BUILTIN::SHIFT_LEFT((1898 - iParam1), 26);
@@ -3656,7 +3656,7 @@ void func_157(var uParam0, int iParam1)
 	else
 	{
 		*uParam0 |= BUILTIN::SHIFT_LEFT((iParam1 - 1898), 26);
-		*uParam0 -= *uParam0 & (1 << 31);
+		*uParam0 -= (*uParam0 & (1 << 31));
 	}
 }
 
@@ -3666,7 +3666,7 @@ void func_158(var uParam0, int iParam1)
 	{
 		return;
 	}
-	*uParam0 -= *uParam0 & 62914560;
+	*uParam0 -= (*uParam0 & 62914560);
 	*uParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 22);
 }
 
@@ -3681,7 +3681,7 @@ void func_159(var uParam0, int iParam1)
 	{
 		return;
 	}
-	*uParam0 -= *uParam0 & 4063232;
+	*uParam0 -= (*uParam0 & 4063232);
 	*uParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 17);
 }
 
@@ -3691,7 +3691,7 @@ void func_160(var uParam0, int iParam1)
 	{
 		return;
 	}
-	*uParam0 -= *uParam0 & 126976;
+	*uParam0 -= (*uParam0 & 126976);
 	*uParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 12);
 }
 
@@ -3701,7 +3701,7 @@ void func_161(var uParam0, int iParam1)
 	{
 		return;
 	}
-	*uParam0 -= *uParam0 & 4032;
+	*uParam0 -= (*uParam0 & 4032);
 	*uParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 6);
 }
 
@@ -3711,7 +3711,7 @@ void func_162(var uParam0, int iParam1)
 	{
 		return;
 	}
-	*uParam0 -= *uParam0 & 63;
+	*uParam0 -= (*uParam0 & 63);
 	*uParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 0);
 }
 
@@ -3807,7 +3807,7 @@ int func_167()
 
 int func_168(int iParam0, int iParam1, int iParam2)
 {
-	return iParam2 & 31 | BUILTIN::SHIFT_LEFT(iParam0 & 1023, 5) | BUILTIN::SHIFT_LEFT(iParam1 & 16383, 15);
+	return (iParam2 & 31) | BUILTIN::SHIFT_LEFT((iParam0 & 1023), 5) | BUILTIN::SHIFT_LEFT((iParam1 & 16383), 15);
 }
 
 int func_169(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
@@ -4069,7 +4069,7 @@ bool func_177(var uParam0)
 		ENTITY::SET_ENTITY_COORDS(uParam0->f_12, func_216(vVar12, vVar15, 0.25f), true, false, true, true);
 		ENTITY::SET_ENTITY_ROTATION(uParam0->f_12, func_216(vVar18, vVar21, 0.25f), 2, true);
 	}
-	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 1865162119) && !TASK::IS_TASK_MOVE_NETWORK_ACTIVE(uParam0->f_12))
+	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("ATTACHPOST")) && !TASK::IS_TASK_MOVE_NETWORK_ACTIVE(uParam0->f_12))
 	{
 		func_174(&(uParam0->f_4), (1 << 9));
 		TASK::TASK_MOVE_NETWORK_ADVANCED_BY_NAME_WITH_INIT_PARAMS(uParam0->f_12, sLocal_0.f_4489, &(uParam0->f_84), uParam0->f_118, uParam0->f_121, 2, 0.0f, 0, 0, 128, 0);
@@ -4098,7 +4098,7 @@ bool func_177(var uParam0)
 			}
 		}
 	}
-	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, 1426850769))
+	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("ATTACHBEAM")))
 	{
 		func_174(&(uParam0->f_4), 32);
 		uParam0->f_129 = 0.5f;
@@ -4134,7 +4134,7 @@ bool func_177(var uParam0)
 				break;
 		}
 	}
-	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, -1658208549))
+	if (ENTITY::HAS_ANIM_EVENT_FIRED(Global_35, joaat("DETACHBEAM")))
 	{
 		ENTITY::SET_ENTITY_COLLISION(uParam0->f_9, false, false);
 		ENTITY::SET_ENTITY_COLLISION(uParam0->f_10, false, false);
@@ -4532,7 +4532,7 @@ int func_191(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 
 bool func_192(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_193(int iParam0)
@@ -5450,7 +5450,7 @@ int func_199(int iParam0)
 
 void func_200(int iParam0, int iParam1)
 {
-	Global_1946054.f_2657.f_26.f_6 -= Global_1946054.f_2657.f_26.f_6 & iParam0;
+	Global_1946054.f_2657.f_26.f_6 -= (Global_1946054.f_2657.f_26.f_6 & iParam0);
 }
 
 void func_201(int iParam0, int iParam1)
@@ -5496,7 +5496,7 @@ bool func_203(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_1945188[iParam0 /*18*/].f_1 & iParam1 != 0;
+	return (Global_1945188[iParam0 /*18*/].f_1 & iParam1) != 0;
 }
 
 void func_204(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, Vector3 vParam6, float fParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, float fParam18, float fParam19, float fParam20, bool bParam21, bool bParam22, int iParam23, int iParam24, bool bParam25)
@@ -5655,7 +5655,7 @@ void func_210(var uParam0, int iParam1)
 
 void func_211(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_212(var uParam0, int iParam1)
@@ -5674,7 +5674,7 @@ Vector3 func_213(Vector3 vParam0, Vector3 vParam3, float fParam6)
 
 void func_214(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 char* func_215()

@@ -43,7 +43,7 @@
 	var uScriptParam_9 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(546))
 	{
@@ -386,7 +386,7 @@ bool func_5(var uParam0)
 			}
 			break;
 		case 10:
-			PED::SET_PED_RESET_FLAG(Global_35, 184, true);
+			PED::SET_PED_RESET_FLAG(Global_35, 184 /*PRF_DisableAutoGreets*/, true);
 			if (!bVar1 || func_50() == 7)
 			{
 				if (uParam0->f_1 == 2)
@@ -535,7 +535,7 @@ void func_9(var uParam0, var uParam1, bool bParam2)
 		}
 		ANIMSCENE::_CLEAR_BREAKOUT_ARCHETYPE(uParam1->f_11);
 		ENTITY::FREEZE_ENTITY_POSITION(uParam1->f_11, false);
-		PED::SET_PED_CONFIG_FLAG(uParam1->f_11, 26, false);
+		PED::SET_PED_CONFIG_FLAG(uParam1->f_11, 26 /*PCF_DisableMelee*/, false);
 		PED::_CLEAR_PED_ACTION_DISABLE_FLAG(uParam1->f_11, 0);
 		PED::CLEAR_RAGDOLL_BLOCKING_FLAGS(uParam1->f_11, 319488);
 		if (bParam2)
@@ -572,7 +572,7 @@ void func_10(var uParam0, var uParam1, int iParam2, bool bParam3, int iParam4, b
 		{
 			func_62(uParam0->f_2, 0);
 		}
-		PED::SET_PED_CONFIG_FLAG(uParam1->f_11, 26, false);
+		PED::SET_PED_CONFIG_FLAG(uParam1->f_11, 26 /*PCF_DisableMelee*/, false);
 		PED::_CLEAR_PED_ACTION_DISABLE_FLAG(uParam1->f_11, 0);
 		ANIMSCENE::_CLEAR_BREAKOUT_ARCHETYPE(uParam1->f_11);
 		ENTITY::FREEZE_ENTITY_POSITION(uParam1->f_11, false);
@@ -690,23 +690,23 @@ void func_16(Vector3 vParam0, float fParam3, int iParam4)
 	int iVar0;
 
 	iVar0 = (1 << 9);
-	if (iParam4 & 1 != 0)
+	if ((iParam4 & 1) != 0)
 	{
 		iVar0 |= (1 << 19);
 	}
-	if (iParam4 & 2 != 0)
+	if ((iParam4 & 2) != 0)
 	{
 		iVar0 |= 1536;
 	}
-	if (iParam4 & 4 != 0)
+	if ((iParam4 & 4) != 0)
 	{
 		iVar0 |= 2560;
 	}
-	if (iParam4 & 8 != 0)
+	if ((iParam4 & 8) != 0)
 	{
 		iVar0 |= 4608;
 	}
-	if (iParam4 & 16 != 0)
+	if ((iParam4 & 16) != 0)
 	{
 		iVar0 |= 8704;
 	}
@@ -1156,7 +1156,7 @@ void func_30(var uParam0, var uParam1)
 			return;
 		}
 		uParam1->f_16 = ANIMSCENE::IS_ENTITY_PLAYING_ANIM_SCENE(uParam1->f_11, -1);
-		PED::SET_PED_RESET_FLAG(uParam1->f_11, 49, true);
+		PED::SET_PED_RESET_FLAG(uParam1->f_11, 49 /*PRF_DisableAgitationTriggers*/, true);
 	}
 	switch (uParam1->f_1)
 	{
@@ -1641,7 +1641,7 @@ void func_43(int iParam0, int iParam1)
 	if (func_82(iParam0, iParam1))
 	{
 	}
-	Global_1899528.f_3[iParam0] -= Global_1899528.f_3[iParam0] & iParam1;
+	Global_1899528.f_3[iParam0] -= (Global_1899528.f_3[iParam0] & iParam1);
 }
 
 void func_44(int iParam0, int iParam1)
@@ -2549,7 +2549,7 @@ float func_81(int iParam0)
 
 bool func_82(int iParam0, int iParam1)
 {
-	return Global_1899528.f_3[iParam0] & iParam1 != 0;
+	return (Global_1899528.f_3[iParam0] & iParam1) != 0;
 }
 
 bool func_83(int iParam0)
@@ -2565,9 +2565,9 @@ bool func_84(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_23118[iParam0 /*11*/] & iParam1 != 0;
+		return (Global_23118[iParam0 /*11*/] & iParam1) != 0;
 	}
-	return Global_1058888.f_40545[iParam0 /*11*/] & iParam1 != 0;
+	return (Global_1058888.f_40545[iParam0 /*11*/] & iParam1) != 0;
 }
 
 bool func_85(int iParam0)
@@ -2668,61 +2668,61 @@ bool func_89(int iParam0, bool bParam1)
 		case 0:
 			return false;
 		case 1:
-			if (iParam0 & 1 != 0)
+			if ((iParam0 & 1) != 0)
 			{
 				return true;
 			}
 			break;
 		case 4:
-			if (iParam0 & 2 != 0)
+			if ((iParam0 & 2) != 0)
 			{
 				return true;
 			}
 			break;
 		case 6:
-			if (iParam0 & 4 != 0)
+			if ((iParam0 & 4) != 0)
 			{
 				return true;
 			}
 			break;
 		case 2:
-			if (iParam0 & 16 != 0)
+			if ((iParam0 & 16) != 0)
 			{
 				return true;
 			}
 			break;
 		case 5:
-			if (iParam0 & 32 != 0)
+			if ((iParam0 & 32) != 0)
 			{
 				return true;
 			}
 			break;
 		case 9:
-			if (iParam0 & 64 != 0)
+			if ((iParam0 & 64) != 0)
 			{
 				return true;
 			}
 			break;
 		case 8:
-			if (iParam0 & 8 != 0)
+			if ((iParam0 & 8) != 0)
 			{
 				return true;
 			}
 			break;
 		case 10:
-			if (iParam0 & (1 << 9) != 0)
+			if ((iParam0 & (1 << 9)) != 0)
 			{
 				return true;
 			}
 			break;
 		case 3:
-			if (iParam0 & 128 != 0)
+			if ((iParam0 & 128) != 0)
 			{
 				return true;
 			}
 			break;
 		case 11:
-			if (iParam0 & 256 != 0)
+			if ((iParam0 & 256) != 0)
 			{
 				return true;
 			}
@@ -3342,12 +3342,12 @@ bool func_101(var uParam0, var uParam1, int iParam2, int iParam3, bool bParam4, 
 	}
 	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iParam2, joaat("REL_MINIGAME_PLAYER"));
 	PED::SET_PED_CAN_USE_AUTO_CONVERSATION_LOOKAT(iParam2, true);
-	PED::SET_PED_CONFIG_FLAG(iParam2, 453, true);
-	PED::SET_PED_CONFIG_FLAG(iParam2, 130, false);
-	PED::SET_PED_CONFIG_FLAG(iParam2, 168, true);
-	PED::SET_PED_CONFIG_FLAG(iParam2, 458, true);
-	PED::SET_PED_CONFIG_FLAG(iParam2, 26, true);
-	PED::SET_PED_CONFIG_FLAG(iParam2, 146, false);
+	PED::SET_PED_CONFIG_FLAG(iParam2, 453 /*PCF_0x43429291*/, true);
+	PED::SET_PED_CONFIG_FLAG(iParam2, 130 /*PCF_DisableTalkTo*/, false);
+	PED::SET_PED_CONFIG_FLAG(iParam2, 168 /*PCF_EnableShockingEvents*/, true);
+	PED::SET_PED_CONFIG_FLAG(iParam2, 458 /*PCF_0xFD170B10*/, true);
+	PED::SET_PED_CONFIG_FLAG(iParam2, 26 /*PCF_DisableMelee*/, true);
+	PED::SET_PED_CONFIG_FLAG(iParam2, 146 /*PCF_0x861831C4*/, false);
 	PED::_SET_PED_ACTION_DISABLE_FLAG(iParam2, 0);
 	PED::SET_RAGDOLL_BLOCKING_FLAGS(iParam2, 319488);
 	if (uParam0->f_1 == 2)
@@ -6097,7 +6097,7 @@ int func_169(int iParam0)
 
 bool func_170(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_171(int iParam0)
@@ -6167,7 +6167,7 @@ void func_177(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4,
 		{
 			func_260(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{
@@ -10896,7 +10896,7 @@ void func_255(var uParam0, int iParam1)
 
 void func_256(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 int func_257(int iParam0)

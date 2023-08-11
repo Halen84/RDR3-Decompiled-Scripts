@@ -45,7 +45,7 @@
 	Vector3 vScriptParam_0 = { 0.0f, 0.0f, 0.0f };
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	iLocal_0 = 1;
 	iLocal_2 = vScriptParam_0.x;
@@ -409,7 +409,7 @@ bool func_12(int iParam0, int iParam1)
 	}
 	if (func_33(iVar0, 8))
 	{
-		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11, false))
+		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11 /*PCF_Knockedout*/, false))
 		{
 			return false;
 		}
@@ -1115,7 +1115,7 @@ void func_32(int iParam0)
 
 bool func_33(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_34(int iParam0, int iParam1)
@@ -1128,7 +1128,7 @@ bool func_34(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_24887[iParam0 /*2*/] & iParam1 != 0;
+	return (Global_24887[iParam0 /*2*/] & iParam1) != 0;
 }
 
 int func_35(int iParam0)
@@ -1349,7 +1349,7 @@ int func_51()
 
 bool func_52(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_53(var uParam0, float fParam1)
@@ -1392,7 +1392,7 @@ void func_56(var uParam0, int iParam1)
 
 void func_57(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_58(var uParam0)

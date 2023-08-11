@@ -204,7 +204,7 @@
 	var uScriptParam_2 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -293,11 +293,11 @@ int func_4(var uParam0)
 	{
 		return -1;
 	}
-	if (*uParam0 == -544327665)
+	if (*uParam0 == joaat("DISCOVER_LOC_OLD_FIREPIT"))
 	{
 		iVar1 = 3;
 	}
-	else if (*uParam0 == 1120968795)
+	else if (*uParam0 == joaat("DISCOVER_LOC_OLD_FIREPLACE"))
 	{
 		iVar1 = 2;
 	}
@@ -305,47 +305,47 @@ int func_4(var uParam0)
 	{
 		iVar1 = 10;
 	}
-	else if (*uParam0 == 1519472817)
+	else if (*uParam0 == joaat("DISCOVER_LOC_BROKEN_BRIDGE"))
 	{
 		iVar1 = 2;
 	}
-	else if (*uParam0 == -1859023693)
+	else if (*uParam0 == joaat("DISCOVER_LOC_BROKEN_WAGONS"))
 	{
 		iVar1 = 11;
 	}
-	else if (*uParam0 == 2000209669)
+	else if (*uParam0 == joaat("DISCOVER_LOC_STRANGE_STATUES"))
 	{
 		iVar1 = 12;
 	}
-	else if (*uParam0 == -1761578407)
+	else if (*uParam0 == joaat("DISCOVER_LOC_GRAVE"))
 	{
 		iVar1 = 11;
 	}
-	else if (*uParam0 == -1243267511)
+	else if (*uParam0 == joaat("DISCOVER_LOC_FACE_TREES"))
 	{
 		iVar1 = 5;
 	}
-	else if (*uParam0 == -1272862985)
+	else if (*uParam0 == joaat("DISCOVER_LOC_TRAIL_TREES"))
 	{
 		iVar1 = 4;
 	}
-	else if (*uParam0 == 1535254161)
+	else if (*uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"))
 	{
 		iVar1 = 4;
 	}
-	else if (*uParam0 == 870958936)
+	else if (*uParam0 == joaat("DISCOVER_LOC_AXE_IN_TREE"))
 	{
 		iVar1 = 5;
 	}
-	else if (*uParam0 == 513110082)
+	else if (*uParam0 == joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"))
 	{
 		iVar1 = 3;
 	}
-	else if (*uParam0 == -321841939)
+	else if (*uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 	{
 		iVar1 = 20;
 	}
-	else if (*uParam0 == -890175011)
+	else if (*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES"))
 	{
 		iVar1 = 5;
 	}
@@ -353,7 +353,7 @@ int func_4(var uParam0)
 	{
 		iVar1 = 6;
 	}
-	else if (*uParam0 == 503180747)
+	else if (*uParam0 == joaat("DISCOVER_LOC_KILL_ZONE"))
 	{
 		iVar1 = 2;
 	}
@@ -383,56 +383,56 @@ bool func_5(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case -2009137002:
-		case -1960242214:
-		case -1958832660:
-		case -1891628345:
-		case -1887999095:
-		case -1787770845:
-		case -1761578407:
-		case -1761189332:
-		case -1646022773:
-		case -1636964661:
-		case -1614148516:
-		case -1609238411:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
+		case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
+		case joaat("DISCOVER_LOC_GIANT_REMAINS"):
+		case joaat("DISCOVER_LOC_GRAVE"):
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
+		case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 		case -1505275983:
-		case -1300082860:
-		case -1287911066:
-		case -1272862985:
-		case -1243267511:
-		case -1109016944:
-		case -1053108445:
-		case -986176781:
-		case -979575591:
-		case -890175011:
-		case -849582265:
-		case -780455182:
-		case -739986731:
-		case -709811179:
-		case -607940493:
-		case -415839138:
-		case -321841939:
-		case -232974724:
-		case -161804536:
-		case -148407339:
-		case 58958195:
-		case 247563739:
-		case 308500632:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_FACE_TREES"):
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
+		case joaat("DISCOVER_LOC_FLYING_MACHINE"):
+		case joaat("DISCOVER_LOC_WHALE_BONE"):
+		case joaat("DISCOVER_LOC_OBELISK"):
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
+		case joaat("DISCOVER_LOC_METEORITE"):
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
+		case joaat("DISCOVER_LOC_DREAMCATCHERS"):
+		case joaat("DISCOVER_LOC_TRADING_POST"):
+		case joaat("DISCOVER_LOC_STONEHENGE"):
+		case joaat("DISCOVER_LOC_MAMMOTH"):
+		case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 		case 373034311:
-		case 404434344:
-		case 429544447:
-		case 657666087:
-		case 921081956:
-		case 1034793488:
-		case 1284679164:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
+		case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
+		case joaat("DISCOVER_LOC_EASEL"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 		case 1519228573:
-		case 1535254161:
-		case 1673499939:
-		case 1734766691:
-		case 1982045664:
-		case 1986618633:
-		case 2000209669:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
+		case joaat("DISCOVER_LOC_BRUSH_FIRE"):
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
+		case joaat("DISCOVER_LOC_SPERM_WHALE"):
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return true;
 		case 677950956:
 			if (func_15())
@@ -444,7 +444,7 @@ bool func_5(var uParam0)
 				return false;
 			}
 			break;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			if (func_16(59))
 			{
 				return false;
@@ -475,7 +475,7 @@ void func_6(var uParam0)
 			{
 				return;
 			}
-			if ((*uParam0 == -890175011 || *uParam0 == 677950956) || *uParam0 == -321841939)
+			if ((*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES") || *uParam0 == 677950956) || *uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 			{
 				if (func_20(uParam0))
 				{
@@ -494,7 +494,7 @@ void func_6(var uParam0)
 			if (func_14(Global_35, uParam0->f_6.f_2, 1) <= uParam0->f_6)
 			{
 				func_23(&(uParam0->f_6.f_5));
-				if ((((func_11(*uParam0, 2) || func_11(*uParam0, 16)) || *uParam0 == -890175011) || *uParam0 == 677950956) || (*uParam0 == -1761578407 && func_20(uParam0)))
+				if ((((func_11(*uParam0, 2) || func_11(*uParam0, 16)) || *uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES")) || *uParam0 == 677950956) || (*uParam0 == joaat("DISCOVER_LOC_GRAVE") && func_20(uParam0)))
 				{
 					func_19(uParam0, 3);
 				}
@@ -525,7 +525,7 @@ void func_6(var uParam0)
 			else if (func_27(uParam0, 0))
 			{
 				func_28(uParam0);
-				if ((func_11(*uParam0, 2) || func_11(*uParam0, 16)) || (*uParam0 == -1761578407 && func_20(uParam0)))
+				if ((func_11(*uParam0, 2) || func_11(*uParam0, 16)) || (*uParam0 == joaat("DISCOVER_LOC_GRAVE") && func_20(uParam0)))
 				{
 					func_19(uParam0, 6);
 				}
@@ -558,7 +558,7 @@ void func_6(var uParam0)
 					}
 					func_35(uParam0);
 					func_36(uParam0, 1);
-					if (!*uParam0 == -321841939)
+					if (!*uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 					{
 						func_37(1, -1);
 					}
@@ -577,12 +577,12 @@ void func_6(var uParam0)
 					if (!func_39(uParam0->f_3, 2))
 					{
 						func_40(&(uParam0->f_3), 2);
-						if (!*uParam0 == -1761578407 && !*uParam0 == 404434344)
+						if (!*uParam0 == joaat("DISCOVER_LOC_GRAVE") && !*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 						{
 							func_41(uParam0);
 						}
 					}
-					if (!*uParam0 == -1761578407 && !*uParam0 == 404434344)
+					if (!*uParam0 == joaat("DISCOVER_LOC_GRAVE") && !*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 					{
 						CAM::SET_GAMEPLAY_COORD_HINT(uParam0->f_6.f_2, -1, 2000, 2000, 0);
 						func_42(uParam0);
@@ -592,7 +592,7 @@ void func_6(var uParam0)
 			else if (func_39(uParam0->f_3, 2))
 			{
 				func_43(&(uParam0->f_3), 2);
-				if (!*uParam0 == -1761578407 && !*uParam0 == 404434344)
+				if (!*uParam0 == joaat("DISCOVER_LOC_GRAVE") && !*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 				{
 					if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
 					{
@@ -602,12 +602,12 @@ void func_6(var uParam0)
 			}
 			break;
 		case 5:
-			if (*uParam0 == -890175011 || *uParam0 == 677950956)
+			if (*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES") || *uParam0 == 677950956)
 			{
 				CAM::SET_GAMEPLAY_COORD_HINT(uParam0->f_6.f_2, -1, 2000, 2000, 0);
 			}
 			func_30(uParam0, uParam0->f_6.f_8, func_29(uParam0), 0);
-			if (!*uParam0 == -1761578407 && !*uParam0 == 404434344)
+			if (!*uParam0 == joaat("DISCOVER_LOC_GRAVE") && !*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 			{
 				func_42(uParam0);
 			}
@@ -621,7 +621,7 @@ void func_6(var uParam0)
 			}
 			else if (func_26(&(uParam0->f_6.f_5)) >= 2000)
 			{
-				if (!*uParam0 == -1761578407 && !*uParam0 == 404434344)
+				if (!*uParam0 == joaat("DISCOVER_LOC_GRAVE") && !*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 				{
 					if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
 					{
@@ -632,11 +632,11 @@ void func_6(var uParam0)
 				{
 					func_43(&(uParam0->f_3), 2);
 				}
-				if (!*uParam0 == -1761578407 && !*uParam0 == 404434344)
+				if (!*uParam0 == joaat("DISCOVER_LOC_GRAVE") && !*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 				{
 					func_44(uParam0);
 				}
-				if ((*uParam0 == -890175011 || *uParam0 == 677950956) || *uParam0 == -321841939)
+				if ((*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES") || *uParam0 == 677950956) || *uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 				{
 					func_18(uParam0);
 					func_19(uParam0, 7);
@@ -676,13 +676,13 @@ void func_7(var uParam0)
 			if (func_46(&(uParam0->f_2)))
 			{
 				iVar0 = 3;
-				if (*uParam0 == -849582265 && Global_40.f_11953)
+				if (*uParam0 == joaat("DISCOVER_LOC_INDIAN_BURIAL") && Global_40.f_11953)
 				{
 					iVar0 = 4;
 				}
 				func_47(iVar0, 0, 0, 0, 0, 0, 1065353216, 0);
 				func_40(&(uParam0->f_3), 8);
-				if (*uParam0 == -849582265)
+				if (*uParam0 == joaat("DISCOVER_LOC_INDIAN_BURIAL"))
 				{
 					Global_40.f_11953 = 1;
 				}
@@ -711,7 +711,7 @@ void func_8(var uParam0)
 			{
 				func_43(&(uParam0->f_3), 1);
 			}
-			if (!*uParam0 == 1187917501)
+			if (!*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON"))
 			{
 				if (func_48(*uParam0))
 				{
@@ -719,14 +719,14 @@ void func_8(var uParam0)
 					return;
 				}
 			}
-			if (*uParam0 == 425000526)
+			if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER"))
 			{
-				if (!func_48(-1308658310))
+				if (!func_48(joaat("DISCOVER_LOC_POWDER_KEG")))
 				{
 					return;
 				}
 			}
-			else if ((*uParam0 == -2108030724 || *uParam0 == -1240932004) || *uParam0 == -1887999095)
+			else if ((*uParam0 == -2108030724 || *uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH")) || *uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 			{
 				if (!func_50(uParam0))
 				{
@@ -745,21 +745,21 @@ void func_8(var uParam0)
 			{
 				return;
 			}
-			if (((!*uParam0 == -499529359 && !*uParam0 == -1714262909) && !*uParam0 == -968854939) && !*uParam0 == 2134589549)
+			if (((!*uParam0 == joaat("DISCOVER_LOC_DEAD_CHAIN_GANG") && !*uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE")) && !*uParam0 == joaat("DISCOVER_LOC_CATTLE_CARCASSES")) && !*uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER"))
 			{
-				if (*uParam0 == -1568839185)
+				if (*uParam0 == joaat("DISCOVER_LOC_CORPSE_PIT"))
 				{
 					iVar1 = 10;
 				}
-				else if (*uParam0 == -1177787273 || *uParam0 == -1841331114)
+				else if (*uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER") || *uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY"))
 				{
 					iVar1 = 4;
 				}
-				else if ((*uParam0 == 1673499939 || *uParam0 == -1824429070) || *uParam0 == 949011950)
+				else if ((*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE") || *uParam0 == -1824429070) || *uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE"))
 				{
 					iVar1 = 3;
 				}
-				else if (((((*uParam0 == -777592153 || *uParam0 == 2072069278) || *uParam0 == 149709049) || *uParam0 == 1187917501) || *uParam0 == 657666087) || *uParam0 == -1829339703)
+				else if (((((*uParam0 == -777592153 || *uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR")) || *uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT")) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 				{
 					iVar1 = 2;
 				}
@@ -767,7 +767,7 @@ void func_8(var uParam0)
 				{
 					iVar1 = 1;
 				}
-				if (!(*uParam0 == 1187917501 && func_48(*uParam0)))
+				if (!(*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON") && func_48(*uParam0)))
 				{
 					if (!PED::_GET_NUM_RESERVED_AMBIENT_PEDS_READY() == iVar1)
 					{
@@ -780,7 +780,7 @@ void func_8(var uParam0)
 		case 3:
 			if (func_55(uParam0))
 			{
-				if ((((*uParam0 == -499529359 || *uParam0 == -1714262909) || *uParam0 == -968854939) || *uParam0 == 2134589549) || (*uParam0 == 1187917501 && func_48(*uParam0)))
+				if ((((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHAIN_GANG") || *uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE")) || *uParam0 == joaat("DISCOVER_LOC_CATTLE_CARCASSES")) || *uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) || (*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON") && func_48(*uParam0)))
 				{
 					func_49(&sLocal_40, 10, 1);
 				}
@@ -851,7 +851,7 @@ void func_8(var uParam0)
 				}
 				func_49(&sLocal_40, 7, 1);
 			}
-			else if (*uParam0 == -2009137002)
+			else if (*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[0]))
 				{
@@ -861,7 +861,7 @@ void func_8(var uParam0)
 			}
 			else
 			{
-				if (*uParam0 == 949011950)
+				if (*uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE"))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[2]))
 					{
@@ -872,19 +872,19 @@ void func_8(var uParam0)
 			}
 			break;
 		case 6:
-			if (((((*uParam0 == -777592153 || *uParam0 == 2072069278) || *uParam0 == 149709049) || *uParam0 == 949011950) || *uParam0 == 1187917501) || *uParam0 == -1829339703)
+			if (((((*uParam0 == -777592153 || *uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR")) || *uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT")) || *uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE")) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 			{
 				iVar2 = 1;
 			}
-			else if (*uParam0 == 1673499939 || *uParam0 == -1824429070)
+			else if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE") || *uParam0 == -1824429070)
 			{
 				iVar2 = 2;
 			}
-			else if (*uParam0 == -1177787273 || *uParam0 == -1841331114)
+			else if (*uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER") || *uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY"))
 			{
 				iVar2 = 3;
 			}
-			else if (*uParam0 == -1568839185)
+			else if (*uParam0 == joaat("DISCOVER_LOC_CORPSE_PIT"))
 			{
 				iVar2 = 9;
 			}
@@ -905,7 +905,7 @@ void func_8(var uParam0)
 			func_49(&sLocal_40, 7, 1);
 			break;
 		case 7:
-			if ((((*uParam0 == -1824429070 || *uParam0 == -1841331114) || *uParam0 == 949011950) || *uParam0 == 1187917501) || *uParam0 == -1829339703)
+			if ((((*uParam0 == -1824429070 || *uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY")) || *uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE")) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 			{
 				if (*uParam0 == -1824429070)
 				{
@@ -928,7 +928,7 @@ void func_8(var uParam0)
 						iVar0++;
 					}
 				}
-				else if (*uParam0 == -1841331114)
+				else if (*uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY"))
 				{
 					iVar0 = 1;
 					while (iVar0 <= 2)
@@ -949,7 +949,7 @@ void func_8(var uParam0)
 						iVar0++;
 					}
 				}
-				else if ((*uParam0 == 949011950 || *uParam0 == 1187917501) || *uParam0 == -1829339703)
+				else if ((*uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE") || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 				{
 					iVar0 = 0;
 					while (iVar0 <= 1)
@@ -974,7 +974,7 @@ void func_8(var uParam0)
 			func_49(&sLocal_40, 8, 1);
 			break;
 		case 8:
-			if (*uParam0 == 425000526)
+			if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER"))
 			{
 				if (!func_39(Global_40.f_8863.f_155, 32))
 				{
@@ -986,7 +986,7 @@ void func_8(var uParam0)
 					}
 				}
 			}
-			else if (*uParam0 == 2072069278)
+			else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR"))
 			{
 				if (!OBJECT::DOES_PICKUP_EXIST(iLocal_18))
 				{
@@ -1010,21 +1010,21 @@ void func_8(var uParam0)
 			func_49(&sLocal_40, 9, 1);
 			break;
 		case 9:
-			if (*uParam0 == -920971071)
+			if (*uParam0 == joaat("DISCOVER_LOC_FLATTENED_CABIN"))
 			{
 				if (!func_67(79, 1246.442f, 1152.859f, 154.2879f, 0.0f, 0.0f, -113.04f, 1, 0, 1, 0, 0, 3, -1))
 				{
 					return;
 				}
 			}
-			else if (*uParam0 == -1287911066)
+			else if (*uParam0 == joaat("DISCOVER_LOC_BARREL_RIDER"))
 			{
 				if (!func_67(90, ENTITY::GET_ENTITY_COORDS(sLocal_44.f_1[0], true, false), 0.0f, 0.0f, -113.04f, 1, 0, 1, 0, 0, 3, -1))
 				{
 					return;
 				}
 			}
-			else if (*uParam0 == 2072069278)
+			else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR"))
 			{
 				if (!func_67(90, ENTITY::GET_ENTITY_COORDS(sLocal_44.f_1[0], true, false), 0.0f, 0.0f, -113.04f, 1, 0, 1, 0, 0, 3, -1))
 				{
@@ -1034,14 +1034,14 @@ void func_8(var uParam0)
 			func_49(&sLocal_40, 10, 1);
 			break;
 		case 10:
-			if (!*uParam0 == 1673499939 && !*uParam0 == -1887999095)
+			if (!*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE") && !*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 			{
 				if (!func_39(uParam0->f_3, 1))
 				{
 					func_40(&(uParam0->f_3), 1);
 				}
 			}
-			if (*uParam0 == 1187917501)
+			if (*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON"))
 			{
 				if (func_68(uParam0))
 				{
@@ -1056,7 +1056,7 @@ void func_8(var uParam0)
 			}
 			else if (!func_48(*uParam0))
 			{
-				if (*uParam0 == -1144800837)
+				if (*uParam0 == joaat("DISCOVER_LOC_PIRATE_SKELETON"))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(uLocal_67[0]) && PED::_GET_CARRIER_AS_PED(uLocal_67[0]) == Global_35)
 					{
@@ -1103,9 +1103,9 @@ void func_8(var uParam0)
 						}
 					}
 				}
-				else if (*uParam0 == 2072069278 || *uParam0 == -1240932004)
+				else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR") || *uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH"))
 				{
-					if (*uParam0 == 2072069278)
+					if (*uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR"))
 					{
 						if (!iLocal_23[0])
 						{
@@ -1116,7 +1116,7 @@ void func_8(var uParam0)
 							}
 						}
 					}
-					else if (*uParam0 == -1240932004)
+					else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH"))
 					{
 						if ((!func_11(*uParam0, 8) && VOLUME::DOES_VOLUME_EXIST(iLocal_14)) && ENTITY::IS_ENTITY_IN_VOLUME(Global_35, iLocal_14, true, 0))
 						{
@@ -1136,7 +1136,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == 425000526)
+				else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER"))
 				{
 					if (!func_39(Global_40.f_8863.f_155, 8))
 					{
@@ -1176,7 +1176,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if ((*uParam0 == -641229542 || *uParam0 == -2108030724) || *uParam0 == -1177787273)
+				else if ((*uParam0 == joaat("DISCOVER_LOC_RUNAWAY_CORPSE") || *uParam0 == -2108030724) || *uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER"))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[0]))
 					{
@@ -1189,7 +1189,7 @@ void func_8(var uParam0)
 						}
 					}
 				}
-				else if (*uParam0 == 1342653896)
+				else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"))
 				{
 					if (!func_39(Global_40.f_8863.f_155, 64))
 					{
@@ -1207,16 +1207,16 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if ((*uParam0 == -1300082860 || *uParam0 == 429544447) || *uParam0 == -2009137002)
+				else if ((*uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL") || *uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY")) || *uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 				{
-					if (*uParam0 == -1300082860)
+					if (*uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"))
 					{
 						if ((!func_11(*uParam0, 8) && VOLUME::DOES_VOLUME_EXIST(iLocal_14)) && ENTITY::IS_ENTITY_IN_VOLUME(Global_35, iLocal_14, true, 0))
 						{
 							func_82(uParam0);
 						}
 					}
-					else if (*uParam0 == 429544447)
+					else if (*uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY"))
 					{
 						func_87(uParam0);
 					}
@@ -1232,7 +1232,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == -739986731)
+				else if (*uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL"))
 				{
 					if (!func_11(*uParam0, 32) && func_11(*uParam0, 16))
 					{
@@ -1254,7 +1254,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == 2134589549)
+				else if (*uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER"))
 				{
 					if (!func_11(*uParam0, 32) && func_11(*uParam0, 16))
 					{
@@ -1276,7 +1276,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == 1673499939)
+				else if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 				{
 					func_89(uParam0);
 					if (!func_11(*uParam0, 32) && func_11(*uParam0, 16))
@@ -1304,7 +1304,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == -1887999095)
+				else if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 				{
 					if (!func_39(Global_40.f_8863.f_155, 1))
 					{
@@ -1332,7 +1332,7 @@ void func_8(var uParam0)
 						}
 					}
 				}
-				else if (*uParam0 == 1519228573 || *uParam0 == -1636964661)
+				else if (*uParam0 == 1519228573 || *uParam0 == joaat("DISCOVER_LOC_DONKEY_LADY"))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[0]) && func_11(*uParam0, 16))
 					{
@@ -1342,7 +1342,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == 657666087)
+				else if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 				{
 					func_91(uParam0);
 					if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[0]) && func_11(*uParam0, 16))
@@ -1351,7 +1351,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 11, 1);
 					}
 				}
-				else if (*uParam0 == -1714262909)
+				else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE"))
 				{
 					if (VOLUME::DOES_VOLUME_EXIST(iLocal_14) && ENTITY::IS_ENTITY_IN_VOLUME(Global_35, iLocal_14, true, 0))
 					{
@@ -1371,7 +1371,7 @@ void func_8(var uParam0)
 						}
 					}
 				}
-				else if (*uParam0 == -920971071)
+				else if (*uParam0 == joaat("DISCOVER_LOC_FLATTENED_CABIN"))
 				{
 					if (!func_11(*uParam0, 8) && func_77(Global_35, func_80(uParam0, 0), 15.0f, 1, 1))
 					{
@@ -1393,7 +1393,7 @@ void func_8(var uParam0)
 						func_49(&sLocal_40, 13, 1);
 					}
 				}
-				else if (*uParam0 == -1287911066)
+				else if (*uParam0 == joaat("DISCOVER_LOC_BARREL_RIDER"))
 				{
 					if (!iLocal_23[0])
 					{
@@ -1413,7 +1413,7 @@ void func_8(var uParam0)
 				}
 				else
 				{
-					if (*uParam0 == 149709049)
+					if (*uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT"))
 					{
 						if (!func_11(*uParam0, 8) && func_77(Global_35, func_94(uParam0, uParam0->f_4), 30.0f, 1, 1))
 						{
@@ -1437,7 +1437,7 @@ void func_8(var uParam0)
 			}
 			break;
 		case 11:
-			if (*uParam0 == -1887999095)
+			if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 			{
 				if (!func_39(Global_40.f_8863.f_155, 1))
 				{
@@ -1461,7 +1461,7 @@ void func_8(var uParam0)
 					func_49(&sLocal_40, 13, 1);
 				}
 			}
-			else if (*uParam0 == 657666087)
+			else if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 			{
 				func_91(uParam0);
 			}
@@ -1493,14 +1493,14 @@ void func_9(var uParam0)
 		PHYSICS::DELETE_ROPE(&iLocal_20);
 	}
 	func_96(&iLocal_22);
-	if (*uParam0 == 657666087 || *uParam0 == 1673499939)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON") || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		if (func_97(1))
 		{
 			func_98(1, 0, 0);
 		}
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		if (!iLocal_21 == 0 && ENTITY::IS_MAP_ENTITY_PINNED(iLocal_21))
 		{
@@ -1513,7 +1513,7 @@ void func_9(var uParam0)
 			func_100(&uLocal_27, 3);
 		}
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 	}
 	func_101(&sLocal_44, 1);
@@ -1529,291 +1529,291 @@ int func_10(int iParam0)
 		case joaat("WB_DISCO_CEREMONIAL_HATCHET"):
 			return -261997819;
 		case joaat("WB_DISCO_AXE_IN_TREE"):
-			return 870958936;
+			return joaat("DISCOVER_LOC_AXE_IN_TREE");
 		case joaat("WB_DISCO_AZTEC_MASK"):
 			return 677950956;
 		case joaat("WB_DISCO_BLACK_SHEEP"):
-			return -35775921;
+			return joaat("DISCOVER_LOC_BLACK_SHEEP");
 		case joaat("WB_DISCO_BOAT_IN_TREE"):
-			return -1084929085;
+			return joaat("DISCOVER_LOC_BOAT_IN_TREE");
 		case joaat("WB_DISCO_BOOTS_NOTE_RANGE"):
 			return 2135153015;
 		case joaat("WB_DISCO_CIV_WAR_FORT"):
-			return 1347913620;
+			return joaat("DISCOVER_LOC_CIVIL_WAR_FORT");
 		case joaat("WB_DISCO_CIV_WAR_KNIFE"):
-			return -599506500;
+			return joaat("DISCOVER_LOC_CIVIL_WAR_SWORD");
 		case joaat("WB_DISCO_CORPSE_PIT"):
-			return -1568839185;
+			return joaat("DISCOVER_LOC_CORPSE_PIT");
 		case joaat("WB_DISCO_DEAD_CIV_WAR"):
 			return 1937333853;
 		case joaat("WB_DISCO_DREAMCATCHERS"):
-			return -321841939;
+			return joaat("DISCOVER_LOC_DREAMCATCHERS");
 		case joaat("WB_DISCO_EASEL"):
-			return 1034793488;
+			return joaat("DISCOVER_LOC_EASEL");
 		case joaat("WB_DISCO_FACE_IN_CLIFF"):
-			return -2009137002;
+			return joaat("DISCOVER_LOC_FACE_IN_CLIFF");
 		case joaat("WB_DISCO_FOSSILIZED_MAN"):
-			return -1646022773;
+			return joaat("DISCOVER_LOC_FOSSILIZED_MAN");
 		case joaat("WB_DISCO_GIANT_REMAINS"):
-			return -1787770845;
+			return joaat("DISCOVER_LOC_GIANT_REMAINS");
 		case joaat("WB_DISCO_GRAVE"):
-			return -1761578407;
+			return joaat("DISCOVER_LOC_GRAVE");
 		case joaat("WB_DISCO_ARTHUR_GRAVE"):
-			return 404434344;
+			return joaat("DISCOVER_LOC_GRAVE_ARTHUR");
 		case joaat("WB_DISCO_KILL_ZONE"):
-			return 503180747;
+			return joaat("DISCOVER_LOC_KILL_ZONE");
 		case joaat("WB_DISCO_HIDDEN_TUNNEL"):
-			return 308500632;
+			return joaat("DISCOVER_LOC_HIDDEN_TUNNEL");
 		case joaat("WB_DISCO_LOVE_MESSAGE"):
-			return 74587361;
+			return joaat("DISCOVER_LOC_LOVE_MESSAGE");
 		case joaat("WB_DISCO_METEORITE"):
-			return -709811179;
+			return joaat("DISCOVER_LOC_METEORITE");
 		case joaat("WB_DISCO_MICAH_CAMP"):
-			return 118535038;
+			return joaat("DISCOVER_LOC_MICAH_CAMP");
 		case joaat("WB_DISCO_OLD_WORLD_SCRIPT"):
-			return -1609238411;
+			return joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT");
 		case joaat("WB_DISCO_PHONOGRAPH_HOUSE"):
-			return -1614148516;
+			return joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE");
 		case joaat("WB_DISCO_PILE_SKULLS"):
 			return 173549940;
 		case joaat("WB_DISCO_PIRATE_KNIFE"):
-			return 1424723727;
+			return joaat("DISCOVER_LOC_PIRATE_SWORD");
 		case joaat("WB_DISCO_POWDER_KEG"):
-			return -1308658310;
+			return joaat("DISCOVER_LOC_POWDER_KEG");
 		case joaat("WB_DISCO_REGISTER_ROCK"):
-			return -1761189332;
+			return joaat("DISCOVER_LOC_REGISTER_ROCK");
 		case joaat("WB_DISCO_SCARECROW_1"):
-			return -1420566543;
+			return joaat("DISCOVER_LOC_SCARECROW_1");
 		case joaat("WB_DISCO_SCARECROW_2"):
-			return -1208846034;
+			return joaat("DISCOVER_LOC_SCARECROW_2");
 		case joaat("WB_DISCO_SCARECROW_3"):
-			return 1048086072;
+			return joaat("DISCOVER_LOC_SCARECROW_3");
 		case joaat("WB_DISCO_SCARECROW_4"):
-			return 939555152;
+			return joaat("DISCOVER_LOC_SCARECROW_4");
 		case joaat("WB_DISCO_STONEHENGE"):
-			return -161804536;
+			return joaat("DISCOVER_LOC_STONEHENGE");
 		case joaat("WB_DISCO_SUN_DIAL"):
-			return -30872859;
+			return joaat("DISCOVER_LOC_SUN_DIAL");
 		case joaat("WB_DISCO_SWAMP_HAND"):
 			return 1519228573;
 		case joaat("WB_DISCO_TREE_STRUCK"):
 			return -1505275983;
 		case joaat("WB_DISCO_VAMPIRE_CLUES"):
-			return -890175011;
+			return joaat("DISCOVER_LOC_VAMPIRE_CLUES");
 		case joaat("WB_DISCO_VIKING_GEAR"):
-			return 733338689;
+			return joaat("DISCOVER_LOC_VIKING_GEAR");
 		case joaat("WB_DISCO_WHALE_BONE"):
-			return -986176781;
+			return joaat("DISCOVER_LOC_WHALE_BONE");
 		case joaat("WB_DISCO_BUCK_CARCASS"):
 			return -1824429070;
 		case joaat("WB_DISCO_BRUSH_FIRE"):
-			return 1734766691;
+			return joaat("DISCOVER_LOC_BRUSH_FIRE");
 		case joaat("WB_DISCO_FLATTENED_CABIN"):
-			return -920971071;
+			return joaat("DISCOVER_LOC_FLATTENED_CABIN");
 		case joaat("WB_DISCO_OBELISK"):
-			return -979575591;
+			return joaat("DISCOVER_LOC_OBELISK");
 		case joaat("WB_DISCO_WHISKEY_TREE"):
-			return 464413478;
+			return joaat("DISCOVER_LOC_WHISKEY_TREE");
 		case joaat("WB_DISCO_CIRCUS_WAGON"):
-			return 657666087;
+			return joaat("DISCOVER_LOC_CIRCUS_WAGON");
 		case joaat("WB_DISCO_LIGHTNING_TREES"):
-			return -715636193;
+			return joaat("DISCOVER_LOC_LIGHTNING_TREES");
 		case joaat("WB_DISCO_SERPENT_MOUND"):
-			return -607940493;
+			return joaat("DISCOVER_LOC_SERPENT_MOUND");
 		case joaat("WB_DISCO_DEAD_MINER"):
-			return 425000526;
+			return joaat("DISCOVER_LOC_DEAD_MINER");
 		case joaat("WB_DISCO_OLD_FIREPIT"):
-			return -544327665;
+			return joaat("DISCOVER_LOC_OLD_FIREPIT");
 		case joaat("WB_DISCO_FLYING_MACHINE"):
-			return -1053108445;
+			return joaat("DISCOVER_LOC_FLYING_MACHINE");
 		case joaat("WB_DISCO_OLD_GRAVESTONES"):
-			return 230001763;
+			return joaat("DISCOVER_LOC_OLD_GRAVESTONES");
 		case joaat("WB_DISCO_STRANGE_STATUES"):
-			return 2000209669;
+			return joaat("DISCOVER_LOC_STRANGE_STATUES");
 		case joaat("WB_DISCO_BROKEN_WAGONS"):
-			return -1859023693;
+			return joaat("DISCOVER_LOC_BROKEN_WAGONS");
 		case joaat("WB_DISCO_BRA_SECRET"):
-			return 1861313914;
+			return joaat("DISCOVER_LOC_BRAITHWAITES_SECRET");
 		case joaat("WB_DISCO_BRAITH_3"):
 			return -2108030724;
 		case joaat("WB_DISCO_CRASHED_AIRSHIP"):
-			return 58958195;
+			return joaat("DISCOVER_LOC_CRASHED_AIRSHIP");
 		case joaat("WB_DISCO_UTE_WICKUP"):
-			return -1891628345;
+			return joaat("DISCOVER_LOC_UTE_WICKUP");
 		case joaat("WB_DISCO_WITCHES_CAULDRON"):
 			return 1464664327;
 		case joaat("WB_DISCO_OLD_DIRTY_CABIN"):
-			return -654238687;
+			return joaat("DISCOVER_LOC_OLD_DIRTY_CABIN");
 		case joaat("WB_DISCO_SPERM_WHALE"):
-			return 1986618633;
+			return joaat("DISCOVER_LOC_SPERM_WHALE");
 		case joaat("WB_DISCO_FIRE_LOOKOUT_TOWER"):
-			return 918206817;
+			return joaat("DISCOVER_LOC_FIRE_LOOKOUT_TOWER");
 		case joaat("WB_DISCO_BATS_IN_BARN"):
-			return -2008558277;
+			return joaat("DISCOVER_LOC_BATS_IN_BARN");
 		case joaat("WB_DISCO_HORNET_NESTS"):
 			return -834293086;
 		case joaat("WB_DISCO_BANK_STAGECOACH"):
-			return 1335921989;
+			return joaat("DISCOVER_LOC_BANK_STAGECOACH");
 		case joaat("WB_DISCO_PAGAN_RITUAL"):
-			return -739986731;
+			return joaat("DISCOVER_LOC_PAGAN_RITUAL");
 		case joaat("WB_DISCO_MAMMOTH"):
-			return -148407339;
+			return joaat("DISCOVER_LOC_MAMMOTH");
 		case joaat("WB_DISCO_UTOPIAN_COLONY"):
-			return -1960242214;
+			return joaat("DISCOVER_LOC_UTOPIAN_COLONY");
 		case joaat("WB_DISCO_WAGON_CIRCLE"):
-			return 1187689415;
+			return joaat("DISCOVER_LOC_WAGON_CIRCLE");
 		case joaat("WB_DISCO_METEOR_HOUSE"):
-			return 1673499939;
+			return joaat("DISCOVER_LOC_METEOR_HOUSE");
 		case joaat("WB_DISCO_WATER_DIVINER"):
-			return -1177787273;
+			return joaat("DISCOVER_LOC_WATER_DIVINER");
 		case joaat("WB_DISCO_DEAD_CHINESE_TRAVELLER"):
-			return 1342653896;
+			return joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER");
 		case joaat("WB_DISCO_DEAD_SNAKE"):
-			return -1714262909;
+			return joaat("DISCOVER_LOC_DEAD_SNAKE");
 		case joaat("WB_DISCO_DESERT_WAGON"):
-			return -1283611369;
+			return joaat("DISCOVER_LOC_DESERT_WAGON");
 		case joaat("WB_DISCO_MEDITATING_MONK"):
-			return -415839138;
+			return joaat("DISCOVER_LOC_MEDITATING_MONK");
 		case joaat("WB_DISCO_PIG_MASK"):
 			return -763376358;
 		case joaat("WB_DISCO_CAT_MASK"):
-			return 1801731633;
+			return joaat("DISCOVER_LOC_CAT_MASK");
 		case joaat("WB_DISCO_RAM_MASK"):
-			return 1490223565;
+			return joaat("DISCOVER_LOC_RAM_MASK");
 		case joaat("WB_DISCO_ANCIENT_SEALED_CLAY_URN"):
-			return -1427565340;
+			return joaat("DISCOVER_LOC_ANCIENT_URN");
 		case joaat("WB_DISCO_TRADING_POST"):
-			return -232974724;
+			return joaat("DISCOVER_LOC_TRADING_POST");
 		case joaat("WB_DISCO_TRAIL_TREES"):
-			return -1272862985;
+			return joaat("DISCOVER_LOC_TRAIL_TREES");
 		case joaat("WB_DISCO_MAIL_TRUCK"):
 			return -1061274876;
 		case joaat("WB_DISCO_WHISPERING_TREES"):
-			return 221420861;
+			return joaat("DISCOVER_LOC_WHISPERING_TREES");
 		case joaat("WB_DISCO_CIV_WAR_BATTLEFIELD"):
-			return 1535254161;
+			return joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD");
 		case joaat("WB_DISCO_ABANDONED_MISSION"):
-			return 683269210;
+			return joaat("DISCOVER_LOC_ABANDONED_MISSION");
 		case joaat("WB_DISCO_ANCIENT_ARROW_HEADS"):
 			return 373034311;
 		case joaat("WB_DISCO_ANCIENT_TOMAHAWK"):
-			return 2072029413;
+			return joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK");
 		case joaat("WB_DISCO_ANCIENT_URN"):
-			return -1427565340;
+			return joaat("DISCOVER_LOC_ANCIENT_URN");
 		case joaat("WB_DISCO_DEAD_CHAIN_GANG"):
-			return -499529359;
+			return joaat("DISCOVER_LOC_DEAD_CHAIN_GANG");
 		case joaat("WB_DISCO_DEFACED_GRAVE"):
-			return -780455182;
+			return joaat("DISCOVER_LOC_DEFACED_GRAVE");
 		case joaat("WB_DISCO_DERAILED_TRAIN"):
-			return -2019711818;
+			return joaat("DISCOVER_LOC_DERAILED_TRAIN");
 		case joaat("WB_DISCO_DONKEY_LADY"):
-			return -1636964661;
+			return joaat("DISCOVER_LOC_DONKEY_LADY");
 		case joaat("WB_DISCO_FACTORY_IN_SWAMP"):
-			return 1154568952;
+			return joaat("DISCOVER_LOC_FACTORY_IN_SWAMP");
 		case joaat("WB_DISCO_FROZEN_SETTLER"):
-			return 2134589549;
+			return joaat("DISCOVER_LOC_FROZEN_SETTLER");
 		case joaat("WB_DISCO_DEAD_TOWN"):
-			return -1109016944;
+			return joaat("DISCOVER_LOC_GHOST_TOWN");
 		case joaat("WB_DISCO_OBJECT_IN_TREE"):
-			return 1124200691;
+			return joaat("DISCOVER_LOC_OBJECT_IN_TREE");
 		case joaat("WB_DISCO_PIRATE_RUM"):
-			return -357364973;
+			return joaat("DISCOVER_LOC_PIRATE_RUM");
 		case joaat("WB_DISCO_RUNAWAY_CORPSE"):
-			return -641229542;
+			return joaat("DISCOVER_LOC_RUNAWAY_CORPSE");
 		case joaat("WB_DISCO_SHEEP_GUY"):
 			return -777592153;
 		case joaat("WB_DISCO_SHRINE"):
-			return -1859413640;
+			return joaat("DISCOVER_LOC_SHRINE");
 		case joaat("WB_DISCO_POTS_TREE"):
-			return -1686810506;
+			return joaat("DISCOVER_LOC_POTS_TREE");
 		case joaat("WB_DISCO_DEAD_BEAR"):
-			return 2072069278;
+			return joaat("DISCOVER_LOC_DEAD_BEAR");
 		case joaat("WB_DISCO_OLD_FIREPLACE"):
-			return 1120968795;
+			return joaat("DISCOVER_LOC_OLD_FIREPLACE");
 		case joaat("WB_DISCO_GRAVESTONE_TREE"):
-			return -409986722;
+			return joaat("DISCOVER_LOC_GRAVESTONE_TREE");
 		case joaat("WB_DISCO_ABANDONED_FURNITURE"):
-			return -1882503209;
+			return joaat("DISCOVER_LOC_ABANDONED_FURNITURE");
 		case joaat("WB_DISCO_EARLY_SETTLERS"):
-			return 1431862613;
+			return joaat("DISCOVER_LOC_EARLY_SETTLERS");
 		case joaat("WB_DISCO_RAILROAD_GRAVESTONE"):
-			return -657632;
+			return joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE");
 		case joaat("WB_DISCO_ABANDONED_CHURCH"):
-			return -1958832660;
+			return joaat("DISCOVER_LOC_ABANDONED_CHURCH");
 		case joaat("WB_DISCO_ABANDONED_WELL"):
-			return -1481450947;
+			return joaat("DISCOVER_LOC_ABANDONED_WELL");
 		case joaat("WB_DISCO_HERMIT_WOMAN"):
-			return 1982045664;
+			return joaat("DISCOVER_LOC_HERMIT_WOMAN");
 		case joaat("WB_DISCO_INDIAN_BURIAL"):
-			return -849582265;
+			return joaat("DISCOVER_LOC_INDIAN_BURIAL");
 		case joaat("WB_DISCO_BURNED_SETTLEMENT"):
-			return 149709049;
+			return joaat("DISCOVER_LOC_BURNED_SETTLEMENT");
 		case joaat("WB_DISCO_FRANKENSTEIN_BOOK"):
-			return 1284679164;
+			return joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK");
 		case joaat("WB_DISCO_ROPE_BRIDGE"):
-			return -1923503631;
+			return joaat("DISCOVER_LOC_ROPE_BRIDGE");
 		case joaat("WB_DISCO_PIRATE_SKELETON"):
-			return -1144800837;
+			return joaat("DISCOVER_LOC_PIRATE_SKELETON");
 		case joaat("WB_DISCO_GRAYS_SECRET"):
-			return -1887999095;
+			return joaat("DISCOVER_LOC_GRAYS_SECRET");
 		case joaat("WB_DISCO_TREE_TRUNK_BOAT"):
-			return -1457751321;
+			return joaat("DISCOVER_LOC_TREE_TRUNK_BOAT");
 		case joaat("WB_DISCO_CONESTOGA_WAGON"):
-			return 1187917501;
+			return joaat("DISCOVER_LOC_CONESTOGA_WAGON");
 		case joaat("WB_DISCO_TREE_HOUSE"):
-			return 1091556515;
+			return joaat("DISCOVER_LOC_TREE_HOUSE");
 		case joaat("WB_DISCO_GEYSER"):
 			return joaat("DISCOVER_LOC_GEYSER");
 		case joaat("WB_DISCO_ABANDONED_OIL_WELL"):
-			return -1300082860;
+			return joaat("DISCOVER_LOC_ABANDONED_OIL_WELL");
 		case joaat("WB_DISCO_GHOST_TRAIN"):
-			return 397377585;
+			return joaat("DISCOVER_LOC_GHOST_TRAIN");
 		case joaat("WB_DISCO_METEOR_SHOWER"):
-			return -777150535;
+			return joaat("DISCOVER_LOC_METEOR_SHOWER");
 		case joaat("WB_DISCO_DESERTED_FARM"):
-			return -919236330;
+			return joaat("DISCOVER_LOC_DESERTED_FARM");
 		case joaat("WB_DISCO_CATTLE_CARCASSES"):
-			return -968854939;
+			return joaat("DISCOVER_LOC_CATTLE_CARCASSES");
 		case joaat("WB_DISCO_BROKEN_BRIDGE"):
-			return 1519472817;
+			return joaat("DISCOVER_LOC_BROKEN_BRIDGE");
 		case joaat("WB_DISCO_ABANDONED_TRADING_POST"):
-			return 247563739;
+			return joaat("DISCOVER_LOC_ABANDONED_TRADING_POST");
 		case joaat("WB_DISCO_QUARRY"):
-			return -1848895400;
+			return joaat("DISCOVER_LOC_QUARRY");
 		case joaat("WB_DISCO_ROADSIDE_BROTHEL"):
-			return -2060865802;
+			return joaat("DISCOVER_LOC_ROADSIDE_BROTHEL");
 		case joaat("WB_DISCO_LIGHTNING_ALLEY"):
-			return -1841331114;
+			return joaat("DISCOVER_LOC_LIGHTNING_ALLEY");
 		case joaat("WB_DISCO_OVERTURNED_HEARSE"):
-			return 949011950;
+			return joaat("DISCOVER_LOC_OVERTURNED_HEARSE");
 		case joaat("WB_DISCO_DESERT_SKELETONS"):
-			return 1505050944;
+			return joaat("DISCOVER_LOC_DESERT_SKELETONS");
 		case joaat("WB_DISCO_FACE_TREES"):
-			return -1243267511;
+			return joaat("DISCOVER_LOC_FACE_TREES");
 		case joaat("WB_DISCO_ALCHEMIST"):
 			return 233600584;
 		case joaat("WB_DISCO_JESUIT_MISSIONARY"):
-			return 429544447;
+			return joaat("DISCOVER_LOC_JESUIT_MISSIONARY");
 		case joaat("WB_DISCO_MOUNTAIN_CLIMB"):
-			return 1833243216;
+			return joaat("DISCOVER_LOC_MOUNTAIN_CLIMB");
 		case joaat("WB_DISCO_BLACK_FLOWER"):
-			return -1494823099;
+			return joaat("DISCOVER_LOC_BLACK_FLOWER");
 		case joaat("WB_DISCO_ONE_ROOM_CHURCH"):
-			return 921081956;
+			return joaat("DISCOVER_LOC_ONE_ROOM_CHURCH");
 		case joaat("WB_DISCO_TREASURE_MAP_HALVES"):
-			return 513110082;
+			return joaat("DISCOVER_LOC_TREASURE_MAP_HALVES");
 		case joaat("WB_DISCO_STUFFED_GORILLA"):
-			return -490142739;
+			return joaat("DISCOVER_LOC_STUFFED_GORILLA");
 		case joaat("WB_DISCO_OLD_RAILROAD_CAMP"):
-			return 330993088;
+			return joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP");
 		case joaat("WB_DISCO_BIRD_NEST"):
-			return 435290930;
+			return joaat("DISCOVER_LOC_BIRD_NEST");
 		case joaat("WB_DISCO_BARREL_RIDER"):
-			return -1287911066;
+			return joaat("DISCOVER_LOC_BARREL_RIDER");
 		case joaat("WB_DISCO_DEAD_MICAH"):
-			return -1240932004;
+			return joaat("DISCOVER_LOC_DEAD_MICAH");
 		case joaat("WB_DISCO_WAGON_CHEST"):
-			return -1829339703;
+			return joaat("DISCOVER_LOC_WAGON_CHEST");
 		default:
 			break;
 	}
@@ -1826,7 +1826,7 @@ bool func_11(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_40.f_8863[func_105(iParam0, 1)] & iParam1 != 0;
+	return (Global_40.f_8863[func_105(iParam0, 1)] & iParam1) != 0;
 }
 
 void func_12(var uParam0)
@@ -1842,85 +1842,85 @@ void func_12(var uParam0)
 		{
 			switch (*uParam0)
 			{
-				case 683269210:
+				case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
 					vVar0 = { -5576.82f, -2583.934f, -9.541f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 30.534f /*3*/ };
 					vVar6 = { 13.524f, 10.157f, 15.906f /*3*/ };
 					sVar9 = "DLAM_Attack";
 					break;
-				case 2072029413:
+				case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 					vVar0 = { 808.518f, 2299.105f, 250.32f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 21.51f /*3*/ };
 					vVar6 = { 5.0f, 4.0f, 9.0f /*3*/ };
 					sVar9 = "DLAT_Attack";
 					break;
-				case -849582265:
+				case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
 					vVar0 = { -2587.832f, -81.85f, 166.262f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 9.056f /*3*/ };
 					vVar6 = { 52.076f, 56.679f, 16.103f /*3*/ };
 					sVar9 = "DLIB_Attack";
 					break;
-				case 1861313914:
+				case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 					vVar0 = { 894.559f, -1969.353f, 43.7f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 51.997f /*3*/ };
 					vVar6 = { 4.5f, 4.5f, 6.0f /*3*/ };
 					sVar9 = "DLBS_Attack";
 					break;
-				case -641229542:
+				case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 					vVar0 = { 1750.836f, -2091.653f, 40.941f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, -30.078f /*3*/ };
 					vVar6 = { 2.215f, 3.182f, 2.394f /*3*/ };
 					sVar9 = "DLRC_Attack";
 					break;
-				case -499529359:
+				case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
 					vVar0 = { 2285.546f, 97.363f, 49.583f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, -30.998f /*3*/ };
 					vVar6 = { 7.132f, 4.645f, 4.596f /*3*/ };
 					sVar9 = "DLDCG_Attack";
 					break;
-				case -780455182:
+				case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 					vVar0 = { -988.307f, 1692.387f, 243.864f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 0.0f /*3*/ };
 					vVar6 = { 4.673f, 3.887f, 3.06f /*3*/ };
 					sVar9 = "DLDG_Attack";
 					break;
-				case 429544447:
+				case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 					vVar0 = { -6314.771f, -3467.0f, -11.247f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 32.675f /*3*/ };
 					vVar6 = { 2.852f, 3.164f, 3.06f /*3*/ };
 					sVar9 = "DLJM_Attack";
 					break;
-				case 230001763:
+				case joaat("DISCOVER_LOC_OLD_GRAVESTONES"):
 					vVar0 = { 2133.283f, 145.452f, 75.745f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 58.303f /*3*/ };
 					vVar6 = { 17.167f, 17.176f, 9.904f /*3*/ };
 					sVar9 = "DLOG_Attack";
 					break;
-				case 921081956:
+				case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
 					vVar0 = { 2415.271f, -738.691f, 41.0f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 89.245f /*3*/ };
 					vVar6 = { 6.662f, 6.841f, 12.231f /*3*/ };
 					sVar9 = "DLORC_Attack";
 					break;
-				case 949011950:
+				case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 					vVar0 = { -2341.024f, -2180.015f, 70.0f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 123.618f /*3*/ };
 					vVar6 = { 7.322f, 10.134f, 10.231f /*3*/ };
 					sVar9 = "DLOH_Attack";
 					break;
-				case -739986731:
+				case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 					vVar0 = { -2905.353f, -254.294f, 186.571f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 129.763f /*3*/ };
 					vVar6 = { 7.64f, 7.534f, 4.0f /*3*/ };
 					sVar9 = "DLPR_Attack";
 					break;
-				case -657632:
+				case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
 					vVar0 = { 2684.651f, 71.256f, 59.0f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 111.493f /*3*/ };
 					vVar6 = { 4.343f, 3.084f, 3.303f /*3*/ };
 					sVar9 = "DLRG_Attack";
 					break;
-				case -1761578407:
+				case joaat("DISCOVER_LOC_GRAVE"):
 					if (Global_36 > -1200.0f)
 					{
 						vVar0 = { -762.369f, -1910.463f, 51.0f /*3*/ };
@@ -1936,7 +1936,7 @@ void func_12(var uParam0)
 						sVar9 = "DLG2_Attack";
 					}
 					break;
-				case 404434344:
+				case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 					if (Global_36 > -1200.0f)
 					{
 						vVar0 = { -762.369f, -1910.463f, 51.0f /*3*/ };
@@ -1952,13 +1952,13 @@ void func_12(var uParam0)
 						sVar9 = "DLG2_Attack";
 					}
 					break;
-				case -1891628345:
+				case joaat("DISCOVER_LOC_UTE_WICKUP"):
 					vVar0 = { -2694.572f, -1500.398f, 150.0f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, 1.841f /*3*/ };
 					vVar6 = { 16.663f, 12.967f, 11.141f /*3*/ };
 					sVar9 = "DLUW_Attack";
 					break;
-				case -1859413640:
+				case joaat("DISCOVER_LOC_SHRINE"):
 					vVar0 = { 2195.32f, -554.613f, 40.995f /*3*/ };
 					vVar3 = { 0.0f, 0.0f, -74.605f /*3*/ };
 					vVar6 = { 1.691f, 1.755f, 2.318f /*3*/ };
@@ -1974,7 +1974,7 @@ Vector3 func_13(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -544327665:
+		case joaat("DISCOVER_LOC_OLD_FIREPIT"):
 			if (iParam1 == 0)
 			{
 				return { 500.882f, 80.003f, 139.28f };
@@ -1988,7 +1988,7 @@ Vector3 func_13(var uParam0, int iParam1)
 				return { -3667.897f, -2805.515f, -7.129f };
 			}
 			break;
-		case 1120968795:
+		case joaat("DISCOVER_LOC_OLD_FIREPLACE"):
 			if (iParam1 == 0)
 			{
 				return { -1521.811f, 519.1222f, 101.6756f };
@@ -2040,7 +2040,7 @@ Vector3 func_13(var uParam0, int iParam1)
 				return { 2264.918f, 934.7651f, 81.1843f };
 			}
 			break;
-		case -1859023693:
+		case joaat("DISCOVER_LOC_BROKEN_WAGONS"):
 			if (iParam1 == 0)
 			{
 				return { 525.7659f, 373.9645f, 107.9581f };
@@ -2086,7 +2086,7 @@ Vector3 func_13(var uParam0, int iParam1)
 				return { 795.2883f, 1013.304f, 118.3968f };
 			}
 			break;
-		case 1519472817:
+		case joaat("DISCOVER_LOC_BROKEN_BRIDGE"):
 			if (iParam1 == 0)
 			{
 				return { -2519.475f, 820.6946f, 146.4494f };
@@ -2096,10 +2096,10 @@ Vector3 func_13(var uParam0, int iParam1)
 				return { -1349.727f, -923.9958f, 69.342f };
 			}
 			break;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			return func_106(uParam0, iParam1);
-		case -1761578407:
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE"):
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			if (iParam1 == 9)
 			{
 				return { -762.4968f, -1910.661f, 50.4933f };
@@ -2113,9 +2113,9 @@ Vector3 func_13(var uParam0, int iParam1)
 				return func_94(uParam0, iParam1);
 			}
 			break;
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			return func_107(uParam0, iParam1);
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			if (iParam1 == 0)
 			{
 				return { -2531.5f, 1174.4f, 225.9f };
@@ -2129,7 +2129,7 @@ Vector3 func_13(var uParam0, int iParam1)
 				return { -4389.58f, -2166.55f, 50.81f };
 			}
 			break;
-		case 503180747:
+		case joaat("DISCOVER_LOC_KILL_ZONE"):
 			if (iParam1 == 0)
 			{
 				return { 2325.978f, 1070.32f, 44.9401f };
@@ -2139,15 +2139,15 @@ Vector3 func_13(var uParam0, int iParam1)
 				return { -2698.656f, 697.2829f, 162.889f };
 			}
 			break;
-		case 1535254161:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 			return func_94(uParam0, iParam1);
-		case -1272862985:
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
 			return func_94(uParam0, iParam1);
-		case -1243267511:
+		case joaat("DISCOVER_LOC_FACE_TREES"):
 			return func_94(uParam0, iParam1);
-		case -321841939:
+		case joaat("DISCOVER_LOC_DREAMCATCHERS"):
 			return func_94(uParam0, iParam1);
-		case -890175011:
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 			return func_94(uParam0, iParam1);
 		case 677950956:
 			return func_94(uParam0, iParam1);
@@ -2223,7 +2223,7 @@ bool func_20(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case -544327665:
+		case joaat("DISCOVER_LOC_OLD_FIREPIT"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_152, 1))
@@ -2246,7 +2246,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_152, 8))
@@ -2311,7 +2311,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case 1120968795:
+		case joaat("DISCOVER_LOC_OLD_FIREPLACE"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_153, (1 << 10)))
@@ -2327,7 +2327,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case 1519472817:
+		case joaat("DISCOVER_LOC_BROKEN_BRIDGE"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_153, (1 << 23)))
@@ -2415,7 +2415,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case -1859023693:
+		case joaat("DISCOVER_LOC_BROKEN_WAGONS"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_153, (1 << 12)))
@@ -2494,13 +2494,13 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			if (func_39(Global_40.f_8863.f_154, 1))
 			{
 				return true;
 			}
 			break;
-		case -1761578407:
+		case joaat("DISCOVER_LOC_GRAVE"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_154, 1))
@@ -2579,7 +2579,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case -321841939:
+		case joaat("DISCOVER_LOC_DREAMCATCHERS"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_148, 2))
@@ -2721,7 +2721,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_149, 1))
@@ -2758,7 +2758,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			switch (uParam0->f_4)
 			{
 				case 0:
@@ -2783,7 +2783,7 @@ bool func_20(var uParam0)
 					break;
 			}
 			break;
-		case -890175011:
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_154, (1 << 11)))
@@ -2864,7 +2864,7 @@ bool func_20(var uParam0)
 				}
 			}
 			break;
-		case -1272862985:
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
 			if (uParam0->f_4 == 0)
 			{
 				if (func_39(Global_40.f_8863.f_152, (1 << 18)))
@@ -2907,61 +2907,61 @@ void func_21(var uParam0)
 	uParam0->f_6 = 10.0f;
 	switch (*uParam0)
 	{
-		case 1535254161:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 			uParam0->f_6 = 20.0f;
 			uParam0->f_6.f_1 = 10.0f;
 			func_111(uParam0);
 			break;
-		case -1958832660:
-		case -1109016944:
+		case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
 			uParam0->f_6 = 48.0f;
 			uParam0->f_6.f_1 = 24.0f;
 			break;
-		case -1960242214:
-		case -1300082860:
-		case -161804536:
-		case 657666087:
-		case 1673499939:
-		case 1734766691:
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
+		case joaat("DISCOVER_LOC_STONEHENGE"):
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
+		case joaat("DISCOVER_LOC_BRUSH_FIRE"):
 			uParam0->f_6 = 30.0f;
 			uParam0->f_6.f_1 = 15.0f;
 			break;
-		case -1891628345:
-		case -986176781:
-		case -849582265:
-		case 247563739:
-		case 1982045664:
-		case 1986618633:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_WHALE_BONE"):
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
+		case joaat("DISCOVER_LOC_SPERM_WHALE"):
 			uParam0->f_6 = 20.0f;
 			uParam0->f_6.f_1 = 10.0f;
 			break;
-		case -1646022773:
-		case 1284679164:
-		case 2000209669:
+		case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			uParam0->f_6 = 6.0f;
 			uParam0->f_6.f_1 = 3.0f;
 			break;
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			uParam0->f_6 = 3.0f;
 			uParam0->f_6.f_1 = 1.5f;
 			break;
-		case -1243267511:
+		case joaat("DISCOVER_LOC_FACE_TREES"):
 			uParam0->f_6 = 10.0f;
 			func_111(uParam0);
 			break;
-		case -607940493:
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 			uParam0->f_6 = 30.0f;
 			func_111(uParam0);
 			break;
-		case -321841939:
+		case joaat("DISCOVER_LOC_DREAMCATCHERS"):
 			uParam0->f_6 = 10.0f;
 			break;
-		case -1761578407:
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE"):
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			uParam0->f_6 = 10.0f;
 			func_111(uParam0);
 			break;
-		case -890175011:
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 			uParam0->f_6 = 3.0f;
 			uParam0->f_6.f_1 = 1.5f;
 			if (((uParam0->f_4 == 0 || uParam0->f_4 == 1) || uParam0->f_4 == 3) || uParam0->f_4 == 4)
@@ -3047,7 +3047,7 @@ bool func_27(var uParam0, bool bParam1)
 		{
 			return true;
 		}
-		if ((((*uParam0 == -1761578407 || *uParam0 == 404434344) || *uParam0 == -1243267511) || *uParam0 == -607940493) || *uParam0 == 1535254161)
+		if ((((*uParam0 == joaat("DISCOVER_LOC_GRAVE") || *uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR")) || *uParam0 == joaat("DISCOVER_LOC_FACE_TREES")) || *uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND")) || *uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"))
 		{
 			if (!VOLUME::DOES_VOLUME_EXIST(uParam0->f_6.f_9))
 			{
@@ -3077,7 +3077,7 @@ bool func_27(var uParam0, bool bParam1)
 		{
 			return false;
 		}
-		if ((((*uParam0 == -1761578407 || *uParam0 == 404434344) || *uParam0 == -1243267511) || *uParam0 == -607940493) || *uParam0 == 1535254161)
+		if ((((*uParam0 == joaat("DISCOVER_LOC_GRAVE") || *uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR")) || *uParam0 == joaat("DISCOVER_LOC_FACE_TREES")) || *uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND")) || *uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"))
 		{
 			if (!VOLUME::DOES_VOLUME_EXIST(uParam0->f_6.f_9))
 			{
@@ -3100,7 +3100,7 @@ void func_28(var uParam0)
 {
 	if (!func_33(uParam0->f_6.f_8))
 	{
-		if (*uParam0 == 404434344)
+		if (*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 		{
 			if (func_48(*uParam0))
 			{
@@ -3112,7 +3112,7 @@ void func_28(var uParam0)
 				uParam0->f_6.f_8 = func_119("DISCO_EXAMINE", joaat("INPUT_CONTEXT_Y"), Global_35, 0, 0, 0, 0, 5, 1070386381, 570, 4000, 10, (1 << 30), 0, joaat("SHORT_TIMED_EVENT"), 0, 0);
 			}
 		}
-		else if (*uParam0 == -1761578407)
+		else if (*uParam0 == joaat("DISCOVER_LOC_GRAVE"))
 		{
 			if (uParam0->f_4 == 2)
 			{
@@ -3148,7 +3148,7 @@ void func_28(var uParam0)
 				uParam0->f_6.f_8 = func_119("DISCO_EXAMINE", joaat("INPUT_CONTEXT_Y"), Global_35, 0, 0, 0, 0, 5, 1070386381, 570, 4000, 10, (1 << 30), 0, joaat("SHORT_TIMED_EVENT"), 0, 0);
 			}
 		}
-		else if (*uParam0 == 1861313914)
+		else if (*uParam0 == joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"))
 		{
 			if (func_11(*uParam0, 2) || func_11(*uParam0, 16))
 			{
@@ -3160,7 +3160,7 @@ void func_28(var uParam0)
 				uParam0->f_6.f_8 = func_119("DISCO_EXAMINE", joaat("INPUT_CONTEXT_Y"), Global_35, 2, 0, 0, 0, 5, 1070386381, 570, 4000, 10, (1 << 30), 0, joaat("PLAYER_FOCUS_TIMING"), 0, 0);
 			}
 		}
-		else if (*uParam0 == -415839138)
+		else if (*uParam0 == joaat("DISCOVER_LOC_MEDITATING_MONK"))
 		{
 			if (func_11(*uParam0, 2) || func_11(*uParam0, 16))
 			{
@@ -3188,7 +3188,7 @@ void func_28(var uParam0)
 
 char* func_29(var uParam0)
 {
-	if (*uParam0 == 404434344)
+	if (*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 	{
 		if (func_48(*uParam0))
 		{
@@ -3199,7 +3199,7 @@ char* func_29(var uParam0)
 			return "DISCO_GRAVE";
 		}
 	}
-	else if (*uParam0 == -1761578407)
+	else if (*uParam0 == joaat("DISCOVER_LOC_GRAVE"))
 	{
 		if (func_20(uParam0))
 		{
@@ -3245,7 +3245,7 @@ char* func_29(var uParam0)
 			return "DISCO_GRAVE";
 		}
 	}
-	else if (*uParam0 == -890175011)
+	else if (*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES"))
 	{
 		return "DISCO_VAMP";
 	}
@@ -3253,89 +3253,89 @@ char* func_29(var uParam0)
 	{
 		return "DISCO_VAMP";
 	}
-	else if (*uParam0 == -321841939)
+	else if (*uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 	{
 		return "DISCO_DREAM";
 	}
 	else if (func_11(*uParam0, 2) || func_11(*uParam0, 16))
 	{
-		if (*uParam0 == -1958832660)
+		if (*uParam0 == joaat("DISCOVER_LOC_ABANDONED_CHURCH"))
 		{
 			return "DISCO_AC";
 		}
-		else if (*uParam0 == -1300082860)
+		else if (*uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"))
 		{
 			return "DISCO_AW";
 		}
-		else if (*uParam0 == 247563739)
+		else if (*uParam0 == joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"))
 		{
 			return "DISCO_ATP";
 		}
-		else if (*uParam0 == -1287911066)
+		else if (*uParam0 == joaat("DISCOVER_LOC_BARREL_RIDER"))
 		{
 			return "DISCO_BR";
 		}
-		else if (*uParam0 == 1861313914)
+		else if (*uParam0 == joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"))
 		{
 			return "DISCO_BS";
 		}
-		else if (*uParam0 == 1734766691)
+		else if (*uParam0 == joaat("DISCOVER_LOC_BRUSH_FIRE"))
 		{
 			return "DISCO_FIRE";
 		}
-		else if (*uParam0 == 657666087)
+		else if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 		{
 			return "DISCO_CW";
 		}
-		else if (*uParam0 == 1535254161)
+		else if (*uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"))
 		{
 			return "DISCO_CWB";
 		}
-		else if (*uParam0 == 58958195)
+		else if (*uParam0 == joaat("DISCOVER_LOC_CRASHED_AIRSHIP"))
 		{
 			return "DISCO_CA";
 		}
-		else if (*uParam0 == -1109016944)
+		else if (*uParam0 == joaat("DISCOVER_LOC_GHOST_TOWN"))
 		{
 			return "DISCO_DT";
 		}
-		else if (*uParam0 == -780455182)
+		else if (*uParam0 == joaat("DISCOVER_LOC_DEFACED_GRAVE"))
 		{
 			return "DISCO_DG";
 		}
-		else if (*uParam0 == -1636964661)
+		else if (*uParam0 == joaat("DISCOVER_LOC_DONKEY_LADY"))
 		{
 			return "DISCO_DL";
 		}
-		else if (*uParam0 == -2009137002)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 		{
 			return "DISCO_FIC";
 		}
-		else if (*uParam0 == -1243267511)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FACE_TREES"))
 		{
 			return "DISCO_FT";
 		}
-		else if (*uParam0 == -1053108445)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FLYING_MACHINE"))
 		{
 			return "DISCO_FLY";
 		}
-		else if (*uParam0 == -1646022773)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FOSSILIZED_MAN"))
 		{
 			return "DISCO_FO";
 		}
-		else if (*uParam0 == 1284679164)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"))
 		{
 			return "DISCO_FR";
 		}
-		else if (*uParam0 == 2134589549)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER"))
 		{
 			return "DISCO_FS";
 		}
-		else if (*uParam0 == -1787770845)
+		else if (*uParam0 == joaat("DISCOVER_LOC_GIANT_REMAINS"))
 		{
 			return "DISCO_GM";
 		}
-		else if (*uParam0 == -1887999095)
+		else if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 		{
 			return "DISCO_GS";
 		}
@@ -3343,95 +3343,95 @@ char* func_29(var uParam0)
 		{
 			return "DISCO_HS";
 		}
-		else if (*uParam0 == 1982045664)
+		else if (*uParam0 == joaat("DISCOVER_LOC_HERMIT_WOMAN"))
 		{
 			return "DISCO_HW";
 		}
-		else if (*uParam0 == 308500632)
+		else if (*uParam0 == joaat("DISCOVER_LOC_HIDDEN_TUNNEL"))
 		{
 			return "DISCO_HT";
 		}
-		else if (*uParam0 == -849582265)
+		else if (*uParam0 == joaat("DISCOVER_LOC_INDIAN_BURIAL"))
 		{
 			return "DISCO_IB";
 		}
-		else if (*uParam0 == 429544447)
+		else if (*uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY"))
 		{
 			return "DISCO_JM";
 		}
-		else if (*uParam0 == -148407339)
+		else if (*uParam0 == joaat("DISCOVER_LOC_MAMMOTH"))
 		{
 			return "DISCO_MA";
 		}
-		else if (*uParam0 == -415839138)
+		else if (*uParam0 == joaat("DISCOVER_LOC_MEDITATING_MONK"))
 		{
 			return "DISCO_MONK";
 		}
-		else if (*uParam0 == 1673499939)
+		else if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 		{
 			return "DISCO_MH";
 		}
-		else if (*uParam0 == -709811179)
+		else if (*uParam0 == joaat("DISCOVER_LOC_METEORITE"))
 		{
 			return "DISCO_MT";
 		}
-		else if (*uParam0 == -979575591)
+		else if (*uParam0 == joaat("DISCOVER_LOC_OBELISK"))
 		{
 			return "DISCO_OB";
 		}
-		else if (*uParam0 == -1609238411)
+		else if (*uParam0 == joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"))
 		{
 			return "DISCO_OWS";
 		}
-		else if (*uParam0 == 921081956)
+		else if (*uParam0 == joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"))
 		{
 			return "DISCO_ORC";
 		}
-		else if (*uParam0 == -739986731)
+		else if (*uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL"))
 		{
 			return "DISCO_PR";
 		}
-		else if (*uParam0 == 1034793488)
+		else if (*uParam0 == joaat("DISCOVER_LOC_EASEL"))
 		{
 			return "DISCO_PIC";
 		}
-		else if (*uParam0 == -1614148516)
+		else if (*uParam0 == joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"))
 		{
 			return "DISCO_PH";
 		}
-		else if (*uParam0 == -1761189332)
+		else if (*uParam0 == joaat("DISCOVER_LOC_REGISTER_ROCK"))
 		{
 			return "DISCO_RR";
 		}
-		else if (*uParam0 == -607940493)
+		else if (*uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND"))
 		{
 			return "DISCO_SM";
 		}
-		else if (*uParam0 == 1986618633)
+		else if (*uParam0 == joaat("DISCOVER_LOC_SPERM_WHALE"))
 		{
 			return "DISCO_SW";
 		}
-		else if (*uParam0 == -161804536)
+		else if (*uParam0 == joaat("DISCOVER_LOC_STONEHENGE"))
 		{
 			return "DISCO_ST";
 		}
-		else if (*uParam0 == 2000209669)
+		else if (*uParam0 == joaat("DISCOVER_LOC_STRANGE_STATUES"))
 		{
 			return "DISCO_SS";
 		}
-		else if (*uParam0 == -232974724)
+		else if (*uParam0 == joaat("DISCOVER_LOC_TRADING_POST"))
 		{
 			return "DISCO_TP";
 		}
-		else if (*uParam0 == -1272862985)
+		else if (*uParam0 == joaat("DISCOVER_LOC_TRAIL_TREES"))
 		{
 			return "DISCO_TT";
 		}
-		else if (*uParam0 == -1891628345)
+		else if (*uParam0 == joaat("DISCOVER_LOC_UTE_WICKUP"))
 		{
 			return "DISCO_UTE";
 		}
-		else if (*uParam0 == -1960242214)
+		else if (*uParam0 == joaat("DISCOVER_LOC_UTOPIAN_COLONY"))
 		{
 			return "DISCO_UCB";
 		}
@@ -3439,7 +3439,7 @@ char* func_29(var uParam0)
 		{
 			return "DISCO_WT";
 		}
-		else if (*uParam0 == -986176781)
+		else if (*uParam0 == joaat("DISCOVER_LOC_WHALE_BONE"))
 		{
 			return "DISCO_WB";
 		}
@@ -3448,51 +3448,51 @@ char* func_29(var uParam0)
 			return "DISCO_AA";
 		}
 	}
-	else if (((*uParam0 == -986176781 || *uParam0 == 1986618633) || *uParam0 == -1787770845) || *uParam0 == -148407339)
+	else if (((*uParam0 == joaat("DISCOVER_LOC_WHALE_BONE") || *uParam0 == joaat("DISCOVER_LOC_SPERM_WHALE")) || *uParam0 == joaat("DISCOVER_LOC_GIANT_REMAINS")) || *uParam0 == joaat("DISCOVER_LOC_MAMMOTH"))
 	{
 		return "DISCO_BONES";
 	}
-	else if ((((((*uParam0 == -1958832660 || *uParam0 == 921081956) || *uParam0 == 247563739) || *uParam0 == -232974724) || *uParam0 == -1300082860) || *uParam0 == -979575591) || *uParam0 == 1673499939)
+	else if ((((((*uParam0 == joaat("DISCOVER_LOC_ABANDONED_CHURCH") || *uParam0 == joaat("DISCOVER_LOC_ONE_ROOM_CHURCH")) || *uParam0 == joaat("DISCOVER_LOC_ABANDONED_TRADING_POST")) || *uParam0 == joaat("DISCOVER_LOC_TRADING_POST")) || *uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL")) || *uParam0 == joaat("DISCOVER_LOC_OBELISK")) || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		return "DISCO_STRUCT";
 	}
-	else if (*uParam0 == -780455182)
+	else if (*uParam0 == joaat("DISCOVER_LOC_DEFACED_GRAVE"))
 	{
 		return "DISCO_GRAVE";
 	}
-	else if (*uParam0 == -2009137002)
+	else if (*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 	{
 		return "DISCO_SCULPT";
 	}
-	else if ((*uParam0 == -1243267511 || *uParam0 == -1272862985) || *uParam0 == -1505275983)
+	else if ((*uParam0 == joaat("DISCOVER_LOC_FACE_TREES") || *uParam0 == joaat("DISCOVER_LOC_TRAIL_TREES")) || *uParam0 == -1505275983)
 	{
 		return "DISCO_TREE";
 	}
-	else if (*uParam0 == 1034793488 || *uParam0 == 373034311)
+	else if (*uParam0 == joaat("DISCOVER_LOC_EASEL") || *uParam0 == 373034311)
 	{
 		return "DISCO_PAINT";
 	}
-	else if ((((((((*uParam0 == -1646022773 || *uParam0 == 1284679164) || *uParam0 == 2134589549) || *uParam0 == -1887999095) || *uParam0 == 1519228573) || *uParam0 == -1287911066) || *uParam0 == -1636964661) || *uParam0 == 429544447) || *uParam0 == -739986731)
+	else if ((((((((*uParam0 == joaat("DISCOVER_LOC_FOSSILIZED_MAN") || *uParam0 == joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK")) || *uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) || *uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET")) || *uParam0 == 1519228573) || *uParam0 == joaat("DISCOVER_LOC_BARREL_RIDER")) || *uParam0 == joaat("DISCOVER_LOC_DONKEY_LADY")) || *uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY")) || *uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL"))
 	{
 		return "DISCO_CORPSE";
 	}
-	else if ((((((((((*uParam0 == -1109016944 || *uParam0 == 1535254161) || *uParam0 == -849582265) || *uParam0 == -161804536) || *uParam0 == -1891628345) || *uParam0 == -1960242214) || *uParam0 == -607940493) || *uParam0 == 308500632) || *uParam0 == 1734766691) || *uParam0 == -415839138) || *uParam0 == 1982045664)
+	else if ((((((((((*uParam0 == joaat("DISCOVER_LOC_GHOST_TOWN") || *uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD")) || *uParam0 == joaat("DISCOVER_LOC_INDIAN_BURIAL")) || *uParam0 == joaat("DISCOVER_LOC_STONEHENGE")) || *uParam0 == joaat("DISCOVER_LOC_UTE_WICKUP")) || *uParam0 == joaat("DISCOVER_LOC_UTOPIAN_COLONY")) || *uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND")) || *uParam0 == joaat("DISCOVER_LOC_HIDDEN_TUNNEL")) || *uParam0 == joaat("DISCOVER_LOC_BRUSH_FIRE")) || *uParam0 == joaat("DISCOVER_LOC_MEDITATING_MONK")) || *uParam0 == joaat("DISCOVER_LOC_HERMIT_WOMAN"))
 	{
 		return "DISCO_SITE";
 	}
-	else if (*uParam0 == -1614148516)
+	else if (*uParam0 == joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"))
 	{
 		return "DISCO_DEVICE";
 	}
-	else if ((*uParam0 == -1761189332 || *uParam0 == -1609238411) || *uParam0 == -709811179)
+	else if ((*uParam0 == joaat("DISCOVER_LOC_REGISTER_ROCK") || *uParam0 == joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT")) || *uParam0 == joaat("DISCOVER_LOC_METEORITE"))
 	{
 		return "DISCO_ROCK";
 	}
-	else if ((*uParam0 == 58958195 || *uParam0 == -1053108445) || *uParam0 == 657666087)
+	else if ((*uParam0 == joaat("DISCOVER_LOC_CRASHED_AIRSHIP") || *uParam0 == joaat("DISCOVER_LOC_FLYING_MACHINE")) || *uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		return "DISCO_WRECK";
 	}
-	else if (*uParam0 == 1861313914)
+	else if (*uParam0 == joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"))
 	{
 		if (func_16(59))
 		{
@@ -3503,7 +3503,7 @@ char* func_29(var uParam0)
 			return "DISCO_SITE";
 		}
 	}
-	else if (*uParam0 == 2000209669)
+	else if (*uParam0 == joaat("DISCOVER_LOC_STRANGE_STATUES"))
 	{
 		if (uParam0->f_4 == 11)
 		{
@@ -3534,7 +3534,7 @@ void func_30(var uParam0, int iParam1, char* sParam2, bool bParam3)
 	iVar0 = func_122(iParam1);
 	if (HUD::_UI_PROMPT_IS_VALID(Global_1945188[iVar0 /*18*/].f_3))
 	{
-		if ((!*uParam0 == -890175011 && !*uParam0 == 677950956) && !*uParam0 == -1308658310)
+		if ((!*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES") && !*uParam0 == 677950956) && !*uParam0 == joaat("DISCOVER_LOC_POWDER_KEG"))
 		{
 			if (bParam3)
 			{
@@ -3545,7 +3545,7 @@ void func_30(var uParam0, int iParam1, char* sParam2, bool bParam3)
 				func_40(&iVar1, 8);
 			}
 		}
-		if ((*uParam0 == 1861313914 || *uParam0 == -1308658310) || *uParam0 == -415839138)
+		if ((*uParam0 == joaat("DISCOVER_LOC_BRAITHWAITES_SECRET") || *uParam0 == joaat("DISCOVER_LOC_POWDER_KEG")) || *uParam0 == joaat("DISCOVER_LOC_MEDITATING_MONK"))
 		{
 			if (func_11(*uParam0, 16))
 			{
@@ -3592,7 +3592,7 @@ bool func_33(int iParam0)
 	{
 		return false;
 	}
-	if (Global_1945188[iParam0 /*18*/].f_1 & 2 == 0)
+	if ((Global_1945188[iParam0 /*18*/].f_1 & 2) == 0)
 	{
 		return false;
 	}
@@ -3617,7 +3617,7 @@ void func_35(var uParam0)
 	{
 		return;
 	}
-	if (*uParam0 == -321841939)
+	if (*uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 	{
 		if (func_125(uParam0->f_4) != 0)
 		{
@@ -3646,7 +3646,7 @@ void func_36(var uParam0, bool bParam1)
 {
 	int iVar0;
 
-	if (*uParam0 == -321841939)
+	if (*uParam0 == joaat("DISCOVER_LOC_DREAMCATCHERS"))
 	{
 		if (bParam1)
 		{
@@ -3673,7 +3673,7 @@ void func_36(var uParam0, bool bParam1)
 		if (bParam1)
 		{
 			func_132(iVar0, 0);
-			if (*uParam0 == -890175011)
+			if (*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES"))
 			{
 				if (func_133() == (5 - 1))
 				{
@@ -3737,7 +3737,7 @@ float func_38(int iParam0, bool bParam1)
 
 bool func_39(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_40(int iParam0, int iParam1)
@@ -3780,23 +3780,23 @@ bool func_45(int iParam0)
 {
 	switch (iParam0)
 	{
-		case -1891628345:
-		case -1859413640:
-		case -1761578407:
-		case -849582265:
-		case -780455182:
-		case -739986731:
-		case -641229542:
-		case -499529359:
-		case -657632:
-		case 230001763:
-		case 404434344:
-		case 429544447:
-		case 683269210:
-		case 921081956:
-		case 949011950:
-		case 1861313914:
-		case 2072029413:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_SHRINE"):
+		case joaat("DISCOVER_LOC_GRAVE"):
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
+		case joaat("DISCOVER_LOC_OLD_GRAVESTONES"):
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
+		case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return true;
 	}
 	return false;
@@ -3839,7 +3839,7 @@ void func_47(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	{
 		return;
 	}
-	if (Global_36616 & func_141(iParam1) != 0)
+	if ((Global_36616 & func_141(iParam1)) != 0)
 	{
 		return;
 	}
@@ -3893,7 +3893,7 @@ bool func_50(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			if (!func_145() && !func_146())
 			{
 				if (!func_145())
@@ -3913,7 +3913,7 @@ bool func_50(var uParam0)
 				return false;
 			}
 			break;
-		case -1761578407:
+		case joaat("DISCOVER_LOC_GRAVE"):
 			if (uParam0->f_4 == 0)
 			{
 				if (!func_145() && !func_146())
@@ -3981,55 +3981,55 @@ bool func_50(var uParam0)
 				return false;
 			}
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			if (!func_16(21))
 			{
 				return false;
 			}
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			if (!func_16(77))
 			{
 				return false;
 			}
 			break;
-		case 118535038:
+		case joaat("DISCOVER_LOC_MICAH_CAMP"):
 			if (!func_16(12))
 			{
 				return false;
 			}
 			break;
-		case -2008558277:
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
 			if (func_150(19))
 			{
 				return false;
 			}
 			break;
-		case 221420861:
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
 			if (func_150(29))
 			{
 				return false;
 			}
 			break;
-		case -1308658310:
+		case joaat("DISCOVER_LOC_POWDER_KEG"):
 			if (func_150(11))
 			{
 				return false;
 			}
 			break;
-		case 308500632:
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 			if (!Global_40.f_11623[20 /*8*/] > 0)
 			{
 				return false;
 			}
 			break;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			if (func_147(19) || func_150(4))
 			{
 				return false;
 			}
 			break;
-		case 1982045664:
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 			if (func_147(66))
 			{
 				return false;
@@ -4050,7 +4050,7 @@ void func_51(var uParam0)
 	func_151(uParam0);
 	func_152(uParam0);
 	func_153(uParam0);
-	if (*uParam0 == -1714262909)
+	if (*uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE"))
 	{
 		if (!func_149(joaat("WS_DISCO_DEAD_SNAKE")))
 		{
@@ -4066,21 +4066,21 @@ void func_52(var uParam0)
 	int iVar0;
 	int iVar1;
 
-	if ((!*uParam0 == -499529359 && !*uParam0 == -1714262909) && !*uParam0 == -968854939)
+	if ((!*uParam0 == joaat("DISCOVER_LOC_DEAD_CHAIN_GANG") && !*uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE")) && !*uParam0 == joaat("DISCOVER_LOC_CATTLE_CARCASSES"))
 	{
-		if (*uParam0 == -1568839185)
+		if (*uParam0 == joaat("DISCOVER_LOC_CORPSE_PIT"))
 		{
 			iVar1 = 10;
 		}
-		else if (*uParam0 == -1177787273 || *uParam0 == -1841331114)
+		else if (*uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER") || *uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY"))
 		{
 			iVar1 = 4;
 		}
-		else if ((*uParam0 == 1673499939 || *uParam0 == -1824429070) || *uParam0 == 949011950)
+		else if ((*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE") || *uParam0 == -1824429070) || *uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE"))
 		{
 			iVar1 = 3;
 		}
-		else if (((((*uParam0 == -777592153 || *uParam0 == 2072069278) || *uParam0 == 149709049) || *uParam0 == 1187917501) || *uParam0 == 657666087) || *uParam0 == -1829339703)
+		else if (((((*uParam0 == -777592153 || *uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR")) || *uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT")) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 		{
 			iVar1 = 2;
 		}
@@ -4088,7 +4088,7 @@ void func_52(var uParam0)
 		{
 			iVar1 = 1;
 		}
-		if (!(*uParam0 == 1187917501 && func_48(*uParam0)))
+		if (!(*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON") && func_48(*uParam0)))
 		{
 			PED::_RESERVE_AMBIENT_PEDS_TOTAL(iVar1);
 		}
@@ -4096,11 +4096,11 @@ void func_52(var uParam0)
 	func_155(&sLocal_44);
 	func_156(&uLocal_67);
 	func_157(uParam0, &uLocal_27, 8);
-	if ((((*uParam0 == 1342653896 || *uParam0 == 425000526) || *uParam0 == 2134589549) || *uParam0 == -739986731) || *uParam0 == -1144800837)
+	if ((((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER") || *uParam0 == joaat("DISCOVER_LOC_DEAD_MINER")) || *uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) || *uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL")) || *uParam0 == joaat("DISCOVER_LOC_PIRATE_SKELETON"))
 	{
 		iLocal_15[0] = func_158(uParam0);
 	}
-	if (*uParam0 == -1887999095)
+	if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 	{
 		iVar0 = 0;
 		while (iVar0 <= (4 - 1))
@@ -4119,7 +4119,7 @@ void func_52(var uParam0)
 	{
 		func_160(-484929865);
 	}
-	else if (*uParam0 == -2009137002)
+	else if (*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 	{
 		func_161(920427419);
 		func_161(1121956769);
@@ -4127,11 +4127,11 @@ void func_52(var uParam0)
 		func_161(510716616);
 		func_160(1464851585);
 	}
-	if (*uParam0 == 657666087 || *uParam0 == 1673499939)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON") || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		func_162(uParam0);
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		iVar0 = 1;
 		while (iVar0 <= 2)
@@ -4156,21 +4156,21 @@ bool func_53(var uParam0)
 	{
 		return false;
 	}
-	if ((((*uParam0 == 1342653896 || *uParam0 == 425000526) || *uParam0 == 2134589549) || *uParam0 == -739986731) || *uParam0 == -1144800837)
+	if ((((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER") || *uParam0 == joaat("DISCOVER_LOC_DEAD_MINER")) || *uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) || *uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL")) || *uParam0 == joaat("DISCOVER_LOC_PIRATE_SKELETON"))
 	{
 		if (!func_166(&(iLocal_15[0])))
 		{
 			return false;
 		}
 	}
-	if (*uParam0 == 657666087 || *uParam0 == 1673499939)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON") || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		if (!func_167(uParam0))
 		{
 			return false;
 		}
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		iVar0 = 1;
 		while (iVar0 <= 2)
@@ -4188,7 +4188,7 @@ bool func_53(var uParam0)
 			iVar0++;
 		}
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(func_168(uParam0)))
 		{
@@ -4215,21 +4215,21 @@ bool func_55(var uParam0)
 		func_171(uParam0, (sLocal_44.f_0 - 1));
 		return false;
 	}
-	if ((((((((((((((((((!*uParam0 == 1342653896 && !*uParam0 == 425000526) && !*uParam0 == 2134589549) && !*uParam0 == -1300082860) && !*uParam0 == -1568839185) && !*uParam0 == -641229542) && !*uParam0 == -1177787273) && !*uParam0 == -1824429070) && !*uParam0 == -2060865802) && !*uParam0 == 1519228573) && !*uParam0 == -739986731) && !*uParam0 == 149709049) && !*uParam0 == -2108030724) && !*uParam0 == 1187917501) && !*uParam0 == -1887999095) && !*uParam0 == 1937333853) && !*uParam0 == 657666087) && !*uParam0 == -1829339703) && !*uParam0 == 1673499939)
+	if ((((((((((((((((((!*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER") && !*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER")) && !*uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) && !*uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL")) && !*uParam0 == joaat("DISCOVER_LOC_CORPSE_PIT")) && !*uParam0 == joaat("DISCOVER_LOC_RUNAWAY_CORPSE")) && !*uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER")) && !*uParam0 == -1824429070) && !*uParam0 == joaat("DISCOVER_LOC_ROADSIDE_BROTHEL")) && !*uParam0 == 1519228573) && !*uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL")) && !*uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT")) && !*uParam0 == -2108030724) && !*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) && !*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET")) && !*uParam0 == 1937333853) && !*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON")) && !*uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST")) && !*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		if (!func_172(uParam0, &uLocal_67))
 		{
 			return false;
 		}
 	}
-	if ((*uParam0 == 1342653896 || *uParam0 == 2134589549) || *uParam0 == -1144800837)
+	if ((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER") || *uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) || *uParam0 == joaat("DISCOVER_LOC_PIRATE_SKELETON"))
 	{
 		if (!func_173(uParam0, &uLocal_67))
 		{
 			return false;
 		}
 	}
-	else if (*uParam0 == 1673499939)
+	else if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		if (!func_39(Global_40.f_8863.f_155, 128))
 		{
@@ -4239,7 +4239,7 @@ bool func_55(var uParam0)
 			}
 		}
 	}
-	else if (*uParam0 == -739986731)
+	else if (*uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL"))
 	{
 		if (!func_39(Global_40.f_8863.f_155, 4))
 		{
@@ -4249,7 +4249,7 @@ bool func_55(var uParam0)
 			}
 		}
 	}
-	else if (*uParam0 == 1342653896)
+	else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"))
 	{
 		if (!func_39(Global_40.f_8863.f_155, 64))
 		{
@@ -4259,7 +4259,7 @@ bool func_55(var uParam0)
 			}
 		}
 	}
-	else if (*uParam0 == 425000526)
+	else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER"))
 	{
 		if (!func_39(Global_40.f_8863.f_155, 8))
 		{
@@ -4276,7 +4276,7 @@ bool func_55(var uParam0)
 			}
 		}
 	}
-	else if (*uParam0 == -1887999095)
+	else if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 	{
 		if (!func_39(Global_40.f_8863.f_155, 1))
 		{
@@ -4286,7 +4286,7 @@ bool func_55(var uParam0)
 			}
 		}
 	}
-	else if (*uParam0 == -1240932004)
+	else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH"))
 	{
 		if (!func_48(*uParam0))
 		{
@@ -4297,7 +4297,7 @@ bool func_55(var uParam0)
 			}
 		}
 	}
-	if (((((((((((((((((((((((*uParam0 == -777592153 || *uParam0 == 2072069278) || *uParam0 == 1342653896) || *uParam0 == 425000526) || *uParam0 == 1937333853) || *uParam0 == -1300082860) || *uParam0 == -1636964661) || *uParam0 == 149709049) || *uParam0 == -1568839185) || *uParam0 == -641229542) || *uParam0 == 1673499939) || *uParam0 == -1177787273) || *uParam0 == -1841331114) || *uParam0 == 949011950) || *uParam0 == -1287911066) || *uParam0 == 429544447) || *uParam0 == -2060865802) || *uParam0 == -739986731) || *uParam0 == -2108030724) || *uParam0 == 1187917501) || *uParam0 == -1887999095) || *uParam0 == -2009137002) || *uParam0 == -1829339703) || *uParam0 == -1240932004)
+	if (((((((((((((((((((((((*uParam0 == -777592153 || *uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR")) || *uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER")) || *uParam0 == joaat("DISCOVER_LOC_DEAD_MINER")) || *uParam0 == 1937333853) || *uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL")) || *uParam0 == joaat("DISCOVER_LOC_DONKEY_LADY")) || *uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT")) || *uParam0 == joaat("DISCOVER_LOC_CORPSE_PIT")) || *uParam0 == joaat("DISCOVER_LOC_RUNAWAY_CORPSE")) || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE")) || *uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER")) || *uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY")) || *uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE")) || *uParam0 == joaat("DISCOVER_LOC_BARREL_RIDER")) || *uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY")) || *uParam0 == joaat("DISCOVER_LOC_ROADSIDE_BROTHEL")) || *uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL")) || *uParam0 == -2108030724) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET")) || *uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST")) || *uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH"))
 	{
 		iVar0 = 0;
 		while (iVar0 <= (10 - 1))
@@ -4317,17 +4317,17 @@ bool func_55(var uParam0)
 			if (!ENTITY::IS_ENTITY_DEAD(sLocal_44.f_1[iVar0]))
 			{
 				func_178(sLocal_44.f_1[iVar0], func_177(uParam0, iVar0));
-				if (*uParam0 == 425000526)
+				if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER"))
 				{
 					PED::REMOVE_TAG_FROM_META_PED(sLocal_44.f_1[iVar0], joaat("HATS"), 1);
 				}
 			}
 			iVar0++;
 		}
-		if ((*uParam0 == 1342653896 || *uParam0 == 425000526) || *uParam0 == -739986731)
+		if ((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER") || *uParam0 == joaat("DISCOVER_LOC_DEAD_MINER")) || *uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL"))
 		{
 			func_179(&(iLocal_15[0]));
-			if (*uParam0 == 425000526)
+			if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MINER"))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(uLocal_67[0]))
 				{
@@ -4340,7 +4340,7 @@ bool func_55(var uParam0)
 					TASK::_MAKE_OBJECT_CARRIABLE(uLocal_67[1]);
 				}
 			}
-			else if (*uParam0 == -739986731)
+			else if (*uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL"))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(uLocal_67[0]))
 				{
@@ -4354,7 +4354,7 @@ bool func_55(var uParam0)
 				ENTITY::FREEZE_ENTITY_POSITION(uLocal_67[0], true);
 			}
 		}
-		else if (*uParam0 == 949011950)
+		else if (*uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE"))
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(sLocal_44.f_1[2]))
 			{
@@ -4376,7 +4376,7 @@ bool func_55(var uParam0)
 				func_181(sLocal_44.f_1[2], 1, 0);
 			}
 		}
-		else if (*uParam0 == -2009137002)
+		else if (*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(sLocal_44.f_1[0]))
 			{
@@ -4398,10 +4398,10 @@ bool func_55(var uParam0)
 				func_181(sLocal_44.f_1[0], 1, 0);
 			}
 		}
-		else if (*uParam0 == 2072069278)
+		else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR"))
 		{
 		}
-		else if (*uParam0 == 429544447)
+		else if (*uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY"))
 		{
 			if (!MAP::DOES_BLIP_EXIST(iLocal_22))
 			{
@@ -4414,12 +4414,12 @@ bool func_55(var uParam0)
 			TASK::_MAKE_OBJECT_CARRIABLE(uLocal_67[0]);
 		}
 	}
-	else if (*uParam0 == 2134589549 || *uParam0 == -1144800837)
+	else if (*uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER") || *uParam0 == joaat("DISCOVER_LOC_PIRATE_SKELETON"))
 	{
 		func_179(&(iLocal_15[0]));
 		if (!ENTITY::IS_ENTITY_DEAD(uLocal_67[0]))
 		{
-			if (*uParam0 == 2134589549)
+			if (*uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER"))
 			{
 				MISC::_0xF63FA29D4A9ACA86(uLocal_67[0], func_180(uParam0));
 			}
@@ -4438,17 +4438,17 @@ bool func_55(var uParam0)
 			if (ENTITY::IS_ENTITY_DEAD(sLocal_44.f_1[iVar0]))
 			{
 			}
-			if (((((!*uParam0 == -1300082860 && !*uParam0 == -641229542) && !*uParam0 == -2108030724) && !*uParam0 == -2009137002) && !*uParam0 == 1342653896) && !(*uParam0 == -1177787273 && iVar0 == 0))
+			if (((((!*uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL") && !*uParam0 == joaat("DISCOVER_LOC_RUNAWAY_CORPSE")) && !*uParam0 == -2108030724) && !*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF")) && !*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER")) && !(*uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER") && iVar0 == 0))
 			{
 				func_182(&(sLocal_44.f_1[iVar0]), 0);
 			}
 			func_183(&(sLocal_44.f_1[iVar0]), 0);
-			PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iVar0], 26, true);
+			PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iVar0], 26 /*PCF_DisableMelee*/, true);
 			PED::SET_PED_LASSO_HOGTIE_FLAG(sLocal_44.f_1[iVar0], 1, false);
 		}
 		iVar0++;
 	}
-	if (*uParam0 == 1673499939)
+	if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		if (func_184(2061942857))
 		{
@@ -4466,14 +4466,14 @@ bool func_55(var uParam0)
 			func_185(1692117745, 0, -1.0f, 1, 0, 0, 1, 0);
 		}
 	}
-	else if (*uParam0 == 149709049)
+	else if (*uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT"))
 	{
 		if (func_184(-906973157))
 		{
 			func_185(-906973157, 1, 0.0f, 0, 0, 0, 1, 0);
 		}
 	}
-	if (*uParam0 == 1673499939)
+	if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		if (func_15())
 		{
@@ -4559,25 +4559,25 @@ int func_61(var uParam0, int iParam1)
 	{
 		case -261997819:
 			return joaat("PICKUP_WEAPON_MELEE_ANCIENT_HATCHET");
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return joaat("PICKUP_WEAPON_THROWN_TOMAHAWK_ANCIENT");
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return joaat("PICKUP_WEAPON_MELEE_KNIFE_MINER");
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return joaat("PICKUP_WEAPON_MELEE_HATCHET_VIKING");
-		case -599506500:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
 			return joaat("PICKUP_WEAPON_MELEE_KNIFE_CIVIL_WAR");
-		case 1424723727:
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 			return joaat("PICKUP_WEAPON_MELEE_BROKEN_SWORD");
-		case 1187689415:
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
 			return joaat("PICKUP_WEAPON_SINGLE_ARROW");
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			return joaat("PICKUP_WEAPON_REVOLVER_SCHOFIELD_GOLDEN");
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			return joaat("PICKUP_WEAPON_MELEE_KNIFE_BEAR");
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return joaat("PICKUP_WEAPON_REVOLVER_DOUBLEACTION_MICAH");
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4604,23 +4604,23 @@ Vector3 func_62(var uParam0, int iParam1)
 	{
 		case -261997819:
 			return { -2588.29f, -93.565f, 167.61f };
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return { 808.621f, 2299.72f, 251.43f };
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return { -2367.267f, 124.251f, 216.25f };
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return { 2378.344f, 1687.092f, 95.406f };
-		case -599506500:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
 			return { 2446.8f, 290.5534f, 67.249f };
-		case 1424723727:
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 			return { 2152.94f, -1647.566f, 41.22f };
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			return { -4394.59f, -2159.13f, 47.51f };
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			return { -2333.5f, 904.52f, 157.39f };
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return { -1498.01f, 1251.11f, 313.1f };
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4637,7 +4637,7 @@ Vector3 func_62(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1187689415:
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4714,23 +4714,23 @@ Vector3 func_63(var uParam0, int iParam1)
 	{
 		case -261997819:
 			return { 90.0f, 0.0f, 90.0f };
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return { 90.0f, 90.0f, 15.0f };
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return { 180.0f, 0.0f, -75.0f };
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return { 90.0f, 0.0f, 0.0f };
-		case -599506500:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
 			return { -88.98f, 179.087f, 84.344f };
-		case 1424723727:
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 			return { 0.0f, -180.0f, -45.0f };
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			return { 85.548f, 2.5f, -213.718f };
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			return { 10.0f, 120.0f, -90.0f };
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return { 95.0f, 1.0f, -90.0f };
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4747,7 +4747,7 @@ Vector3 func_63(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1187689415:
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4822,7 +4822,7 @@ Vector3 func_64(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -1481450947:
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4831,7 +4831,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1427565340:
+		case joaat("DISCOVER_LOC_ANCIENT_URN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4851,7 +4851,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1801731633:
+		case joaat("DISCOVER_LOC_CAT_MASK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4860,7 +4860,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1490223565:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4878,7 +4878,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4887,7 +4887,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1308658310:
+		case joaat("DISCOVER_LOC_POWDER_KEG"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4900,7 +4900,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4911,7 +4911,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4920,7 +4920,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4929,7 +4929,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1124200691:
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4938,7 +4938,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1859413640:
+		case joaat("DISCOVER_LOC_SHRINE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4949,7 +4949,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4958,7 +4958,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1420566543:
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4967,7 +4967,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1208846034:
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4976,7 +4976,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1048086072:
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4985,7 +4985,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 939555152:
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
 			switch (iParam1)
 			{
 				case 0:
@@ -4994,7 +4994,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -657632:
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5020,7 +5020,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			if (uParam0->f_4 == 0)
 			{
 				switch (iParam1)
@@ -5060,7 +5060,7 @@ Vector3 func_64(var uParam0, int iParam1)
 				}
 			}
 			break;
-		case 1335921989:
+		case joaat("DISCOVER_LOC_BANK_STAGECOACH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5080,7 +5080,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5089,7 +5089,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -709811179:
+		case joaat("DISCOVER_LOC_METEORITE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5098,7 +5098,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 464413478:
+		case joaat("DISCOVER_LOC_WHISKEY_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5109,7 +5109,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5120,7 +5120,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5129,7 +5129,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5147,7 +5147,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5158,7 +5158,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5167,7 +5167,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5180,7 +5180,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -654238687:
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5189,7 +5189,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5198,7 +5198,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1347913620:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_FORT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5207,7 +5207,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5216,7 +5216,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1494823099:
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5236,7 +5236,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 118535038:
+		case joaat("DISCOVER_LOC_MICAH_CAMP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5249,7 +5249,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1891628345:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5258,7 +5258,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5267,7 +5267,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5278,7 +5278,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5289,7 +5289,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1761578407:
+		case joaat("DISCOVER_LOC_GRAVE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5298,7 +5298,7 @@ Vector3 func_64(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 247563739:
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5308,45 +5308,45 @@ Vector3 func_64(var uParam0, int iParam1)
 			}
 			break;
 		case -2108030724:
-		case -2060865802:
-		case -2008558277:
-		case -1887999095:
-		case -1841331114:
-		case -1829339703:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 		case -1824429070:
-		case -1761189332:
-		case -1714262909:
-		case -1636964661:
-		case -1287911066:
-		case -1272862985:
-		case -1240932004:
-		case -1177787273:
-		case -968854939:
-		case -641229542:
-		case -599506500:
-		case -499529359:
-		case -415839138:
-		case -357364973:
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
+		case joaat("DISCOVER_LOC_PIRATE_RUM"):
 		case -261997819:
-		case -232974724:
-		case -30872859:
-		case 149709049:
-		case 221420861:
-		case 308500632:
-		case 330993088:
-		case 435290930:
-		case 683269210:
-		case 870958936:
-		case 1187689415:
-		case 1187917501:
-		case 1284679164:
-		case 1424723727:
+		case joaat("DISCOVER_LOC_TRADING_POST"):
+		case joaat("DISCOVER_LOC_SUN_DIAL"):
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
+		case joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP"):
+		case joaat("DISCOVER_LOC_BIRD_NEST"):
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 		case 1464664327:
-		case 1505050944:
-		case 1535254161:
-		case 1861313914:
-		case 2072029413:
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DESERT_SKELETONS"):
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			break;
 		default:
 			break;
@@ -5358,7 +5358,7 @@ Vector3 func_65(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -1481450947:
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5367,7 +5367,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1427565340:
+		case joaat("DISCOVER_LOC_ANCIENT_URN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5387,7 +5387,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1801731633:
+		case joaat("DISCOVER_LOC_CAT_MASK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5396,7 +5396,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1490223565:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5414,7 +5414,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5423,7 +5423,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1308658310:
+		case joaat("DISCOVER_LOC_POWDER_KEG"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5436,7 +5436,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5447,7 +5447,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5456,7 +5456,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5465,7 +5465,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1124200691:
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5474,7 +5474,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1859413640:
+		case joaat("DISCOVER_LOC_SHRINE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5485,7 +5485,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5494,7 +5494,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1420566543:
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5503,7 +5503,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1208846034:
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5512,7 +5512,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1048086072:
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5521,7 +5521,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 939555152:
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5530,7 +5530,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -657632:
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5556,7 +5556,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			if (uParam0->f_4 == 0)
 			{
 				switch (iParam1)
@@ -5596,7 +5596,7 @@ Vector3 func_65(var uParam0, int iParam1)
 				}
 			}
 			break;
-		case 1335921989:
+		case joaat("DISCOVER_LOC_BANK_STAGECOACH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5616,7 +5616,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5625,7 +5625,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -709811179:
+		case joaat("DISCOVER_LOC_METEORITE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5634,7 +5634,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 464413478:
+		case joaat("DISCOVER_LOC_WHISKEY_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5645,7 +5645,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5656,7 +5656,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5665,7 +5665,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5683,7 +5683,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5694,7 +5694,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5703,7 +5703,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5716,7 +5716,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -654238687:
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5725,7 +5725,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5734,7 +5734,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1347913620:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_FORT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5752,7 +5752,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 118535038:
+		case joaat("DISCOVER_LOC_MICAH_CAMP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5765,7 +5765,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5776,7 +5776,7 @@ Vector3 func_65(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -5788,47 +5788,47 @@ Vector3 func_65(var uParam0, int iParam1)
 			}
 			break;
 		case -2108030724:
-		case -2060865802:
-		case -2008558277:
-		case -1891628345:
-		case -1887999095:
-		case -1841331114:
-		case -1829339703:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 		case -1824429070:
-		case -1761189332:
-		case -1714262909:
-		case -1636964661:
-		case -1494823099:
-		case -1287911066:
-		case -1272862985:
-		case -1240932004:
-		case -1177787273:
-		case -968854939:
-		case -641229542:
-		case -599506500:
-		case -499529359:
-		case -415839138:
-		case -357364973:
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
+		case joaat("DISCOVER_LOC_PIRATE_RUM"):
 		case -261997819:
-		case -30872859:
-		case 149709049:
-		case 221420861:
-		case 308500632:
-		case 330993088:
-		case 435290930:
-		case 657666087:
-		case 683269210:
-		case 870958936:
-		case 1187689415:
-		case 1187917501:
-		case 1284679164:
-		case 1424723727:
+		case joaat("DISCOVER_LOC_SUN_DIAL"):
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
+		case joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP"):
+		case joaat("DISCOVER_LOC_BIRD_NEST"):
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 		case 1464664327:
-		case 1505050944:
-		case 1535254161:
-		case 1861313914:
-		case 2072029413:
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DESERT_SKELETONS"):
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			break;
 		default:
 			break;
@@ -5995,14 +5995,14 @@ void func_71(var uParam0)
 	{
 		TASK::_DELETE_SCENARIO_POINT(iLocal_19);
 	}
-	if (*uParam0 == -1714262909)
+	if (*uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE"))
 	{
 		if (GRAPHICS::_IS_TRACKED_POINT_VALID(iLocal_33))
 		{
 			GRAPHICS::DESTROY_TRACKED_POINT(iLocal_33);
 		}
 	}
-	if ((((*uParam0 == -1824429070 || *uParam0 == -1841331114) || *uParam0 == 949011950) || *uParam0 == 1187917501) || *uParam0 == -1829339703)
+	if ((((*uParam0 == -1824429070 || *uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY")) || *uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE")) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON")) || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 	{
 		if (!func_48(*uParam0))
 		{
@@ -6011,9 +6011,9 @@ void func_71(var uParam0)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[iVar0]))
 				{
-					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iVar0], 186, true))
+					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iVar0], 186 /*PCF_CorpseIsPersistent*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iVar0], 186, false);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iVar0], 186 /*PCF_CorpseIsPersistent*/, false);
 					}
 				}
 				iVar0++;
@@ -6029,33 +6029,33 @@ int func_72(var uParam0)
 	{
 		case -763376358:
 			return joaat("CLOTHING_ITEM_MASK_PIG_001");
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			return joaat("CLOTHING_ITEM_SKULLMASK_MR1_001_1");
-		case 1801731633:
+		case joaat("DISCOVER_LOC_CAT_MASK"):
 			return joaat("CLOTHING_ITEM_SKULLMASK_MR1_002_1");
-		case 1490223565:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
 			return joaat("CLOTHING_ITEM_SKULLMASK_MR1_000_1");
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			return joaat("CLOTHING_ITEM_PZ_HAT_PIRATE_01");
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			return joaat("CLOTHING_SP_CHINESE_LABOR_HAT_000_1");
-		case 1124200691:
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
 			return joaat("CLOTHING_SP_CIVIL_WAR_HAT_000_1");
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return joaat("CLOTHING_SP_CONQUISTADOR_HAT_000_1");
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return joaat("CLOTHING_SP_DEAD_MINER_HAT_000_1");
-		case -1420566543:
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
 			return joaat("CLOTHING_SP_SCARECROW_01_HAT_000_1");
-		case -1208846034:
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
 			return joaat("CLOTHING_SP_SCARECROW_02_HAT_000_1");
-		case 1048086072:
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
 			return joaat("CLOTHING_SP_SCARECROW_03_HAT_000_1");
-		case 939555152:
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
 			return joaat("CLOTHING_SP_SCARECROW_04_HAT_000_1");
-		case -657632:
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
 			return joaat("CLOTHING_SP_CHINESE_LABOR_HAT_000_1");
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return joaat("CLOTHING_SP_VIKING_HAT_000_1");
 		case 2135153015:
 			return joaat("CLOTHING_ITEM_SP_VALSHERIFF_HAT_000");
@@ -6161,7 +6161,7 @@ int func_73(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4, 
 	}
 	if (func_219(iParam0) == joaat("CLOTHING"))
 	{
-		if ((!func_220(iParam0, joaat("CI_TAG_ITEM_TALISMAN")) && !func_220(iParam0, joaat("CI_TAG_ITEM_UPGRADE"))) && !func_220(iParam0, 1248798204))
+		if ((!func_220(iParam0, joaat("CI_TAG_ITEM_TALISMAN")) && !func_220(iParam0, joaat("CI_TAG_ITEM_UPGRADE"))) && !func_220(iParam0, joaat("CI_TAG_ITEM_IS_SATCHEL")))
 		{
 			bVar3 = true;
 		}
@@ -6388,7 +6388,7 @@ int func_73(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4, 
 			bParam2 = true;
 			bVar4 = true;
 		}
-		else if (func_220(iParam0, 1248798204))
+		else if (func_220(iParam0, joaat("CI_TAG_ITEM_IS_SATCHEL")))
 		{
 			iVar8 = 0;
 			switch (iParam0)
@@ -6833,19 +6833,19 @@ int func_75(var uParam0, int iParam1)
 		case -2108030724:
 			return joaat("PROVISION_CATHERINES_NECKLACE");
 		case -777592153:
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			return joaat("PROVISION_GOLDRING");
-		case 425000526:
-		case 464413478:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
+		case joaat("DISCOVER_LOC_WHISKEY_TREE"):
 			return joaat("PROVISION_GOLD_NUGGET");
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return joaat("PROVISION_DISCO_VIKING_COMB");
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			return joaat("PROVISION_JEWELRYBAG_SM");
-		case -709811179:
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEORITE"):
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return joaat("PROVISION_ASTEROID_CHUNK");
-		case -1494823099:
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -6910,25 +6910,25 @@ int func_78(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			return joaat("DOCUMENT_DISCO_RUNAWAY_LETTER");
 		case 1937333853:
 			return joaat("DOCUMENT_DISCO_DEAD_SOLDIER_LETTER");
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			return joaat("DOCUMENT_DISCO_ABANDONED_OILDRILL_LETTER");
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			return joaat("DOCUMENT_DISCO_LETTER_JESUIT");
-		case 1347913620:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_FORT"):
 			return joaat("DOCUMENT_CWFORT_JOURNAL");
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			return joaat("DOCUMENT_DISCO_FACE_IN_CLIFF_LETTER");
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			return joaat("DOCUMENT_DISCO_GRAVE_NEWSCLIP");
 		case 2135153015:
 			return joaat("DOCUMENT_DISCO_BOOTS_LETTER");
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			return joaat("DOCUMENT_LETTER_CHINESE_TRAVELLER");
-		case 1284679164:
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -6960,7 +6960,7 @@ int func_78(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 118535038:
+		case joaat("DISCOVER_LOC_MICAH_CAMP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -6973,7 +6973,7 @@ int func_78(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			switch (uParam0->f_4)
 			{
 				case 0:
@@ -7053,7 +7053,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7066,7 +7066,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7075,7 +7075,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7086,7 +7086,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7095,7 +7095,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7104,7 +7104,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7122,7 +7122,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -654238687:
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7149,7 +7149,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7158,7 +7158,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7169,7 +7169,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7196,7 +7196,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7205,7 +7205,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7218,7 +7218,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -415839138:
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7229,7 +7229,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7244,7 +7244,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7253,7 +7253,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2008558277:
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7274,7 +7274,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7298,7 +7298,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7313,7 +7313,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7322,7 +7322,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7342,7 +7342,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7360,7 +7360,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1714262909:
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7369,7 +7369,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7378,7 +7378,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7396,7 +7396,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1187917501:
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7407,7 +7407,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7416,7 +7416,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1982045664:
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7425,7 +7425,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7434,7 +7434,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1829339703:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7445,7 +7445,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7460,7 +7460,7 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7469,48 +7469,48 @@ Vector3 func_80(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1891628345:
-		case -1859413640:
-		case -1761189332:
-		case -1494823099:
-		case -1481450947:
-		case -1420566543:
-		case -1272862985:
-		case -1208846034:
-		case -1144800837:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_SHRINE"):
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 		case -1061274876:
-		case -968854939:
-		case -780455182:
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 		case -763376358:
-		case -709811179:
-		case -599506500:
-		case -499529359:
-		case -357364973:
+		case joaat("DISCOVER_LOC_METEORITE"):
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_PIRATE_RUM"):
 		case -261997819:
-		case -30872859:
-		case -657632:
-		case 221420861:
-		case 308500632:
-		case 330993088:
-		case 435290930:
-		case 464413478:
-		case 513110082:
-		case 683269210:
-		case 733338689:
-		case 870958936:
-		case 939555152:
-		case 1048086072:
-		case 1124200691:
-		case 1187689415:
-		case 1284679164:
-		case 1335921989:
-		case 1424723727:
-		case 1490223565:
-		case 1505050944:
-		case 1535254161:
-		case 1801731633:
-		case 2072029413:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_SUN_DIAL"):
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
+		case joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP"):
+		case joaat("DISCOVER_LOC_BIRD_NEST"):
+		case joaat("DISCOVER_LOC_WHISKEY_TREE"):
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
+		case joaat("DISCOVER_LOC_BANK_STAGECOACH"):
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
+		case joaat("DISCOVER_LOC_RAM_MASK"):
+		case joaat("DISCOVER_LOC_DESERT_SKELETONS"):
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_CAT_MASK"):
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 		case 2135153015:
 			break;
 		default:
@@ -7558,23 +7558,23 @@ int func_83(var uParam0, int iParam1)
 	{
 		case -261997819:
 			return joaat("WEAPON_MELEE_ANCIENT_HATCHET");
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return joaat("WEAPON_THROWN_TOMAHAWK_ANCIENT");
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return joaat("WEAPON_MELEE_KNIFE_MINER");
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return joaat("WEAPON_MELEE_HATCHET_VIKING");
-		case -599506500:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
 			return joaat("WEAPON_MELEE_KNIFE_CIVIL_WAR");
-		case 1424723727:
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 			return joaat("WEAPON_MELEE_BROKEN_SWORD");
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			return joaat("WEAPON_REVOLVER_SCHOFIELD_GOLDEN");
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			return joaat("WEAPON_MELEE_KNIFE_BEAR");
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return joaat("WEAPON_REVOLVER_DOUBLEACTION_MICAH");
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -7772,7 +7772,7 @@ void func_90(var uParam0, int iParam1, var uParam2, int iParam3)
 					OBJECT::SET_CUSTOM_TEXTURES_ON_OBJECT((*uParam2)[iParam3], func_159(uParam0, iParam3), 0, 0);
 				}
 			}
-			if (*uParam0 == 1284679164)
+			if (*uParam0 == joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"))
 			{
 				if (iParam3 == 0)
 				{
@@ -7791,7 +7791,7 @@ void func_90(var uParam0, int iParam1, var uParam2, int iParam3)
 					iVar0 = joaat("DOCUMENT_NOTE_FRANKENSTEIN_4");
 				}
 			}
-			else if (*uParam0 == -1887999095)
+			else if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 			{
 				iVar0 = joaat("DOCUMENT_DISCO_GRAYS_SECRET_LETTER");
 			}
@@ -7945,87 +7945,87 @@ Vector3 func_94(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			return func_64(uParam0, 1);
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			return func_64(uParam0, 0);
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return func_64(uParam0, 0);
 		case 373034311:
 			return func_64(uParam0, 0);
-		case -1887999095:
-		case -1636964661:
-		case -1287911066:
-		case -415839138:
-		case 429544447:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 		case 1519228573:
-		case 1982045664:
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 			return func_80(uParam0, 0);
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			return { 365.725f, -15.4104f, 110.5399f };
-		case -1958832660:
+		case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
 			return { 1591.863f, -1845.292f, 65.196f };
-		case 247563739:
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 			return { 2450.049f, 2104.19f, 173.9434f };
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			return { 894.6589f, -1969.363f, 44.554f };
-		case 1734766691:
+		case joaat("DISCOVER_LOC_BRUSH_FIRE"):
 			return { -270.2353f, 114.9477f, 62.751f };
-		case 58958195:
+		case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
 			return { -2565.258f, 756.6277f, 153.3524f };
-		case 308500632:
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 			return { -2664.789f, 690.7282f, 185.3162f };
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			return { -2904.952f, -254.2731f, 186.965f };
-		case 1986618633:
+		case joaat("DISCOVER_LOC_SPERM_WHALE"):
 			return { -4688.022f, -3419.115f, 17.2107f };
-		case -986176781:
+		case joaat("DISCOVER_LOC_WHALE_BONE"):
 			return { -2774.109f, -431.3145f, 174.3467f };
-		case -232974724:
+		case joaat("DISCOVER_LOC_TRADING_POST"):
 			return { 189.6525f, -414.4084f, 87.8956f };
-		case -1053108445:
+		case joaat("DISCOVER_LOC_FLYING_MACHINE"):
 			return { -4346.388f, -2604.249f, -1.1693f };
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return { 2476.001f, 1997.824f, 167.269f };
-		case -709811179:
+		case joaat("DISCOVER_LOC_METEORITE"):
 			return { 2291.568f, 2080.932f, 200.7657f };
-		case -979575591:
+		case joaat("DISCOVER_LOC_OBELISK"):
 			return { -2937.443f, -138.5504f, 199.3164f };
-		case -1609238411:
+		case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 			return { 3220.522f, 1463.278f, 52.9448f };
-		case 921081956:
+		case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
 			return { 2417.172f, -738.7664f, 42.3038f };
-		case -148407339:
+		case joaat("DISCOVER_LOC_MAMMOTH"):
 			return { -1732.145f, 2191.086f, 293.2867f };
-		case -1109016944:
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
 			return { 1733.116f, -424.945f, 48.4327f };
-		case -1646022773:
+		case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
 			return { 2148.987f, 1918.443f, 194.4452f };
-		case 1284679164:
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 			return { 2782.746f, 536.9514f, 72.1612f };
 		case -1505275983:
 			return { 947.541f, 238.4814f, 127.5118f };
-		case -1761189332:
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
 			return { 703.7369f, 427.9747f, 108.3372f };
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			return { 1260.331f, 1296.422f, 217.8313f };
-		case -1787770845:
+		case joaat("DISCOVER_LOC_GIANT_REMAINS"):
 			return { -1915.618f, -30.6525f, 287.4662f };
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return { 2388.642f, 1690.187f, 95.5056f };
-		case -1891628345:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
 			return { -2694.149f, -1499.7f, 150.6036f };
-		case -1960242214:
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
 			return { 749.9653f, 1825.082f, 240.1131f };
-		case 1034793488:
+		case joaat("DISCOVER_LOC_EASEL"):
 			return { 1705.885f, -1006.939f, 43.8407f };
-		case -849582265:
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
 			return { -2588.29f, -93.565f, 167.61f };
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			return { -1749.065f, -1624.292f, 90.1441f };
-		case -607940493:
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 			return { 2698.995f, 410.8617f, 77.4735f };
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			if (iParam1 == 11)
 			{
 				return func_106(uParam0, 11);
@@ -8035,7 +8035,7 @@ Vector3 func_94(var uParam0, int iParam1)
 				return func_106(uParam0, 7);
 			}
 			break;
-		case -1272862985:
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8247,7 +8247,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8263,7 +8263,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8279,7 +8279,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8293,7 +8293,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8307,7 +8307,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1308658310:
+		case joaat("DISCOVER_LOC_POWDER_KEG"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8323,7 +8323,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8355,7 +8355,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8369,7 +8369,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8383,7 +8383,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8397,7 +8397,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8411,7 +8411,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8425,7 +8425,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8441,7 +8441,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8469,7 +8469,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8483,7 +8483,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8530,7 +8530,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8560,7 +8560,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -415839138:
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8576,7 +8576,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8592,7 +8592,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8622,7 +8622,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8638,7 +8638,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1761578407:
+		case joaat("DISCOVER_LOC_GRAVE"):
 			if ((((((((iParam3 == 0 || iParam3 == 1) || iParam3 == 2) || iParam3 == 3) || iParam3 == 4) || iParam3 == 5) || iParam3 == 6) || iParam3 == 7) || iParam3 == 8)
 			{
 				switch (iParam1)
@@ -8657,7 +8657,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 				}
 			}
 			break;
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8673,7 +8673,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8689,7 +8689,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8721,7 +8721,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case 1187917501:
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8749,7 +8749,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8765,7 +8765,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1829339703:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8779,7 +8779,7 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -8795,51 +8795,51 @@ char* func_99(var uParam0, int iParam1, int iParam2, int iParam3)
 					break;
 			}
 			break;
-		case -2008558277:
-		case -1891628345:
-		case -1859413640:
-		case -1761189332:
-		case -1714262909:
-		case -1494823099:
-		case -1420566543:
-		case -1272862985:
-		case -1208846034:
-		case -1144800837:
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_SHRINE"):
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 		case -1061274876:
-		case -968854939:
-		case -780455182:
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 		case -763376358:
-		case -709811179:
-		case -654238687:
-		case -599506500:
-		case -499529359:
-		case -357364973:
+		case joaat("DISCOVER_LOC_METEORITE"):
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_PIRATE_RUM"):
 		case -261997819:
-		case -35775921:
-		case -30872859:
-		case -657632:
-		case 221420861:
-		case 308500632:
-		case 330993088:
-		case 435290930:
-		case 513110082:
-		case 683269210:
-		case 733338689:
-		case 870958936:
-		case 939555152:
-		case 1048086072:
-		case 1124200691:
-		case 1187689415:
-		case 1284679164:
-		case 1335921989:
-		case 1424723727:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
+		case joaat("DISCOVER_LOC_SUN_DIAL"):
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
+		case joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP"):
+		case joaat("DISCOVER_LOC_BIRD_NEST"):
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
+		case joaat("DISCOVER_LOC_BANK_STAGECOACH"):
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 		case 1464664327:
-		case 1490223565:
-		case 1505050944:
-		case 1535254161:
-		case 1801731633:
-		case 2072029413:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
+		case joaat("DISCOVER_LOC_DESERT_SKELETONS"):
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_CAT_MASK"):
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 		case 2135153015:
 			break;
 		default:
@@ -8890,7 +8890,7 @@ void func_103(var uParam0)
 	func_307(&sLocal_44);
 	func_308(&uLocal_67);
 	func_102(uParam0, &uLocal_27);
-	if (*uParam0 == -1887999095)
+	if (*uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET"))
 	{
 		iVar0 = 0;
 		while (iVar0 <= (4 - 1))
@@ -8909,7 +8909,7 @@ void func_103(var uParam0)
 	{
 		func_161(-484929865);
 	}
-	else if (*uParam0 == -2009137002)
+	else if (*uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 	{
 		func_161(920427419);
 		func_161(1121956769);
@@ -8917,11 +8917,11 @@ void func_103(var uParam0)
 		func_161(510716616);
 		func_161(1464851585);
 	}
-	if (*uParam0 == 657666087 || *uParam0 == 1673499939)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON") || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 	{
 		func_309(uParam0);
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		iVar0 = 1;
 		while (iVar0 <= 2)
@@ -8936,7 +8936,7 @@ void func_103(var uParam0)
 			iVar0++;
 		}
 	}
-	if (*uParam0 == 657666087)
+	if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 	{
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(func_168(uParam0)))
 		{
@@ -8963,289 +8963,289 @@ int func_105(int iParam0, int iParam1)
 	{
 		case -2108030724:
 			return 138;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			return 116;
-		case -2019711818:
+		case joaat("DISCOVER_LOC_DERAILED_TRAIN"):
 			return 9;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			return 34;
-		case -2008558277:
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
 			return 59;
-		case -1960242214:
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
 			return 125;
-		case -1958832660:
+		case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
 			return 49;
-		case -1923503631:
+		case joaat("DISCOVER_LOC_ROPE_BRIDGE"):
 			return 117;
-		case -1891628345:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
 			return 124;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return 89;
-		case -1882503209:
+		case joaat("DISCOVER_LOC_ABANDONED_FURNITURE"):
 			return 50;
-		case -1859413640:
+		case joaat("DISCOVER_LOC_SHRINE"):
 			return 28;
-		case -1859023693:
+		case joaat("DISCOVER_LOC_BROKEN_WAGONS"):
 			return 64;
-		case -1848895400:
+		case joaat("DISCOVER_LOC_QUARRY"):
 			return 113;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			return 94;
-		case -1829339703:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 			return 141;
 		case -1824429070:
 			return 66;
-		case -1787770845:
+		case joaat("DISCOVER_LOC_GIANT_REMAINS"):
 			return 16;
-		case -1761578407:
+		case joaat("DISCOVER_LOC_GRAVE"):
 			return 17;
-		case -1761189332:
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
 			return 115;
-		case -1714262909:
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
 			return 76;
-		case -1686810506:
+		case joaat("DISCOVER_LOC_POTS_TREE"):
 			return 112;
-		case -1646022773:
+		case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
 			return 13;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			return 10;
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			return 48;
-		case -1609238411:
+		case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 			return 21;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			return 6;
 		case -1505275983:
 			return 31;
-		case -1494823099:
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
 			return 61;
-		case -1481450947:
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
 			return 53;
-		case -1457751321:
+		case joaat("DISCOVER_LOC_TREE_TRUNK_BOAT"):
 			return 123;
-		case -1427565340:
+		case joaat("DISCOVER_LOC_ANCIENT_URN"):
 			return 47;
-		case -1420566543:
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
 			return 23;
-		case -1308658310:
+		case joaat("DISCOVER_LOC_POWDER_KEG"):
 			return 45;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			return 51;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			return 2;
-		case -1283611369:
+		case joaat("DISCOVER_LOC_DESERT_WAGON"):
 			return 78;
-		case -1272862985:
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
 			return 139;
-		case -1243267511:
+		case joaat("DISCOVER_LOC_FACE_TREES"):
 			return 81;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return 140;
-		case -1208846034:
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
 			return 24;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			return 127;
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			return 111;
-		case -1109016944:
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
 			return 15;
-		case -1084929085:
+		case joaat("DISCOVER_LOC_BOAT_IN_TREE"):
 			return 4;
 		case -1061274876:
 			return 96;
-		case -1053108445:
+		case joaat("DISCOVER_LOC_FLYING_MACHINE"):
 			return 84;
-		case -986176781:
+		case joaat("DISCOVER_LOC_WHALE_BONE"):
 			return 25;
-		case -979575591:
+		case joaat("DISCOVER_LOC_OBELISK"):
 			return 103;
-		case -968854939:
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
 			return 68;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			return 83;
-		case -919236330:
+		case joaat("DISCOVER_LOC_DESERTED_FARM"):
 			return 79;
-		case -890175011:
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 			return 137;
-		case -849582265:
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
 			return 92;
 		case -834293086:
 			return 91;
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			return 8;
 		case -777592153:
 			return 3;
-		case -777150535:
+		case joaat("DISCOVER_LOC_METEOR_SHOWER"):
 			return 100;
 		case -763376358:
 			return 55;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			return 110;
-		case -715636193:
+		case joaat("DISCOVER_LOC_LIGHTNING_TREES"):
 			return 95;
-		case -709811179:
+		case joaat("DISCOVER_LOC_METEORITE"):
 			return 20;
-		case -654238687:
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
 			return 104;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			return 46;
-		case -607940493:
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 			return 118;
-		case -599506500:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
 			return 38;
-		case -544327665:
+		case joaat("DISCOVER_LOC_OLD_FIREPIT"):
 			return 106;
-		case -499529359:
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
 			return 74;
-		case -490142739:
+		case joaat("DISCOVER_LOC_STUFFED_GORILLA"):
 			return 130;
-		case -415839138:
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 			return 98;
-		case -409986722:
+		case joaat("DISCOVER_LOC_GRAVESTONE_TREE"):
 			return 88;
-		case -357364973:
+		case joaat("DISCOVER_LOC_PIRATE_RUM"):
 			return 44;
-		case -321841939:
+		case joaat("DISCOVER_LOC_DREAMCATCHERS"):
 			return 11;
 		case -261997819:
 			return 37;
-		case -232974724:
+		case joaat("DISCOVER_LOC_TRADING_POST"):
 			return 135;
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return 29;
-		case -148407339:
+		case joaat("DISCOVER_LOC_MAMMOTH"):
 			return 97;
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			return 40;
-		case -30872859:
+		case joaat("DISCOVER_LOC_SUN_DIAL"):
 			return 30;
-		case -657632:
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
 			return 114;
 		case 0:
 			return 143;
-		case 58958195:
+		case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
 			return 72;
-		case 74587361:
+		case joaat("DISCOVER_LOC_LOVE_MESSAGE"):
 			return 35;
-		case 118535038:
+		case joaat("DISCOVER_LOC_MICAH_CAMP"):
 			return 101;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			return 67;
 		case 173549940:
 			return 22;
-		case 221420861:
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
 			return 132;
-		case 230001763:
+		case joaat("DISCOVER_LOC_OLD_GRAVESTONES"):
 			return 107;
 		case 233600584:
 			return 54;
-		case 247563739:
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 			return 52;
-		case 308500632:
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 			return 136;
-		case 330993088:
+		case joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP"):
 			return 131;
 		case 373034311:
 			return 0;
-		case 397377585:
+		case joaat("DISCOVER_LOC_GHOST_TRAIN"):
 			return 87;
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			return 18;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return 75;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			return 93;
-		case 435290930:
+		case joaat("DISCOVER_LOC_BIRD_NEST"):
 			return 60;
-		case 464413478:
+		case joaat("DISCOVER_LOC_WHISKEY_TREE"):
 			return 128;
-		case 503180747:
+		case joaat("DISCOVER_LOC_KILL_ZONE"):
 			return 19;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			return 121;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			return 70;
 		case 677950956:
 			return 142;
-		case 683269210:
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
 			return 134;
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return 32;
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			return 1;
-		case 918206817:
+		case joaat("DISCOVER_LOC_FIRE_LOOKOUT_TOWER"):
 			return 82;
-		case 921081956:
+		case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
 			return 108;
-		case 939555152:
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
 			return 27;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			return 109;
-		case 1034793488:
+		case joaat("DISCOVER_LOC_EASEL"):
 			return 33;
-		case 1048086072:
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
 			return 26;
-		case 1091556515:
+		case joaat("DISCOVER_LOC_TREE_HOUSE"):
 			return 122;
-		case 1120968795:
+		case joaat("DISCOVER_LOC_OLD_FIREPLACE"):
 			return 105;
-		case 1124200691:
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
 			return 43;
-		case 1154568952:
+		case joaat("DISCOVER_LOC_FACTORY_IN_SWAMP"):
 			return 12;
-		case 1187689415:
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
 			return 126;
-		case 1187917501:
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			return 71;
-		case 1284679164:
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 			return 85;
-		case 1335921989:
+		case joaat("DISCOVER_LOC_BANK_STAGECOACH"):
 			return 58;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			return 69;
-		case 1347913620:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_FORT"):
 			return 5;
 		case joaat("DISCOVER_LOC_GEYSER"):
 			return 86;
-		case 1424723727:
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
 			return 39;
-		case 1431862613:
+		case joaat("DISCOVER_LOC_EARLY_SETTLERS"):
 			return 80;
 		case 1464664327:
 			return 129;
-		case 1490223565:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
 			return 57;
-		case 1505050944:
+		case joaat("DISCOVER_LOC_DESERT_SKELETONS"):
 			return 77;
 		case 1519228573:
 			return 42;
-		case 1519472817:
+		case joaat("DISCOVER_LOC_BROKEN_BRIDGE"):
 			return 63;
-		case 1535254161:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 			return 133;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return 99;
-		case 1734766691:
+		case joaat("DISCOVER_LOC_BRUSH_FIRE"):
 			return 65;
-		case 1801731633:
+		case joaat("DISCOVER_LOC_CAT_MASK"):
 			return 56;
-		case 1833243216:
+		case joaat("DISCOVER_LOC_MOUNTAIN_CLIMB"):
 			return 102;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			return 62;
 		case 1937333853:
 			return 7;
-		case 1982045664:
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 			return 90;
-		case 1986618633:
+		case joaat("DISCOVER_LOC_SPERM_WHALE"):
 			return 119;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			return 120;
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return 36;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			return 73;
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return 14;
 		case 2135153015:
 			return 41;
@@ -9266,7 +9266,7 @@ Vector3 func_106(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			if (iParam1 == 0)
 			{
 				return { 827.9519f, 1925.23f, 258.7208f };
@@ -9314,23 +9314,23 @@ Vector3 func_107(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -1859413640:
+		case joaat("DISCOVER_LOC_SHRINE"):
 			return { 2195.23f, -554.23f, 40.86f };
-		case -1481450947:
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
 			return { 1268.257f, -387.328f, 88.459f };
-		case -1427565340:
+		case joaat("DISCOVER_LOC_ANCIENT_URN"):
 			return { 2255.135f, -754.127f, 41.793f };
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return { 1772.964f, -1359.736f, 44.18f };
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			return { 830.53f, 1923.9f, 258.33f };
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return { 2385.593f, 1696.987f, 94.94f };
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return { 2388.11f, 1688.02f, 94.66f };
 		case 2135153015:
 			return { -161.88f, 1734.6f, 169.73f };
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return { 808.47f, 2300.12f, 250.82f };
 		case 1464664327:
 			switch (iParam1)
@@ -9341,7 +9341,7 @@ Vector3 func_107(var uParam0, int iParam1)
 					return { 1227.191f, 2007.389f, 319.3389f };
 			}
 			break;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -9432,7 +9432,7 @@ void func_111(var uParam0)
 	Vector3 vVar3;
 	Vector3 vVar6;
 
-	if (*uParam0 == 404434344)
+	if (*uParam0 == joaat("DISCOVER_LOC_GRAVE_ARTHUR"))
 	{
 		vVar0 = { 796.1158f, 1777.652f, 281.4886f /*3*/ };
 		vVar3 = { 0.0f, 0.0f, -74.42887f /*3*/ };
@@ -9442,7 +9442,7 @@ void func_111(var uParam0)
 			uParam0->f_6.f_9 = VOLUME::_CREATE_VOLUME_BOX_WITH_CUSTOM_NAME(vVar0, vVar3, vVar6, func_312(uParam0));
 		}
 	}
-	else if (*uParam0 == -1761578407)
+	else if (*uParam0 == joaat("DISCOVER_LOC_GRAVE"))
 	{
 		if (uParam0->f_4 == 0)
 		{
@@ -9503,21 +9503,21 @@ void func_111(var uParam0)
 			uParam0->f_6.f_9 = VOLUME::_CREATE_VOLUME_BOX_WITH_CUSTOM_NAME(vVar0, vVar3, vVar6, func_312(uParam0));
 		}
 	}
-	else if ((*uParam0 == -1243267511 || *uParam0 == 1535254161) || *uParam0 == -607940493)
+	else if ((*uParam0 == joaat("DISCOVER_LOC_FACE_TREES") || *uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD")) || *uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND"))
 	{
-		if (*uParam0 == -1243267511)
+		if (*uParam0 == joaat("DISCOVER_LOC_FACE_TREES"))
 		{
 			vVar0 = { -2691.41f, -407.6143f, 146.533f /*3*/ };
 			vVar3 = { 0.0f, 0.0f, 0.0f /*3*/ };
 			vVar6 = { 5.0f, 5.0f, 5.0f /*3*/ };
 		}
-		else if (*uParam0 == 1535254161)
+		else if (*uParam0 == joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"))
 		{
 			vVar0 = { 1503.231f, -1819.476f, 56.89473f /*3*/ };
 			vVar3 = { 0.0f, 0.0f, 31.7625f /*3*/ };
 			vVar6 = { 44.60546f, 27.38259f, 6.0f /*3*/ };
 		}
-		else if (*uParam0 == -607940493)
+		else if (*uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND"))
 		{
 			vVar0 = { 2704.939f, 435.9636f, 91.37785f /*3*/ };
 			vVar3 = { 0.0f, 0.0f, -54.20028f /*3*/ };
@@ -9525,7 +9525,7 @@ void func_111(var uParam0)
 		}
 		if (!VOLUME::DOES_VOLUME_EXIST(uParam0->f_6.f_9))
 		{
-			if (*uParam0 == -607940493)
+			if (*uParam0 == joaat("DISCOVER_LOC_SERPENT_MOUND"))
 			{
 				uParam0->f_6.f_9 = VOLUME::_CREATE_VOLUME_BOX_WITH_CUSTOM_NAME(vVar0, vVar3, vVar6, func_312(uParam0));
 			}
@@ -9535,7 +9535,7 @@ void func_111(var uParam0)
 			}
 		}
 	}
-	else if (*uParam0 == -890175011)
+	else if (*uParam0 == joaat("DISCOVER_LOC_VAMPIRE_CLUES"))
 	{
 		if (uParam0->f_4 == 0)
 		{
@@ -9589,7 +9589,7 @@ void func_111(var uParam0)
 
 bool func_112(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_113(var uParam0, float fParam1)
@@ -9621,13 +9621,13 @@ bool func_116(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			if (func_77(Global_35, func_64(uParam0, 0), 3.0f, 1, 1))
 			{
 				return true;
 			}
 			break;
-		case -890175011:
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 			if (((uParam0->f_4 == 0 || uParam0->f_4 == 1) || uParam0->f_4 == 3) || uParam0->f_4 == 4)
 			{
 				if (VOLUME::DOES_VOLUME_EXIST(uParam0->f_6.f_9) && ENTITY::IS_ENTITY_IN_VOLUME(Global_35, uParam0->f_6.f_9, true, 0))
@@ -9913,95 +9913,95 @@ int func_126(int iParam0, int iParam1)
 {
 	switch (iParam0)
 	{
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			return 1614617630;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			return -617882357;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			return 1599532233;
-		case -1646022773:
+		case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
 			return -65357919;
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return 2004715705;
-		case -1109016944:
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
 			return -1451193020;
-		case 308500632:
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 			return 1553391542;
-		case -709811179:
+		case joaat("DISCOVER_LOC_METEORITE"):
 			return 317656811;
-		case -1609238411:
+		case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 			return 1910189712;
-		case -986176781:
+		case joaat("DISCOVER_LOC_WHALE_BONE"):
 			return -1896654834;
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return -126421233;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			return -440810089;
 		case 1519228573:
 			return -703551507;
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			return -1705330644;
-		case -1958832660:
+		case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
 			return -245016475;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			return 1529964155;
-		case 247563739:
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 			return 325616917;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			return 1067266077;
-		case 1734766691:
+		case joaat("DISCOVER_LOC_BRUSH_FIRE"):
 			return 1292039078;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			return -1721762433;
-		case 58958195:
+		case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
 			return 712585684;
-		case -1243267511:
+		case joaat("DISCOVER_LOC_FACE_TREES"):
 			return -1482291365;
-		case -1053108445:
+		case joaat("DISCOVER_LOC_FLYING_MACHINE"):
 			return -1576735250;
-		case 1982045664:
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 			return -1173476934;
-		case -849582265:
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
 			return 2097588565;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			return -159963867;
-		case -148407339:
+		case joaat("DISCOVER_LOC_MAMMOTH"):
 			return -1155213091;
-		case -415839138:
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 			return 979428630;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return -720689005;
-		case -979575591:
+		case joaat("DISCOVER_LOC_OBELISK"):
 			return 463289412;
-		case 921081956:
+		case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
 			return 731487006;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			return 371066;
-		case -1761189332:
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
 			return 270899202;
-		case -607940493:
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 			return 894739389;
-		case 1986618633:
+		case joaat("DISCOVER_LOC_SPERM_WHALE"):
 			return -2113673964;
-		case -1891628345:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
 			return -804420153;
-		case -1960242214:
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
 			return 1747567809;
-		case -232974724:
+		case joaat("DISCOVER_LOC_TRADING_POST"):
 			return -792295257;
-		case 1535254161:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 			return -452661064;
 		case -1505275983:
 			return 387715582;
-		case 1284679164:
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 			return -1245190585;
-		case -1787770845:
+		case joaat("DISCOVER_LOC_GIANT_REMAINS"):
 			return 422665644;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return -95543768;
-		case 1034793488:
+		case joaat("DISCOVER_LOC_EASEL"):
 			return 120200140;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			switch (iParam1)
 			{
 				case 11:
@@ -10010,7 +10010,7 @@ int func_126(int iParam0, int iParam1)
 					break;
 			}
 			return -866955093;
-		case -1272862985:
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -10085,87 +10085,87 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 	{
 		switch (iParam0)
 		{
-			case -321841939:
+			case joaat("DISCOVER_LOC_DREAMCATCHERS"):
 				return joaat("JOURNAL_DISC_DREAMCATCHER_MAP_AR");
-			case -1958832660:
+			case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
 				return joaat("JOURNAL_DISC_ABANDONED_CHURCH_AR");
-			case 247563739:
+			case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 				return joaat("JOURNAL_DISC_ABANDONED_TRADING_POST_AR");
-			case -1300082860:
+			case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 				return joaat("JOURNAL_DISC_OIL_WELL_AR");
-			case -1287911066:
+			case joaat("DISCOVER_LOC_BARREL_RIDER"):
 				return joaat("JOURNAL_DISC_BARREL_RIDER_AR");
-			case 1861313914:
+			case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 				return joaat("JOURNAL_DISC_BRAITHWAITE_SECRET_AR");
-			case 1734766691:
+			case joaat("DISCOVER_LOC_BRUSH_FIRE"):
 				return joaat("JOURNAL_DISC_BRUSH_FIRE_AR");
-			case 657666087:
+			case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 				return joaat("JOURNAL_DISC_CIRCUS_WAGONS_AR");
-			case 1535254161:
+			case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 				return joaat("JOURNAL_DISC_CIVIL_WAR_AR");
-			case 58958195:
+			case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
 				return joaat("JOURNAL_DISC_CRASHED_AIRSHIP_AR");
-			case -1109016944:
+			case joaat("DISCOVER_LOC_GHOST_TOWN"):
 				return joaat("JOURNAL_DISC_DEAD_TOWN_AR");
-			case -780455182:
+			case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 				return joaat("JOURNAL_DISC_DEFACED_GRAVE_AR");
-			case -1636964661:
+			case joaat("DISCOVER_LOC_DONKEY_LADY"):
 				return joaat("JOURNAL_DISC_DONKEY_LADY_AR");
-			case -2009137002:
+			case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 				return joaat("JOURNAL_DISC_FACE_CLIFF_AR");
-			case -1243267511:
+			case joaat("DISCOVER_LOC_FACE_TREES"):
 				return joaat("JOURNAL_DISC_FACE_TREES_AR");
-			case -1053108445:
+			case joaat("DISCOVER_LOC_FLYING_MACHINE"):
 				return joaat("JOURNAL_DISC_FLYING_MACHINE_AR");
-			case -1646022773:
+			case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
 				return joaat("JOURNAL_DISC_FOSSILISED_MAN_AR");
-			case 1284679164:
+			case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 				return joaat("JOURNAL_DISC_FRANKENSTEIN_AR");
-			case 2134589549:
+			case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 				return joaat("JOURNAL_DISC_FROZEN_SETTLER_AR");
-			case -1787770845:
+			case joaat("DISCOVER_LOC_GIANT_REMAINS"):
 				return joaat("JOURNAL_DISC_GIANT_REMAINS_AR");
-			case -1887999095:
+			case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 				return joaat("JOURNAL_DISC_GRAYS_SECRET_AR");
 			case 1519228573:
 				return joaat("JOURNAL_DISC_HAND_SWAMP_AR");
-			case 1982045664:
+			case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 				return joaat("JOURNAL_DISC_HERMIT_WOMAN_AR");
-			case 308500632:
+			case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 				return joaat("JOURNAL_DISC_HIDDEN_TUNNEL_AR");
-			case -849582265:
+			case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
 				return joaat("JOURNAL_DISC_INDIAN_BURIAL_AR");
-			case 429544447:
+			case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 				return joaat("JOURNAL_DISC_JESUIT_AR");
-			case -148407339:
+			case joaat("DISCOVER_LOC_MAMMOTH"):
 				return joaat("JOURNAL_DISC_MAMMOTH_AR");
-			case -415839138:
+			case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 				return joaat("JOURNAL_DISC_MEDITATING_MONK_AR");
-			case -709811179:
+			case joaat("DISCOVER_LOC_METEORITE"):
 				return joaat("JOURNAL_DISC_METEORITE_AR");
-			case 1673499939:
+			case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 				return joaat("JOURNAL_DISC_METEOR_HOUSE_AR");
-			case -979575591:
+			case joaat("DISCOVER_LOC_OBELISK"):
 				return joaat("JOURNAL_DISC_OBELISK_AR");
-			case -1609238411:
+			case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 				return joaat("JOURNAL_DISC_OLD_SCRIPTS_AR");
-			case 921081956:
+			case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
 				return joaat("JOURNAL_DISC_ONE_ROOM_CHURCH_AR");
-			case -739986731:
+			case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 				return joaat("JOURNAL_DISC_PAGAN_RITUAL_AR");
-			case 1034793488:
+			case joaat("DISCOVER_LOC_EASEL"):
 				return joaat("JOURNAL_DISC_PAINTING_CABIN_AR");
-			case -1614148516:
+			case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 				return joaat("JOURNAL_DISC_PHONOGRAPH_AR");
-			case -1761189332:
+			case joaat("DISCOVER_LOC_REGISTER_ROCK"):
 				return joaat("JOURNAL_DISC_REGISTER_ROCK_AR");
-			case -607940493:
+			case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 				return joaat("JOURNAL_DISC_SERPENT_MOUND_AR");
-			case 1986618633:
+			case joaat("DISCOVER_LOC_SPERM_WHALE"):
 				return joaat("JOURNAL_DISC_SPERM_WHALE_AR");
-			case -161804536:
+			case joaat("DISCOVER_LOC_STONEHENGE"):
 				return joaat("JOURNAL_DISC_STONEHENGE_AR");
-			case 2000209669:
+			case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 				if (iParam2 == 11)
 				{
 					return joaat("JOURNAL_DISC_STRANGE_STATUES_PAINTING_AR");
@@ -10175,9 +10175,9 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 					return joaat("JOURNAL_DISC_STRANGE_STATUES_AR");
 				}
 				break;
-			case -232974724:
+			case joaat("DISCOVER_LOC_TRADING_POST"):
 				return joaat("JOURNAL_DISC_TRADING_POST_AR");
-			case -1272862985:
+			case joaat("DISCOVER_LOC_TRAIL_TREES"):
 				if (iParam2 == 0)
 				{
 					return joaat("JOURNAL_DISCOVER_TRAIL_TREES_TREE_01_AR");
@@ -10195,13 +10195,13 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 					return joaat("JOURNAL_DISCOVER_TRAIL_TREES_TREE_04_AR");
 				}
 				break;
-			case -1891628345:
+			case joaat("DISCOVER_LOC_UTE_WICKUP"):
 				return joaat("JOURNAL_DISC_UTE_WICKIUP");
-			case -1960242214:
+			case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
 				return joaat("JOURNAL_DISC_COLONY_AR");
 			case -1505275983:
 				return joaat("JOURNAL_DISC_WARPED_TREE_AR");
-			case -890175011:
+			case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 				if (iParam2 == 0)
 				{
 					return joaat("JOURNAL_TOWN_SECRET_VAMP2_AR");
@@ -10223,7 +10223,7 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 					return joaat("JOURNAL_TOWN_SECRET_VAMP3_AR");
 				}
 				break;
-			case -986176781:
+			case joaat("DISCOVER_LOC_WHALE_BONE"):
 				return joaat("JOURNAL_DISC_WHALE_BONE_AR");
 			default:
 				break;
@@ -10233,13 +10233,13 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 	{
 		switch (iParam0)
 		{
-			case -321841939:
+			case joaat("DISCOVER_LOC_DREAMCATCHERS"):
 				return joaat("JOURNAL_DISC_DREAMCATCHER_MAP_JN");
-			case -1958832660:
+			case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
 				return joaat("JOURNAL_DISC_ABANDONED_CHURCH_JN");
-			case 247563739:
+			case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 				return joaat("JOURNAL_DISC_ABANDONED_TRADING_POST_JN");
-			case -1300082860:
+			case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 				return joaat("JOURNAL_DISC_OIL_WELL_JN");
 			case 677950956:
 				if (iParam2 == 0)
@@ -10267,77 +10267,77 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 					return joaat("JOURNAL_TOWN_SECRET_AZTEC_6_JN");
 				}
 				break;
-			case -1287911066:
+			case joaat("DISCOVER_LOC_BARREL_RIDER"):
 				return joaat("JOURNAL_DISC_BARREL_RIDER_JN");
-			case 1734766691:
+			case joaat("DISCOVER_LOC_BRUSH_FIRE"):
 				return joaat("JOURNAL_DISC_BRUSH_FIRE_JN");
-			case 657666087:
+			case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 				return joaat("JOURNAL_DISC_CIRCUS_WAGONS_JN");
-			case 1535254161:
+			case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 				return joaat("JOURNAL_DISC_CIVIL_WAR_JN");
-			case 58958195:
+			case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
 				return joaat("JOURNAL_DISC_CRASHED_AIRSHIP_JN");
-			case -1109016944:
+			case joaat("DISCOVER_LOC_GHOST_TOWN"):
 				return joaat("JOURNAL_DISC_DEAD_TOWN_JN");
-			case -780455182:
+			case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 				return joaat("JOURNAL_DISC_DEFACED_GRAVE_JN");
-			case -1636964661:
+			case joaat("DISCOVER_LOC_DONKEY_LADY"):
 				return joaat("JOURNAL_DISC_DONKEY_LADY_JN");
-			case -2009137002:
+			case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 				return joaat("JOURNAL_DISC_FACE_CLIFF_JN");
-			case -1243267511:
+			case joaat("DISCOVER_LOC_FACE_TREES"):
 				return joaat("JOURNAL_DISC_FACE_TREES_JN");
-			case -1053108445:
+			case joaat("DISCOVER_LOC_FLYING_MACHINE"):
 				return joaat("JOURNAL_DISC_FLYING_MACHINE_JN");
-			case -1646022773:
+			case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
 				return joaat("JOURNAL_DISC_FOSSILISED_MAN_JN");
-			case 1284679164:
+			case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 				return joaat("JOURNAL_DISC_FRANKENSTEIN_JN");
-			case 2134589549:
+			case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 				return joaat("JOURNAL_DISC_FROZEN_SETTLER_JN");
-			case -1787770845:
+			case joaat("DISCOVER_LOC_GIANT_REMAINS"):
 				return joaat("JOURNAL_DISC_GIANT_REMAINS_JN");
-			case -1887999095:
+			case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 				return joaat("JOURNAL_DISC_GRAYS_SECRET_JN");
 			case 1519228573:
 				return joaat("JOURNAL_DISC_HAND_SWAMP_JN");
-			case 1982045664:
+			case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
 				return joaat("JOURNAL_DISC_HERMIT_WOMAN_JN");
-			case 308500632:
+			case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
 				return joaat("JOURNAL_DISC_HIDDEN_TUNNEL_JN");
-			case -849582265:
+			case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
 				return joaat("JOURNAL_DISC_INDIAN_BURIAL_JN");
-			case 429544447:
+			case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 				return joaat("JOURNAL_DISC_JESUIT_JN");
-			case -148407339:
+			case joaat("DISCOVER_LOC_MAMMOTH"):
 				return joaat("JOURNAL_DISC_MAMMOTH_JN");
-			case -415839138:
+			case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 				return joaat("JOURNAL_DISC_MEDITATING_MONK_JN");
-			case -709811179:
+			case joaat("DISCOVER_LOC_METEORITE"):
 				return joaat("JOURNAL_DISC_METEORITE_JN");
-			case 1673499939:
+			case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 				return joaat("JOURNAL_DISC_METEOR_HOUSE_JN");
-			case -979575591:
+			case joaat("DISCOVER_LOC_OBELISK"):
 				return joaat("JOURNAL_DISC_OBELISK_JN");
-			case -1609238411:
+			case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 				return joaat("JOURNAL_DISC_OLD_SCRIPTS_JN");
-			case 921081956:
+			case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
 				return joaat("JOURNAL_DISC_ONE_ROOM_CHURCH_JN");
-			case -739986731:
+			case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 				return joaat("JOURNAL_DISC_PAGAN_RITUAL_JN");
-			case 1034793488:
+			case joaat("DISCOVER_LOC_EASEL"):
 				return joaat("JOURNAL_DISC_PAINTING_CABIN_JN");
-			case -1614148516:
+			case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 				return joaat("JOURNAL_DISC_PHONOGRAPH_JN");
-			case -1761189332:
+			case joaat("DISCOVER_LOC_REGISTER_ROCK"):
 				return joaat("JOURNAL_DISC_REGISTER_ROCK_JN");
-			case -607940493:
+			case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 				return joaat("JOURNAL_DISC_SERPENT_MOUND_JN");
-			case 1986618633:
+			case joaat("DISCOVER_LOC_SPERM_WHALE"):
 				return joaat("JOURNAL_DISC_SPERM_WHALE_JN");
-			case -161804536:
+			case joaat("DISCOVER_LOC_STONEHENGE"):
 				return joaat("JOURNAL_DISC_STONEHENGE_JN");
-			case 2000209669:
+			case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 				if (iParam2 == 11)
 				{
 					return joaat("JOURNAL_DISC_STRANGE_STATUES_PAINTING_JN");
@@ -10347,9 +10347,9 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 					return joaat("JOURNAL_DISC_STRANGE_STATUES_JN");
 				}
 				break;
-			case -232974724:
+			case joaat("DISCOVER_LOC_TRADING_POST"):
 				return joaat("JOURNAL_DISC_TRADING_POST_JN");
-			case -1272862985:
+			case joaat("DISCOVER_LOC_TRAIL_TREES"):
 				if (iParam2 == 0)
 				{
 					return joaat("JOURNAL_DISCOVER_TRAIL_TREES_TREE_01_JN");
@@ -10367,15 +10367,15 @@ int func_130(int iParam0, bool bParam1, int iParam2)
 					return joaat("JOURNAL_DISCOVER_TRAIL_TREES_TREE_04_JN");
 				}
 				break;
-			case -1891628345:
+			case joaat("DISCOVER_LOC_UTE_WICKUP"):
 				return joaat("JOURNAL_DISC_UTE_WICKIUP_JN");
-			case -1960242214:
+			case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
 				return joaat("JOURNAL_DISC_COLONY_JN");
 			case -1505275983:
 				return joaat("JOURNAL_DISC_WARPED_TREE_JN");
-			case -986176781:
+			case joaat("DISCOVER_LOC_WHALE_BONE"):
 				return joaat("JOURNAL_DISC_WHALE_BONE_JN");
-			case -890175011:
+			case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 				if (iParam2 == 0)
 				{
 					return joaat("JOURNAL_TOWN_SECRET_VAMP2_JN");
@@ -10518,7 +10518,7 @@ void func_137(int iParam0, int iParam1)
 
 void func_138(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 int func_139(int iParam0, var uParam1)
@@ -10892,21 +10892,21 @@ void func_151(var uParam0)
 		}
 		vVar6 = { 2.0f, 2.0f, 6.0f /*3*/ };
 		vVar3 = { 0.0f, 0.0f, 0.0f /*3*/ };
-		if ((*uParam0 == 149709049 || *uParam0 == 1673499939) || *uParam0 == 1187917501)
+		if ((*uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT") || *uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE")) || *uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON"))
 		{
-			if (*uParam0 == 149709049)
+			if (*uParam0 == joaat("DISCOVER_LOC_BURNED_SETTLEMENT"))
 			{
 				vVar0 = { -326.1965f, -151.218f, 52.53027f /*3*/ };
 				vVar3 = { 0.0f, 0.0f, -39.78071f /*3*/ };
 				vVar6 = { 7.217832f, 6.022492f, 5.0f /*3*/ };
 			}
-			else if (*uParam0 == 1673499939)
+			else if (*uParam0 == joaat("DISCOVER_LOC_METEOR_HOUSE"))
 			{
 				vVar0 = { 2475.394f, 1998.81f, 167.5842f /*3*/ };
 				vVar3 = { 0.0f, 0.0f, 44.11323f /*3*/ };
 				vVar6 = { 5.248059f, 8.223731f, 5.0f /*3*/ };
 			}
-			else if (*uParam0 == 1187917501)
+			else if (*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON"))
 			{
 				vVar0 = { -2241.641f, -624.4506f, 161.8841f /*3*/ };
 				vVar3 = { 1.792697f, 23.67082f, -24.60585f /*3*/ };
@@ -10916,27 +10916,27 @@ void func_151(var uParam0)
 		}
 		else
 		{
-			if ((((((((((((*uParam0 == 1342653896 || *uParam0 == 2072069278) || *uParam0 == -1636964661) || *uParam0 == 1937333853) || *uParam0 == -641229542) || *uParam0 == -1287911066) || *uParam0 == -1824429070) || *uParam0 == -1300082860) || *uParam0 == 1519228573) || *uParam0 == -739986731) || *uParam0 == -2108030724) || *uParam0 == -1887999095) || *uParam0 == -2060865802)
+			if ((((((((((((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER") || *uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR")) || *uParam0 == joaat("DISCOVER_LOC_DONKEY_LADY")) || *uParam0 == 1937333853) || *uParam0 == joaat("DISCOVER_LOC_RUNAWAY_CORPSE")) || *uParam0 == joaat("DISCOVER_LOC_BARREL_RIDER")) || *uParam0 == -1824429070) || *uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL")) || *uParam0 == 1519228573) || *uParam0 == joaat("DISCOVER_LOC_PAGAN_RITUAL")) || *uParam0 == -2108030724) || *uParam0 == joaat("DISCOVER_LOC_GRAYS_SECRET")) || *uParam0 == joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"))
 			{
 				vVar0 = { func_80(uParam0, 0) /*3*/ };
-				if (*uParam0 == -1300082860)
+				if (*uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"))
 				{
 					vVar6 = { (7.0f * 2.0f), (7.0f * 2.0f), (2.0f * 6.0f) /*3*/ };
 				}
 			}
-			if (*uParam0 == -499529359 || *uParam0 == -1636964661)
+			if (*uParam0 == joaat("DISCOVER_LOC_DEAD_CHAIN_GANG") || *uParam0 == joaat("DISCOVER_LOC_DONKEY_LADY"))
 			{
 				vVar6.x = (2.0f * 2.0f);
 				vVar6.f_1 = (2.0f * 2.0f);
 				vVar6.f_2 = 6.0f;
 			}
-			if (*uParam0 == -1714262909)
+			if (*uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE"))
 			{
 				vVar0 = { 1763.855f, -560.2155f, 42.4184f /*3*/ };
 				vVar3 = { 0.0f, 0.0f, 0.0f /*3*/ };
 				vVar6 = { 15.0f, 15.0f, 14.0f /*3*/ };
 			}
-			else if (*uParam0 == -1240932004)
+			else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH"))
 			{
 				vVar0 = { -1503.38f, 1246.656f, 314.1237f /*3*/ };
 				vVar3 = { 0.0f, 0.0f, 0.0f /*3*/ };
@@ -10967,41 +10967,41 @@ void func_152(var uParam0)
 		case -2108030724:
 			sLocal_44.f_12[0] = joaat("A_F_M_UNICORPSE_01");
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			sLocal_44.f_12[0] = joaat("A_C_HORSE_MORGAN_FLAXENCHESTNUT");
 			sLocal_44.f_12[1] = joaat("A_C_HORSE_MORGAN_FLAXENCHESTNUT");
 			sLocal_44.f_12[2] = joaat("A_M_M_UNICORPSE_01");
 			uLocal_67.f_6[0] = joaat("P_CS_NOOSE01XB");
 			uLocal_67.f_6[1] = joaat("S_SCRIPTROPEATTACH");
 			break;
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			break;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			sLocal_44.f_12[0] = joaat("A_C_BEAR_01");
 			sLocal_44.f_12[1] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			uLocal_67.f_6[1] = joaat("P_GOLDNUGGET01X");
 			break;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			sLocal_44.f_12[0] = joaat("A_F_M_UNICORPSE_01");
 			break;
 		case 1937333853:
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			uLocal_67.f_6[0] = joaat("P_CS_RT_ENVELOPE01X");
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[1] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[1] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[2] = joaat("A_M_M_UNICORPSE_01");
@@ -11013,22 +11013,22 @@ void func_152(var uParam0)
 			sLocal_44.f_12[8] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[9] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[1] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[2] = joaat("A_M_M_UNICORPSE_01");
 			uLocal_67.f_6[0] = joaat("S_METEORITESHARD01X");
 			break;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[1] = joaat("A_F_M_UNICORPSE_01");
 			sLocal_44.f_12[2] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[3] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			sLocal_44.f_12[0] = joaat("A_F_M_UNICORPSE_01");
 			break;
 		case -1824429070:
@@ -11036,59 +11036,59 @@ void func_152(var uParam0)
 			sLocal_44.f_12[1] = joaat("A_C_BUCK_01");
 			sLocal_44.f_12[2] = joaat("A_C_BUCK_01");
 			break;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			sLocal_44.f_12[1] = joaat("A_C_COW");
 			sLocal_44.f_12[2] = joaat("A_C_COW");
 			sLocal_44.f_12[3] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			sLocal_44.f_12[0] = joaat("U_F_M_CIRCUSWAGON_01");
 			sLocal_44.f_12[1] = joaat("A_F_M_UNICORPSE_01");
 			uLocal_67.f_6[0] = joaat("S_FORTUNETELLER01X");
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			sLocal_44.f_12[0] = joaat("CS_ODPROSTITUTE");
 			break;
 		case 1519228573:
 			sLocal_44.f_12[0] = joaat("CS_SWAMPFREAK");
 			break;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			break;
-		case 1187917501:
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			if (!func_48(*uParam0))
 			{
 				sLocal_44.f_12[0] = joaat("A_C_HORSE_MORGAN_FLAXENCHESTNUT");
 				sLocal_44.f_12[1] = joaat("A_C_HORSE_MORGAN_FLAXENCHESTNUT");
 			}
 			break;
-		case -1829339703:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 			sLocal_44.f_12[0] = joaat("A_C_HORSE_MORGAN_FLAXENCHESTNUT");
 			sLocal_44.f_12[1] = joaat("A_C_HORSE_MORGAN_FLAXENCHESTNUT");
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			sLocal_44.f_12[0] = joaat("CS_TAVISHGRAY");
 			uLocal_67.f_6[0] = joaat("P_CS_LETTER03X");
 			break;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			sLocal_44.f_12[0] = joaat("A_M_M_UNICORPSE_01");
 			uLocal_67.f_6[0] = joaat("P_CS_NOOSE01XB");
 			uLocal_67.f_6[1] = joaat("S_SCRIPTROPEATTACH");
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			sLocal_44.f_12[0] = joaat("CS_MICAHBELL");
 			break;
-		case -1714262909:
-		case -968854939:
-		case -499529359:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			break;
 		default:
 			break;
@@ -11097,11 +11097,11 @@ void func_152(var uParam0)
 
 void func_153(var uParam0)
 {
-	if ((((*uParam0 == -499529359 || *uParam0 == -1714262909) || *uParam0 == -968854939) || *uParam0 == 2134589549) || *uParam0 == -2009137002)
+	if ((((*uParam0 == joaat("DISCOVER_LOC_DEAD_CHAIN_GANG") || *uParam0 == joaat("DISCOVER_LOC_DEAD_SNAKE")) || *uParam0 == joaat("DISCOVER_LOC_CATTLE_CARCASSES")) || *uParam0 == joaat("DISCOVER_LOC_FROZEN_SETTLER")) || *uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF"))
 	{
 		func_344(&uLocal_27);
 	}
-	else if (*uParam0 == 1187917501)
+	else if (*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON"))
 	{
 		if (func_48(*uParam0))
 		{
@@ -11596,11 +11596,11 @@ int func_159(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return joaat("UI_LETTER_GRBR");
-		case -780455182:
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 			return joaat("UI_DOC_SKATENEWSP");
-		case 1284679164:
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -11727,11 +11727,11 @@ char* func_168(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			return "Strange_Statues_Sounds";
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			return "inworld_music_wax_cylinder_swamp_boat";
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			return "fortune_teller_soundset";
 		default:
 			break;
@@ -11741,7 +11741,7 @@ char* func_168(var uParam0)
 
 bool func_169(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_170(var uParam0, var uParam1, var uParam2, bool bParam3, float fParam4, int iParam5)
@@ -11789,52 +11789,52 @@ void func_171(var uParam0, int iParam1)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[iParam1]))
 				{
-					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true))
+					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true);
 					}
-					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, true))
+					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, false);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, false);
 					}
 				}
 			}
 		}
-		else if (*uParam0 == -1841331114)
+		else if (*uParam0 == joaat("DISCOVER_LOC_LIGHTNING_ALLEY"))
 		{
 			if (iParam1 >= 1 && iParam1 <= 2)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[iParam1]))
 				{
-					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true))
+					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true);
 					}
-					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, true))
+					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, false);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, false);
 					}
 				}
 			}
 		}
-		else if (*uParam0 == 949011950)
+		else if (*uParam0 == joaat("DISCOVER_LOC_OVERTURNED_HEARSE"))
 		{
 			if (iParam1 >= 0 && iParam1 <= 1)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[iParam1]))
 				{
-					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true))
+					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true);
 					}
-					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, true))
+					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, false);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, false);
 					}
 				}
 			}
 		}
-		else if (*uParam0 == 2072069278)
+		else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_BEAR"))
 		{
 			if (iParam1 == 0)
 			{
@@ -11851,24 +11851,24 @@ void func_171(var uParam0, int iParam1)
 				}
 			}
 		}
-		else if (*uParam0 == 1187917501 || *uParam0 == -1829339703)
+		else if (*uParam0 == joaat("DISCOVER_LOC_CONESTOGA_WAGON") || *uParam0 == joaat("DISCOVER_LOC_WAGON_CHEST"))
 		{
 			if (iParam1 >= 0 && iParam1 <= 1)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(sLocal_44.f_1[iParam1]))
 				{
-					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true))
+					if (!PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186, true);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 186 /*PCF_CorpseIsPersistent*/, true);
 					}
-					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, true))
+					if (PED::GET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, true))
 					{
-						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223, false);
+						PED::SET_PED_CONFIG_FLAG(sLocal_44.f_1[iParam1], 223 /*PCF_IsCriticalCorpse*/, false);
 					}
 				}
 			}
 		}
-		else if (*uParam0 == 657666087)
+		else if (*uParam0 == joaat("DISCOVER_LOC_CIRCUS_WAGON"))
 		{
 			if (iParam1 == 1)
 			{
@@ -11887,7 +11887,7 @@ void func_171(var uParam0, int iParam1)
 				}
 			}
 		}
-		else if (*uParam0 == -1240932004)
+		else if (*uParam0 == joaat("DISCOVER_LOC_DEAD_MICAH"))
 		{
 			if (iParam1 == 0)
 			{
@@ -11900,13 +11900,13 @@ void func_171(var uParam0, int iParam1)
 				}
 			}
 		}
-		else if (((((*uParam0 == -641229542 || *uParam0 == -1300082860) || *uParam0 == -2108030724) || *uParam0 == -2009137002) || *uParam0 == 1342653896) || *uParam0 == -1177787273)
+		else if (((((*uParam0 == joaat("DISCOVER_LOC_RUNAWAY_CORPSE") || *uParam0 == joaat("DISCOVER_LOC_ABANDONED_OIL_WELL")) || *uParam0 == -2108030724) || *uParam0 == joaat("DISCOVER_LOC_FACE_IN_CLIFF")) || *uParam0 == joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER")) || *uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER"))
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(sLocal_44.f_1[iParam1]))
 			{
 				func_286(sLocal_44.f_1[iParam1]);
 				func_287(sLocal_44.f_1[iParam1], 0);
-				if (*uParam0 == -2108030724 || (*uParam0 == -1177787273 && iParam1 == 0))
+				if (*uParam0 == -2108030724 || (*uParam0 == joaat("DISCOVER_LOC_WATER_DIVINER") && iParam1 == 0))
 				{
 					if (*uParam0 == -2108030724)
 					{
@@ -11953,31 +11953,31 @@ int func_174(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -1859413640:
+		case joaat("DISCOVER_LOC_SHRINE"):
 			return joaat("RANSACK_VOLUME_NARROW_0M5_0M5_2M0");
-		case -2008558277:
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
 			return joaat("WORLD_ANIMAL_BAT_HANGING");
-		case -1481450947:
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
 			return joaat("RANSACK_REACH_OVER_VOLUME_NARROW_0M5_0M5_2M0");
-		case -1427565340:
+		case joaat("DISCOVER_LOC_ANCIENT_URN"):
 			return joaat("RANSACK_REACH_OVER_VOLUME_0M8_0M5_2M0");
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return joaat("WORLD_PLAYER_INSPECT_LETTER_80CM_PAPER_W15_1_H24_FOLDVERTICAL_P_CS_LETTER03X");
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			return joaat("RANSACK_STRANGE_STATUES_STASH");
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return joaat("RANSACK_VOLUME_0M8_0M5_2M0");
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return joaat("WORLD_PLAYER_PICKUP_WEAPON_MELEE_HATCHET_VIKING");
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return joaat("WORLD_PLAYER_PICKUP_WEAPON_THROWN_TOMAHAWK_ANCIENT");
-		case 247563739:
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 			return joaat("PROP_PLAYER_LNS_FLOOR_STASH");
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			return joaat("RANSACK_REACH_OVER_CENTERED_GROUND_PICKUP");
 		case 2135153015:
 			return joaat("RANSACK_REACH_OVER_GENERIC_LETTER_PROMPT_0M5_0M5_2M0");
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			return joaat("RANSACK_ATTACHED_CHEST_MEDIUM_OPEN_ONLY");
 		case 1464664327:
 			switch (iParam1)
@@ -11988,7 +11988,7 @@ int func_174(var uParam0, int iParam1)
 					return joaat("WORLD_PLAYER_SLEEP_GROUND");
 			}
 			break;
-		case 1284679164:
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12000,7 +12000,7 @@ int func_174(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 870958936:
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12023,21 +12023,21 @@ float func_175(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case -1859413640:
+		case joaat("DISCOVER_LOC_SHRINE"):
 			return -162.606f;
-		case -1481450947:
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
 			return 0.0f;
-		case -1427565340:
+		case joaat("DISCOVER_LOC_ANCIENT_URN"):
 			return -49.4f;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return 40.0f;
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			return -13.0f;
-		case -161804536:
+		case joaat("DISCOVER_LOC_STONEHENGE"):
 			return -160.0f;
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			return -5.848f;
-		case 2072029413:
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
 			return -155.926f;
 		case 2135153015:
 			return 3.97f;
@@ -12050,7 +12050,7 @@ float func_175(var uParam0, int iParam1)
 					return 103.5514f;
 			}
 			break;
-		case 513110082:
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12115,7 +12115,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12135,7 +12135,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12144,7 +12144,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12153,7 +12153,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12171,7 +12171,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12180,7 +12180,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12191,7 +12191,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12218,7 +12218,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12227,7 +12227,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12240,7 +12240,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12255,7 +12255,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12264,7 +12264,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12279,7 +12279,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12292,7 +12292,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12301,7 +12301,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12310,7 +12310,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12319,8 +12319,8 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1829339703:
-		case 1187917501:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12331,7 +12331,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12340,7 +12340,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12349,7 +12349,7 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -12364,10 +12364,10 @@ int func_177(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2060865802:
-		case -1144800837:
-		case 657666087:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			break;
 	}
 	return joaat("META_OUTFIT_DEFAULT");
@@ -12418,14 +12418,14 @@ char* func_180(var uParam0)
 	{
 		case -763376358:
 			return "DISCO_MASK_AM";
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			return "DISCO_MASK_PR";
-		case 1801731633:
+		case joaat("DISCOVER_LOC_CAT_MASK"):
 			return "DISCO_MASK_CAT";
-		case 1490223565:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
 			return "DISCO_MASK_RAM";
-		case 733338689:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return "DISCO_HELMET";
 		default:
 			break;
@@ -12443,7 +12443,7 @@ void func_181(int iParam0, bool bParam1, bool bParam2)
 		}
 		if (bParam2)
 		{
-			PED::SET_PED_CONFIG_FLAG(iParam0, 243, true);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 243 /*PCF_0x0831CCD1*/, true);
 		}
 		if (Global_35 == iParam0)
 		{
@@ -12574,7 +12574,7 @@ void func_188(var uParam0, var uParam1, int iParam2)
 						}
 						iVar0++;
 					}
-					if (*uParam0 == 429544447)
+					if (*uParam0 == joaat("DISCOVER_LOC_JESUIT_MISSIONARY"))
 					{
 						iVar0 = 0;
 						while (iVar0 <= (5 - 1))
@@ -12683,7 +12683,7 @@ bool func_189(Vector3 vParam0, float fParam3, bool bParam4, bool bParam5, bool b
 
 bool func_190(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_191(int iParam0)
@@ -12870,39 +12870,39 @@ bool func_197(var uParam0, int iParam1)
 	switch (*uParam0)
 	{
 		case -2108030724:
-		case -2060865802:
-		case -2009137002:
-		case -1887999095:
-		case -1841331114:
-		case -1829339703:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 		case -1824429070:
-		case -1714262909:
-		case -1636964661:
-		case -1568839185:
-		case -1300082860:
-		case -1287911066:
-		case -1240932004:
-		case -1177787273:
-		case -1144800837:
-		case -968854939:
-		case -920971071:
-		case -739986731:
-		case -641229542:
-		case -499529359:
-		case 149709049:
-		case 425000526:
-		case 429544447:
-		case 657666087:
-		case 949011950:
-		case 1187917501:
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 		case 1519228573:
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 		case 1937333853:
-		case 2072069278:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return true;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			if (func_16(59))
 			{
 				return true;
@@ -12922,13 +12922,13 @@ void func_198(var uParam0, int iParam1, int iParam2)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
-		if (!PED::GET_PED_CONFIG_FLAG(*uParam0, 186, true))
+		if (!PED::GET_PED_CONFIG_FLAG(*uParam0, 186 /*PCF_CorpseIsPersistent*/, true))
 		{
-			PED::SET_PED_CONFIG_FLAG(*uParam0, 186, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam0, 186 /*PCF_CorpseIsPersistent*/, true);
 		}
-		if (PED::GET_PED_CONFIG_FLAG(*uParam0, 223, true))
+		if (PED::GET_PED_CONFIG_FLAG(*uParam0, 223 /*PCF_IsCriticalCorpse*/, true))
 		{
-			PED::SET_PED_CONFIG_FLAG(*uParam0, 223, false);
+			PED::SET_PED_CONFIG_FLAG(*uParam0, 223 /*PCF_IsCriticalCorpse*/, false);
 		}
 		PERSISTENCE::_0xE225CEF1901F6108(*uParam0, iParam1);
 	}
@@ -13006,7 +13006,7 @@ void func_202(int iParam0, bool bParam1)
 	{
 		return;
 	}
-	switch (func_392(iParam0, -949239683))
+	switch (func_392(iParam0, joaat("TAG_INTERACTION_TYPE")))
 	{
 		case joaat("CI_TAG_PAPER_W15_24_H10_16"):
 		case joaat("CI_TAG_PAPER_W11_5_H20_5"):
@@ -13293,7 +13293,7 @@ void func_216(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4,
 			sVar5 = "COL_EX_INTRO";
 			vVar6 = { 2585.668f, -1009.616f, 44.97972f /*3*/ };
 			iVar9 = func_402(iParam3, 19);
-			iVar14 = -1531394072;
+			iVar14 = joaat("EXOTIC_ITEMS");
 			iVar11 = MISC::GET_HASH_KEY("BLIP_RC_COLLECTABLE_EXOTICS");
 			iVar13 = joaat("COL_EX_INTRO");
 			break;
@@ -13312,7 +13312,7 @@ void func_216(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4,
 			sVar5 = "COL_LF_INTRO";
 			vVar6 = { 337.3075f, -684.5404f, 41.8362f /*3*/ };
 			iVar9 = 13;
-			iVar14 = 1995362678;
+			iVar14 = joaat("LEGENDARY_FISH");
 			iVar11 = joaat("BLIP_RC_JEREMY_GILL");
 			iVar13 = joaat("COL_LF_INTRO");
 			break;
@@ -13442,7 +13442,7 @@ void func_218(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			sVar0 = "COL_EX_TITLE";
 			sVar3 = "COL_EX_ITEMS_COLLECTED";
 			sVar1 = "COL_EX_INTRO";
-			iVar7 = -1531394072;
+			iVar7 = joaat("EXOTIC_ITEMS");
 			iVar4 = MISC::GET_HASH_KEY("BLIP_RC_COLLECTABLE_EXOTICS");
 			iVar6 = joaat("COL_EX_INTRO");
 			break;
@@ -13450,7 +13450,7 @@ void func_218(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			sVar0 = "COL_LF_TITLE";
 			sVar3 = "COL_LF_CAUGHT";
 			sVar1 = "COL_LF_INTRO";
-			iVar7 = 1995362678;
+			iVar7 = joaat("LEGENDARY_FISH");
 			iVar4 = joaat("BLIP_RC_JEREMY_GILL");
 			iVar6 = joaat("COL_LF_INTRO");
 			break;
@@ -15650,7 +15650,7 @@ void func_281(int iParam0, int iParam1, bool bParam2, bool bParam3, bool bParam4
 		}
 	}
 	sVar15 = func_503(MISC::VAR_STRING(10, &cVar2, MISC::VAR_STRING(0, func_268(iParam0)), iVar1), iVar12);
-	if (((((iParam1 == 1 || func_220(iParam0, 1443104131)) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX")) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX_USED")) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX_CHEAP")) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX_CHEAP_USED"))
+	if (((((iParam1 == 1 || func_220(iParam0, joaat("CI_TAG_SMOKING_CIGARETTE"))) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX")) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX_USED")) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX_CHEAP")) || iParam0 == joaat("CONSUMABLE_CIGARETTE_BOX_CHEAP_USED"))
 	{
 		sVar15 = MISC::VAR_STRING(0, func_268(iParam0));
 	}
@@ -15673,37 +15673,37 @@ int func_284(int iParam0)
 {
 	switch (iParam0)
 	{
-		case 683269210:
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
 			return 993246734;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			return -1212881551;
-		case 247563739:
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
 			return 1352537560;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			return 2021420613;
-		case 1347913620:
+		case joaat("DISCOVER_LOC_CIVIL_WAR_FORT"):
 			return 460210291;
-		case -1109016944:
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
 			return -2011320133;
-		case -919236330:
+		case joaat("DISCOVER_LOC_DESERTED_FARM"):
 			return 539572870;
-		case 918206817:
+		case joaat("DISCOVER_LOC_FIRE_LOOKOUT_TOWER"):
 			return -1262808306;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			return 1582457845;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return 1195199040;
-		case -654238687:
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
 			return 2056389698;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			return -1988847961;
-		case -232974724:
+		case joaat("DISCOVER_LOC_TRADING_POST"):
 			return -942443338;
-		case -1960242214:
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
 			return 66159563;
 		case 1464664327:
 			return 387869270;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return -875696111;
 		default:
 			break;
@@ -15769,52 +15769,52 @@ bool func_289(int iParam0)
 {
 	switch (iParam0)
 	{
-		case -2009137002:
-		case -1960242214:
-		case -1958832660:
-		case -1891628345:
-		case -1887999095:
-		case -1787770845:
-		case -1761189332:
-		case -1646022773:
-		case -1636964661:
-		case -1614148516:
-		case -1609238411:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
+		case joaat("DISCOVER_LOC_UTOPIAN_COLONY"):
+		case joaat("DISCOVER_LOC_ABANDONED_CHURCH"):
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
+		case joaat("DISCOVER_LOC_GIANT_REMAINS"):
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_FOSSILIZED_MAN"):
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
+		case joaat("DISCOVER_LOC_OLD_WORLD_SCRIPT"):
 		case -1505275983:
-		case -1300082860:
-		case -1287911066:
-		case -1272862985:
-		case -1243267511:
-		case -1109016944:
-		case -1053108445:
-		case -986176781:
-		case -979575591:
-		case -849582265:
-		case -780455182:
-		case -739986731:
-		case -709811179:
-		case -607940493:
-		case -415839138:
-		case -232974724:
-		case -161804536:
-		case -148407339:
-		case 58958195:
-		case 247563739:
-		case 308500632:
-		case 429544447:
-		case 657666087:
-		case 921081956:
-		case 1034793488:
-		case 1284679164:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_FACE_TREES"):
+		case joaat("DISCOVER_LOC_GHOST_TOWN"):
+		case joaat("DISCOVER_LOC_FLYING_MACHINE"):
+		case joaat("DISCOVER_LOC_WHALE_BONE"):
+		case joaat("DISCOVER_LOC_OBELISK"):
+		case joaat("DISCOVER_LOC_INDIAN_BURIAL"):
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
+		case joaat("DISCOVER_LOC_METEORITE"):
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
+		case joaat("DISCOVER_LOC_TRADING_POST"):
+		case joaat("DISCOVER_LOC_STONEHENGE"):
+		case joaat("DISCOVER_LOC_MAMMOTH"):
+		case joaat("DISCOVER_LOC_CRASHED_AIRSHIP"):
+		case joaat("DISCOVER_LOC_ABANDONED_TRADING_POST"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
+		case joaat("DISCOVER_LOC_ONE_ROOM_CHURCH"):
+		case joaat("DISCOVER_LOC_EASEL"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
 		case 1519228573:
-		case 1535254161:
-		case 1673499939:
-		case 1734766691:
-		case 1861313914:
-		case 1982045664:
-		case 1986618633:
-		case 2000209669:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
+		case joaat("DISCOVER_LOC_BRUSH_FIRE"):
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
+		case joaat("DISCOVER_LOC_HERMIT_WOMAN"):
+		case joaat("DISCOVER_LOC_SPERM_WHALE"):
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return true;
 	}
 	return false;
@@ -16180,7 +16180,7 @@ char* func_297(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case 2000209669:
+		case joaat("DISCOVER_LOC_STRANGE_STATUES"):
 			if (iParam1 == 0)
 			{
 				return "button_press";
@@ -16190,7 +16190,7 @@ char* func_297(var uParam0, int iParam1)
 				return "statue_door_open";
 			}
 			break;
-		case -1614148516:
+		case joaat("DISCOVER_LOC_PHONOGRAPH_HOUSE"):
 			switch ((Global_40.f_8863.f_146 % 4))
 			{
 				case 0:
@@ -16205,7 +16205,7 @@ char* func_297(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			if (iParam1 == 0)
 			{
 				return "fortune_teller";
@@ -16480,9 +16480,9 @@ char* func_312(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			return "DISC_VOL_GRAVE_ARTHUR_I";
-		case -1761578407:
+		case joaat("DISCOVER_LOC_GRAVE"):
 			if (uParam0->f_4 == 0)
 			{
 				return "DISC_VOL_GRAVE_ARTHUR_I";
@@ -16520,13 +16520,13 @@ char* func_312(var uParam0)
 				return "DISC_VOL_GRAVE_EAGLE_I";
 			}
 			break;
-		case -1243267511:
+		case joaat("DISCOVER_LOC_FACE_TREES"):
 			return "DISC_VOL_FACE_TREES_I";
-		case 1535254161:
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
 			return "DISC_VOL_CIV_WAR_I";
-		case -607940493:
+		case joaat("DISCOVER_LOC_SERPENT_MOUND"):
 			return "DISC_VOL_SERPENT_MOUND_I";
-		case -890175011:
+		case joaat("DISCOVER_LOC_VAMPIRE_CLUES"):
 			if (uParam0->f_4 == 0)
 			{
 				return "DISC_VOL_VAMP_CLUES_1_I";
@@ -16585,7 +16585,7 @@ void func_313(var uParam0, int iParam1)
 
 void func_314(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_315()
@@ -16774,7 +16774,7 @@ bool func_322(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_1945188[iParam0 /*18*/].f_1 & iParam1 != 0;
+	return (Global_1945188[iParam0 /*18*/].f_1 & iParam1) != 0;
 }
 
 void func_323(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, Vector3 vParam6, float fParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, float fParam18, float fParam19, float fParam20, bool bParam21, bool bParam22, int iParam23, int iParam24, bool bParam25)
@@ -18186,71 +18186,71 @@ char* func_343(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case -499529359:
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
 			return "DISC_VOL_DEAD_CHAIN_GANG";
 		case -777592153:
 			return "DISC_VOL_BESTIALITY";
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			return "DISC_VOL_OVERTURNED_HEARSE";
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			return "DISC_VOL_DEAD_TRAVELLER";
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			return "DISC_VOL_DEAD_PIRATE";
-		case -1714262909:
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
 			return "DISC_VOL_DEAD_SNAKE";
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			return "DISC_VOL_DEAD_BEAR";
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			return "DISC_VOL_DEAD_MINER";
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			return "DISC_VOL_DONKEY_LADY";
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return "DISC_VOL_FROZEN_SETTLER";
 		case 1937333853:
 			return "DISC_VOL_DEAD_SOLDIER";
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			return "DISC_VOL_ABANDONED_OIL";
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			return "DISC_VOL_BURNED_SETTLEMENT";
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			return "DISC_VOL_CORPSE_PIT";
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			return "DISC_VOL_RUNAWAY_CORPSE";
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return "DISC_VOL_METEOR_HOUSE";
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			return "DISC_VOL_WATER_DIVINER";
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			return "DISC_VOL_BARREL_RIDER";
-		case -968854939:
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
 			return "DISC_VOL_CATTLE_CARCASSES";
 		case -1824429070:
 			return "DISC_VOL_BUCK_CARCASSES";
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			return "DISC_VOL_LIGHTNING_ALLEY";
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			return "DISC_VOL_CIRCUS_WAGON";
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			return "DISC_VOL_ROADSIDE_BROTHEL";
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			return "DISC_VOL_JESUIT_MISSIONARY";
 		case 1519228573:
 			return "DISC_VOL_HAND_IN_SWAMP";
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			return "DISC_VOL_FLATTENED_CABIN";
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			return "DISC_VOL_PAGAN_RITUAL";
 		case -2108030724:
 			return "DISC_VOL_DEAD_CATHERINE";
-		case 1187917501:
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			return "DISC_VOL_CONESTOGA_WAGON";
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			return "DISC_VOL_GRAYS_SECRET";
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			return "DISC_VOL_FACE_IN_CLIFF";
-		case -1829339703:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 			return "DISC_VOL_WAGON_CHEST";
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			return "DISC_VOL_DEAD_MICAH";
 		default:
 			break;
@@ -18384,7 +18384,7 @@ int func_351(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18393,7 +18393,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18411,7 +18411,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1801731633:
+		case joaat("DISCOVER_LOC_CAT_MASK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18420,7 +18420,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1490223565:
+		case joaat("DISCOVER_LOC_RAM_MASK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18429,7 +18429,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18438,7 +18438,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 733338689:
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18447,7 +18447,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1124200691:
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18456,7 +18456,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1420566543:
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18465,7 +18465,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1208846034:
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18474,7 +18474,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1048086072:
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18483,7 +18483,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 939555152:
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18492,7 +18492,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18510,7 +18510,7 @@ int func_351(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1144800837:
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18529,11 +18529,11 @@ char* func_352(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			return "FTELLAU";
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			return "DSMEHAU";
-		case -415839138:
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 			return "DMONKAU";
 		default:
 			break;
@@ -18556,7 +18556,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18569,7 +18569,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18578,7 +18578,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18589,7 +18589,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18598,7 +18598,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18607,7 +18607,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18625,7 +18625,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -654238687:
+		case joaat("DISCOVER_LOC_OLD_DIRTY_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18652,7 +18652,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18661,7 +18661,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18672,7 +18672,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18699,7 +18699,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18708,7 +18708,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18721,7 +18721,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -415839138:
+		case joaat("DISCOVER_LOC_MEDITATING_MONK"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18730,7 +18730,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18745,7 +18745,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18754,7 +18754,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2008558277:
+		case joaat("DISCOVER_LOC_BATS_IN_BARN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18775,7 +18775,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1861313914:
+		case joaat("DISCOVER_LOC_BRAITHWAITES_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18799,7 +18799,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18814,7 +18814,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -35775921:
+		case joaat("DISCOVER_LOC_BLACK_SHEEP"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18823,7 +18823,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18843,7 +18843,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18861,7 +18861,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18870,7 +18870,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18888,7 +18888,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1187917501:
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18899,7 +18899,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18908,7 +18908,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2009137002:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18917,7 +18917,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1829339703:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18928,7 +18928,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 404434344:
+		case joaat("DISCOVER_LOC_GRAVE_ARTHUR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18943,7 +18943,7 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -18952,49 +18952,49 @@ float func_353(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1891628345:
-		case -1859413640:
-		case -1761189332:
-		case -1714262909:
-		case -1494823099:
-		case -1481450947:
-		case -1420566543:
-		case -1272862985:
-		case -1208846034:
-		case -1144800837:
+		case joaat("DISCOVER_LOC_UTE_WICKUP"):
+		case joaat("DISCOVER_LOC_SHRINE"):
+		case joaat("DISCOVER_LOC_REGISTER_ROCK"):
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_BLACK_FLOWER"):
+		case joaat("DISCOVER_LOC_ABANDONED_WELL"):
+		case joaat("DISCOVER_LOC_SCARECROW_1"):
+		case joaat("DISCOVER_LOC_TRAIL_TREES"):
+		case joaat("DISCOVER_LOC_SCARECROW_2"):
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
 		case -1061274876:
-		case -968854939:
-		case -780455182:
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_DEFACED_GRAVE"):
 		case -763376358:
-		case -709811179:
-		case -599506500:
-		case -499529359:
-		case -357364973:
+		case joaat("DISCOVER_LOC_METEORITE"):
+		case joaat("DISCOVER_LOC_CIVIL_WAR_SWORD"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_PIRATE_RUM"):
 		case -261997819:
-		case -30872859:
-		case -657632:
-		case 221420861:
-		case 308500632:
-		case 330993088:
-		case 435290930:
-		case 464413478:
-		case 513110082:
-		case 683269210:
-		case 733338689:
-		case 870958936:
-		case 939555152:
-		case 1048086072:
-		case 1124200691:
-		case 1187689415:
-		case 1284679164:
-		case 1335921989:
-		case 1424723727:
-		case 1490223565:
-		case 1505050944:
-		case 1535254161:
-		case 1801731633:
-		case 2072029413:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_SUN_DIAL"):
+		case joaat("DISCOVER_LOC_RAILROAD_GRAVESTONE"):
+		case joaat("DISCOVER_LOC_WHISPERING_TREES"):
+		case joaat("DISCOVER_LOC_HIDDEN_TUNNEL"):
+		case joaat("DISCOVER_LOC_OLD_RAILROAD_CAMP"):
+		case joaat("DISCOVER_LOC_BIRD_NEST"):
+		case joaat("DISCOVER_LOC_WHISKEY_TREE"):
+		case joaat("DISCOVER_LOC_TREASURE_MAP_HALVES"):
+		case joaat("DISCOVER_LOC_ABANDONED_MISSION"):
+		case joaat("DISCOVER_LOC_VIKING_GEAR"):
+		case joaat("DISCOVER_LOC_AXE_IN_TREE"):
+		case joaat("DISCOVER_LOC_SCARECROW_4"):
+		case joaat("DISCOVER_LOC_SCARECROW_3"):
+		case joaat("DISCOVER_LOC_OBJECT_IN_TREE"):
+		case joaat("DISCOVER_LOC_WAGON_CIRCLE"):
+		case joaat("DISCOVER_LOC_FRANKENSTEIN_BOOK"):
+		case joaat("DISCOVER_LOC_BANK_STAGECOACH"):
+		case joaat("DISCOVER_LOC_PIRATE_SWORD"):
+		case joaat("DISCOVER_LOC_RAM_MASK"):
+		case joaat("DISCOVER_LOC_DESERT_SKELETONS"):
+		case joaat("DISCOVER_LOC_CIV_WAR_BATTLEFIELD"):
+		case joaat("DISCOVER_LOC_CAT_MASK"):
+		case joaat("DISCOVER_LOC_ANCIENT_TOMAHAWK"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 		case 2135153015:
 			break;
 		default:
@@ -19050,7 +19050,7 @@ bool func_357(var uParam0)
 {
 	switch (*uParam0)
 	{
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			return 0.6f;
 		default:
 			break;
@@ -19283,7 +19283,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 949011950:
+		case joaat("DISCOVER_LOC_OVERTURNED_HEARSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19303,7 +19303,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1342653896:
+		case joaat("DISCOVER_LOC_DEAD_CHINESE_TRAVELLER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19312,7 +19312,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 2072069278:
+		case joaat("DISCOVER_LOC_DEAD_BEAR"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19323,7 +19323,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 425000526:
+		case joaat("DISCOVER_LOC_DEAD_MINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19332,7 +19332,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1636964661:
+		case joaat("DISCOVER_LOC_DONKEY_LADY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19350,7 +19350,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1300082860:
+		case joaat("DISCOVER_LOC_ABANDONED_OIL_WELL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19359,7 +19359,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 149709049:
+		case joaat("DISCOVER_LOC_BURNED_SETTLEMENT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19370,7 +19370,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1568839185:
+		case joaat("DISCOVER_LOC_CORPSE_PIT"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19397,7 +19397,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -641229542:
+		case joaat("DISCOVER_LOC_RUNAWAY_CORPSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19406,7 +19406,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 1673499939:
+		case joaat("DISCOVER_LOC_METEOR_HOUSE"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19419,7 +19419,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1177787273:
+		case joaat("DISCOVER_LOC_WATER_DIVINER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19434,7 +19434,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1287911066:
+		case joaat("DISCOVER_LOC_BARREL_RIDER"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19456,7 +19456,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1841331114:
+		case joaat("DISCOVER_LOC_LIGHTNING_ALLEY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19471,7 +19471,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 657666087:
+		case joaat("DISCOVER_LOC_CIRCUS_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19480,7 +19480,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19489,7 +19489,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2060865802:
+		case joaat("DISCOVER_LOC_ROADSIDE_BROTHEL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19507,7 +19507,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -920971071:
+		case joaat("DISCOVER_LOC_FLATTENED_CABIN"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19516,7 +19516,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -739986731:
+		case joaat("DISCOVER_LOC_PAGAN_RITUAL"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19525,8 +19525,8 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1829339703:
-		case 1187917501:
+		case joaat("DISCOVER_LOC_WAGON_CHEST"):
+		case joaat("DISCOVER_LOC_CONESTOGA_WAGON"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19537,7 +19537,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1887999095:
+		case joaat("DISCOVER_LOC_GRAYS_SECRET"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19546,7 +19546,7 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -1240932004:
+		case joaat("DISCOVER_LOC_DEAD_MICAH"):
 			switch (iParam1)
 			{
 				case 0:
@@ -19555,12 +19555,12 @@ char* func_372(var uParam0, int iParam1)
 					break;
 			}
 			break;
-		case -2009137002:
-		case -1714262909:
-		case -1144800837:
-		case -968854939:
-		case -499529359:
-		case 2134589549:
+		case joaat("DISCOVER_LOC_FACE_IN_CLIFF"):
+		case joaat("DISCOVER_LOC_DEAD_SNAKE"):
+		case joaat("DISCOVER_LOC_PIRATE_SKELETON"):
+		case joaat("DISCOVER_LOC_CATTLE_CARCASSES"):
+		case joaat("DISCOVER_LOC_DEAD_CHAIN_GANG"):
+		case joaat("DISCOVER_LOC_FROZEN_SETTLER"):
 			break;
 	}
 	return "";
@@ -19570,7 +19570,7 @@ char* func_373(var uParam0, int iParam1)
 {
 	switch (*uParam0)
 	{
-		case 429544447:
+		case joaat("DISCOVER_LOC_JESUIT_MISSIONARY"):
 			break;
 		default:
 			switch (iParam1)
@@ -19587,7 +19587,7 @@ char* func_373(var uParam0, int iParam1)
 
 bool func_374()
 {
-	return (Global_1894899 & 1 != 0 && func_544() != -1);
+	return ((Global_1894899 & 1) != 0 && func_544() != -1);
 }
 
 bool func_375(Vector3 vParam0, float fParam3)
@@ -19674,7 +19674,7 @@ int func_377(int iParam0)
 
 void func_378(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 float func_379(int iParam0)
@@ -20474,7 +20474,7 @@ char* func_403(int iParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				sParam3 = MISC::VAR_STRING(2, "COL_DB_FOUND_OBJ", func_447(), 30);
 			}
 			break;
-		case -1531394072:
+		case joaat("EXOTIC_ITEMS"):
 			if (iParam2 == 7)
 			{
 				sParam3 = "COL_TX_CHECK_BACK";
@@ -20488,7 +20488,7 @@ char* func_403(int iParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				sParam3 = MISC::VAR_STRING(2, "COL_EX_ITEMS_COLLECTED_OBJ", sParam4, sParam5);
 			}
 			break;
-		case 1995362678:
+		case joaat("LEGENDARY_FISH"):
 			if (iParam2 == 0)
 			{
 				sParam3 = MISC::VAR_STRING(2, "COL_LF_RETURN_POST_OFFICE");
@@ -20696,7 +20696,7 @@ bool func_407(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 				UILOG::_UILOG_ADD_OR_UPDATE_OBJECTIVE(3, iParam1, MISC::GET_HASH_KEY(func_582(iVar0)), func_582(iVar0), bVar1, true, false);
 			}
 		}
-		if (iParam2 == -1531394072)
+		if (iParam2 == joaat("EXOTIC_ITEMS"))
 		{
 			iVar2 = func_457(iParam3, func_583(iVar0));
 			if (iParam5 == 8)
@@ -20724,9 +20724,9 @@ bool func_407(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 			UILOG::_UILOG_ADD_OR_UPDATE_OBJECTIVE(3, iParam1, MISC::GET_HASH_KEY(func_585(iVar2)), func_585(iVar2), bVar1, true, false);
 		}
-		if (iParam2 == 1995362678)
+		if (iParam2 == joaat("LEGENDARY_FISH"))
 		{
-			if (func_586(COLLECTION::_COLLECTABLE_GET_COLLECTABLE_ITEM_HASH(iVar0, 1995362678, 0)))
+			if (func_586(COLLECTION::_COLLECTABLE_GET_COLLECTABLE_ITEM_HASH(iVar0, joaat("LEGENDARY_FISH"), 0)))
 			{
 				bVar1 = true;
 			}
@@ -20815,11 +20815,11 @@ bool func_408(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		UILOG::_UILOG_ADD_OR_UPDATE_OBJECTIVE(3, iParam1, MISC::GET_HASH_KEY("COL_CC_ITEMS_DELIVERED"), "COL_CC_ITEMS_DELIVERED", bVar0, true, false);
 	}
-	if (iParam2 == -1531394072)
+	if (iParam2 == joaat("EXOTIC_ITEMS"))
 	{
 		UILOG::_UILOG_ADD_OR_UPDATE_OBJECTIVE(3, iParam1, MISC::GET_HASH_KEY("COL_EX_ITEMS_DELIVERED"), "COL_EX_ITEMS_DELIVERED", bVar0, true, false);
 	}
-	if (iParam2 == 1995362678)
+	if (iParam2 == joaat("LEGENDARY_FISH"))
 	{
 		if (func_577() >= 13)
 		{
@@ -20852,7 +20852,7 @@ bool func_409(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 	{
 		iParam3 = 7;
 	}
-	if ((iParam2 == joaat("DINO_BONES") || iParam2 == 1995362678) || iParam2 == joaat("ROCK_CARVINGS"))
+	if ((iParam2 == joaat("DINO_BONES") || iParam2 == joaat("LEGENDARY_FISH")) || iParam2 == joaat("ROCK_CARVINGS"))
 	{
 		if (iParam3 == 7)
 		{
@@ -21322,7 +21322,7 @@ int func_418(int iParam0, int iParam1)
 		case 28:
 			return 769706682;
 		case 29:
-			return 1635590003;
+			return joaat("SLOTID_CARD_PROGRESSION");
 		case 30:
 			return -2047978619;
 		case 31:
@@ -21344,11 +21344,11 @@ int func_418(int iParam0, int iParam1)
 		case 39:
 			return joaat("SLOTID_CARRIED_WEAPONS_MODS");
 		case 40:
-			return 1158805436;
+			return joaat("SLOTID_CHALLENGE_PROGRESSION");
 		case 41:
-			return -559473670;
+			return joaat("SLOTID_CHARACTER_0");
 		case 42:
-			return -797147251;
+			return joaat("SLOTID_CHARACTER_1");
 		case 43:
 			return -382216265;
 		case 44:
@@ -21962,13 +21962,13 @@ int func_418(int iParam0, int iParam1)
 		case 348:
 			return joaat("SLOTID_WARDROBE_EYEWEAR");
 		case 349:
-			return 892816668;
+			return joaat("SLOTID_WARDROBE_FACE_PAINT");
 		case 350:
 			return -1994943603;
 		case 351:
-			return 603133554;
+			return joaat("SLOTID_WARDROBE_FOOTWEAR_1");
 		case 352:
-			return -30160144;
+			return joaat("SLOTID_WARDROBE_FOOTWEAR_2");
 		case 353:
 			return joaat("SLOTID_WARDROBE_FOUNDATION");
 		case 354:
@@ -21988,7 +21988,7 @@ int func_418(int iParam0, int iParam1)
 		case 361:
 			return -246340825;
 		case 362:
-			return -1410671073;
+			return joaat("SLOTID_WARDROBE_HEADWEAR");
 		case 363:
 			return joaat("SLOTID_WARDROBE_LIPSTICK");
 		case 364:
@@ -22154,7 +22154,7 @@ int func_418(int iParam0, int iParam1)
 		case 444:
 			return joaat("SLOTID_WEAPON_PISTOL_VOLCANIC_BARREL");
 		case 445:
-			return 61132362;
+			return joaat("SLOTID_WEAPON_PISTOL_VOLCANIC_CLIP");
 		case 446:
 			return joaat("SLOTID_WEAPON_PISTOL_VOLCANIC_GRIP");
 		case 447:
@@ -22164,7 +22164,7 @@ int func_418(int iParam0, int iParam1)
 		case 449:
 			return joaat("SLOTID_WEAPON_REPEATER_CARBINE_GRIP");
 		case 450:
-			return 1136146715;
+			return joaat("SLOTID_WEAPON_REPEATER_CARBINE_LEVER");
 		case 451:
 			return joaat("SLOTID_WEAPON_REPEATER_CARBINE_SIGHT");
 		case 452:
@@ -22180,15 +22180,15 @@ int func_418(int iParam0, int iParam1)
 		case 457:
 			return joaat("SLOTID_WEAPON_REPEATER_HENRY_GRIP");
 		case 458:
-			return 1471419228;
+			return joaat("SLOTID_WEAPON_REPEATER_HENRY_LEVER");
 		case 459:
 			return joaat("SLOTID_WEAPON_REPEATER_HENRY_SIGHT");
 		case 460:
 			return joaat("SLOTID_WEAPON_REPEATER_HENRY_WRAP1");
 		case 461:
-			return 1911050315;
+			return joaat("SLOTID_WEAPON_REPEATER_PUMPACTION_CLIP");
 		case 462:
-			return -1343525599;
+			return joaat("SLOTID_WEAPON_REPEATER_PUMPACTION_GRIP");
 		case 463:
 			return joaat("SLOTID_WEAPON_REPEATER_PUMPACTION_SIGHT");
 		case 464:
@@ -22196,7 +22196,7 @@ int func_418(int iParam0, int iParam1)
 		case 465:
 			return joaat("SLOTID_WEAPON_REPEATER_WINCHESTER_GRIP");
 		case 466:
-			return 526744654;
+			return joaat("SLOTID_WEAPON_REPEATER_WINCHESTER_LEVER");
 		case 467:
 			return joaat("SLOTID_WEAPON_REPEATER_WINCHESTER_SIGHT");
 		case 468:
@@ -22204,7 +22204,7 @@ int func_418(int iParam0, int iParam1)
 		case 469:
 			return joaat("SLOTID_WEAPON_REVOLVER_CATTLEMAN_BARREL");
 		case 470:
-			return 853355463;
+			return joaat("SLOTID_WEAPON_REVOLVER_CATTLEMAN_CLIP");
 		case 471:
 			return joaat("SLOTID_WEAPON_REVOLVER_CATTLEMAN_GRIP");
 		case 472:
@@ -22212,7 +22212,7 @@ int func_418(int iParam0, int iParam1)
 		case 473:
 			return joaat("SLOTID_WEAPON_REVOLVER_DOUBLEACTION_BARREL");
 		case 474:
-			return -585289073;
+			return joaat("SLOTID_WEAPON_REVOLVER_DOUBLEACTION_CLIP");
 		case 475:
 			return joaat("SLOTID_WEAPON_REVOLVER_DOUBLEACTION_GRIP");
 		case 476:
@@ -22244,11 +22244,11 @@ int func_418(int iParam0, int iParam1)
 		case 489:
 			return joaat("SLOTID_WEAPON_REVOLVER_SCHOFIELD_BARREL");
 		case 490:
-			return -2145069367;
+			return joaat("SLOTID_WEAPON_REVOLVER_SCHOFIELD_CLIP");
 		case 491:
 			return joaat("SLOTID_WEAPON_REVOLVER_SCHOFIELD_GRIP");
 		case 492:
-			return -2117214398;
+			return joaat("SLOTID_WEAPON_REVOLVER_SCHOFIELD_SCOPE");
 		case 493:
 			return joaat("SLOTID_WEAPON_REVOLVER_SCHOFIELD_SIGHT");
 		case 494:
@@ -22262,7 +22262,7 @@ int func_418(int iParam0, int iParam1)
 		case 498:
 			return joaat("SLOTID_WEAPON_RIFLE_ELEPHANT_BARREL");
 		case 499:
-			return 302954672;
+			return joaat("SLOTID_WEAPON_RIFLE_ELEPHANT_CLIP");
 		case 500:
 			return joaat("SLOTID_WEAPON_RIFLE_ELEPHANT_GRIP");
 		case 501:
@@ -22326,9 +22326,9 @@ int func_418(int iParam0, int iParam1)
 		case 530:
 			return joaat("SLOTID_WEAPON_SHOTGUN_DOUBLEBARREL_BARREL");
 		case 531:
-			return 293062146;
+			return joaat("SLOTID_WEAPON_SHOTGUN_DOUBLEBARREL_CLIP");
 		case 532:
-			return 95360094;
+			return joaat("SLOTID_WEAPON_SHOTGUN_DOUBLEBARREL_CLIP_EXOTIC");
 		case 533:
 			return joaat("SLOTID_WEAPON_SHOTGUN_DOUBLEBARREL_GRIP");
 		case 534:
@@ -22352,7 +22352,7 @@ int func_418(int iParam0, int iParam1)
 		case 543:
 			return joaat("SLOTID_WEAPON_SHOTGUN_PUMP_WRAP1");
 		case 544:
-			return 1670843243;
+			return joaat("SLOTID_WEAPON_SHOTGUN_PUMPACTION_BARREL");
 		case 545:
 			return joaat("SLOTID_WEAPON_SHOTGUN_PUMPACTION_SIGHT");
 		case 546:
@@ -22442,7 +22442,7 @@ int func_418(int iParam0, int iParam1)
 		case 588:
 			return 677262775;
 		case 589:
-			return -832337898;
+			return joaat("SLOTID_TEMPORARY_HORSE");
 		case 590:
 			return -319249747;
 		case 591:
@@ -22454,7 +22454,7 @@ int func_418(int iParam0, int iParam1)
 		case 594:
 			return joaat("SLOTID_WARDROBE_BEARD_MUSTACHE");
 		case 595:
-			return 1380479304;
+			return joaat("SLOTID_WARDROBE_FOOTWEAR_3");
 		case 596:
 			return joaat("SLOTID_WARDROBE_LOADOUT");
 		case 597:
@@ -23559,7 +23559,7 @@ int func_451()
 	iVar1 = 0;
 	while (iVar1 < 5)
 	{
-		if (func_619(COLLECTION::_COLLECTABLE_GET_COLLECTABLE_ITEM_HASH(iVar1, -1531394072, 0)))
+		if (func_619(COLLECTION::_COLLECTABLE_GET_COLLECTABLE_ITEM_HASH(iVar1, joaat("EXOTIC_ITEMS"), 0)))
 		{
 			iVar0++;
 		}
@@ -24190,7 +24190,7 @@ void func_470(int iParam0, int iParam1, int iParam2, int iParam3, bool bParam4)
 
 bool func_471(int iParam0)
 {
-	return Global_1946054 & iParam0 != 0;
+	return (Global_1946054 & iParam0) != 0;
 }
 
 void func_472()
@@ -24439,7 +24439,7 @@ float func_481()
 
 bool func_482(int iParam0, int iParam1)
 {
-	return Global_1905944.f_22[iParam0 /*9*/].f_2 & iParam1 != 0;
+	return (Global_1905944.f_22[iParam0 /*9*/].f_2 & iParam1) != 0;
 }
 
 bool func_483(int iParam0)
@@ -25254,32 +25254,32 @@ int func_509(bool bParam0)
 
 int func_510(int iParam0)
 {
-	return (BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31 * func_680(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 1898;
+	return ((BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31) * func_680(MISC::IS_BIT_SET(iParam0, 31), -1, 1)) + 1898;
 }
 
 int func_511(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 22) & 15;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 22) & 15);
 }
 
 int func_512(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 17) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 17) & 31);
 }
 
 int func_513(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31);
 }
 
 int func_514(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 6) & 63;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 6) & 63);
 }
 
 int func_515(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 0) & 63;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 0) & 63);
 }
 
 int func_516(int iParam0, int iParam1)
@@ -26401,7 +26401,7 @@ bool func_570(int iParam0)
 
 bool func_571(int iParam0)
 {
-	return Global_1572864.f_3 & iParam0 != 0;
+	return (Global_1572864.f_3 & iParam0) != 0;
 }
 
 bool func_572()
@@ -26475,7 +26475,7 @@ int func_577()
 	iVar1 = 0;
 	while (iVar1 < 14)
 	{
-		if (func_586(COLLECTION::_COLLECTABLE_GET_COLLECTABLE_ITEM_HASH(iVar1, 1995362678, 0)))
+		if (func_586(COLLECTION::_COLLECTABLE_GET_COLLECTABLE_ITEM_HASH(iVar1, joaat("LEGENDARY_FISH"), 0)))
 		{
 			iVar0++;
 		}
@@ -26559,7 +26559,7 @@ int func_580(int iParam0)
 
 bool func_581(int iParam0)
 {
-	return Global_40.f_12019 & iParam0 != 0;
+	return (Global_40.f_12019 & iParam0) != 0;
 }
 
 char* func_582(int iParam0)
@@ -26800,7 +26800,7 @@ void func_595(bool bParam0)
 	if (ENTITY::IS_ENTITY_DEAD(Global_35) || PED::IS_PED_INJURED(Global_35))
 	{
 	}
-	PED::SET_PED_CONFIG_FLAG(Global_35, 440, !bParam0);
+	PED::SET_PED_CONFIG_FLAG(Global_35, 440 /*PCF_0xDBD31C9C*/, !bParam0);
 }
 
 void func_596(bool bParam0)
@@ -26812,7 +26812,7 @@ void func_596(bool bParam0)
 	if (ENTITY::IS_ENTITY_DEAD(Global_35) || PED::IS_PED_INJURED(Global_35))
 	{
 	}
-	PED::SET_PED_CONFIG_FLAG(Global_35, 439, !bParam0);
+	PED::SET_PED_CONFIG_FLAG(Global_35, 439 /*PCF_0x8519377E*/, !bParam0);
 }
 
 void func_597(bool bParam0)
@@ -26824,7 +26824,7 @@ void func_597(bool bParam0)
 	if (ENTITY::IS_ENTITY_DEAD(Global_35) || PED::IS_PED_INJURED(Global_35))
 	{
 	}
-	PED::SET_PED_CONFIG_FLAG(Global_35, 438, !bParam0);
+	PED::SET_PED_CONFIG_FLAG(Global_35, 438 /*PCF_0x14013CF9*/, !bParam0);
 }
 
 void func_598(bool bParam0)
@@ -27679,7 +27679,7 @@ void func_631(var uParam0, bool bParam1, int iParam2)
 
 void func_632(int iParam0, int iParam1, int iParam2)
 {
-	Global_1946054.f_57[func_467(iParam0, 1) /*11*/].f_10 -= Global_1946054.f_57[func_467(iParam0, 1) /*11*/].f_10 & iParam1;
+	Global_1946054.f_57[func_467(iParam0, 1) /*11*/].f_10 -= (Global_1946054.f_57[func_467(iParam0, 1) /*11*/].f_10 & iParam1);
 }
 
 void func_633(var uParam0, bool bParam1, bool bParam2, bool bParam3)
@@ -27700,9 +27700,9 @@ void func_633(var uParam0, bool bParam1, bool bParam2, bool bParam3)
 	{
 		if ((Global_40.f_7729 != 0 || !func_726(2, Global_26796.f_776)) || Global_1946054.f_1497 != func_656(0))
 		{
-			if (Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 9) != 0)
+			if ((Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 9)) != 0)
 			{
-				Global_40.f_7157[Global_40.f_7729 /*3*/] -= Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 12);
+				Global_40.f_7157[Global_40.f_7729 /*3*/] -= (Global_40.f_7157[Global_40.f_7729 /*3*/] & (1 << 12));
 				Global_40.f_7729 = 0;
 				Global_1905941 = Global_40.f_7729;
 				Global_40.f_7157[Global_40.f_7729 /*3*/] |= (1 << 12);
@@ -27829,12 +27829,12 @@ void func_636(var uParam0)
 
 void func_637(int iParam0)
 {
-	Global_1946054 -= Global_1946054 & iParam0;
+	Global_1946054 -= (Global_1946054 & iParam0);
 }
 
 bool func_638(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_639(struct<4> /*32*/ sParam0)
@@ -28282,7 +28282,7 @@ bool func_657(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return Global_40.f_7157[iParam0 /*3*/] & iParam1 != 0;
+	return (Global_40.f_7157[iParam0 /*3*/] & iParam1) != 0;
 }
 
 bool func_658()
@@ -28342,7 +28342,7 @@ bool func_659(int iParam0, bool bParam1, bool bParam2)
 	{
 		return true;
 	}
-	if (Global_1935630 & 40959 & (-1 - iParam0) != 0)
+	if ((Global_1935630 & (40959 & (-1 - iParam0))) != 0)
 	{
 		return true;
 	}
@@ -28358,25 +28358,25 @@ bool func_659(int iParam0, bool bParam1, bool bParam2)
 		case 0:
 			return false;
 		case 1:
-			return iParam0 & 1 == 0;
+			return (iParam0 & 1) == 0;
 		case 4:
-			return iParam0 & 2 == 0;
+			return (iParam0 & 2) == 0;
 		case 6:
-			return iParam0 & 4 == 0;
+			return (iParam0 & 4) == 0;
 		case 2:
-			return iParam0 & 16 == 0;
+			return (iParam0 & 16) == 0;
 		case 5:
-			return iParam0 & 32 == 0;
+			return (iParam0 & 32) == 0;
 		case 9:
-			return iParam0 & 64 == 0;
+			return (iParam0 & 64) == 0;
 		case 8:
-			return iParam0 & 8 == 0;
+			return (iParam0 & 8) == 0;
 		case 10:
-			return iParam0 & (1 << 9) == 0;
+			return (iParam0 & (1 << 9)) == 0;
 		case 3:
-			return iParam0 & 128 == 0;
+			return (iParam0 & 128) == 0;
 		case 11:
-			return iParam0 & 256 == 0;
+			return (iParam0 & 256) == 0;
 		default:
 			break;
 	}
@@ -28854,7 +28854,7 @@ void func_681(int iParam0, int iParam1)
 	{
 		return;
 	}
-	*iParam0 -= *iParam0 & 2080374784;
+	*iParam0 -= (*iParam0 & 2080374784);
 	if (iParam1 < 1898)
 	{
 		*iParam0 |= BUILTIN::SHIFT_LEFT((1898 - iParam1), 26);
@@ -28863,7 +28863,7 @@ void func_681(int iParam0, int iParam1)
 	else
 	{
 		*iParam0 |= BUILTIN::SHIFT_LEFT((iParam1 - 1898), 26);
-		*iParam0 -= *iParam0 & (1 << 31);
+		*iParam0 -= (*iParam0 & (1 << 31));
 	}
 }
 
@@ -28873,7 +28873,7 @@ void func_682(int iParam0, int iParam1)
 	{
 		return;
 	}
-	*iParam0 -= *iParam0 & 62914560;
+	*iParam0 -= (*iParam0 & 62914560);
 	*iParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 22);
 }
 
@@ -28888,7 +28888,7 @@ void func_683(int iParam0, int iParam1)
 	{
 		return;
 	}
-	*iParam0 -= *iParam0 & 4063232;
+	*iParam0 -= (*iParam0 & 4063232);
 	*iParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 17);
 }
 
@@ -28898,7 +28898,7 @@ void func_684(int iParam0, int iParam1)
 	{
 		return;
 	}
-	*iParam0 -= *iParam0 & 126976;
+	*iParam0 -= (*iParam0 & 126976);
 	*iParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 12);
 }
 
@@ -28908,7 +28908,7 @@ void func_685(int iParam0, int iParam1)
 	{
 		return;
 	}
-	*iParam0 -= *iParam0 & 4032;
+	*iParam0 -= (*iParam0 & 4032);
 	*iParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 6);
 }
 
@@ -28918,7 +28918,7 @@ void func_686(int iParam0, int iParam1)
 	{
 		return;
 	}
-	*iParam0 -= *iParam0 & 63;
+	*iParam0 -= (*iParam0 & 63);
 	*iParam0 |= BUILTIN::SHIFT_LEFT(iParam1, 0);
 }
 
@@ -29054,7 +29054,7 @@ void func_692(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4,
 		{
 			func_755(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{
@@ -29375,7 +29375,7 @@ int func_706(int iParam0)
 	iVar0 = 0;
 	while (iParam0 != 0)
 	{
-		iParam0 &= (iParam0 - 1);
+		iParam0 = (iParam0 & (iParam0 - 1));
 		iVar0++;
 	}
 	return iVar0;
@@ -29626,7 +29626,7 @@ void func_717(var uParam0, int iParam1, int iParam2)
 
 bool func_718(int iParam0, int iParam1)
 {
-	return Global_1946054.f_57[iParam0 /*11*/].f_9 & iParam1 != 0;
+	return (Global_1946054.f_57[iParam0 /*11*/].f_9 & iParam1) != 0;
 }
 
 void func_719(var uParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
@@ -29718,7 +29718,7 @@ bool func_722(int iParam0, int iParam1, int iParam2)
 
 bool func_723(int iParam0, int iParam1)
 {
-	return Global_1946054.f_57[func_467(iParam0, 1) /*11*/].f_10 & iParam1 != 0;
+	return (Global_1946054.f_57[func_467(iParam0, 1) /*11*/].f_10 & iParam1) != 0;
 }
 
 int func_724(var uParam0)
@@ -29770,7 +29770,7 @@ bool func_726(int iParam0, int iParam1)
 		}
 		if (iParam1 > -1 && iParam1 < 5)
 		{
-			return Global_26796.f_26[iParam1 /*120*/] & iParam0 != 0;
+			return (Global_26796.f_26[iParam1 /*120*/] & iParam0) != 0;
 		}
 		return false;
 	}
@@ -29780,7 +29780,7 @@ bool func_726(int iParam0, int iParam1)
 	}
 	if (iParam1 > -1 && iParam1 < 5)
 	{
-		return Global_36638.f_45.f_350.f_26[iParam1 /*120*/] & iParam0 != 0;
+		return (Global_36638.f_45.f_350.f_26[iParam1 /*120*/] & iParam0) != 0;
 	}
 	return false;
 }
@@ -29908,7 +29908,7 @@ bool func_736()
 	{
 		return true;
 	}
-	if (Global_1051043 == -1 && Global_1572887.f_6 & 1 != 0)
+	if (Global_1051043 == -1 && (Global_1572887.f_6 & 1) != 0)
 	{
 		return true;
 	}
@@ -29926,7 +29926,7 @@ int func_737(int iParam0)
 
 bool func_738(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 int func_739(int iParam0)
@@ -29998,7 +29998,7 @@ bool func_741(int iParam0)
 
 bool func_742(int iParam0)
 {
-	return Global_40.f_12003 & iParam0 != 0;
+	return (Global_40.f_12003 & iParam0) != 0;
 }
 
 void func_743()
@@ -30492,13 +30492,13 @@ int func_768(int iParam0)
 
 bool func_769(int iParam0, int iParam1, int iParam2, var uParam3)
 {
-	bool bVar0;
+	int iVar0;
 	struct<4> /*32*/ sVar1;
 	int iVar5;
 
 	if (func_794(iParam1) && !func_795(iParam1))
 	{
-		bVar0 = func_796(iParam1);
+		iVar0 = func_796(iParam1);
 	}
 	else
 	{
@@ -30506,7 +30506,7 @@ bool func_769(int iParam0, int iParam1, int iParam2, var uParam3)
 	}
 	func_797(uParam3);
 	iVar5 = func_798(iParam2);
-	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, bVar0, iVar5, 0))
+	if (!PED::GET_CARRIED_ATTACHED_INFO_FOR_SLOT(&sVar1, iVar0, iVar5, 0))
 	{
 		return false;
 	}
@@ -30550,7 +30550,7 @@ void func_771(int iParam0, int* iParam1)
 		return;
 	}
 	uVar0 = 29;
-	MISC::_COPY_MEMORY(iParam1, &uVar0, 30);
+	MISC::COPY_SCRIPT_STRUCT(iParam1, &uVar0, 30);
 	iVar30 = 0;
 	while (iVar30 < 29)
 	{
@@ -30792,7 +30792,7 @@ bool func_776(int iParam0)
 
 bool func_777(var uParam0, int iParam1)
 {
-	return uParam0->f_1 & iParam1 != 0;
+	return (uParam0->f_1 & iParam1) != 0;
 }
 
 void func_778(var uParam0, int iParam1, int iParam2)
@@ -30802,7 +30802,7 @@ void func_778(var uParam0, int iParam1, int iParam2)
 
 bool func_779(var uParam0, int iParam1)
 {
-	return uParam0->f_1 & iParam1 != 0;
+	return (uParam0->f_1 & iParam1) != 0;
 }
 
 void func_780(var uParam0, int iParam1)
@@ -30813,13 +30813,13 @@ void func_780(var uParam0, int iParam1)
 void func_781(var uParam0, int iParam1, int iParam2)
 {
 	Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/] = { *uParam0 /*3*/ };
-	Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1;
+	Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= (Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1);
 }
 
 void func_782(var uParam0, int iParam1, int iParam2)
 {
 	Global_36638.f_45.f_350.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/] = { *uParam0 /*3*/ };
-	Global_36638.f_45.f_350.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1;
+	Global_36638.f_45.f_350.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 -= (Global_26796.f_26[iParam2 /*120*/].f_1.f_1[iParam1 /*3*/].f_2 & 1);
 }
 
 void func_783(var uParam0, int iParam1)
@@ -30898,7 +30898,7 @@ int func_786(int iParam0)
 
 int func_787(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 5) & 1023);
 }
 
 bool func_788(int iParam0)
@@ -30933,7 +30933,7 @@ bool func_790(int iParam0)
 	{
 		return false;
 	}
-	if (func_220(iParam0, 363491182))
+	if (func_220(iParam0, joaat("CI_TAG_ITEM_EQUIPMENT_HOLSTER")))
 	{
 		return true;
 	}
@@ -30946,7 +30946,7 @@ bool func_791(int iParam0)
 	{
 		return false;
 	}
-	if (func_220(iParam0, 1406113494))
+	if (func_220(iParam0, joaat("CI_TAG_ITEM_EQUIPMENT_OFFHAND")))
 	{
 		return true;
 	}
@@ -31760,7 +31760,7 @@ int func_830(int iParam0)
 
 bool func_831(int iParam0)
 {
-	return Global_1946054.f_2657.f_26.f_6 & iParam0 != 0;
+	return (Global_1946054.f_2657.f_26.f_6 & iParam0) != 0;
 }
 
 void func_832(var uParam0, int iParam1, int iParam2)

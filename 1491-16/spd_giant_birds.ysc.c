@@ -9,7 +9,7 @@
 	float fLocal_31 = 0.0f;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bool bVar0;
 	int iVar1;
@@ -413,7 +413,7 @@ int func_11(int iParam0, Vector3 vParam1, float fParam4, bool bParam5, bool bPar
 
 bool func_12(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_13(var uParam0, int iParam1)
@@ -423,7 +423,7 @@ void func_13(var uParam0, int iParam1)
 
 void func_14(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_15(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, bool bParam5, bool bParam6, bool bParam7)
@@ -458,7 +458,7 @@ void func_15(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, 
 		{
 			func_18(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{

@@ -51,7 +51,7 @@
 	int iScriptParam_0 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -197,7 +197,7 @@ bool func_6(int iParam0, int iParam1)
 	}
 	if (func_19(iVar0, 8))
 	{
-		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11, false))
+		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11 /*PCF_Knockedout*/, false))
 		{
 			return false;
 		}
@@ -299,9 +299,9 @@ bool func_10(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_23118[iParam0 /*11*/] & iParam1 != 0;
+		return (Global_23118[iParam0 /*11*/] & iParam1) != 0;
 	}
-	return Global_1058888.f_40545[iParam0 /*11*/] & iParam1 != 0;
+	return (Global_1058888.f_40545[iParam0 /*11*/] & iParam1) != 0;
 }
 
 int func_11(int iParam0)
@@ -420,7 +420,7 @@ void func_16()
 	iLocal_42 = func_25(iLocal_44, vLocal_45, 101.6932f, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0);
 	WEAPON::GIVE_WEAPON_TO_PED(iLocal_42, joaat("WEAPON_SNIPERRIFLE_CARCANO"), 999, true, true, 0, false, 0.5f, 1.0f, joaat("ADD_REASON_DEFAULT"), false, 0.0f, false);
 	PED::SET_PED_DEFENSIVE_AREA_VOLUME(iLocal_42, iLocal_43, false, false, false);
-	PED::SET_PED_CONFIG_FLAG(iLocal_42, 263, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_42, 263 /*PCF_NoCriticalHits*/, true);
 	PED::SET_PED_CAN_RAGDOLL(iLocal_42, false);
 	iVar0 = 160;
 	ENTITY::SET_ENTITY_MAX_HEALTH(iLocal_42, iVar0);
@@ -455,7 +455,7 @@ void func_18(int iParam0, int iParam1)
 
 bool func_19(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_20(int iParam0)
@@ -551,7 +551,7 @@ void func_27(var uParam0, float fParam1)
 
 bool func_28(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_29(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, bool bParam5, bool bParam6, bool bParam7)
@@ -586,7 +586,7 @@ void func_29(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, 
 		{
 			func_35(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{
@@ -612,7 +612,7 @@ void func_30(int iParam0)
 {
 	LAW::_SET_PED_LAW_BEHAVIOUR(iParam0, 2);
 	LAW::_SET_PED_LAW_BEHAVIOUR(iParam0, 1);
-	PED::SET_PED_CONFIG_FLAG(iParam0, 188, true);
+	PED::SET_PED_CONFIG_FLAG(iParam0, 188 /*PCF_0x66114902*/, true);
 	PED::_SET_PED_COMBAT_ATTRIBUTE_HASH(iParam0, joaat("LAW"));
 	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 39, true);
 	TASK::_SET_PED_PATH_MAY_ENTER_DEEP_WATER(iParam0, false);
@@ -628,7 +628,7 @@ void func_31(var uParam0, int iParam1)
 
 void func_32(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 bool func_33(int iParam0)

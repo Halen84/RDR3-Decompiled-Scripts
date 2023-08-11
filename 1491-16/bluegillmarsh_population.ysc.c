@@ -17,7 +17,7 @@
 	int iLocal_15 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	bool bVar0;
 
@@ -104,6 +104,6 @@ void func_5(int iParam0, bool bParam1)
 
 void func_6(int iParam0, int iParam1)
 {
-	*iParam0 -= *iParam0 & iParam1;
+	*iParam0 -= (*iParam0 & iParam1);
 }
 

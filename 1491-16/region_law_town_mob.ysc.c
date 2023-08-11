@@ -57,7 +57,7 @@
 	int iScriptParam_0 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;
@@ -96,11 +96,11 @@ void func_1()
 			{
 				if (iVar1 == 0)
 				{
-					PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar1], 155, false);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar1], 155 /*PCF_EnableCompanionAIAnalysis*/, false);
 				}
 				else
 				{
-					PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar1], 156, false);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar1], 156 /*PCF_EnableCompanionAISupport*/, false);
 				}
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_46[iVar1], joaat("REL_CIVMALE"));
 			}
@@ -185,7 +185,7 @@ void func_4()
 		case 1:
 			if (func_14(Global_35, vLocal_60, 1) < 100.0f)
 			{
-				iLocal_44 = func_15(0, 2, -156825994, 1, 0, 0.0f, 0.0f, 0.0f);
+				iLocal_44 = func_15(0, 2, joaat("SPECIES_HUMAN"), 1, 0, 0.0f, 0.0f, 0.0f);
 				switch (iLocal_41)
 				{
 					case 76:
@@ -382,7 +382,7 @@ bool func_6(int iParam0, int iParam1)
 	}
 	if (func_22(iVar0, 8))
 	{
-		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11, false))
+		if (PED::GET_PED_CONFIG_FLAG(iParam0, 11 /*PCF_Knockedout*/, false))
 		{
 			return false;
 		}
@@ -505,9 +505,9 @@ bool func_12(int iParam0, int iParam1)
 {
 	if (Global_1572887.f_12 == -1)
 	{
-		return Global_23118[iParam0 /*11*/] & iParam1 != 0;
+		return (Global_23118[iParam0 /*11*/] & iParam1) != 0;
 	}
-	return Global_1058888.f_40545[iParam0 /*11*/] & iParam1 != 0;
+	return (Global_1058888.f_40545[iParam0 /*11*/] & iParam1) != 0;
 }
 
 bool func_13(int iParam0, int iParam1, bool bParam2, int iParam3)
@@ -629,19 +629,19 @@ void func_17()
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_46[iVar0], joaat("REL_TOWN_MOB"));
 			PED::REGISTER_TARGET(iLocal_46[iVar0], Global_35, true);
 			PED::SET_PED_ACCURACY(iLocal_46[iVar0], 60);
-			PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 279, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 279 /*PCF_NeverLeavesGroup*/, true);
 			if (iVar0 == 0)
 			{
 				PED::SET_PED_AS_GROUP_LEADER(iLocal_46[iVar0], iLocal_45, false);
-				PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 155, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 155 /*PCF_EnableCompanionAIAnalysis*/, true);
 				COMPANION::_ACTIVATE_COMPANION_ANALYSIS(iLocal_45);
 				COMPANION::_0x0F1CD8CA9E65D5F6(iLocal_45, joaat("CA_SEARCH"));
 			}
 			else
 			{
 				PED::SET_PED_AS_GROUP_MEMBER(iLocal_46[iVar0], iLocal_45);
-				PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 156, true);
-				PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 152, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 156 /*PCF_EnableCompanionAISupport*/, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_46[iVar0], 152 /*PCF_0x79114A20*/, true);
 			}
 			iVar4 = MAP::BLIP_ADD_FOR_ENTITY(joaat("BLIP_STYLE_ENEMY"), iLocal_46[iVar0]);
 			MAP::BLIP_ADD_MODIFIER(iVar4, joaat("BLIP_MODIFIER_ENEMY_DISAPPEARING"));
@@ -736,7 +736,7 @@ int func_21(bool bParam0, bool bParam1, bool bParam2)
 
 bool func_22(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_23(int iParam0)
@@ -860,23 +860,23 @@ void func_28(int iParam0, int iParam1)
 	int iVar0;
 
 	iVar0 = (1 << 9);
-	if (iParam1 & 1 != 0)
+	if ((iParam1 & 1) != 0)
 	{
 		iVar0 |= (1 << 19);
 	}
-	if (iParam1 & 2 != 0)
+	if ((iParam1 & 2) != 0)
 	{
 		iVar0 |= 1536;
 	}
-	if (iParam1 & 4 != 0)
+	if ((iParam1 & 4) != 0)
 	{
 		iVar0 |= 2560;
 	}
-	if (iParam1 & 8 != 0)
+	if ((iParam1 & 8) != 0)
 	{
 		iVar0 |= 4608;
 	}
-	if (iParam1 & 16 != 0)
+	if ((iParam1 & 16) != 0)
 	{
 		iVar0 |= 8704;
 	}
@@ -915,7 +915,7 @@ int func_31()
 
 int func_32(int iParam0)
 {
-	return BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 12) & 31);
 }
 
 void func_33(int iParam0, int iParam1)
@@ -1008,7 +1008,7 @@ void func_39(int iParam0, int iParam1, int iParam2, bool bParam3, bool bParam4, 
 		{
 			func_46(iParam0, 0, 1);
 		}
-		PED::SET_PED_CONFIG_FLAG(iParam0, 502, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 502 /*PCF_0x5B64E56A*/, true);
 	}
 	else if (PED::_IS_THIS_MODEL_A_HORSE(ENTITY::GET_ENTITY_MODEL(iParam0)))
 	{
@@ -1049,7 +1049,7 @@ void func_41(var uParam0, int iParam1)
 
 void func_42(var uParam0, int iParam1)
 {
-	*uParam0 -= *uParam0 & iParam1;
+	*uParam0 -= (*uParam0 & iParam1);
 }
 
 void func_43(int* iParam0)

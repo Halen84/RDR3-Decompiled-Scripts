@@ -10,7 +10,7 @@
 	float fLocal_8 = 0.0f;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	fLocal_7 = 1.0f;
 	fLocal_8 = 1.0f;

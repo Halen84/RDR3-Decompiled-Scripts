@@ -18,7 +18,7 @@
 	var uScriptParam_2 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	struct<10> /*80*/ sVar0;
 	struct<16> /*128*/ sVar10;
@@ -108,7 +108,7 @@ void func_4(struct<16> /*128*/ sParam0, int iParam16)
 
 bool func_5(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 bool func_6(char* sParam0)

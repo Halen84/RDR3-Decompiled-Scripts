@@ -115,7 +115,7 @@
 	int iLocal_117 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	int iVar0;
 	bool bVar1;
@@ -311,7 +311,7 @@ int func_4()
 
 bool func_5(int iParam0, int iParam1)
 {
-	return iParam0 & iParam1 != 0;
+	return (iParam0 & iParam1) != 0;
 }
 
 void func_6()
@@ -722,7 +722,7 @@ int func_28(var uParam0, var uParam1, var uParam2, Vector3 vParam3, int iParam6,
 
 void func_29(int iParam0, int iParam1)
 {
-	*iParam0 -= *iParam0 & iParam1;
+	*iParam0 -= (*iParam0 & iParam1);
 }
 
 bool func_30(int iParam0)

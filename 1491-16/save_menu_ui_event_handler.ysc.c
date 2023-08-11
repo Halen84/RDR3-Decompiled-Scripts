@@ -2,7 +2,7 @@
 	int iScriptParam_0 = 0;
 #pragma endregion
 
-void __EntryFunction__()
+void __SCRIPT()
 {
 	Vector3 vVar0;
 
@@ -21,7 +21,7 @@ void __EntryFunction__()
 				switch (vVar0.x)
 				{
 					case joaat("ITEM_SELECTED_ACTION_SUCCEEDED"):
-						if (vVar0.z == 1535628899)
+						if (vVar0.z == joaat("SAVE_COMPLETE"))
 						{
 							Global_20 = 1;
 						}
