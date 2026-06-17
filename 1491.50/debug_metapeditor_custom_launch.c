@@ -1,0 +1,5 @@
+void __SCRIPT()
+{
+	SCRIPT::TERMINATE_THIS_THREAD();
+}
+
